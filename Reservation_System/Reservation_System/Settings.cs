@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,15 +10,11 @@ using System.Windows.Forms;
 
 namespace Reservation_System
 {
-    class Program
+    public partial class Settings : Form
     {
-        [STAThread]
-        static void Main(string[] args)
+        public Settings()
         {
-            Application.EnableVisualStyles();
-            Application.Run(new User_InterFace());
-
-           
+            InitializeComponent();
         }
     }
 }
