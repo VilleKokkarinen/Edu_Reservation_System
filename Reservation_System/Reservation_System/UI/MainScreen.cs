@@ -16,5 +16,10 @@ namespace Reservation_System
         {
             InitializeComponent();
         }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+            txt_username.Focus();
+        }
     }
 }

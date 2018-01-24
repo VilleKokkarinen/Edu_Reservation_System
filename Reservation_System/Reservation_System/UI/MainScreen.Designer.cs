@@ -28,11 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.lbl_userinfo = new System.Windows.Forms.Label();
+            this.cbox_remember_user = new System.Windows.Forms.CheckBox();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // txt_username
+            // 
+            this.txt_username.Location = new System.Drawing.Point(15, 27);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(241, 20);
+            this.txt_username.TabIndex = 0;
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(15, 53);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(241, 20);
+            this.txt_password.TabIndex = 1;
+            // 
+            // btn_login
+            // 
+            this.btn_login.Location = new System.Drawing.Point(262, 27);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(68, 46);
+            this.btn_login.TabIndex = 2;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = true;
+            // 
+            // lbl_userinfo
+            // 
+            this.lbl_userinfo.AutoSize = true;
+            this.lbl_userinfo.Location = new System.Drawing.Point(12, 9);
+            this.lbl_userinfo.Name = "lbl_userinfo";
+            this.lbl_userinfo.Size = new System.Drawing.Size(113, 13);
+            this.lbl_userinfo.TabIndex = 3;
+            this.lbl_userinfo.Text = "Username && Password";
+            // 
+            // cbox_remember_user
+            // 
+            this.cbox_remember_user.AutoSize = true;
+            this.cbox_remember_user.Location = new System.Drawing.Point(15, 79);
+            this.cbox_remember_user.Name = "cbox_remember_user";
+            this.cbox_remember_user.Size = new System.Drawing.Size(100, 17);
+            this.cbox_remember_user.TabIndex = 4;
+            this.cbox_remember_user.Text = "Remember user";
+            this.cbox_remember_user.UseVisualStyleBackColor = true;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Location = new System.Drawing.Point(15, 203);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(68, 46);
+            this.btnSettings.TabIndex = 5;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            // 
+            // MainScreen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(342, 261);
+            this.Controls.Add(this.btnSettings);
+            this.Controls.Add(this.cbox_remember_user);
+            this.Controls.Add(this.lbl_userinfo);
+            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_username);
+            this.Name = "MainScreen";
             this.Text = "MainScreen";
+            this.Load += new System.EventHandler(this.MainScreen_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txt_username;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Label lbl_userinfo;
+        private System.Windows.Forms.CheckBox cbox_remember_user;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
