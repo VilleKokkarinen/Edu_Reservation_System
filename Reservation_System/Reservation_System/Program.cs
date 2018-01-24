@@ -12,9 +12,11 @@ namespace Reservation_System
         [STAThread]
         static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.Run(new User_InterFace());
 
+            // luo ja näyttää uuden MainScreen elementin
+            Application.EnableVisualStyles();
+            Application.Run(new MainScreen());
+            
            
         }
     }
