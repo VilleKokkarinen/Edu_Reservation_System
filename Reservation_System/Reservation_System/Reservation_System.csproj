@@ -88,6 +88,12 @@
     <Compile Include="UI\PreReservationScreen.Designer.cs">
       <DependentUpon>PreReservationScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\RegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RegisterUser.Designer.cs">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\RemovingItemScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RegisterUser.resx">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

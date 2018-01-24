@@ -34,6 +34,8 @@
             this.lbl_userinfo = new System.Windows.Forms.Label();
             this.cbox_remember_user = new System.Windows.Forms.CheckBox();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_username
@@ -42,6 +44,8 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(241, 20);
             this.txt_username.TabIndex = 0;
+            this.txt_username.Text = "GUEST";
+            this.txt_username.Click += new System.EventHandler(this.txt_username_Click);
             // 
             // txt_password
             // 
@@ -59,6 +63,7 @@
             this.btn_login.TabIndex = 2;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_userinfo
             // 
@@ -81,18 +86,41 @@
             // 
             // btnSettings
             // 
-            this.btnSettings.Location = new System.Drawing.Point(15, 203);
+            this.btnSettings.Location = new System.Drawing.Point(213, 203);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(68, 46);
             this.btnSettings.TabIndex = 5;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.Location = new System.Drawing.Point(12, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Don\' t have a user?";
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.Location = new System.Drawing.Point(12, 158);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(141, 28);
+            this.btnRegisterUser.TabIndex = 7;
+            this.btnRegisterUser.Text = "Create User";
+            this.btnRegisterUser.UseVisualStyleBackColor = true;
+            this.btnRegisterUser.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 261);
+            this.Controls.Add(this.btnRegisterUser);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.cbox_remember_user);
             this.Controls.Add(this.lbl_userinfo);
@@ -115,5 +143,7 @@
         private System.Windows.Forms.Label lbl_userinfo;
         private System.Windows.Forms.CheckBox cbox_remember_user;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRegisterUser;
     }
 }
