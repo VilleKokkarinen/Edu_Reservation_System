@@ -45,7 +45,7 @@ namespace Reservation_System.UI
                 using (SqlConnection connection = new SqlConnection(cs))
                 {
 
-                 string query = "INSERT INTO USERS ( U_FIRST_NAME,U_LAST_NAME,U_EMAIL,U_USERNAME, U_PASSWORD,U_ACCOUNTTYPE) VALUES (@firstname, @lastname, @email, @username, @password, 2)";
+                 string query = "INSERT INTO USERS (U_FIRST_NAME, U_LAST_NAME, U_EMAIL,U_USERNAME, U_PASSWORD, U_ACCOUNTTYPE) VALUES (@firstname, @lastname, @email, @username, @password, 2)";
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@firstname", txt_firstname.Text);

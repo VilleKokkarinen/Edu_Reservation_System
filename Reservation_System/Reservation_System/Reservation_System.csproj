@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\ForgotPasswordScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ForgotPasswordScreen.Designer.cs">
+      <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
