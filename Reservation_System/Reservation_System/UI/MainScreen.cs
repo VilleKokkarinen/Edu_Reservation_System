@@ -15,7 +15,7 @@ namespace Reservation_System
     public partial class MainScreen : Form
     {
         string cs = @"Data Source=(localdb)\MSSQLLocalDB;
-                    Initial Catalog = master;
+                    Initial Catalog = RESERVATIONSYSTEM;
                     Integrated Security = True;
                     Connect Timeout = 30;
                     Encrypt=False;
