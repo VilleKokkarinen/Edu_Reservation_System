@@ -1,6 +1,6 @@
-﻿namespace Reservation_System
+﻿namespace Reservation_System.UI
 {
-    partial class MainScreen
+    partial class Mainscreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,135 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_username = new System.Windows.Forms.TextBox();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.btn_login = new System.Windows.Forms.Button();
-            this.lbl_userinfo = new System.Windows.Forms.Label();
-            this.cbox_remember_user = new System.Windows.Forms.CheckBox();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnRegisterUser = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txt_username
+            // button16
             // 
-            this.txt_username.Location = new System.Drawing.Point(15, 27);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(241, 20);
-            this.txt_username.TabIndex = 0;
-            this.txt_username.Text = "GUEST";
-            this.txt_username.Click += new System.EventHandler(this.txt_username_Click);
+            this.button16.Location = new System.Drawing.Point(37, 111);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(101, 39);
+            this.button16.TabIndex = 55;
+            this.button16.Text = "Varaa";
+            this.button16.UseVisualStyleBackColor = true;
             // 
-            // txt_password
+            // button4
             // 
-            this.txt_password.Location = new System.Drawing.Point(15, 53);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(241, 20);
-            this.txt_password.TabIndex = 1;
+            this.button4.Location = new System.Drawing.Point(37, 180);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 23);
+            this.button4.TabIndex = 54;
+            this.button4.Text = "Asetukset";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // btn_login
+            // button3
             // 
-            this.btn_login.Location = new System.Drawing.Point(262, 27);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(68, 46);
-            this.btn_login.TabIndex = 2;
-            this.btn_login.Text = "Login";
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(37, 209);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 30);
+            this.button3.TabIndex = 53;
+            this.button3.Text = "Sulje";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // lbl_userinfo
+            // button2
             // 
-            this.lbl_userinfo.AutoSize = true;
-            this.lbl_userinfo.Location = new System.Drawing.Point(12, 9);
-            this.lbl_userinfo.Name = "lbl_userinfo";
-            this.lbl_userinfo.Size = new System.Drawing.Size(113, 13);
-            this.lbl_userinfo.TabIndex = 3;
-            this.lbl_userinfo.Text = "Username && Password";
+            this.button2.Location = new System.Drawing.Point(37, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 36);
+            this.button2.TabIndex = 52;
+            this.button2.Text = "Palauta";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // cbox_remember_user
+            // button1
             // 
-            this.cbox_remember_user.AutoSize = true;
-            this.cbox_remember_user.Location = new System.Drawing.Point(15, 79);
-            this.cbox_remember_user.Name = "cbox_remember_user";
-            this.cbox_remember_user.Size = new System.Drawing.Size(100, 17);
-            this.cbox_remember_user.TabIndex = 4;
-            this.cbox_remember_user.Text = "Remember user";
-            this.cbox_remember_user.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(37, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 38);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Lainaa";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnSettings
-            // 
-            this.btnSettings.Location = new System.Drawing.Point(262, 203);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(68, 46);
-            this.btnSettings.TabIndex = 5;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Don\' t have a user?";
-            // 
-            // btnRegisterUser
-            // 
-            this.btnRegisterUser.Location = new System.Drawing.Point(12, 158);
-            this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Size = new System.Drawing.Size(141, 28);
-            this.btnRegisterUser.TabIndex = 7;
-            this.btnRegisterUser.Text = "Create User";
-            this.btnRegisterUser.UseVisualStyleBackColor = true;
-            this.btnRegisterUser.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(165, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Forgot password?";
-            // 
-            // MainScreen
+            // Mainscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 261);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnRegisterUser);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.cbox_remember_user);
-            this.Controls.Add(this.lbl_userinfo);
-            this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_username);
-            this.Name = "MainScreen";
-            this.Text = "MainScreen";
-            this.Load += new System.EventHandler(this.MainScreen_Load);
+            this.ClientSize = new System.Drawing.Size(215, 261);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Name = "Mainscreen";
+            this.Text = "Mainscreen";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_username;
-        private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.Label lbl_userinfo;
-        private System.Windows.Forms.CheckBox cbox_remember_user;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRegisterUser;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

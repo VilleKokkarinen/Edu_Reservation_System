@@ -28,11 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(12, 12);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(171, 23);
+            this.button11.TabIndex = 34;
+            this.button11.Text = "Lisää uusi tavara tietokantaan";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(12, 65);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(171, 23);
+            this.button12.TabIndex = 35;
+            this.button12.Text = "Poista tavara tietokannasta";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // SettingsScreen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Name = "SettingsScreen";
             this.Text = "SettingsScreen";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }
