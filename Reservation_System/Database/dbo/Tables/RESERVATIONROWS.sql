@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[RESERVATIONROWS] (
+    [RR_ID]              INT      IDENTITY (1, 1) NOT NULL,
+    [RR_R_ID]            INT      NULL,
+    [RR_USER]            INT      NULL,
+    [RR_ITEM]            INT      NULL,
+    [RR_RESERVATIONDATE] DATETIME NOT NULL,
+    [RR_RETURNDATE]      DATETIME NOT NULL,
+    PRIMARY KEY CLUSTERED ([RR_ID] ASC),
+    FOREIGN KEY ([RR_ITEM]) REFERENCES [dbo].[ITEMS] ([I_ID]),
+    FOREIGN KEY ([RR_R_ID]) REFERENCES [dbo].[RESERVATION] ([R_ID]),
+    FOREIGN KEY ([RR_USER]) REFERENCES [dbo].[USERS] ([U_ID])
+);
+
