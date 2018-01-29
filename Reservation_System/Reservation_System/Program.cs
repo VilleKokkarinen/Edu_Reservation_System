@@ -15,12 +15,12 @@ namespace Reservation_System
                   
             // luo ja näyttää uuden MainScreen elementin
             Application.EnableVisualStyles();
-            MainScreen _MainScreen = new MainScreen();
+           // MainScreen _MainScreen = new MainScreen();
            
 
             // Application.Run(_MainScreen);
 
-            _MainScreen.ShowDialog();
+          //  _MainScreen.ShowDialog();
         }
     }
 }
