@@ -86,11 +86,11 @@
     <Compile Include="UI\ForgotPasswordScreen.Designer.cs">
       <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainScreen.cs">
+    <Compile Include="UI\Login screen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainScreen.Designer.cs">
-      <DependentUpon>MainScreen.cs</DependentUpon>
+    <Compile Include="UI\Login screen.Designer.cs">
+      <DependentUpon>Login screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +98,12 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mainscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mainscreen.Designer.cs">
+      <DependentUpon>Mainscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\NewItemScreen.cs">
       <SubType>Form</SubType>
@@ -160,11 +166,32 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainScreen.resx">
-      <DependentUpon>MainScreen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Login screen.resx">
+      <DependentUpon>Login screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mainscreen.resx">
+      <DependentUpon>Mainscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewItemScreen.resx">
+      <DependentUpon>NewItemScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PreReservationScreen.resx">
+      <DependentUpon>PreReservationScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\RegisterUser.resx">
       <DependentUpon>RegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemovingItemScreen.resx">
+      <DependentUpon>RemovingItemScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReserationScreen.resx">
+      <DependentUpon>ReserationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReturningScreen.resx">
+      <DependentUpon>ReturningScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SettingsScreen.resx">
+      <DependentUpon>SettingsScreen.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

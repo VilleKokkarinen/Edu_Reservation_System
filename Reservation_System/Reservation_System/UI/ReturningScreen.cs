@@ -16,5 +16,10 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
         }
+
+        private void ReturningScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
