@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Reservation_System.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Reservation_System
 {
@@ -15,12 +17,12 @@ namespace Reservation_System
                   
             // luo ja näyttää uuden MainScreen elementin
             Application.EnableVisualStyles();
-           // MainScreen _MainScreen = new MainScreen();
+            LoginScreen _LoginScreen = new LoginScreen();
            
 
-            // Application.Run(_MainScreen);
+             Application.Run(_LoginScreen);
 
-          //  _MainScreen.ShowDialog();
+            _LoginScreen.ShowDialog();
         }
     }
 }

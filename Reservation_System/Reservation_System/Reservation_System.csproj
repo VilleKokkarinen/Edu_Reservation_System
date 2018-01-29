@@ -93,6 +93,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UI\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\NewItemScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,10 +135,10 @@
     <Compile Include="UI\ReserationScreen.Designer.cs">
       <DependentUpon>ReserationScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs">
+    <Compile Include="UI\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
+    <Compile Include="UI\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ReturningScreen.cs">
@@ -151,8 +163,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Settings.resx">
+    <EmbeddedResource Include="UI\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NewItemScreen.resx">
       <DependentUpon>NewItemScreen.cs</DependentUpon>
