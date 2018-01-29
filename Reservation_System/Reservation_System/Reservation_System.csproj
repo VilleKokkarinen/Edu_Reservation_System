@@ -27,6 +27,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +48,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -67,10 +70,16 @@
       <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.0.0\lib\net45\FirebirdSql.Data.FirebirdClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -80,6 +89,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Settings\AppSettings.cs" />
+    <Compile Include="Settings\MySettings.cs" />
     <Compile Include="UI\ForgotPasswordScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,17 +140,11 @@
     <Compile Include="UI\RemovingItemScreen.Designer.cs">
       <DependentUpon>RemovingItemScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ReserationScreen.cs">
+    <Compile Include="UI\ReservationScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ReserationScreen.Designer.cs">
-      <DependentUpon>ReserationScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="UI\ReservationScreen.Designer.cs">
+      <DependentUpon>ReservationScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ReturningScreen.cs">
       <SubType>Form</SubType>
@@ -163,9 +168,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UI\Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,8 +183,8 @@
     <EmbeddedResource Include="UI\RemovingItemScreen.resx">
       <DependentUpon>RemovingItemScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ReserationScreen.resx">
-      <DependentUpon>ReserationScreen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ReservationScreen.resx">
+      <DependentUpon>ReservationScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ReturningScreen.resx">
       <DependentUpon>ReturningScreen.cs</DependentUpon>

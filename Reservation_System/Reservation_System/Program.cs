@@ -14,15 +14,25 @@ namespace Reservation_System
         [STAThread]
         static void Main(string[] args)
         {
-                  
-            // luo ja näyttää uuden MainScreen elementin
+            MySettings Settings = new MySettings();
+            Settings.Checksettings();
+            Settings.SaveFile();
+            
             Application.EnableVisualStyles();
-            LoginScreen _LoginScreen = new LoginScreen();
-           
 
-             Application.Run(_LoginScreen);
+            //Creating all screens
+            LoginScreen _Loginscreen = new LoginScreen();
+            MainScreen _Mainscreen = new MainScreen();
+            ForgotPasswordScreen _fpscreen = new ForgotPasswordScreen();
+            NewItemScreen _newitemscreen = new NewItemScreen();
+            PreReservationScreen _prreservationscreen = new PreReservationScreen();
+            ReserationScreen _reservationscreen = new ReserationScreen();
+            ReturningScreen _returningscreen = new ReturningScreen();
+            SettingsScreen _settingscreen = new SettingsScreen();
+            
 
-            _LoginScreen.ShowDialog();
+            //show the first screen (login)
+            _Loginscreen.ShowDialog();
         }
     }
 }
