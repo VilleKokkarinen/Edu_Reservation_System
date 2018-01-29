@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Reservation_System.UI;
+using FirebirdSql.Data.Client;
+using FirebirdSql.Data.FirebirdClient;
 
 namespace Reservation_System
 {
@@ -23,10 +25,15 @@ namespace Reservation_System
                     ApplicationIntent=ReadWrite;
                     MultiSubnetFailover=False";
 
+
         public MainScreen()
         {
             InitializeComponent();
-        }
+
+            cs = @"User=SYSDBA;Password=kokkarinen;Database=37.219.31.104:D:\data\reservationsystem.fdb;DataSource=37.219.31.104;
+                Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;
+                MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;";
+         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {            
@@ -35,15 +42,15 @@ namespace Reservation_System
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(cs);
+            FbConnection connection = new FbConnection(cs);
 
-            SqlCommand cmd = new SqlCommand("Select * from USERS where U_USERNAME=@username and U_PASSWORD=@password", connection);
+            FbCommand cmd = new FbCommand("Select * from USERS where U_USERNAME=@username and U_PASSWORD=@password", connection);
             cmd.Parameters.AddWithValue("@username", txt_username.Text);
             cmd.Parameters.AddWithValue("@password", txt_password.Text);
 
             connection.Open();
 
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            FbDataAdapter adapter = new FbDataAdapter(cmd);
             DataSet ds = new DataSet();
             adapter.Fill(ds);
 
