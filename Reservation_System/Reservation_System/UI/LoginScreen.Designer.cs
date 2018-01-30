@@ -31,7 +31,9 @@
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
-            this.lbl_userinfo = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lbl_invalid_login_credentials = new System.Windows.Forms.Label();
+            this.btnforgotpassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_username
@@ -40,7 +42,6 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(256, 20);
             this.txt_username.TabIndex = 0;
-            this.txt_username.Text = "username";
             // 
             // txt_password
             // 
@@ -63,21 +64,45 @@
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click_2);
             // 
-            // lbl_userinfo
+            // checkBox1
             // 
-            this.lbl_userinfo.AutoSize = true;
-            this.lbl_userinfo.Location = new System.Drawing.Point(13, 8);
-            this.lbl_userinfo.Name = "lbl_userinfo";
-            this.lbl_userinfo.Size = new System.Drawing.Size(113, 13);
-            this.lbl_userinfo.TabIndex = 3;
-            this.lbl_userinfo.Text = "Username && Password";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(12, 78);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(100, 17);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Remember user";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // lbl_invalid_login_credentials
+            // 
+            this.lbl_invalid_login_credentials.AutoSize = true;
+            this.lbl_invalid_login_credentials.ForeColor = System.Drawing.Color.Red;
+            this.lbl_invalid_login_credentials.Location = new System.Drawing.Point(12, 10);
+            this.lbl_invalid_login_credentials.Name = "lbl_invalid_login_credentials";
+            this.lbl_invalid_login_credentials.Size = new System.Drawing.Size(123, 13);
+            this.lbl_invalid_login_credentials.TabIndex = 99;
+            this.lbl_invalid_login_credentials.Text = "Login credentials invalid!";
+            this.lbl_invalid_login_credentials.Visible = false;
+            // 
+            // btnforgotpassword
+            // 
+            this.btnforgotpassword.Location = new System.Drawing.Point(158, 119);
+            this.btnforgotpassword.Name = "btnforgotpassword";
+            this.btnforgotpassword.Size = new System.Drawing.Size(130, 23);
+            this.btnforgotpassword.TabIndex = 100;
+            this.btnforgotpassword.Text = "forgot password?";
+            this.btnforgotpassword.UseVisualStyleBackColor = true;
+            this.btnforgotpassword.Click += new System.EventHandler(this.btnforgotpassword_Click);
             // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 261);
-            this.Controls.Add(this.lbl_userinfo);
+            this.Controls.Add(this.btnforgotpassword);
+            this.Controls.Add(this.lbl_invalid_login_credentials);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_username);
@@ -93,6 +118,8 @@
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.Label lbl_userinfo;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lbl_invalid_login_credentials;
+        private System.Windows.Forms.Button btnforgotpassword;
     }
 }

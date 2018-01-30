@@ -8,21 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
+using System.Data.SqlClient;
 
 namespace Reservation_System.UI
 {
     public partial class LoginScreen : Form
     {
-        bool txt_password_enabled_checker = true;
+        bool txt_password_enabled_checker = true;      
 
-        string cs = @"Data Source=(localdb)\MSSQLLocalDB;
-                    Initial Catalog = RESERVATIONSYSTEM;
-                    Integrated Security = True;
-                    Connect Timeout = 30;
-                    Encrypt=False;
-                    TrustServerCertificate=True;
-                    ApplicationIntent=ReadWrite;
-                    MultiSubnetFailover=False";
+        string cs = "";
 
             public LoginScreen()
             {
@@ -52,19 +46,19 @@ namespace Reservation_System.UI
             int count = ds.Tables[0].Rows.Count;
             //If count is equal to 1, than show frmMain form
             if (count == 1)
-            {
-                MessageBox.Show("Login Successful!");
+            {                
                 this.Hide();
                 UserInterFace.MainScreen();
             }
             else
             {
-                MessageBox.Show("Login Failed!");
+                lbl_invalid_login_credentials.Visible = true;
             }
         }
 
         private void txt_password_Enabled(object sender, EventArgs e)
-        {           
+        {
+            lbl_invalid_login_credentials.Visible = false;
 
             if (txt_password_enabled_checker == true)
             {
@@ -73,7 +67,11 @@ namespace Reservation_System.UI
                 txt_password.Font = new Font("Microsoft Sans Serif", txt_password.Font.Size);
                 txt_password_enabled_checker = false;
             }
-            
+        }
+
+        private void btnforgotpassword_Click(object sender, EventArgs e)
+        {
+            UserInterFace.ForgotPasswordScreen();
         }
     }
 }
