@@ -14,18 +14,14 @@ namespace Reservation_System.UI
 {
     public partial class RegisterUser : Form
     {
-        string cs = @"Data Source=(localdb)\MSSQLLocalDB;
-                    Initial Catalog = RESERVATIONSYSTEM;
-                    Integrated Security = True;
-                    Connect Timeout = 30;
-                    Encrypt=False;
-                    TrustServerCertificate=True;
-                    ApplicationIntent=ReadWrite;
-                    MultiSubnetFailover=False";
+        string cs = @"User=SYSDBA;Password=kokkarinen;Database=192.168.43.227:D:\data\reservationsystem.fdb;DataSource=192.168.43.227;
+                Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;
+                MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;";
 
         public RegisterUser()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         

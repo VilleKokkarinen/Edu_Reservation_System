@@ -24,6 +24,7 @@ namespace Reservation_System
             
             //show the first screen (login)
             UserInterFace.LoginScreen();
+            
         }
     }
 }

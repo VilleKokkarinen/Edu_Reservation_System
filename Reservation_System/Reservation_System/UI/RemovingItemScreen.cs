@@ -15,6 +15,7 @@ namespace Reservation_System.UI
         public RemovingItemScreen()
         {
             InitializeComponent();
+            CenterToScreen();
         }
     }
 }

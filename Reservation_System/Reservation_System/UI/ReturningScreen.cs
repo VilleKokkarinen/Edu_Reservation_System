@@ -15,6 +15,7 @@ namespace Reservation_System.UI
         public ReturningScreen()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void ReturningScreen_Load(object sender, EventArgs e)

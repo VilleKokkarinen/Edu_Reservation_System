@@ -17,10 +17,23 @@ namespace Reservation_System.UI
         bool txt_password_enabled_checker = true;      
 
         string cs = "";
+        protected void Center()
+        {
+            Screen screen = Screen.FromControl(this);
 
-            public LoginScreen()
+            Rectangle workingArea = screen.WorkingArea;
+            this.Location = new Point()
+            {
+                X = Math.Max(workingArea.X, workingArea.X + (workingArea.Width - this.Width) / 2),
+                Y = Math.Max(workingArea.Y, workingArea.Y + (workingArea.Height - this.Height) / 2)
+            };
+        }
+
+        public LoginScreen()
             {
                 InitializeComponent();
+                       
+                Center();
 
                 cs = @"User=SYSDBA;Password=kokkarinen;Database=192.168.43.227:D:\data\reservationsystem.fdb;DataSource=192.168.43.227;
                 Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;
@@ -69,7 +82,7 @@ namespace Reservation_System.UI
             }
         }
 
-        private void btnforgotpassword_Click(object sender, EventArgs e)
+        private void lblforgotpassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UserInterFace.ForgotPasswordScreen();
         }

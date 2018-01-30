@@ -15,6 +15,7 @@ namespace Reservation_System
         public SettingsScreen()
         {
             InitializeComponent();
+            CenterToScreen();
         }
     }
 }

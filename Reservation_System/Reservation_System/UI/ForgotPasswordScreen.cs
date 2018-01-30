@@ -12,10 +12,12 @@ using System.Net.Mail;
 namespace Reservation_System.UI
 {
     public partial class ForgotPasswordScreen : Form
-    {
+    {        
+        
         public ForgotPasswordScreen()
         {
             InitializeComponent();
+            CenterToScreen();             
         }
 
         private void button1_Click(object sender, EventArgs e)
