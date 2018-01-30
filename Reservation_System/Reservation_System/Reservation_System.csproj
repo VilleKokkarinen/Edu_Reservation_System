@@ -158,6 +158,8 @@
     <Compile Include="UI\SettingsScreen.Designer.cs">
       <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UI.cs" />
+    <Compile Include="UI\UiWindows.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

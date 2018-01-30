@@ -13,7 +13,9 @@ namespace Reservation_System.UI
 {
     public partial class LoginScreen : Form
     {
-            string cs = @"Data Source=(localdb)\MSSQLLocalDB;
+        bool txt_password_enabled_checker = true;
+
+        string cs = @"Data Source=(localdb)\MSSQLLocalDB;
                     Initial Catalog = RESERVATIONSYSTEM;
                     Integrated Security = True;
                     Connect Timeout = 30;
@@ -26,7 +28,7 @@ namespace Reservation_System.UI
             {
                 InitializeComponent();
 
-                cs = @"User=SYSDBA;Password=kokkarinen;Database=224.0.0.22:D:\data\reservationsystem.fdb;DataSource=224.0.0.22;
+                cs = @"User=SYSDBA;Password=kokkarinen;Database=192.168.43.227:D:\data\reservationsystem.fdb;DataSource=192.168.43.227;
                 Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;
                 MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;";
             }        
@@ -53,14 +55,25 @@ namespace Reservation_System.UI
             {
                 MessageBox.Show("Login Successful!");
                 this.Hide();
-                SettingsScreen SS = new SettingsScreen();
-                SS.Show();
+                UserInterFace.MainScreen();
             }
             else
             {
                 MessageBox.Show("Login Failed!");
-
             }
+        }
+
+        private void txt_password_Enabled(object sender, EventArgs e)
+        {           
+
+            if (txt_password_enabled_checker == true)
+            {
+                txt_password.Text = "";
+                txt_password.PasswordChar = '*';
+                txt_password.Font = new Font("Microsoft Sans Serif", txt_password.Font.Size);
+                txt_password_enabled_checker = false;
+            }
+            
         }
     }
 }
