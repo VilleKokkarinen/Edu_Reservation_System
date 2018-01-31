@@ -74,6 +74,7 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -87,6 +88,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Access\AccessreservationsystemDataSet.Designer.cs">
@@ -96,6 +98,7 @@
     </Compile>
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\MySettings.cs" />
+    <Compile Include="SQL.cs" />
     <Compile Include="UI\ForgotPasswordScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +168,7 @@
     </Compile>
     <Compile Include="UI\UI.cs" />
     <Compile Include="UI\UiWindows.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Access\AccessreservationsystemDataSet.xsc">
@@ -191,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NewItemScreen.resx">
       <DependentUpon>NewItemScreen.cs</DependentUpon>

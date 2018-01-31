@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Reservation_System.UI;
 using System;
 using System.Web.Script.Serialization;
 
@@ -31,12 +32,12 @@ namespace Reservation_System
         }
 
         public void Checksettings()
-        {
+        {           
             string Errormessage = "";
 
             if (MySettings.LoadFile().English != true && MySettings.LoadFile().English != false)
                 Errormessage += ("Exception: You can't leave the language setting empty\n\n");
-                     
+                
             if (Errormessage != "")
             {
                 Console.ForegroundColor = ConsoleColor.Green;

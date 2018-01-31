@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Reservation_System.UI
 {
     class UiWindows
-    { 
+    {
+        public RegisterUser _RegisterUserScreen = new RegisterUser();
         public LoginScreen _Loginscreen = new LoginScreen();        
         public MainScreen _Mainscreen = new MainScreen();
         public ForgotPasswordScreen _fpscreen = new ForgotPasswordScreen();

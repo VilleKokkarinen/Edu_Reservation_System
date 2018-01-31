@@ -12,7 +12,6 @@ namespace Reservation_System.UI
     {
         private static UiWindows UI = new UiWindows();
        
-
         public static void LoginScreen()
         {
             UI._Loginscreen.ShowDialog();            
@@ -27,5 +26,12 @@ namespace Reservation_System.UI
         {
             UI._fpscreen.ShowDialog();
         }
+
+        public static void RegisterUserScreen()
+        {
+            UI._RegisterUserScreen.ShowDialog();
+        }
+
+
     }
 }

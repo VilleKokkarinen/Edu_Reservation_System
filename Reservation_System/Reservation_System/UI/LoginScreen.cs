@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
 using System.Data.SqlClient;
+using System.Windows.Input;
 
 namespace Reservation_System.UI
 {
@@ -31,36 +32,54 @@ namespace Reservation_System.UI
         public LoginScreen()
             {
                 InitializeComponent();                       
-                Center();               
+                Center();
+                        
+                if(Program.Settings.RememberUserName == true)
+                {
+                    chkbox_remember_user.Checked = true;
+                    txt_username.Text = Program.Settings.Username;
+                txt_password.Select();
+
+                }             
             }        
 
         private void login()
         {
-            SQL sql = new SQL();
-
-            FbConnection connection = sql.FBconnection();
-
-            FbCommand cmd = sql.userlogin(txt_username.Text, txt_password.Text, connection);
-
-            connection.Open();
-
-            FbDataAdapter adapter = new FbDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-
-            connection.Close();
-
-            int count = ds.Tables[0].Rows.Count;
-            //If count is equal to 1, than show frmMain form
-            if (count == 1)
+            Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            try
             {
-                this.Hide();
-                UserInterFace.MainScreen();
+                SQL sql = new SQL();
+                FbConnection connection = sql.FBconnection();
+                FbCommand cmd = sql.userlogin(txt_username.Text, txt_password.Text, connection);
+
+                connection.Open();
+
+                FbDataAdapter adapter = new FbDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+
+                connection.Close();
+
+                int count = ds.Tables[0].Rows.Count;
+                //If count is equal to 1, than show frmMain form
+                if (count == 1)
+                {
+                    Program.User = new User(txt_username.Text);
+                    this.Hide();
+                    UserInterFace.MainScreen();
+                }
+                else
+                {
+                    lbl_invalid_login_credentials.Visible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lbl_invalid_login_credentials.Visible = true;
+                //do something with the error code ex
             }
+            
+
+            Cursor = System.Windows.Forms.Cursors.Default;
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -84,6 +103,32 @@ namespace Reservation_System.UI
         private void lblforgotpassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UserInterFace.ForgotPasswordScreen();
+        }
+
+        private void txt_password_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.Enter))
+            {
+                btn_login.PerformClick();
+            } 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.Settings.RememberUserName = chkbox_remember_user.Checked;
+            
+
+            if(Program.Settings.RememberUserName == true && txt_username.Text != "")
+            {
+                Program.Settings.Username = txt_username.Text;
+            }
+
+            Program.Settings.SaveFile();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserInterFace.RegisterUserScreen();
         }
     }
 }
