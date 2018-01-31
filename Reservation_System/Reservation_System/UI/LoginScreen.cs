@@ -15,8 +15,7 @@ namespace Reservation_System.UI
     public partial class LoginScreen : Form
     {
         bool txt_password_enabled_checker = true;      
-
-        string cs = "";
+               
         protected void Center()
         {
             Screen screen = Screen.FromControl(this);
@@ -31,22 +30,17 @@ namespace Reservation_System.UI
 
         public LoginScreen()
             {
-                InitializeComponent();
-                       
-                Center();
-
-                cs = @"User=SYSDBA;Password=kokkarinen;Database=192.168.43.227:D:\data\reservationsystem.fdb;DataSource=192.168.43.227;
-                Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;
-                MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;";
+                InitializeComponent();                       
+                Center();               
             }        
 
-        private void btn_login_Click_2(object sender, EventArgs e)
+        private void login()
         {
-            FbConnection connection = new FbConnection(cs);
+            SQL sql = new SQL();
 
-            FbCommand cmd = new FbCommand("Select * from USERS where U_USERNAME=@username and U_PASSWORD=@password", connection);
-            cmd.Parameters.AddWithValue("@username", txt_username.Text);
-            cmd.Parameters.AddWithValue("@password", txt_password.Text);
+            FbConnection connection = sql.FBconnection();
+
+            FbCommand cmd = sql.userlogin(txt_username.Text, txt_password.Text, connection);
 
             connection.Open();
 
@@ -59,7 +53,7 @@ namespace Reservation_System.UI
             int count = ds.Tables[0].Rows.Count;
             //If count is equal to 1, than show frmMain form
             if (count == 1)
-            {                
+            {
                 this.Hide();
                 UserInterFace.MainScreen();
             }
@@ -67,6 +61,11 @@ namespace Reservation_System.UI
             {
                 lbl_invalid_login_credentials.Visible = true;
             }
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            login();
         }
 
         private void txt_password_Enabled(object sender, EventArgs e)
