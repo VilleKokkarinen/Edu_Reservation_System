@@ -47,7 +47,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(12, 65);
+            this.button12.Location = new System.Drawing.Point(12, 41);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(171, 23);
             this.button12.TabIndex = 35;
@@ -58,9 +58,9 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(56, 117);
+            this.groupBox1.Location = new System.Drawing.Point(12, 178);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(90, 95);
+            this.groupBox1.Size = new System.Drawing.Size(90, 71);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Language";
@@ -68,6 +68,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(6, 42);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(59, 17);
@@ -83,7 +84,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(58, 17);
             this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Finnish";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 

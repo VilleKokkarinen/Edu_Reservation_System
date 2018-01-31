@@ -11,7 +11,7 @@ namespace Reservation_System.UI
         public RegisterUser _RegisterUserScreen = new RegisterUser();
         public LoginScreen _Loginscreen = new LoginScreen();        
         public MainScreen _Mainscreen = new MainScreen();
-        public ForgotPasswordScreen _fpscreen = new ForgotPasswordScreen();
+        public ForgotPasswordScreen _forgotpasswordscreen = new ForgotPasswordScreen();
         public NewItemScreen _newitemscreen = new NewItemScreen();
         public PreReservationScreen _prreservationscreen = new PreReservationScreen();
         public ReserationScreen _reservationscreen = new ReserationScreen();
@@ -22,6 +22,8 @@ namespace Reservation_System.UI
         public void parentise()
         {
             _Mainscreen.Parent = _Loginscreen;
+            _forgotpasswordscreen.Parent = _Loginscreen;
+            _settingscreen.Parent = _Mainscreen;
         }
     }
 }

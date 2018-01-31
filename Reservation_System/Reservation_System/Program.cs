@@ -13,6 +13,7 @@ namespace Reservation_System
 {   
     class Program
     {
+        public static SQL sql = new SQL();
         public static MySettings Settings = MySettings.LoadFile();
         public static User User;
 

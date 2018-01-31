@@ -24,7 +24,7 @@ namespace Reservation_System.UI
 
         public static void ForgotPasswordScreen()
         {
-            UI._fpscreen.ShowDialog();
+            UI._forgotpasswordscreen.ShowDialog();
         }
 
         public static void RegisterUserScreen()

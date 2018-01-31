@@ -15,6 +15,29 @@ namespace Reservation_System.UI
 {
     public partial class LoginScreen : Form
     {
+        void language()
+        {
+            if(Program.Settings.English == true)
+            {
+                lbl_invalid_login_credentials.Text = "Login - credentials invalid!";
+                lblforgotpassword.Text = "Forgot password?";
+                txt_password.Text = "password";
+                chkbox_remember_user.Text = "Remember user";
+                btn_login.Text = "Login";
+                btn_registeruser.Text = "Register new user";
+            }
+            else
+            {
+                lbl_invalid_login_credentials.Text = "Sisäänkirjautumistiedot väärin!";
+                lblforgotpassword.Text = "Unohditko salasanan?";
+                txt_password.Text = "salasana";
+                chkbox_remember_user.Text = "Muista käyttäjä";
+                btn_login.Text = "Kirjaudu";
+                btn_registeruser.Text = "Rekisteröi uusi käyttäjä";
+                this.Text = "Sisäänkirjautuminen";
+            }
+        }
+
         bool txt_password_enabled_checker = true;      
                
         protected void Center()
@@ -33,7 +56,8 @@ namespace Reservation_System.UI
             {
                 InitializeComponent();                       
                 Center();
-                        
+                language();
+
                 if(Program.Settings.RememberUserName == true)
                 {
                     chkbox_remember_user.Checked = true;
@@ -48,9 +72,9 @@ namespace Reservation_System.UI
             Cursor = System.Windows.Forms.Cursors.WaitCursor;
             try
             {
-                SQL sql = new SQL();
-                FbConnection connection = sql.FBconnection();
-                FbCommand cmd = sql.userlogin(txt_username.Text, txt_password.Text, connection);
+                
+                FbConnection connection = Program.sql.FBconnection();
+                FbCommand cmd = Program.sql.userlogin(txt_username.Text, txt_password.Text, connection);
 
                 connection.Open();
 
@@ -129,6 +153,11 @@ namespace Reservation_System.UI
         private void button1_Click(object sender, EventArgs e)
         {
             UserInterFace.RegisterUserScreen();
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

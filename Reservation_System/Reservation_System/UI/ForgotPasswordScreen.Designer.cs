@@ -29,32 +29,77 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(214, 95);
+            this.button1.Location = new System.Drawing.Point(12, 64);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.Size = new System.Drawing.Size(368, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Recover password";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Location = new System.Drawing.Point(9, 9);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(57, 13);
+            this.lbl_username.TabIndex = 8;
+            this.lbl_username.Text = "UserName";
+            // 
+            // txt_username
+            // 
+            this.txt_username.Location = new System.Drawing.Point(12, 27);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(119, 20);
+            this.txt_username.TabIndex = 7;
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(136, 9);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(32, 13);
+            this.lbl_email.TabIndex = 13;
+            this.lbl_email.Text = "Email";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(139, 27);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(241, 20);
+            this.txt_email.TabIndex = 12;
+            // 
             // ForgotPasswordScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 261);
+            this.ClientSize = new System.Drawing.Size(394, 114);
+            this.Controls.Add(this.lbl_email);
+            this.Controls.Add(this.txt_email);
+            this.Controls.Add(this.lbl_username);
+            this.Controls.Add(this.txt_username);
             this.Controls.Add(this.button1);
             this.Name = "ForgotPasswordScreen";
             this.Text = "ForgotPasswordScreen";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.TextBox txt_username;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.TextBox txt_email;
     }
 }

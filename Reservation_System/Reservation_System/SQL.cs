@@ -29,12 +29,28 @@ namespace Reservation_System
 
         public FbCommand userlogin(string user, string password, FbConnection connection)
         {
-            FbCommand cmd = new FbCommand("Select * from USERS where U_USERNAME=@username and U_PASSWORD=@password", connection);
-            cmd.Parameters.AddWithValue("@username", user);
+            FbCommand cmd = new FbCommand("Select * from USERS where U_USERNAME=@user and U_PASSWORD=@password", connection);
+            cmd.Parameters.AddWithValue("@user", user);
             cmd.Parameters.AddWithValue("@password", password);
 
             return cmd;
         }
 
+        public FbCommand forgotpassword (string user, string email, FbConnection connection)
+        {
+            FbCommand cmd = new FbCommand("Select * from USERS where U_USERNAME=@user and U_EMAIL=@email", connection);
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.Parameters.AddWithValue("@email", email);
+
+            return cmd;
+        }
+        public FbCommand changepassword (string user, string newpassword, FbConnection connection)
+        {
+            FbCommand cmd = new FbCommand("UPDATE USERS SET U_PASSWORD =@newpassword where U_USERNAME=@user", connection);
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.Parameters.AddWithValue("@newpassword", newpassword);
+
+            return cmd;
+        }
     }
 }

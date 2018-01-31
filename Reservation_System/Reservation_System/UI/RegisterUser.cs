@@ -13,17 +13,34 @@ using FirebirdSql.Data.FirebirdClient;
 namespace Reservation_System.UI
 {
     public partial class RegisterUser : Form
-    {
-        string cs = @"User=SYSDBA;Password=kokkarinen;Database=192.168.43.227:D:\data\reservationsystem.fdb;DataSource=192.168.43.227;
-                Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;
-                MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;";
-
+    {        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_username.Text = "Username";
+                lbl_password.Text = "Password";                
+                lbl_firstname.Text = "First name";
+                lbl_lastname.Text = "Last name";
+                lbl_email.Text = "Email-address";
+                Text = "Registration";
+            }
+            else
+            {
+                lbl_username.Text = "Käyttäjänimi";
+                lbl_password.Text = "Salasana";
+                lbl_firstname.Text = "Etunimi";
+                lbl_lastname.Text = "Sukunimi";
+                lbl_email.Text = "Sähköposti- osoite";
+                Text = "Rekisteröityminen";
+            }
+        }
+       
         public RegisterUser()
         {
             InitializeComponent();
             CenterToScreen();
+            language();
         }
-
         
 
         private void btn_register_Click(object sender, EventArgs e)
@@ -40,8 +57,9 @@ namespace Reservation_System.UI
                 MessageBox.Show("Password must be atleast 6 characters long");
             }
             else
-            { 
-                using (FbConnection connection = new FbConnection(cs))
+            {
+                
+                using (FbConnection connection = Program.sql.FBconnection())
                 {
                     //Check before doing the query, if the username is already taken
 
