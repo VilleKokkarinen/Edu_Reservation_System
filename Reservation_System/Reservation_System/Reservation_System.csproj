@@ -38,7 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -85,16 +85,23 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Access\AccessreservationsystemDataSet.Designer.cs">
+    <Compile Include="reservationsystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AccessreservationsystemDataSet.xsd</DependentUpon>
+      <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reservationsystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reservationsystemDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\MySettings.cs" />
@@ -171,22 +178,33 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Access\AccessreservationsystemDataSet.xsc">
-      <DependentUpon>AccessreservationsystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Access\AccessreservationsystemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AccessreservationsystemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Access\AccessreservationsystemDataSet.xss">
-      <DependentUpon>AccessreservationsystemDataSet.xsd</DependentUpon>
-    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reservationsystemDataSet.xsc">
+      <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="reservationsystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reservationsystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reservationsystemDataSet.xss">
+      <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="reservationsystemDataSet1.xsc">
+      <DependentUpon>reservationsystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="reservationsystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reservationsystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reservationsystemDataSet1.xss">
+      <DependentUpon>reservationsystemDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

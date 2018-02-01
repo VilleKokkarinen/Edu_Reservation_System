@@ -27,9 +27,17 @@ namespace Reservation_System
             return connection;
         }
 
-        public FbCommand userlogin(string user, string password, FbConnection connection)
+        public FbCommand FBuserlogin(string user, string password, FbConnection connection)
         {
             FbCommand cmd = new FbCommand("Select * from USERS where U_USERNAME=@user and U_PASSWORD=@password", connection);
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.Parameters.AddWithValue("@password", password);
+
+            return cmd;
+        }
+        public OleDbCommand Accesslogin(string user, string password, OleDbConnection connection)
+        {
+            OleDbCommand cmd = new OleDbCommand("Select * from USERS where U_USERNAME=@user and U_PASSWORD=@password", connection);
             cmd.Parameters.AddWithValue("@user", user);
             cmd.Parameters.AddWithValue("@password", password);
 

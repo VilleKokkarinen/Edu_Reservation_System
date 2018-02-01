@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
@@ -35,6 +36,13 @@
             this.lbl_invalid_login_credentials = new System.Windows.Forms.Label();
             this.lblforgotpassword = new System.Windows.Forms.LinkLabel();
             this.btn_registeruser = new System.Windows.Forms.Button();
+            this.reservationsystemDataSet = new Reservation_System.reservationsystemDataSet();
+            this.reservationsystemDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERSTableAdapter = new Reservation_System.reservationsystemDataSetTableAdapters.USERSTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_username
@@ -110,11 +118,30 @@
             this.btn_registeruser.UseVisualStyleBackColor = true;
             this.btn_registeruser.Click += new System.EventHandler(this.button1_Click);
             // 
+            // reservationsystemDataSet
+            // 
+            this.reservationsystemDataSet.DataSetName = "reservationsystemDataSet";
+            this.reservationsystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reservationsystemDataSetBindingSource
+            // 
+            this.reservationsystemDataSetBindingSource.DataSource = this.reservationsystemDataSet;
+            this.reservationsystemDataSetBindingSource.Position = 0;
+            // 
+            // uSERSBindingSource
+            // 
+            this.uSERSBindingSource.DataMember = "USERS";
+            this.uSERSBindingSource.DataSource = this.reservationsystemDataSetBindingSource;
+            // 
+            // uSERSTableAdapter
+            // 
+            this.uSERSTableAdapter.ClearBeforeFill = true;
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 115);
+            this.ClientSize = new System.Drawing.Size(282, 127);
             this.Controls.Add(this.btn_registeruser);
             this.Controls.Add(this.lblforgotpassword);
             this.Controls.Add(this.lbl_invalid_login_credentials);
@@ -125,6 +152,9 @@
             this.Name = "LoginScreen";
             this.Text = "LoginScreen";
             this.Load += new System.EventHandler(this.LoginScreen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +169,9 @@
         private System.Windows.Forms.Label lbl_invalid_login_credentials;
         private System.Windows.Forms.LinkLabel lblforgotpassword;
         private System.Windows.Forms.Button btn_registeruser;
+        private System.Windows.Forms.BindingSource reservationsystemDataSetBindingSource;
+        private reservationsystemDataSet reservationsystemDataSet;
+        private System.Windows.Forms.BindingSource uSERSBindingSource;
+        private reservationsystemDataSetTableAdapters.USERSTableAdapter uSERSTableAdapter;
     }
 }
