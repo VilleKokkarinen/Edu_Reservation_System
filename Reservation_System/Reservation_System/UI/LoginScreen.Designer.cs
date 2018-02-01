@@ -35,14 +35,7 @@
             this.chkbox_remember_user = new System.Windows.Forms.CheckBox();
             this.lbl_invalid_login_credentials = new System.Windows.Forms.Label();
             this.lblforgotpassword = new System.Windows.Forms.LinkLabel();
-            this.btn_registeruser = new System.Windows.Forms.Button();
-            this.reservationsystemDataSet = new Reservation_System.reservationsystemDataSet();
-            this.reservationsystemDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSERSTableAdapter = new Reservation_System.reservationsystemDataSetTableAdapters.USERSTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERSBindingSource)).BeginInit();
+            this.btn_registeruser = new System.Windows.Forms.Button();          
             this.SuspendLayout();
             // 
             // txt_username
@@ -117,25 +110,7 @@
             this.btn_registeruser.Text = "Register new user";
             this.btn_registeruser.UseVisualStyleBackColor = true;
             this.btn_registeruser.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // reservationsystemDataSet
-            // 
-            this.reservationsystemDataSet.DataSetName = "reservationsystemDataSet";
-            this.reservationsystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reservationsystemDataSetBindingSource
-            // 
-            this.reservationsystemDataSetBindingSource.DataSource = this.reservationsystemDataSet;
-            this.reservationsystemDataSetBindingSource.Position = 0;
-            // 
-            // uSERSBindingSource
-            // 
-            this.uSERSBindingSource.DataMember = "USERS";
-            this.uSERSBindingSource.DataSource = this.reservationsystemDataSetBindingSource;
-            // 
-            // uSERSTableAdapter
-            // 
-            this.uSERSTableAdapter.ClearBeforeFill = true;
+           
             // 
             // LoginScreen
             // 
@@ -151,10 +126,7 @@
             this.Controls.Add(this.txt_username);
             this.Name = "LoginScreen";
             this.Text = "LoginScreen";
-            this.Load += new System.EventHandler(this.LoginScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsystemDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERSBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.LoginScreen_Load);           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,10 +140,6 @@
         private System.Windows.Forms.CheckBox chkbox_remember_user;
         private System.Windows.Forms.Label lbl_invalid_login_credentials;
         private System.Windows.Forms.LinkLabel lblforgotpassword;
-        private System.Windows.Forms.Button btn_registeruser;
-        private System.Windows.Forms.BindingSource reservationsystemDataSetBindingSource;
-        private reservationsystemDataSet reservationsystemDataSet;
-        private System.Windows.Forms.BindingSource uSERSBindingSource;
-        private reservationsystemDataSetTableAdapters.USERSTableAdapter uSERSTableAdapter;
+        private System.Windows.Forms.Button btn_registeruser;       
     }
 }

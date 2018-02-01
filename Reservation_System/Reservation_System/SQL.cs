@@ -10,7 +10,7 @@ namespace Reservation_System
 {
     class SQL
     {
-        string access = @"Provider=Microsoft.ACE.OLEDB.12.0;DataSource=|DataDirectory|\Access\reservationsystem.accdb";
+        string access = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Access\reservationsystem.mdb";
         string Firebird = @"User=SYSDBA;Password=kokkarinen;Database=192.168.43.227:D:\data\reservationsystem.fdb;DataSource=192.168.43.227;
                 Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;";
 

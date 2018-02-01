@@ -4500,7 +4500,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4821,7 +4821,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5178,7 +5178,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5546,7 +5546,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5858,7 +5858,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6170,7 +6170,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6482,7 +6482,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6821,7 +6821,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7280,7 +7280,7 @@ namespace Reservation_System.reservationsystemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.AccessreservationsystemConnectionString;
+            this._connection.ConnectionString = global::Reservation_System.Properties.Settings.Default.reservationsystemConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

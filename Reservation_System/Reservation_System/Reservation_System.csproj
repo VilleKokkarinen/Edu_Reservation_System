@@ -98,11 +98,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="reservationsystemDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>reservationsystemDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\MySettings.cs" />
     <Compile Include="SQL.cs" />
@@ -195,17 +190,6 @@
     <None Include="reservationsystemDataSet.xss">
       <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
     </None>
-    <None Include="reservationsystemDataSet1.xsc">
-      <DependentUpon>reservationsystemDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="reservationsystemDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>reservationsystemDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="reservationsystemDataSet1.xss">
-      <DependentUpon>reservationsystemDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UI\ForgotPasswordScreen.resx">
@@ -279,7 +263,7 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Access\reservationsystem.accdb">
+    <Content Include="Access\reservationsystem.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
