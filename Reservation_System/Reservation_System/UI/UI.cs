@@ -32,6 +32,29 @@ namespace Reservation_System.UI
             UI._RegisterUserScreen.ShowDialog();
         }
 
+        public static void SettingsScreen()
+        {
+            UI._settingscreen.ShowDialog();
+        }
 
+        public static void ReservationScreen()
+        {
+            UI._reservationscreen.ShowDialog();
+        }
+
+        public static void PreReservationScreen()
+        {
+            UI._prreservationscreen.ShowDialog();
+        }
+
+        public static void NewItemScreen()
+        {
+            UI._newitemscreen.ShowDialog();
+        }
+
+        public static void ReturningScreen()
+        {
+            UI._returningscreen.ShowDialog();
+        }
     }
 }

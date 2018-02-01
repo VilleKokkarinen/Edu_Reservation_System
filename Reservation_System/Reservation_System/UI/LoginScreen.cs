@@ -98,7 +98,7 @@ namespace Reservation_System.UI
                     lbl_invalid_login_credentials.Visible = true;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 //do something with the error code ex
             }
@@ -136,7 +136,7 @@ namespace Reservation_System.UI
                     lbl_invalid_login_credentials.Visible = true;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 ACCESSlogin();
             }
@@ -149,11 +149,10 @@ namespace Reservation_System.UI
         {
             try
             {
-                ACCESSlogin();
-               // FBlogin();
-            }catch (Exception)
+                ACCESSlogin();                
+            }catch
             {
-               
+                FBlogin();
             }
         }
 

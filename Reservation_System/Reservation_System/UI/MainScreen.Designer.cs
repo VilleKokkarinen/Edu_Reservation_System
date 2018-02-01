@@ -47,6 +47,7 @@
             this.btn_reserve.TabIndex = 0;
             this.btn_reserve.Text = "Reservation";
             this.btn_reserve.UseVisualStyleBackColor = true;
+            this.btn_reserve.Click += new System.EventHandler(this.btn_reserve_Click);
             // 
             // btn_settings
             // 
@@ -56,6 +57,7 @@
             this.btn_settings.TabIndex = 1;
             this.btn_settings.Text = "Settings";
             this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // lbl_welcome
             // 
@@ -74,6 +76,7 @@
             this.btn_accountmngr.TabIndex = 3;
             this.btn_accountmngr.Text = "Account Management";
             this.btn_accountmngr.UseVisualStyleBackColor = true;
+            this.btn_accountmngr.Click += new System.EventHandler(this.btn_accountmngr_Click);
             // 
             // lbl_username
             // 
@@ -93,6 +96,7 @@
             this.btn_return.TabIndex = 5;
             this.btn_return.Text = "Return loan(s)";
             this.btn_return.UseVisualStyleBackColor = true;
+            this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
             // btn_Loan
             // 

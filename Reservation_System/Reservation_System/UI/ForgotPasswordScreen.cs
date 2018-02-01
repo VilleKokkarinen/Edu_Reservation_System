@@ -28,7 +28,7 @@ namespace Reservation_System.UI
             try
             {
                 FbConnection connection = Program.sql.FBconnection();
-                FbCommand cmd = Program.sql.forgotpassword(txt_username.Text, txt_email.Text, connection);
+                FbCommand cmd = Program.sql.FBforgotpassword(txt_username.Text, txt_email.Text, connection);
 
                 connection.Open();
 
@@ -54,7 +54,7 @@ namespace Reservation_System.UI
                     MessageBox.Show("No user found with provided information");
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 //do something with the error code ex
             }
@@ -68,7 +68,7 @@ namespace Reservation_System.UI
             
             using (FbConnection connection = Program.sql.FBconnection())
             {
-                using (FbCommand cmdnewpw = Program.sql.changepassword(txt_username.Text, newpassword, connection))
+                using (FbCommand cmdnewpw = Program.sql.FBchangepassword(txt_username.Text, newpassword, connection))
                 {
                     connection.Open();
 

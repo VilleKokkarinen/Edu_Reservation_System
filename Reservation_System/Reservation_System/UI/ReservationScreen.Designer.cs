@@ -28,113 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button9 = new System.Windows.Forms.Button();
+            this.btn_showitemdetails = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.dtpReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.lbl_availableitems = new System.Windows.Forms.Label();
+            this.lbl_searchitems = new System.Windows.Forms.Label();
+            this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.btn_loan = new System.Windows.Forms.Button();
+            this.chckboxlist_Items = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
-            // button9
+            // btn_showitemdetails
             // 
-            this.button9.Location = new System.Drawing.Point(181, 251);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(106, 43);
-            this.button9.TabIndex = 40;
-            this.button9.Text = "Näytä valitun tavaran tiedot";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_showitemdetails.Location = new System.Drawing.Point(310, 250);
+            this.btn_showitemdetails.Name = "btn_showitemdetails";
+            this.btn_showitemdetails.Size = new System.Drawing.Size(106, 43);
+            this.btn_showitemdetails.TabIndex = 40;
+            this.btn_showitemdetails.Text = "Näytä valitun tavaran tiedot";
+            this.btn_showitemdetails.UseVisualStyleBackColor = true;
+            this.btn_showitemdetails.Click += new System.EventHandler(this.btn_showitemdetails_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 310);
+            this.label10.Location = new System.Drawing.Point(150, 308);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 39;
             this.label10.Text = "Palautuspäivä";
             // 
-            // dateTimePicker1
+            // dtpReturnDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(24, 326);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 38;
+            this.dtpReturnDate.Location = new System.Drawing.Point(153, 325);
+            this.dtpReturnDate.Name = "dtpReturnDate";
+            this.dtpReturnDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpReturnDate.TabIndex = 38;
             // 
-            // label6
+            // lbl_availableitems
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 13);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Saatavilla olevat tuotteet";
+            this.lbl_availableitems.AutoSize = true;
+            this.lbl_availableitems.Location = new System.Drawing.Point(24, 18);
+            this.lbl_availableitems.Name = "lbl_availableitems";
+            this.lbl_availableitems.Size = new System.Drawing.Size(124, 13);
+            this.lbl_availableitems.TabIndex = 37;
+            this.lbl_availableitems.Text = "Saatavilla olevat tuotteet";
             // 
-            // button6
+            // lbl_searchitems
             // 
-            this.button6.Location = new System.Drawing.Point(184, 97);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 36;
-            this.button6.Text = "Hae";
-            this.button6.UseVisualStyleBackColor = true;
+            this.lbl_searchitems.AutoSize = true;
+            this.lbl_searchitems.Location = new System.Drawing.Point(313, 53);
+            this.lbl_searchitems.Name = "lbl_searchitems";
+            this.lbl_searchitems.Size = new System.Drawing.Size(71, 13);
+            this.lbl_searchitems.TabIndex = 35;
+            this.lbl_searchitems.Text = "Hae tavaroita";
             // 
-            // label3
+            // txtSearchBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(184, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Hae tavaroita";
+            this.txtSearchBox.Location = new System.Drawing.Point(313, 70);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.Size = new System.Drawing.Size(140, 20);
+            this.txtSearchBox.TabIndex = 34;
             // 
-            // textBox1
+            // btn_loan
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 34;
+            this.btn_loan.Location = new System.Drawing.Point(27, 368);
+            this.btn_loan.Name = "btn_loan";
+            this.btn_loan.Size = new System.Drawing.Size(148, 23);
+            this.btn_loan.TabIndex = 33;
+            this.btn_loan.Text = "Lainaa";
+            this.btn_loan.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // chckboxlist_Items
             // 
-            this.button5.Location = new System.Drawing.Point(27, 368);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 23);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Lainaa";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.HorizontalScrollbar = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "[Tavara] [tyyppi X]",
-            "[Laite] [tyyppi Y]"});
-            this.checkedListBox1.Location = new System.Drawing.Point(24, 35);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(151, 259);
-            this.checkedListBox1.TabIndex = 32;
+            this.chckboxlist_Items.FormattingEnabled = true;
+            this.chckboxlist_Items.HorizontalScrollbar = true;
+            this.chckboxlist_Items.Location = new System.Drawing.Point(24, 35);
+            this.chckboxlist_Items.Name = "chckboxlist_Items";
+            this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
+            this.chckboxlist_Items.TabIndex = 32;
             // 
             // ReserationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 450);
-            this.Controls.Add(this.button9);
+            this.ClientSize = new System.Drawing.Size(639, 450);
+            this.Controls.Add(this.btn_showitemdetails);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.dtpReturnDate);
+            this.Controls.Add(this.lbl_availableitems);
+            this.Controls.Add(this.lbl_searchitems);
+            this.Controls.Add(this.txtSearchBox);
+            this.Controls.Add(this.btn_loan);
+            this.Controls.Add(this.chckboxlist_Items);
             this.Name = "ReserationScreen";
             this.Text = "ReserationScreen";
+            this.Load += new System.EventHandler(this.ReserationScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,14 +130,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_showitemdetails;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.DateTimePicker dtpReturnDate;
+        private System.Windows.Forms.Label lbl_availableitems;
+        private System.Windows.Forms.Label lbl_searchitems;
+        private System.Windows.Forms.TextBox txtSearchBox;
+        private System.Windows.Forms.Button btn_loan;
+        private System.Windows.Forms.CheckedListBox chckboxlist_Items;
     }
 }
