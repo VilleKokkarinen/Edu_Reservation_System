@@ -17,7 +17,7 @@ namespace Reservation_System.UI
         public ReserationScreen _reservationscreen = new ReserationScreen();
         public ReturningScreen _returningscreen = new ReturningScreen();
         public SettingsScreen _settingscreen = new SettingsScreen();
-
+        public AccountManagement _accounmanagementscreen = new AccountManagement();
 
         public void parentise()
         {

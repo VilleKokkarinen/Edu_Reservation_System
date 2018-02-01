@@ -40,7 +40,7 @@ namespace Reservation_System.UI
 
         private void btn_accountmngr_Click(object sender, EventArgs e)
         {
-
+            UserInterFace.AccountManagementScreen();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)

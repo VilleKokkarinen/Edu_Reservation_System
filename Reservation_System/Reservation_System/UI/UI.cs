@@ -56,5 +56,10 @@ namespace Reservation_System.UI
         {
             UI._returningscreen.ShowDialog();
         }
+        public static void AccountManagementScreen()
+        {
+            UI._accounmanagementscreen.ShowDialog();
+        }
+
     }
 }
