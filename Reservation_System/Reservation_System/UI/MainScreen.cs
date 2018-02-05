@@ -20,7 +20,7 @@ namespace Reservation_System.UI
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            lbl_username.Text = Program.User.username();
+            lbl_username.Text = User.User._username;
         }
 
         private void btn_Loan_Click(object sender, EventArgs e)

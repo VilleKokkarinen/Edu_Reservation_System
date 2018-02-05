@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FirebirdSql.Data.FirebirdClient;
 using System.Data.SqlClient;
 using System.Windows.Input;
 using System.Data.OleDb;
@@ -90,7 +89,7 @@ namespace Reservation_System.UI
                 //If count is equal to 1, than show frmMain form
                 if (count == 1)
                 {
-                    Program.User = new User(txt_username.Text);
+                    Program.user = User.User.CreateUser(txt_username.Text);
                     this.Hide();
                     UserInterFace.MainScreen();
                 }
@@ -107,53 +106,14 @@ namespace Reservation_System.UI
             Cursor = System.Windows.Forms.Cursors.Default;
         }
 
-
-        private void FBlogin()
-        {
-            Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            try
-            {                
-                FbConnection connection = Program.sql.FBconnection();
-                FbCommand cmd = Program.sql.FBuserlogin(txt_username.Text, txt_password.Text, connection);
-
-                connection.Open();
-
-                FbDataAdapter adapter = new FbDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-
-                connection.Close();
-
-                int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
-                {
-                    Program.User = new User(txt_username.Text);
-                    this.Hide();
-                    UserInterFace.MainScreen();
-                }
-                else
-                {
-                    lbl_invalid_login_credentials.Visible = true;
-                }
-            }
-            catch
-            {
-                ACCESSlogin();
-            }
-            
-
-            Cursor = System.Windows.Forms.Cursors.Default;
-        }
-
-
+        
         private void SQLlogin()
         {
             Cursor = System.Windows.Forms.Cursors.WaitCursor;
             try
             {
-                MySqlConnection connection = Program.sql.SQLconnection();
-                MySqlCommand cmd = Program.sql.SQLuserlogin(txt_username.Text, txt_password.Text, connection);
+                MySqlConnection connection = Program.sql.MySqlConnection();
+                MySqlCommand cmd = Program.sql.MySqlLogin(txt_username.Text, txt_password.Text, connection);
 
                 connection.Open();
 
@@ -167,7 +127,7 @@ namespace Reservation_System.UI
                 //If count is equal to 1, than show frmMain form
                 if (count == 1)
                 {
-                    Program.User = new User(txt_username.Text);
+                    Program.user = User.User.CreateUser(txt_username.Text);
                     this.Hide();
                     UserInterFace.MainScreen();
                 }

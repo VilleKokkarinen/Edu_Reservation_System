@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
-using FirebirdSql.Data.FirebirdClient;
+
+using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
 {
@@ -27,12 +28,13 @@ namespace Reservation_System.UI
             Cursor = Cursors.WaitCursor;
             try
             {
-                FbConnection connection = Program.sql.FBconnection();
-                FbCommand cmd = Program.sql.FBforgotpassword(txt_username.Text, txt_email.Text, connection);
+
+                MySqlConnection connection = Program.sql.MySqlConnection();
+                MySqlCommand cmd = Program.sql.MySqlLogin(txt_username.Text, txt_email.Text, connection);
 
                 connection.Open();
 
-                FbDataAdapter adapter = new FbDataAdapter(cmd);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
 
@@ -65,10 +67,10 @@ namespace Reservation_System.UI
 
         private void changepassword()
         {
-            
-            using (FbConnection connection = Program.sql.FBconnection())
+
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
-                using (FbCommand cmdnewpw = Program.sql.FBchangepassword(txt_username.Text, newpassword, connection))
+                using (MySqlCommand cmdnewpw = Program.sql.MySqlLogin(txt_username.Text, newpassword, connection))
                 {
                     connection.Open();
 
