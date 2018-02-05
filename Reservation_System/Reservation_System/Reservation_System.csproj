@@ -27,6 +27,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,34 +48,70 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Firebird, Version=5.12.1.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Firebird.5.12.1\lib\net452\EntityFramework.Firebird.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.0.0\lib\net45\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="reservationsystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AppSettings.cs" />
+    <Compile Include="Settings\MySettings.cs" />
+    <Compile Include="SQL.cs" />
+    <Compile Include="UI\AccountManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AccountManagement.Designer.cs">
+      <DependentUpon>AccountManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ForgotPasswordScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\ForgotPasswordScreen.Designer.cs">
       <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Login screen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Login screen.Designer.cs">
-      <DependentUpon>Login screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,11 +120,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="UI\Mainscreen.cs">
+    <Compile Include="UI\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Mainscreen.Designer.cs">
-      <DependentUpon>Mainscreen.cs</DependentUpon>
+    <Compile Include="UI\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\NewItemScreen.cs">
       <SubType>Form</SubType>
@@ -112,17 +156,11 @@
     <Compile Include="UI\RemovingItemScreen.Designer.cs">
       <DependentUpon>RemovingItemScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ReserationScreen.cs">
+    <Compile Include="UI\ReservationScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ReserationScreen.Designer.cs">
-      <DependentUpon>ReserationScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="UI\ReservationScreen.Designer.cs">
+      <DependentUpon>ReservationScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ReturningScreen.cs">
       <SubType>Form</SubType>
@@ -136,40 +174,41 @@
     <Compile Include="UI\SettingsScreen.Designer.cs">
       <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\_Reservation_systemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Reservation_systemDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="UI\UI.cs" />
+    <Compile Include="UI\UiWindows.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ACCESS\ReservationSystem.laccdb" />
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataBase\_Reservation_systemDataSet.xsc">
-      <DependentUpon>_Reservation_systemDataSet.xsd</DependentUpon>
+    <None Include="reservationsystemDataSet.xsc">
+      <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DataBase\_Reservation_systemDataSet.xsd">
+    <None Include="reservationsystemDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Reservation_systemDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>reservationsystemDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataBase\_Reservation_systemDataSet.xss">
-      <DependentUpon>_Reservation_systemDataSet.xsd</DependentUpon>
+    <None Include="reservationsystemDataSet.xss">
+      <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <EmbeddedResource Include="UI\AccountManagement.resx">
+      <DependentUpon>AccountManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Login screen.resx">
-      <DependentUpon>Login screen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ForgotPasswordScreen.resx">
+      <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Mainscreen.resx">
-      <DependentUpon>Mainscreen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NewItemScreen.resx">
       <DependentUpon>NewItemScreen.cs</DependentUpon>
@@ -183,8 +222,8 @@
     <EmbeddedResource Include="UI\RemovingItemScreen.resx">
       <DependentUpon>RemovingItemScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ReserationScreen.resx">
-      <DependentUpon>ReserationScreen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ReservationScreen.resx">
+      <DependentUpon>ReservationScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ReturningScreen.resx">
       <DependentUpon>ReturningScreen.cs</DependentUpon>
@@ -211,18 +250,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ACCESS\ReservationSystem.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DataBase\Reservation-system.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DataBase\Reservation-system_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Reservation-system.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <PublishFile Include="DataBase\Reservation-system.mdf">
       <Visible>False</Visible>
       <Group>
@@ -244,7 +271,11 @@
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Access\reservationsystem.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

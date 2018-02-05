@@ -33,5 +33,27 @@ namespace Reservation_System.Properties {
                 return ((string)(this["Reservation_systemConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Access\\reservations" +
+            "ystem.accdb")]
+        public string AccessreservationsystemConnectionString {
+            get {
+                return ((string)(this["AccessreservationsystemConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Access\\reservationsy" +
+            "stem.mdb")]
+        public string reservationsystemConnectionString {
+            get {
+                return ((string)(this["reservationsystemConnectionString"]));
+            }
+        }
     }
 }

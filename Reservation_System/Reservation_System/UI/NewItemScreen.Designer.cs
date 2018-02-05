@@ -28,95 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label17 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbl_ID = new System.Windows.Forms.Label();
+            this.btn_addtodatabase = new System.Windows.Forms.Button();
+            this.txt_ID = new System.Windows.Forms.TextBox();
+            this.lbl_type = new System.Windows.Forms.Label();
+            this.txt_type = new System.Windows.Forms.TextBox();
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.lbl_addnewitem = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label17
+            // lbl_ID
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(33, 185);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(18, 13);
-            this.label17.TabIndex = 50;
-            this.label17.Text = "ID";
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Location = new System.Drawing.Point(33, 185);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(18, 13);
+            this.lbl_ID.TabIndex = 50;
+            this.lbl_ID.Text = "ID";
             // 
-            // button13
+            // btn_addtodatabase
             // 
-            this.button13.Location = new System.Drawing.Point(32, 262);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(116, 23);
-            this.button13.TabIndex = 49;
-            this.button13.Text = "Lisää tietokantaan";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btn_addtodatabase.Location = new System.Drawing.Point(32, 262);
+            this.btn_addtodatabase.Name = "btn_addtodatabase";
+            this.btn_addtodatabase.Size = new System.Drawing.Size(116, 23);
+            this.btn_addtodatabase.TabIndex = 49;
+            this.btn_addtodatabase.Text = "Lisää tietokantaan";
+            this.btn_addtodatabase.UseVisualStyleBackColor = true;
+            this.btn_addtodatabase.Click += new System.EventHandler(this.button13_Click);
             // 
-            // textBox5
+            // txt_ID
             // 
-            this.textBox5.Location = new System.Drawing.Point(36, 204);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 48;
+            this.txt_ID.Location = new System.Drawing.Point(36, 204);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(100, 20);
+            this.txt_ID.TabIndex = 48;
             // 
-            // label16
+            // lbl_type
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(36, 125);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Tyyppi";
+            this.lbl_type.AutoSize = true;
+            this.lbl_type.Location = new System.Drawing.Point(36, 125);
+            this.lbl_type.Name = "lbl_type";
+            this.lbl_type.Size = new System.Drawing.Size(38, 13);
+            this.lbl_type.TabIndex = 47;
+            this.lbl_type.Text = "Tyyppi";
             // 
-            // textBox4
+            // txt_type
             // 
-            this.textBox4.Location = new System.Drawing.Point(36, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 46;
+            this.txt_type.Location = new System.Drawing.Point(36, 144);
+            this.txt_type.Name = "txt_type";
+            this.txt_type.Size = new System.Drawing.Size(100, 20);
+            this.txt_type.TabIndex = 46;
             // 
-            // label15
+            // lbl_name
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(36, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(27, 13);
-            this.label15.TabIndex = 45;
-            this.label15.Text = "Nimi";
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(36, 64);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(27, 13);
+            this.lbl_name.TabIndex = 45;
+            this.lbl_name.Text = "Nimi";
             // 
-            // textBox3
+            // txt_name
             // 
-            this.textBox3.Location = new System.Drawing.Point(36, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 44;
+            this.txt_name.Location = new System.Drawing.Point(36, 80);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(100, 20);
+            this.txt_name.TabIndex = 44;
             // 
-            // label14
+            // lbl_addnewitem
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(33, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 13);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Uuden tavaran lisääminen";
+            this.lbl_addnewitem.AutoSize = true;
+            this.lbl_addnewitem.Location = new System.Drawing.Point(33, 12);
+            this.lbl_addnewitem.Name = "lbl_addnewitem";
+            this.lbl_addnewitem.Size = new System.Drawing.Size(130, 13);
+            this.lbl_addnewitem.TabIndex = 43;
+            this.lbl_addnewitem.Text = "Uuden tavaran lisääminen";
             // 
             // NewItemScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 356);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lbl_ID);
+            this.Controls.Add(this.btn_addtodatabase);
+            this.Controls.Add(this.txt_ID);
+            this.Controls.Add(this.lbl_type);
+            this.Controls.Add(this.txt_type);
+            this.Controls.Add(this.lbl_name);
+            this.Controls.Add(this.txt_name);
+            this.Controls.Add(this.lbl_addnewitem);
             this.Name = "NewItemScreen";
             this.Text = "NewItemScreen";
             this.ResumeLayout(false);
@@ -126,13 +127,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_ID;
+        private System.Windows.Forms.Button btn_addtodatabase;
+        private System.Windows.Forms.TextBox txt_ID;
+        private System.Windows.Forms.Label lbl_type;
+        private System.Windows.Forms.TextBox txt_type;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.Label lbl_addnewitem;
     }
 }
