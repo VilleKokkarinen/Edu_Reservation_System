@@ -11,6 +11,7 @@ using FirebirdSql.Data.FirebirdClient;
 using System.Data.SqlClient;
 using System.Windows.Input;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
 {
@@ -145,14 +146,53 @@ namespace Reservation_System.UI
             Cursor = System.Windows.Forms.Cursors.Default;
         }
 
+
+        private void SQLlogin()
+        {
+            Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            try
+            {
+                MySqlConnection connection = Program.sql.SQLconnection();
+                MySqlCommand cmd = Program.sql.SQLuserlogin(txt_username.Text, txt_password.Text, connection);
+
+                connection.Open();
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+
+                connection.Close();
+
+                int count = ds.Tables[0].Rows.Count;
+                //If count is equal to 1, than show frmMain form
+                if (count == 1)
+                {
+                    Program.User = new User(txt_username.Text);
+                    this.Hide();
+                    UserInterFace.MainScreen();
+                }
+                else
+                {
+                    lbl_invalid_login_credentials.Visible = true;
+                }
+            }
+            catch
+            {               
+            }
+
+
+            Cursor = System.Windows.Forms.Cursors.Default;
+        }
+
         private void btn_login_Click(object sender, EventArgs e)
         {
             try
             {
-                ACCESSlogin();                
+                SQLlogin();
+               // ACCESSlogin();                
             }catch
             {
-                FBlogin();
+               // FBlogin();
             }
         }
 
