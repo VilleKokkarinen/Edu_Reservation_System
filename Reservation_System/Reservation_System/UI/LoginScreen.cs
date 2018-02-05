@@ -71,77 +71,24 @@ namespace Reservation_System.UI
 
         private void ACCESSlogin()
         {
-            Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            try
-            {
-                OleDbConnection connection = Program.sql.Accessconnection();
-                OleDbCommand cmd = Program.sql.Accesslogin(txt_username.Text, txt_password.Text, connection);
-
-                connection.Open();
-
-                OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-
-                connection.Close();
-
-                int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
-                {
-                    Program.user = User.User.CreateUser(txt_username.Text);
-                    this.Hide();
-                    UserInterFace.MainScreen();
-                }
-                else
-                {
-                    lbl_invalid_login_credentials.Visible = true;
-                }
-            }
-            catch
-            {
-                //do something with the error code ex
-            }
-
-            Cursor = System.Windows.Forms.Cursors.Default;
         }
 
-        
+
+        private static void LoadUserData()
+        {
+            
+        }
         private void SQLlogin()
         {
-            Cursor = System.Windows.Forms.Cursors.WaitCursor;
             try
             {
-                MySqlConnection connection = Program.sql.MySqlConnection();
-                MySqlCommand cmd = Program.sql.MySqlLogin(txt_username.Text, txt_password.Text, connection);
+                Program.user = User.UserDataMapper.CreateFromDatabase(txt_username.Text, txt_password.Text);
+            }catch
+            {
 
-                connection.Open();
-
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-
-                connection.Close();
-
-                int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
-                {
-                    Program.user = User.User.CreateUser(txt_username.Text);
-                    this.Hide();
-                    UserInterFace.MainScreen();
-                }
-                else
-                {
-                    lbl_invalid_login_credentials.Visible = true;
-                }
             }
-            catch
-            {               
-            }
+            UserInterFace.MainScreen();
 
-
-            Cursor = System.Windows.Forms.Cursors.Default;
         }
 
         private void btn_login_Click(object sender, EventArgs e)

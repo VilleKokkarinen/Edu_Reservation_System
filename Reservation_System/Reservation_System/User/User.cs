@@ -10,13 +10,15 @@ namespace Reservation_System.User
     class User
     {
         public static string _username;
-        private string _email;
+        public static string _email;
+        public static int _userid;
+
         public BindingList<Loan> Loans { get; set; }
 
-
-        private User(string username)
+        private User(string username, int userid)
         {
             _username = username;
+            _userid = userid;
             Loans = new BindingList<Loan>();            
         }
 
@@ -25,9 +27,9 @@ namespace Reservation_System.User
             return _username;
         }
 
-        public static User CreateUser(string username)
+        public static User CreateUser(string username, int userid)
         {
-            User user = new User(username);
+            User user = new User(username, userid);
             //user.Loans.Add();
             return user;
         }

@@ -15,6 +15,8 @@ namespace Reservation_System
         public static MySettings Settings = MySettings.LoadFile();
         public static User.User user;
 
+
+
         [STAThread]
         static void Main(string[] args)
         {
