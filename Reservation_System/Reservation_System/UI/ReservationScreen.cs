@@ -26,33 +26,7 @@ namespace Reservation_System
 
         private void ReserationScreen_Load(object sender, EventArgs e)
         {
-            OleDbConnection connection = Program.sql.Accessconnection();
-            OleDbCommand cmd = Program.sql.AccessGetAvailableItems(connection);
-
-            connection.Open();
-
-            OleDbDataReader reader;
-            reader = cmd.ExecuteReader();
-
-            string value = "";
-
-            while (reader.Read())
-            {
-                if (reader.HasRows)
-                {
-                    for (int i = 0; i < reader.FieldCount; i++)
-                    {
-                        value += " - " +reader.GetValue(i).ToString();
-                        
-                    }
-                    chckboxlist_Items.Items.Add(value);
-                    value = "";
-                }
-            }
-                        connection.Close();
-
-            
-              
+           // foreach ()             
                       
         }
     }

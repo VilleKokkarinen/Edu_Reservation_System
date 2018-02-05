@@ -20,7 +20,10 @@ namespace Reservation_System.UI
 
         private void ReturningScreen_Load(object sender, EventArgs e)
         {
-
+            foreach (User.LoanItem loan in Program.user.Loans)
+            {
+                checkedListBox2.Items.Add(loan.Description);
+            }
         }
     }
 }

@@ -103,9 +103,6 @@
             // checkedListBox2
             // 
             this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "[Hilavitkutin] [Tyyppi X] [Saatavilla 7.5.18]",
-            "[Asia] [Tyyppi 43] [Saatavilla 9.5.18]"});
             this.checkedListBox2.Location = new System.Drawing.Point(22, 55);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(230, 229);

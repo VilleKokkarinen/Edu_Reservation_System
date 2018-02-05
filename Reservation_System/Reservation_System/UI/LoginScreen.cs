@@ -74,32 +74,37 @@ namespace Reservation_System.UI
         }
 
 
-        private static void LoadUserData()
-        {
-            
-        }
-        private void SQLlogin()
+        private void LoginUser()
         {
             try
             {
+
                 Program.user = User.UserDataMapper.CreateFromDatabase(txt_username.Text, txt_password.Text);
-            }catch
+
+            }
+            catch
             {
 
             }
-            UserInterFace.MainScreen();
 
+            if (Program.user != null)
+            {
+                UserInterFace.MainScreen();
+            }
+            else
+            {
+                lbl_invalid_login_credentials.Visible = true;
+            }
         }
-
+        
         private void btn_login_Click(object sender, EventArgs e)
         {
             try
             {
-                SQLlogin();
-               // ACCESSlogin();                
+                LoginUser();          
             }catch
             {
-               // FBlogin();
+              
             }
         }
 

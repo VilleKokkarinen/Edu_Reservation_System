@@ -9,13 +9,15 @@ namespace Reservation_System.User
     class Item
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public Item(int id, string name)
+        public string NAME { get; set; }
+        public int TYPE { get; set; }
+        public int STATE { get; set; }
+        public Item(int id, string name, int type, int state)
         {
             ID = id;
-            Name = name;           
+            NAME = name;
+            TYPE = type;
+            STATE = state;
         }
-
-
     }
 }

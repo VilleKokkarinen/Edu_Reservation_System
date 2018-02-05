@@ -45,7 +45,7 @@ namespace Reservation_System.UI
                 if (count == 1)
                 {                   
                     this.Hide();
-                    newpassword = "kokkarinen";
+                    newpassword = "password1";
 
                     changepassword();
                     email();

@@ -36,7 +36,7 @@ namespace Reservation_System.User
 
                         // Check if the query did not return a row/record of data
                         if (!reader.HasRows)
-                        {                           
+                        {
                             return null;
                         }
 
@@ -62,9 +62,11 @@ namespace Reservation_System.User
                             {
                                 int ItemID = (int)reader["I_ID"];
                                 string Itemname = (string)reader["I_NAME"];
+                                int ItemType = (int)reader["I_TYPE"];
+                                int ItemState = (int)reader["I_STATE"];
 
                                 // Add the item to the User's inventory
-                                User.Loans.Add(new Loan(new Item(ItemID, Itemname)));
+                                User.Loans.Add(new LoanItem(new Item(ItemID, Itemname, ItemType, ItemState)));
                                 
                             }
                         }

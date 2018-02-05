@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reservation_System.User
 {
-    class Loan
+    class LoanItem
     {
         private Item _details;
 
@@ -25,10 +25,10 @@ namespace Reservation_System.User
         }
         public string Description
         {
-            get { return Details.Name; }
+            get { return Details.NAME; }
         }
 
-        public Loan(Item details)
+        public LoanItem(Item details)
         {
             Details = details;
         }
