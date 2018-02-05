@@ -28,60 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button15 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.btn_SearchItem = new System.Windows.Forms.Button();
+            this.txt_SearchItem = new System.Windows.Forms.TextBox();
+            this.lbl_SearchItem = new System.Windows.Forms.Label();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.checkboxlist_DeleteItem = new System.Windows.Forms.CheckedListBox();
             this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button15
+            // btn_SearchItem
             // 
-            this.button15.Location = new System.Drawing.Point(209, 90);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 55;
-            this.button15.Text = "Hae";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btn_SearchItem.Location = new System.Drawing.Point(209, 90);
+            this.btn_SearchItem.Name = "btn_SearchItem";
+            this.btn_SearchItem.Size = new System.Drawing.Size(75, 23);
+            this.btn_SearchItem.TabIndex = 55;
+            this.btn_SearchItem.Text = "Hae";
+            this.btn_SearchItem.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txt_SearchItem
             // 
-            this.textBox6.Location = new System.Drawing.Point(209, 64);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(117, 20);
-            this.textBox6.TabIndex = 54;
+            this.txt_SearchItem.Location = new System.Drawing.Point(209, 64);
+            this.txt_SearchItem.Name = "txt_SearchItem";
+            this.txt_SearchItem.Size = new System.Drawing.Size(117, 20);
+            this.txt_SearchItem.TabIndex = 54;
             // 
-            // label20
+            // lbl_SearchItem
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(206, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 13);
-            this.label20.TabIndex = 53;
-            this.label20.Text = "Hae tavaroita";
+            this.lbl_SearchItem.AutoSize = true;
+            this.lbl_SearchItem.Location = new System.Drawing.Point(206, 48);
+            this.lbl_SearchItem.Name = "lbl_SearchItem";
+            this.lbl_SearchItem.Size = new System.Drawing.Size(71, 13);
+            this.lbl_SearchItem.TabIndex = 53;
+            this.lbl_SearchItem.Text = "Hae tavaroita";
             // 
-            // button14
+            // btn_Delete
             // 
-            this.button14.Location = new System.Drawing.Point(23, 268);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(132, 39);
-            this.button14.TabIndex = 52;
-            this.button14.Text = "Poista valittu tuote";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btn_Delete.Location = new System.Drawing.Point(23, 268);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(132, 39);
+            this.btn_Delete.TabIndex = 52;
+            this.btn_Delete.Text = "Poista valittu tuote";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // checkedListBox3
+            // checkboxlist_DeleteItem
             // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
+            this.checkboxlist_DeleteItem.FormattingEnabled = true;
+            this.checkboxlist_DeleteItem.Items.AddRange(new object[] {
             "[Tavara] [tyyppi X]",
             "[Laite] [tyyppi Y]",
             "[Hilavitkutin] [Tyyppi X]",
             "[Asia] [Tyyppi 43]"});
-            this.checkedListBox3.Location = new System.Drawing.Point(23, 32);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(165, 214);
-            this.checkedListBox3.TabIndex = 51;
+            this.checkboxlist_DeleteItem.Location = new System.Drawing.Point(23, 32);
+            this.checkboxlist_DeleteItem.Name = "checkboxlist_DeleteItem";
+            this.checkboxlist_DeleteItem.Size = new System.Drawing.Size(165, 214);
+            this.checkboxlist_DeleteItem.TabIndex = 51;
             // 
             // label19
             // 
@@ -97,11 +98,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 322);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.checkedListBox3);
+            this.Controls.Add(this.btn_SearchItem);
+            this.Controls.Add(this.txt_SearchItem);
+            this.Controls.Add(this.lbl_SearchItem);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.checkboxlist_DeleteItem);
             this.Controls.Add(this.label19);
             this.Name = "RemovingItemScreen";
             this.Text = "RemovingItemScreen";
@@ -112,11 +113,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.Button btn_SearchItem;
+        private System.Windows.Forms.TextBox txt_SearchItem;
+        private System.Windows.Forms.Label lbl_SearchItem;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.CheckedListBox checkboxlist_DeleteItem;
         private System.Windows.Forms.Label label19;
     }
 }

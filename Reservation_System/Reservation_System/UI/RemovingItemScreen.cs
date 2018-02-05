@@ -17,5 +17,26 @@ namespace Reservation_System.UI
             InitializeComponent();
             CenterToScreen();
         }
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_SearchItem.Text = "Search item";
+                checkboxlist_DeleteItem.Text = "Delete item";
+                btn_Delete.Text = "Delete";
+                btn_SearchItem.Text = "Search";
+            }
+            else
+            {
+                lbl_SearchItem.Text = "Hae tavara";
+                checkboxlist_DeleteItem.Text = "Poista tavara";
+                btn_Delete.Text = "Poista";
+                btn_SearchItem.Text = "Hae";
+            }
+        }
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,68 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button18 = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
+            this.btn_ShowItemInfo = new System.Windows.Forms.Button();
+            this.lbl_Search = new System.Windows.Forms.Label();
+            this.txt_SearchItem = new System.Windows.Forms.TextBox();
+            this.btn_Reserve = new System.Windows.Forms.Button();
+            this.checkboxlist_ReserveItems = new System.Windows.Forms.CheckedListBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.lbl_PreReservationMenu = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button18
+            // btn_ShowItemInfo
             // 
-            this.button18.Location = new System.Drawing.Point(244, 243);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(106, 43);
-            this.button18.TabIndex = 62;
-            this.button18.Text = "Näytä valitun tavaran tiedot";
-            this.button18.UseVisualStyleBackColor = true;
+            this.btn_ShowItemInfo.Location = new System.Drawing.Point(244, 265);
+            this.btn_ShowItemInfo.Name = "btn_ShowItemInfo";
+            this.btn_ShowItemInfo.Size = new System.Drawing.Size(106, 43);
+            this.btn_ShowItemInfo.TabIndex = 62;
+            this.btn_ShowItemInfo.Text = "Näytä valitun tavaran tiedot";
+            this.btn_ShowItemInfo.UseVisualStyleBackColor = true;
             // 
-            // label23
+            // lbl_Search
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(253, 55);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(71, 13);
-            this.label23.TabIndex = 61;
-            this.label23.Text = "Hae tavaroita";
+            this.lbl_Search.AutoSize = true;
+            this.lbl_Search.Location = new System.Drawing.Point(253, 79);
+            this.lbl_Search.Name = "lbl_Search";
+            this.lbl_Search.Size = new System.Drawing.Size(71, 13);
+            this.lbl_Search.TabIndex = 61;
+            this.lbl_Search.Text = "Hae tavaroita";
             // 
-            // textBox7
+            // txt_SearchItem
             // 
-            this.textBox7.Location = new System.Drawing.Point(256, 72);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(117, 20);
-            this.textBox7.TabIndex = 60;
+            this.txt_SearchItem.Location = new System.Drawing.Point(256, 95);
+            this.txt_SearchItem.Name = "txt_SearchItem";
+            this.txt_SearchItem.Size = new System.Drawing.Size(117, 20);
+            this.txt_SearchItem.TabIndex = 60;
             // 
-            // button17
+            // btn_Reserve
             // 
-            this.button17.Location = new System.Drawing.Point(12, 291);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(143, 23);
-            this.button17.TabIndex = 59;
-            this.button17.Text = "Varaa";
-            this.button17.UseVisualStyleBackColor = true;
+            this.btn_Reserve.Location = new System.Drawing.Point(12, 314);
+            this.btn_Reserve.Name = "btn_Reserve";
+            this.btn_Reserve.Size = new System.Drawing.Size(143, 23);
+            this.btn_Reserve.TabIndex = 59;
+            this.btn_Reserve.Text = "Varaa";
+            this.btn_Reserve.UseVisualStyleBackColor = true;
+            this.btn_Reserve.Click += new System.EventHandler(this.button17_Click);
             // 
-            // checkedListBox4
+            // checkboxlist_ReserveItems
             // 
-            this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Items.AddRange(new object[] {
+            this.checkboxlist_ReserveItems.FormattingEnabled = true;
+            this.checkboxlist_ReserveItems.Items.AddRange(new object[] {
             "[Hilavitkutin] [Tyyppi X] [Saatavilla 7.5.18]",
             "[Asia] [Tyyppi 43] [Saatavilla 9.5.18]"});
-            this.checkedListBox4.Location = new System.Drawing.Point(12, 26);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(226, 259);
-            this.checkedListBox4.TabIndex = 58;
+            this.checkboxlist_ReserveItems.Location = new System.Drawing.Point(12, 49);
+            this.checkboxlist_ReserveItems.Name = "checkboxlist_ReserveItems";
+            this.checkboxlist_ReserveItems.Size = new System.Drawing.Size(226, 259);
+            this.checkboxlist_ReserveItems.TabIndex = 58;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(256, 121);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_Search.TabIndex = 63;
+            this.btn_Search.Text = "Hae";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
+            // lbl_PreReservationMenu
+            // 
+            this.lbl_PreReservationMenu.AutoSize = true;
+            this.lbl_PreReservationMenu.Location = new System.Drawing.Point(12, 13);
+            this.lbl_PreReservationMenu.Name = "lbl_PreReservationMenu";
+            this.lbl_PreReservationMenu.Size = new System.Drawing.Size(92, 13);
+            this.lbl_PreReservationMenu.TabIndex = 64;
+            this.lbl_PreReservationMenu.Text = "Varaa ennakkoon";
             // 
             // PreReservationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 351);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.checkedListBox4);
+            this.ClientSize = new System.Drawing.Size(403, 370);
+            this.Controls.Add(this.lbl_PreReservationMenu);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.btn_ShowItemInfo);
+            this.Controls.Add(this.lbl_Search);
+            this.Controls.Add(this.txt_SearchItem);
+            this.Controls.Add(this.btn_Reserve);
+            this.Controls.Add(this.checkboxlist_ReserveItems);
             this.Name = "PreReservationScreen";
             this.Text = "PreReservationScreen";
             this.ResumeLayout(false);
@@ -99,10 +122,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.CheckedListBox checkedListBox4;
+        private System.Windows.Forms.Button btn_ShowItemInfo;
+        private System.Windows.Forms.Label lbl_Search;
+        private System.Windows.Forms.TextBox txt_SearchItem;
+        private System.Windows.Forms.Button btn_Reserve;
+        private System.Windows.Forms.CheckedListBox checkboxlist_ReserveItems;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Label lbl_PreReservationMenu;
     }
 }

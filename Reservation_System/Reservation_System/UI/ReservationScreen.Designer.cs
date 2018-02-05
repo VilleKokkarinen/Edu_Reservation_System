@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_showitemdetails = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_returndate = new System.Windows.Forms.Label();
             this.dtpReturnDate = new System.Windows.Forms.DateTimePicker();
             this.lbl_availableitems = new System.Windows.Forms.Label();
             this.lbl_searchitems = new System.Windows.Forms.Label();
@@ -48,14 +48,14 @@
             this.btn_showitemdetails.UseVisualStyleBackColor = true;
             this.btn_showitemdetails.Click += new System.EventHandler(this.btn_showitemdetails_Click);
             // 
-            // label10
+            // lbl_returndate
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(150, 308);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 13);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Palautuspäivä";
+            this.lbl_returndate.AutoSize = true;
+            this.lbl_returndate.Location = new System.Drawing.Point(150, 308);
+            this.lbl_returndate.Name = "lbl_returndate";
+            this.lbl_returndate.Size = new System.Drawing.Size(74, 13);
+            this.lbl_returndate.TabIndex = 39;
+            this.lbl_returndate.Text = "Palautuspäivä";
             // 
             // dtpReturnDate
             // 
@@ -97,6 +97,7 @@
             this.btn_loan.TabIndex = 33;
             this.btn_loan.Text = "Lainaa";
             this.btn_loan.UseVisualStyleBackColor = true;
+            this.btn_loan.Click += new System.EventHandler(this.btn_loan_Click);
             // 
             // chckboxlist_Items
             // 
@@ -113,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 450);
             this.Controls.Add(this.btn_showitemdetails);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbl_returndate);
             this.Controls.Add(this.dtpReturnDate);
             this.Controls.Add(this.lbl_availableitems);
             this.Controls.Add(this.lbl_searchitems);
@@ -131,7 +132,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_showitemdetails;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_returndate;
         private System.Windows.Forms.DateTimePicker dtpReturnDate;
         private System.Windows.Forms.Label lbl_availableitems;
         private System.Windows.Forms.Label lbl_searchitems;

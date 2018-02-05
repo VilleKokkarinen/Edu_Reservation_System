@@ -16,5 +16,10 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
         }
+
+        private void btn_acceptchanges_pword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
