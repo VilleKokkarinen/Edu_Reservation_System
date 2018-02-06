@@ -23,6 +23,7 @@ namespace Reservation_System
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();
+                items.Clear();
 
                 using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
                 {
@@ -53,7 +54,9 @@ namespace Reservation_System
 
         private void ReserationScreen_Load(object sender, EventArgs e)
         {
-           foreach (User.LoanItem item in Program.user.AvailableItems)
+            items.Clear();
+            chckboxlist_Items.Items.Clear();
+            foreach (User.LoanItem item in Program.user.AvailableItems)
             {
                 chckboxlist_Items.Items.Add(item.Description);
             }           

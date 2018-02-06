@@ -12,7 +12,7 @@ namespace Reservation_System.UI
 {
     public partial class AccountManagement : Form
     {
-      
+       
         public AccountManagement()
         {
             InitializeComponent();
