@@ -15,15 +15,15 @@ namespace Reservation_System.UI
     {
         List<ComboItem> items = new List<ComboItem>();
 
-        public NewItemScreen()
-        {
-            InitializeComponent();
-            CenterToScreen();
 
+        void updatetypes()
+        {
+            
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();
                 items.Clear();
+                comboBox1.Items.Clear();
 
                 using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
                 {
@@ -33,8 +33,10 @@ namespace Reservation_System.UI
                     {
                         while (reader.Read())
                         {
-                            string text = (string)reader["IS_NAME"];
+                            string text = (string)reader["IT_NAME"];
+                            int id = (int)reader["IT_ID"];
                             items.Add(new ComboItem { Text = text });
+                            
                         }
                     }
 
@@ -44,18 +46,24 @@ namespace Reservation_System.UI
             {
                 comboBox1.Items.Add(item.Text);
             }
+
+        }
+        public NewItemScreen()
+        {
+            InitializeComponent();
+            CenterToScreen();         
         }
         void language()
         {
             if (Program.Settings.English == true)
             {
-               
+
                 lbl_name.Text = "Name";
                 lbl_type.Text = "Type";
                 btn_addtodatabase.Text = "Add to database";
             }
             else
-            {               
+            {
                 lbl_name.Text = "Nimi";
                 lbl_type.Text = "Tyyppi";
                 btn_addtodatabase.Text = "Lisää tietokantaan";
@@ -63,12 +71,65 @@ namespace Reservation_System.UI
         }
         private void button13_Click(object sender, EventArgs e)
         {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                string query = "INSERT INTO ITEMS (I_NAME, I_STATE, I_TYPE) VALUES (@name, 1, @TYPE)";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
 
-        }
+                    int index = items.FindIndex(x => x.Text == comboBox1.SelectedItem.ToString());
+
+
+                    cmd.Parameters.AddWithValue("@name", txt_name.Text);
+                    cmd.Parameters.AddWithValue("@TYPE", index.ToString());
+
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result < 0)
+                    {
+                        MessageBox.Show("Error creating user");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item Type: " + textBox1.Text + "\nCreated succesfully");
+                        updatetypes();
+                    }
+                }
+                connection.Close();
+            }
+        
+    }
 
         private void NewItemScreen_Load(object sender, EventArgs e)
         {
+            updatetypes();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                string query = "INSERT INTO ITEMTYPE (IT_NAME) VALUES (@name)";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@name", textBox1.Text); 
+
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result < 0)
+                    {
+                        MessageBox.Show("Error creating user");
+                    }
+                    else
+                    {                        
+                        MessageBox.Show("Item Type: " + textBox1.Text + "\nCreated succesfully");
+                        updatetypes();
+                    }
+                }
+                connection.Close();
+            }
         }
     }
     class ComboItem

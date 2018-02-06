@@ -66,5 +66,10 @@ namespace Reservation_System.UI
         {
             UserInterFace.SettingsScreen();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserInterFace.ItemManagementScreen();
+        }
     }
 }

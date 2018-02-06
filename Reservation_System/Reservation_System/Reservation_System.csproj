@@ -188,6 +188,9 @@
     <EmbeddedResource Include="UI\ForgotPasswordScreen.resx">
       <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemManagement.resx">
+      <DependentUpon>ItemManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>

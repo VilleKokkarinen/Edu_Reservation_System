@@ -54,7 +54,7 @@ namespace Reservation_System
 
         public MySqlCommand MySqlGetItemTypes(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("select * from ITEMSTATE", connection);            
+            MySqlCommand cmd = new MySqlCommand("select * from ITEMTYPE ORDER BY IT_ID", connection);            
             return cmd;
         }
 
