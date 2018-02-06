@@ -7,9 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
-{
+{ 
+   
+
     public partial class ReturningScreen : Form
     {
         void language()
@@ -41,6 +44,14 @@ namespace Reservation_System.UI
 
         private void ReturningScreen_Load(object sender, EventArgs e)
         {
+            foreach (User.LoanItem loan in Program.user.Loans)
+            {
+                checkedListBox2.Items.Add(loan.Description);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -49,4 +60,5 @@ namespace Reservation_System.UI
 
         }
     }
+    
 }

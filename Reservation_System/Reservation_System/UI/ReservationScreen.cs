@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,29 +14,36 @@ namespace Reservation_System
 {
     public partial class ReserationScreen : Form
     {
-        void language()
-        {
-            if (Program.Settings.English == true)
-            {
-                lbl_availableitems.Text = "Available items";
-                lbl_searchitems.Text = "Search items";
-                label10.Text = "Return date";
-                btn_showitemdetails.Text = "Show item details";
-                btn_loan.Text = "Loan";
-            }
-            else
-            {
-                lbl_availableitems.Text = "Saatavilla olevat tuottet";
-                lbl_searchitems.Text = "Hae tavaroita";
-                label10.Text = "Palautuspäivä";
-                btn_showitemdetails.Text = "Näytä valitun tavaran tiedot";
-                btn_loan.Text = "Lainaa";
-            }
-        }
+        List<ComboItem> items = new List<ComboItem>();
+
         public ReserationScreen()
         {
             InitializeComponent();
-            CenterToScreen();
+            CenterToScreen();                        
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                connection.Open();
+
+                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
+                {
+                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string text = (string)reader["IS_NAME"];
+                            items.Add(new ComboItem { Text = text });
+                        }
+                    }
+
+                }
+            }           
+            foreach (ComboItem item in items)
+            {
+                comboBox1.Items.Add(item.Text);
+            }
+
         }
 
         private void btn_showitemdetails_Click(object sender, EventArgs e)
@@ -45,34 +53,30 @@ namespace Reservation_System
 
         private void ReserationScreen_Load(object sender, EventArgs e)
         {
-            OleDbConnection connection = Program.sql.Accessconnection();
-            OleDbCommand cmd = Program.sql.AccessGetAvailableItems(connection);
-
-            connection.Open();
-
-            OleDbDataReader reader;
-            reader = cmd.ExecuteReader();
-
-            string value = "";
-
-            while (reader.Read())
+           foreach (User.LoanItem item in Program.user.AvailableItems)
             {
-                if (reader.HasRows)
-                {
-                    for (int i = 0; i < reader.FieldCount; i++)
-                    {
-                        value += " - " +reader.GetValue(i).ToString();
-                        
-                    }
-                    chckboxlist_Items.Items.Add(value);
-                    value = "";
-                }
-            }
-                        connection.Close();
-
-            
-              
+                chckboxlist_Items.Items.Add(item.Description);
+            }           
                       
         }
+
+        private void btn_loan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReserationScreen_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ReserationScreen_Leave(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+    }
+    class ComboItem
+    {
+        public string Text { get; set; }
     }
 }

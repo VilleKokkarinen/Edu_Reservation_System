@@ -28,137 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txt_newpassword = new System.Windows.Forms.TextBox();
+            this.lbl_newpassword = new System.Windows.Forms.Label();
+            this.txt_confirmpassword = new System.Windows.Forms.TextBox();
+            this.lbl_confirmpassword = new System.Windows.Forms.Label();
+            this.btn_applychanges = new System.Windows.Forms.Button();
+            this.btn_applychanges2 = new System.Windows.Forms.Button();
+            this.lbl_newemail = new System.Windows.Forms.Label();
+            this.txt_newemail = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // txt_newpassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Change password";
+            this.txt_newpassword.Location = new System.Drawing.Point(6, 52);
+            this.txt_newpassword.Name = "txt_newpassword";
+            this.txt_newpassword.PasswordChar = '*';
+            this.txt_newpassword.Size = new System.Drawing.Size(115, 20);
+            this.txt_newpassword.TabIndex = 1;
             // 
-            // textBox1
+            // lbl_newpassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.lbl_newpassword.AutoSize = true;
+            this.lbl_newpassword.Location = new System.Drawing.Point(6, 33);
+            this.lbl_newpassword.Name = "lbl_newpassword";
+            this.lbl_newpassword.Size = new System.Drawing.Size(77, 13);
+            this.lbl_newpassword.TabIndex = 2;
+            this.lbl_newpassword.Text = "New password";
             // 
-            // label2
+            // txt_confirmpassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "New password";
+            this.txt_confirmpassword.Location = new System.Drawing.Point(6, 99);
+            this.txt_confirmpassword.Name = "txt_confirmpassword";
+            this.txt_confirmpassword.PasswordChar = '*';
+            this.txt_confirmpassword.Size = new System.Drawing.Size(115, 20);
+            this.txt_confirmpassword.TabIndex = 3;
             // 
-            // textBox2
+            // lbl_confirmpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.lbl_confirmpassword.AutoSize = true;
+            this.lbl_confirmpassword.Location = new System.Drawing.Point(6, 83);
+            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
+            this.lbl_confirmpassword.Size = new System.Drawing.Size(90, 13);
+            this.lbl_confirmpassword.TabIndex = 4;
+            this.lbl_confirmpassword.Text = "Confirm password";
             // 
-            // label3
+            // btn_applychanges
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Confirm password";
+            this.btn_applychanges.Location = new System.Drawing.Point(6, 134);
+            this.btn_applychanges.Name = "btn_applychanges";
+            this.btn_applychanges.Size = new System.Drawing.Size(115, 23);
+            this.btn_applychanges.TabIndex = 5;
+            this.btn_applychanges.Text = "Hyväksy muutokset";
+            this.btn_applychanges.UseVisualStyleBackColor = true;
+            this.btn_applychanges.Click += new System.EventHandler(this.btn_applychanges_Click);
             // 
-            // button1
+            // btn_applychanges2
             // 
-            this.button1.Location = new System.Drawing.Point(16, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Hyväksy muutokset";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_applychanges2.Location = new System.Drawing.Point(9, 134);
+            this.btn_applychanges2.Name = "btn_applychanges2";
+            this.btn_applychanges2.Size = new System.Drawing.Size(134, 23);
+            this.btn_applychanges2.TabIndex = 11;
+            this.btn_applychanges2.Text = "Hyväksy muutokset";
+            this.btn_applychanges2.UseVisualStyleBackColor = true;
+            this.btn_applychanges2.Click += new System.EventHandler(this.btn_applychanges2_Click);
             // 
-            // button2
+            // lbl_newemail
             // 
-            this.button2.Location = new System.Drawing.Point(233, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Hyväksy muutokset";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lbl_newemail.AutoSize = true;
+            this.lbl_newemail.Location = new System.Drawing.Point(6, 33);
+            this.lbl_newemail.Name = "lbl_newemail";
+            this.lbl_newemail.Size = new System.Drawing.Size(56, 13);
+            this.lbl_newemail.TabIndex = 8;
+            this.lbl_newemail.Text = "New email";
             // 
-            // label5
+            // txt_newemail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(230, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "New email";
+            this.txt_newemail.Location = new System.Drawing.Point(9, 52);
+            this.txt_newemail.Name = "txt_newemail";
+            this.txt_newemail.Size = new System.Drawing.Size(134, 20);
+            this.txt_newemail.TabIndex = 7;
             // 
-            // textBox4
+            // groupBox1
             // 
-            this.textBox4.Location = new System.Drawing.Point(233, 63);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.groupBox1.Controls.Add(this.txt_confirmpassword);
+            this.groupBox1.Controls.Add(this.txt_newpassword);
+            this.groupBox1.Controls.Add(this.lbl_newpassword);
+            this.groupBox1.Controls.Add(this.lbl_confirmpassword);
+            this.groupBox1.Controls.Add(this.btn_applychanges);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(137, 166);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Change password";
             // 
-            // label6
+            // groupBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(230, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Change email";
+            this.groupBox2.Controls.Add(this.btn_applychanges2);
+            this.groupBox2.Controls.Add(this.txt_newemail);
+            this.groupBox2.Controls.Add(this.lbl_newemail);
+            this.groupBox2.Location = new System.Drawing.Point(172, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(171, 166);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Change email address";
             // 
             // AccountManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 344);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(371, 196);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AccountManagement";
             this.Text = "AccountManagement";
+            this.Load += new System.EventHandler(this.AccountManagement_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_newpassword;
+        private System.Windows.Forms.Label lbl_newpassword;
+        private System.Windows.Forms.TextBox txt_confirmpassword;
+        private System.Windows.Forms.Label lbl_confirmpassword;
+        private System.Windows.Forms.Button btn_applychanges;
+        private System.Windows.Forms.Button btn_applychanges2;
+        private System.Windows.Forms.Label lbl_newemail;
+        private System.Windows.Forms.TextBox txt_newemail;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

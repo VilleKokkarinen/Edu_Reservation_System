@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Reservation_System {
+namespace Reservation_System.Access {
     
     
     /// <summary>
@@ -4345,7 +4345,7 @@ namespace Reservation_System {
         }
     }
 }
-namespace Reservation_System.reservationsystemDataSetTableAdapters {
+namespace Reservation_System.Access.reservationsystemDataSetTableAdapters {
     
     
     /// <summary>
