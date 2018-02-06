@@ -67,12 +67,27 @@ namespace Reservation_System
 
         private void ReserationScreen_Leave(object sender, EventArgs e)
         {
-            
+            chckboxlist_Items.Text = String.Empty;
         }
 
         private void ReserationScreen_Leave(object sender, FormClosedEventArgs e)
         {
-           
+            
+        }
+
+        private void chckboxlist_Items_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        void CleareAllcontrolsRecursive(Control container)
+        {
+            foreach (var control in container.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    ((CheckBox)control).Text = string.Empty;
+                }
+            }
         }
     }
     class ComboItem

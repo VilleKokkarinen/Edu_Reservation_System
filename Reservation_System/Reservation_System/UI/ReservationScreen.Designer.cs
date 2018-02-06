@@ -108,6 +108,7 @@
             this.chckboxlist_Items.Name = "chckboxlist_Items";
             this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
             this.chckboxlist_Items.TabIndex = 32;
+            this.chckboxlist_Items.SelectedIndexChanged += new System.EventHandler(this.chckboxlist_Items_SelectedIndexChanged);
             // 
             // comboBox1
             // 
