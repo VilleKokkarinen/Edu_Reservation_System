@@ -44,6 +44,7 @@
             this.button11.TabIndex = 34;
             this.button11.Text = "Lisää uusi tavara tietokantaan";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
