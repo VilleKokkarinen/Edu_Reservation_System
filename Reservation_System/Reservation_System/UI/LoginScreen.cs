@@ -68,13 +68,7 @@ namespace Reservation_System.UI
                 }             
             }        
 
-
-        private void ACCESSlogin()
-        {
-        }
-
-
-        private void LoginUser()
+        void LoginUser()
         {
             try
             {

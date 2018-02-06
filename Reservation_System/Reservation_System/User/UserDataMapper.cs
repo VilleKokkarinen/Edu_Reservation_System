@@ -72,6 +72,30 @@ namespace Reservation_System.User
                         }
                     }
 
+                    using (MySqlCommand availableItems = connection.CreateCommand())
+                    {
+                        availableItems.CommandType = CommandType.Text;
+                        availableItems.CommandText = "SELECT * FROM ITEMS WHERE ITEMS.I_STATE = 1";
+                        availableItems.Parameters.AddWithValue("@USER", User._userid);
+
+                        MySqlDataReader reader = availableItems.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                int ItemID = (int)reader["I_ID"];
+                                string Itemname = (string)reader["I_NAME"];
+                                int ItemType = (int)reader["I_TYPE"];
+                                int ItemState = (int)reader["I_STATE"];
+
+                                // Add the item to the User's inventory
+                                User.AvailableItems.Add(new LoanItem(new Item(ItemID, Itemname, ItemType, ItemState)));
+
+                            }
+                        }
+                    }
+
                     // Now that the User has been built from the database, return it.
                     return User;
                 }

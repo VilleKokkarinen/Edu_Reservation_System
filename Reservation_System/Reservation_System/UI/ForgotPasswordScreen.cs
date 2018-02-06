@@ -15,7 +15,7 @@ namespace Reservation_System.UI
 {
     public partial class ForgotPasswordScreen : Form
     {
-        string newpassword = "";
+        string newpassword = "password1";
 
         public ForgotPasswordScreen()
         {
@@ -45,11 +45,10 @@ namespace Reservation_System.UI
                 if (count == 1)
                 {                   
                     this.Hide();
-                    newpassword = "password1";
-
                     changepassword();
-                    email();
 
+                    Email.Email email = new Email.Email(txt_email.Text, "Password reset request", "You've requested a password change.\n" +
+                        "Here is your new password:" + newpassword);
                 }
                 else
                 {
@@ -90,30 +89,9 @@ namespace Reservation_System.UI
             }
         }
 
-        private void email()
-        {
-            MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-            mail.From = new MailAddress("reservationsystem.forgotpw@gmail.com");
-            mail.To.Add(txt_email.Text);
-            mail.Subject = "Password reset request";
-            mail.Body = "You've requested a password change.\n"+
-                        "Here is your new password:"+ newpassword;
-
-            SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("reservationsystem.forgotpw@gmail.com", "aaaaaaaaaa!#");
-            SmtpServer.EnableSsl = true;
-
-            SmtpServer.Send(mail);          
-        }
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            checkuser();
-                   
+            checkuser();                   
         }
     }
 }

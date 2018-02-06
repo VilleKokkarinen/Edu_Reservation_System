@@ -20,7 +20,8 @@ namespace Reservation_System.User
         {
             _username = username;
             _userid = userid;
-            Loans = new BindingList<LoanItem>();            
+            Loans = new BindingList<LoanItem>();
+            AvailableItems = new BindingList<LoanItem>();      
         }
 
         public string username()

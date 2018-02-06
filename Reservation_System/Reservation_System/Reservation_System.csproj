@@ -88,6 +88,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>reservationsystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Email\Email.cs" />
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\MySettings.cs" />
     <Compile Include="Sql\SQL.cs" />

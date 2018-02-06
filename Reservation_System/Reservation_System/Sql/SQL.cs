@@ -51,6 +51,12 @@ namespace Reservation_System
             MySqlCommand cmd = new MySqlCommand("select ITEMS.I_NAME, ITEMS.I_ID from ITEMS where ITEMS.I_STATE=\"1\"", connection);
             return cmd;
         }
-        
+
+        public MySqlCommand MySqlGetItemTypes(MySqlConnection connection)
+        {
+            MySqlCommand cmd = new MySqlCommand("select * from ITEMSTATE", connection);            
+            return cmd;
+        }
+
     }
 }

@@ -14,7 +14,7 @@ namespace Reservation_System
         public static SQL sql = new SQL();
         public static MySettings Settings = MySettings.LoadFile();
         public static User.User user;
-
+        
 
 
         [STAThread]
