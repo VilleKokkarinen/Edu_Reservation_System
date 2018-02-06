@@ -10,9 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
-{ 
-   
-
+{
     public partial class ReturningScreen : Form
     {
         void language()
@@ -20,19 +18,15 @@ namespace Reservation_System.UI
             if (Program.Settings.English == true)
             {
                 label7.Text = "Return window";
-                label8.Text = "Borrowed items";
-                label9.Text = "Search items";
-                button7.Text = "Return";
-                button8.Text = "Search";
+                label8.Text = "Borrowed items";               
+                button7.Text = "Return";                
                 button10.Text = "Show information about item";
             }
             else
             {
                 label7.Text = "Palautusvalikko";
-                label8.Text = "Lainassa olevat tuotteet";
-                label9.Text = "Hae tavaroita";
-                button7.Text = "Palauta";
-                button8.Text = "Hae";
+                label8.Text = "Lainassa olevat tuotteet";               
+                button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
             }
         }
@@ -44,6 +38,7 @@ namespace Reservation_System.UI
 
         private void ReturningScreen_Load(object sender, EventArgs e)
         {
+            checkedListBox2.Items.Clear();
             foreach (User.LoanItem loan in Program.user.Loans)
             {
                 checkedListBox2.Items.Add(loan.Description);

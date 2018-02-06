@@ -83,6 +83,7 @@ namespace Reservation_System.UI
 
             if (Program.user != null)
             {
+                this.Hide();
                 UserInterFace.MainScreen();
             }
             else
@@ -95,7 +96,8 @@ namespace Reservation_System.UI
         {
             try
             {
-                LoginUser();          
+                LoginUser();    
+                      
             }catch
             {
               
