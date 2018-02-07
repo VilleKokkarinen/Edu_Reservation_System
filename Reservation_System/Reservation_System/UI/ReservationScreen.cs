@@ -70,7 +70,7 @@ namespace Reservation_System
 
         private void ReserationScreen_Leave(object sender, EventArgs e)
         {
-            chckboxlist_Items.Text = String.Empty;
+            
         }
 
         private void ReserationScreen_Leave(object sender, FormClosedEventArgs e)

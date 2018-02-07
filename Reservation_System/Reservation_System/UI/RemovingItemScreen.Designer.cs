@@ -74,11 +74,6 @@
             // checkedListBox3
             // 
             this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
-            "[Tavara] [tyyppi X]",
-            "[Laite] [tyyppi Y]",
-            "[Hilavitkutin] [Tyyppi X]",
-            "[Asia] [Tyyppi 43]"});
             this.checkedListBox3.Location = new System.Drawing.Point(23, 32);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(165, 214);
