@@ -15,10 +15,8 @@ namespace Reservation_System.UI
     {
         List<ComboItem> items = new List<ComboItem>();
 
-
         void updatetypes()
-        {
-            
+        {            
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();
@@ -35,11 +33,9 @@ namespace Reservation_System.UI
                         {
                             string text = (string)reader["IT_NAME"];
                             int id = (int)reader["IT_ID"];
-                            items.Add(new ComboItem { Text = text });
-                            
+                            items.Add(new ComboItem { Text = text });                           
                         }
                     }
-
                 }
             }
             foreach (ComboItem item in items)
@@ -48,6 +44,7 @@ namespace Reservation_System.UI
             }
 
         }
+
         public NewItemScreen()
         {
             InitializeComponent();
@@ -79,7 +76,6 @@ namespace Reservation_System.UI
 
                     int index = items.FindIndex(x => x.Text == comboBox1.SelectedItem.ToString());
 
-
                     cmd.Parameters.AddWithValue("@name", txt_name.Text);
                     cmd.Parameters.AddWithValue("@TYPE", index.ToString());
 
@@ -88,11 +84,11 @@ namespace Reservation_System.UI
 
                     if (result < 0)
                     {
-                        MessageBox.Show("Error creating user");
+                        MessageBox.Show("Error creating item");
                     }
                     else
                     {
-                        MessageBox.Show("Item Type: " + textBox1.Text + "\nCreated succesfully");
+                        MessageBox.Show("Item Created succesfully");
                         updatetypes();
                     }
                 }
@@ -120,11 +116,11 @@ namespace Reservation_System.UI
 
                     if (result < 0)
                     {
-                        MessageBox.Show("Error creating user");
+                        MessageBox.Show("Error creating new item type");
                     }
                     else
                     {                        
-                        MessageBox.Show("Item Type: " + textBox1.Text + "\nCreated succesfully");
+                        MessageBox.Show("Item Type Created succesfully");
                         updatetypes();
                     }
                 }

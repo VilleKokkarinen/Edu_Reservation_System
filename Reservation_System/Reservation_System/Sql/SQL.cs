@@ -58,5 +58,12 @@ namespace Reservation_System
             return cmd;
         }
 
+        public MySqlCommand MySqlGetAllItems(MySqlConnection connection)
+        {
+            MySqlCommand cmd = new MySqlCommand("Select * from ITEMS ORDER BY I_ID", connection);
+            return cmd;
+        }
+
+
     }
 }

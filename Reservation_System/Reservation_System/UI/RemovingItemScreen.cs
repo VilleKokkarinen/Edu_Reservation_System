@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,18 +16,12 @@ namespace Reservation_System.UI
         void language()
         {
             if (Program.Settings.English == true)
-            {
-                label19.Text = "Removing items";
-                label20.Text = "Search items";
-                button15.Text = "Search";
-                button14.Text = "Remove selected item";
+            {               
+                btn_remove.Text = "Remove selected item";
             }
             else
-            {
-                label19.Text = "Tavaran poistaminen";
-                label20.Text = "Hae tavaroita";
-                button15.Text = "Hae";
-                button14.Text = "Poista valittu tuote";
+            {               
+                btn_remove.Text = "Poista valittu tuote";
             }
         }
 
@@ -34,11 +29,40 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
             CenterToScreen();
+
+            checklist_items.Items.Clear();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RemovingItemScreen_Load(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                connection.Open();
+
+
+                using (MySqlCommand Items = Program.sql.MySqlGetAllItems(connection))
+                {
+                    MySqlDataReader reader = Items.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int ItemID = (int)reader["I_ID"];
+                            string Itemname = (string)reader["I_NAME"];
+                            int ItemType = (int)reader["I_TYPE"];
+                            int ItemState = (int)reader["I_STATE"];
+
+                            checklist_items.Items.Add("[" + ItemID +"] " + "["+ Itemname +"] "+ "[" + ItemType + "] "+ "[" + ItemState + "] ");
+                        }
+                    }
+                }
+            }
         }
     }
 }
