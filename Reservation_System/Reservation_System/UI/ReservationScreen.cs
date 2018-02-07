@@ -33,8 +33,9 @@ namespace Reservation_System
                     {
                         while (reader.Read())
                         {
-                            string text = (string)reader["IS_NAME"];
-                            items.Add(new ComboItem { Text = text });
+                            string text = (string)reader["IT_NAME"];
+                            int id = (int)reader["IT_ID"];
+                            items.Add(new ComboItem { Text = text, ID = id });
                         }
                     }
 
@@ -96,5 +97,6 @@ namespace Reservation_System
     class ComboItem
     {
         public string Text { get; set; }
+        public int ID { get; set; }
     }
 }

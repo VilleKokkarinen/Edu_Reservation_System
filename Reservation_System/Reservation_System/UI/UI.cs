@@ -60,6 +60,16 @@ namespace Reservation_System.UI
         {
             UI._accounmanagementscreen.ShowDialog();
         }
+        public static void ItemManagementScreen()
+        {
+            UI._itemmanagementscreen.ShowDialog();
+        }
+        public static void RemovingItemScreen()
+        {
+            UI._removeitemscreen.ShowDialog();
+        }
+
+
 
     }
 }
