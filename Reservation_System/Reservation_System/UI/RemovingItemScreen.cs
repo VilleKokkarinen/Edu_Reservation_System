@@ -64,11 +64,5 @@ namespace Reservation_System.UI
                 }
             }
         }
-
-        
-        private void btn_Delete_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

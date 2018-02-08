@@ -47,26 +47,7 @@ namespace Reservation_System
             }
 
         }
-        void language()
-        {
-            if (Program.Settings.English == true)
-            {
-                lbl_availableitems.Text = "Item's avalaible";
-                lbl_searchitems.Text = "Search items";
 
-                lbl_returndate.Text = "Return date";
-                btn_loan.Text = "Loan";
-                btn_showitemdetails.Text = "Show item details";
-            }
-            else
-            {
-                lbl_availableitems.Text = "Saatavilla olevat tuotteet";
-                lbl_searchitems.Text = "Hae tuotteita";
-                lbl_returndate.Text = "Palautus päivämäärä";
-                btn_loan.Text = "Lainaa";
-                btn_showitemdetails.Text = "Näytä valitun esineen tiedot";
-            }
-        }
         private void btn_showitemdetails_Click(object sender, EventArgs e)
         {
 
@@ -83,7 +64,10 @@ namespace Reservation_System
                       
         }
 
+        private void btn_loan_Click(object sender, EventArgs e)
+        {
 
+        }
 
         private void ReserationScreen_Leave(object sender, EventArgs e)
         {
@@ -108,16 +92,6 @@ namespace Reservation_System
                     ((CheckBox)control).Text = string.Empty;
                 }
             }
-        }
-
-        private void btn_loan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_loan_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
     class ComboItem

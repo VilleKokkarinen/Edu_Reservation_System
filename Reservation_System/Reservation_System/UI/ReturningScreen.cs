@@ -29,7 +29,6 @@ namespace Reservation_System.UI
                 button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
             }
-
         }
         public ReturningScreen()
         {
@@ -52,11 +51,6 @@ namespace Reservation_System.UI
         }
 
         private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Return_Click(object sender, EventArgs e)
         {
 
         }

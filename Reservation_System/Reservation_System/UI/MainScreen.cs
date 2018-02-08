@@ -36,29 +36,7 @@ namespace Reservation_System.UI
             InitializeComponent();
             CenterToScreen();
         }
-        void language()
-        {
-            if (Program.Settings.English == true)
-            {
-                lbl_username.Text = "Username";
-                lbl_welcome.Text = "Logged in as";
-                btn_accountmngr.Text = "Account managment";
-                btn_Loan.Text = "Loan";
-                btn_reserve.Text = "Reserve";
-                btn_return.Text = "Return";
-                btn_settings.Text = "Settings";
-            }
-            else
-            {
-                lbl_username.Text = "Käyttäjänimi";
-                lbl_welcome.Text = "Kirjautunut sisään käyttäjänä";
-                btn_accountmngr.Text = "Tilin hallinta";
-                btn_Loan.Text = "Lainaa";
-                btn_reserve.Text = "Varaa";
-                btn_return.Text = "Palauta";
-                btn_settings.Text = "Asetukset";
-            }
-        }
+
         private void MainScreen_Load(object sender, EventArgs e)
         {
             lbl_username.Text = User.User._username;
