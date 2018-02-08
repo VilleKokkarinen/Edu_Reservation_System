@@ -29,34 +29,13 @@ namespace Reservation_System.UI
                 button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
             }
-
         }
         public ReturningScreen()
         {
             InitializeComponent();
             CenterToScreen();
         }
-        void language()
-        {
-            if (Program.Settings.English == true)
-            {
-                lbl_SearchItems.Text = "Search item";
-                lbl_ItemsLoaned.Text = "Loaned item's";
-                lbl_ReturnMenu.Text = "Return menu";
-                btn_Return.Text = "Return";
-                btn_Search.Text = "Search";
-                btn_ShowItemInfo.Text = "Show selected item info";
-            }
-            else
-            {
-                lbl_SearchItems.Text = "Hae tavara";
-                lbl_ItemsLoaned.Text = "Lainassa olevat tavarat";
-                lbl_ReturnMenu.Text = "Palautusvalikko";
-                btn_Return.Text = "Palauta";
-                btn_Search.Text = "Hae";
-                btn_ShowItemInfo.Text = "Näytä valitun tavaran tiedot";
-            }
-        }
+
         private void ReturningScreen_Load(object sender, EventArgs e)
         {
             checkedListBox2.Items.Clear();
@@ -72,11 +51,6 @@ namespace Reservation_System.UI
         }
 
         private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Return_Click(object sender, EventArgs e)
         {
 
         }
