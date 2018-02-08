@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FirebirdSql.Data.FirebirdClient;
 using System.Data.SqlClient;
 using System.Windows.Input;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
 {
@@ -68,91 +68,37 @@ namespace Reservation_System.UI
                 }             
             }        
 
-
-        private void ACCESSlogin()
+        void LoginUser()
         {
-            Cursor = System.Windows.Forms.Cursors.WaitCursor;
             try
             {
-                OleDbConnection connection = Program.sql.Accessconnection();
-                OleDbCommand cmd = Program.sql.Accesslogin(txt_username.Text, txt_password.Text, connection);
-
-                connection.Open();
-
-                OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-
-                connection.Close();
-
-                int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
-                {
-                    Program.User = new User(txt_username.Text);
-                    this.Hide();
-                    UserInterFace.MainScreen();
-                }
-                else
-                {
-                    lbl_invalid_login_credentials.Visible = true;
-                }
+                Program.user = User.UserDataMapper.CreateFromDatabase(txt_username.Text, txt_password.Text);
             }
             catch
             {
-                //do something with the error code ex
+
             }
 
-            Cursor = System.Windows.Forms.Cursors.Default;
-        }
-
-
-        private void FBlogin()
-        {
-            Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            try
-            {                
-                FbConnection connection = Program.sql.FBconnection();
-                FbCommand cmd = Program.sql.FBuserlogin(txt_username.Text, txt_password.Text, connection);
-
-                connection.Open();
-
-                FbDataAdapter adapter = new FbDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-
-                connection.Close();
-
-                int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
-                {
-                    Program.User = new User(txt_username.Text);
-                    this.Hide();
-                    UserInterFace.MainScreen();
-                }
-                else
-                {
-                    lbl_invalid_login_credentials.Visible = true;
-                }
-            }
-            catch
+            if (Program.user != null)
             {
-                ACCESSlogin();
+                this.Hide();
+                UserInterFace.MainScreen();
             }
-            
-
-            Cursor = System.Windows.Forms.Cursors.Default;
+            else
+            {
+                lbl_invalid_login_credentials.Visible = true;
+            }
         }
-
+        
         private void btn_login_Click(object sender, EventArgs e)
         {
             try
             {
-                ACCESSlogin();                
+                LoginUser();    
+                      
             }catch
             {
-                FBlogin();
+              
             }
         }
 
@@ -184,8 +130,7 @@ namespace Reservation_System.UI
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            Program.Settings.RememberUserName = chkbox_remember_user.Checked;
-            
+            Program.Settings.RememberUserName = chkbox_remember_user.Checked;            
 
             if(Program.Settings.RememberUserName == true && txt_username.Text != "")
             {
@@ -202,8 +147,6 @@ namespace Reservation_System.UI
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'reservationsystemDataSet.USERS' table. You can move, or remove it, as needed.
-           
 
         }
     }

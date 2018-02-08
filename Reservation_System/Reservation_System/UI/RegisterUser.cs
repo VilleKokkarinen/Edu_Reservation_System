@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FirebirdSql.Data.FirebirdClient;
 
+using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
 {
@@ -59,12 +59,12 @@ namespace Reservation_System.UI
             else
             {
                 
-                using (FbConnection connection = Program.sql.FBconnection())
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
                     //Check before doing the query, if the username is already taken
 
                     string query = "INSERT INTO USERS (U_FIRST_NAME, U_LAST_NAME, U_EMAIL,U_USERNAME, U_PASSWORD, U_ACCOUNTTYPE) VALUES (@firstname, @lastname, @email, @username, @password, 2)";
-                    using (FbCommand cmd = new FbCommand(query, connection))
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@firstname", txt_firstname.Text);
                         cmd.Parameters.AddWithValue("@lastname", txt_surname.Text);

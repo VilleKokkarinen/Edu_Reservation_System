@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
-using FirebirdSql.Data.FirebirdClient;
+
+using MySql.Data.MySqlClient;
 
 namespace Reservation_System.UI
 {
     public partial class ForgotPasswordScreen : Form
     {
-        string newpassword = "";
+        string newpassword = "password1";
 
         public ForgotPasswordScreen()
         {
@@ -27,12 +28,13 @@ namespace Reservation_System.UI
             Cursor = Cursors.WaitCursor;
             try
             {
-                FbConnection connection = Program.sql.FBconnection();
-                FbCommand cmd = Program.sql.FBforgotpassword(txt_username.Text, txt_email.Text, connection);
+
+                MySqlConnection connection = Program.sql.MySqlConnection();
+                MySqlCommand cmd = Program.sql.MySqlLogin(txt_username.Text, txt_email.Text, connection);
 
                 connection.Open();
 
-                FbDataAdapter adapter = new FbDataAdapter(cmd);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
 
@@ -43,11 +45,10 @@ namespace Reservation_System.UI
                 if (count == 1)
                 {                   
                     this.Hide();
-                    newpassword = "kokkarinen";
-
                     changepassword();
-                    email();
 
+                    Email.Email email = new Email.Email(txt_email.Text, "Password reset request", "You've requested a password change.\n" +
+                        "Here is your new password:" + newpassword);
                 }
                 else
                 {
@@ -65,10 +66,10 @@ namespace Reservation_System.UI
 
         private void changepassword()
         {
-            
-            using (FbConnection connection = Program.sql.FBconnection())
+
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
-                using (FbCommand cmdnewpw = Program.sql.FBchangepassword(txt_username.Text, newpassword, connection))
+                using (MySqlCommand cmdnewpw = Program.sql.MySqlLogin(txt_username.Text, newpassword, connection))
                 {
                     connection.Open();
 
@@ -88,30 +89,9 @@ namespace Reservation_System.UI
             }
         }
 
-        private void email()
-        {
-            MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-            mail.From = new MailAddress("reservationsystem.forgotpw@gmail.com");
-            mail.To.Add(txt_email.Text);
-            mail.Subject = "Password reset request";
-            mail.Body = "You've requested a password change.\n"+
-                        "Here is your new password:"+ newpassword;
-
-            SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("reservationsystem.forgotpw@gmail.com", "aaaaaaaaaa!#");
-            SmtpServer.EnableSsl = true;
-
-            SmtpServer.Send(mail);          
-        }
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            checkuser();
-                   
+            checkuser();                   
         }
     }
 }

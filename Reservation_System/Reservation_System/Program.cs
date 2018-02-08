@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FirebirdSql.Data.Client;
-using FirebirdSql.Data.FirebirdClient;
 using System.Data.OleDb;
 
 namespace Reservation_System
@@ -15,7 +13,9 @@ namespace Reservation_System
     {
         public static SQL sql = new SQL();
         public static MySettings Settings = MySettings.LoadFile();
-        public static User User;
+        public static User.User user;
+        
+
 
         [STAThread]
         static void Main(string[] args)

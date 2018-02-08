@@ -43,6 +43,7 @@
             this.button18.TabIndex = 62;
             this.button18.Text = "Näytä valitun tavaran tiedot";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // label23
             // 
