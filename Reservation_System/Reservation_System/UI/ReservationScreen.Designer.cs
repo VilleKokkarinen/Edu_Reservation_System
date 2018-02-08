@@ -97,7 +97,7 @@
             this.chckboxlist_Items.Name = "chckboxlist_Items";
             this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
             this.chckboxlist_Items.TabIndex = 32;
-            this.chckboxlist_Items.SelectedIndexChanged += new System.EventHandler(this.chckboxlist_Items_SelectedIndexChanged);
+            this.chckboxlist_Items.DisplayMember = "Text";          
             // 
             // comboBox1
             // 
@@ -106,6 +106,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 43;
+            this.comboBox1.DisplayMember = "Text";
             // 
             // ReserationScreen
             // 
@@ -121,8 +122,7 @@
             this.Controls.Add(this.btn_loan);
             this.Controls.Add(this.chckboxlist_Items);
             this.Name = "ReserationScreen";
-            this.Text = "ReserationScreen";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReserationScreen_Leave);
+            this.Text = "ReserationScreen";            
             this.Load += new System.EventHandler(this.ReserationScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
