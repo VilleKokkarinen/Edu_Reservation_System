@@ -37,5 +37,11 @@ namespace Reservation_System
         {
 
         }
+
+        private void SettingsScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            e.Cancel = (exit == DialogResult.No);
+        }
     }
 }

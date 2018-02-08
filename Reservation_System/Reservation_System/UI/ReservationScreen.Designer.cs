@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_showitemdetails = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpReturnDate = new System.Windows.Forms.DateTimePicker();
             this.lbl_availableitems = new System.Windows.Forms.Label();
@@ -39,20 +38,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // btn_showitemdetails
-            // 
-            this.btn_showitemdetails.Location = new System.Drawing.Point(310, 250);
-            this.btn_showitemdetails.Name = "btn_showitemdetails";
-            this.btn_showitemdetails.Size = new System.Drawing.Size(106, 43);
-            this.btn_showitemdetails.TabIndex = 40;
-            this.btn_showitemdetails.Text = "Näytä valitun tavaran tiedot";
-            this.btn_showitemdetails.UseVisualStyleBackColor = true;
-            this.btn_showitemdetails.Click += new System.EventHandler(this.btn_showitemdetails_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(150, 308);
+            this.label10.Location = new System.Drawing.Point(24, 329);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 39;
@@ -60,7 +49,7 @@
             // 
             // dtpReturnDate
             // 
-            this.dtpReturnDate.Location = new System.Drawing.Point(153, 325);
+            this.dtpReturnDate.Location = new System.Drawing.Point(27, 346);
             this.dtpReturnDate.Name = "dtpReturnDate";
             this.dtpReturnDate.Size = new System.Drawing.Size(200, 20);
             this.dtpReturnDate.TabIndex = 38;
@@ -92,7 +81,7 @@
             // 
             // btn_loan
             // 
-            this.btn_loan.Location = new System.Drawing.Point(27, 368);
+            this.btn_loan.Location = new System.Drawing.Point(27, 372);
             this.btn_loan.Name = "btn_loan";
             this.btn_loan.Size = new System.Drawing.Size(148, 23);
             this.btn_loan.TabIndex = 33;
@@ -124,7 +113,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 450);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btn_showitemdetails);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpReturnDate);
             this.Controls.Add(this.lbl_availableitems);
@@ -142,8 +130,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_showitemdetails;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtpReturnDate;
         private System.Windows.Forms.Label lbl_availableitems;

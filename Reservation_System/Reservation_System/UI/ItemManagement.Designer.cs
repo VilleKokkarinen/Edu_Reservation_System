@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(391, 194);
+            this.button1.Location = new System.Drawing.Point(69, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 35);
             this.button1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(391, 235);
+            this.button2.Location = new System.Drawing.Point(69, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 35);
             this.button2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 282);
+            this.ClientSize = new System.Drawing.Size(245, 136);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "ItemManagement";
