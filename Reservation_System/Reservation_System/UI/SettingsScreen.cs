@@ -12,31 +12,28 @@ namespace Reservation_System
 {
     public partial class SettingsScreen : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                button11.Text = "Add new item to database";
+                button12.Text = "Remove item from database";
+                groupBox1.Text = "Language";
+            }
+            else
+            {
+                button11.Text = "Lisää uusi tavara tietokantaan";
+                button12.Text = "Poista tavara tietokannasta";
+                groupBox1.Text = "Kieli";
+            }
+        }
         public SettingsScreen()
         {
             InitializeComponent();
             CenterToScreen();
         }
-        void language()
-        {
-            if (Program.Settings.English == true)
-            {
-                btn_AddItem.Text = "Add new item to database";
-                btn_DeleteItem.Text = "Delete item from database";
-                grpBox_Language.Text = "Language";
-                rBtn_LangEng.Text = "English";
-                rBtn_LangFin.Text = "Suomi";
-            }
-            else
-            {
-                btn_AddItem.Text = "Lisää uusi tavara tietokantaan";
-                btn_DeleteItem.Text = "Poista tavara tietokannasta";
-                grpBox_Language.Text = "Kieli";
-                rBtn_LangEng.Text = "English";
-                rBtn_LangFin.Text = "Suomi";
-            }
-        }
-        private void btn_AddItem_Click(object sender, EventArgs e)
+
+        private void button11_Click(object sender, EventArgs e)
         {
 
         }

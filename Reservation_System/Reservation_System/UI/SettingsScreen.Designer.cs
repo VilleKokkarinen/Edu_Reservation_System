@@ -28,88 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_AddItem = new System.Windows.Forms.Button();
-            this.btn_DeleteItem = new System.Windows.Forms.Button();
-            this.grpBox_Language = new System.Windows.Forms.GroupBox();
-            this.rBtn_LangEng = new System.Windows.Forms.RadioButton();
-            this.rBtn_LangFin = new System.Windows.Forms.RadioButton();
-            this.grpBox_Language.SuspendLayout();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_AddItem
+            // button11
             // 
-            this.btn_AddItem.Location = new System.Drawing.Point(12, 12);
-            this.btn_AddItem.Name = "btn_AddItem";
-            this.btn_AddItem.Size = new System.Drawing.Size(171, 23);
-            this.btn_AddItem.TabIndex = 34;
-            this.btn_AddItem.Text = "Lisää uusi tavara tietokantaan";
-            this.btn_AddItem.UseVisualStyleBackColor = true;
-            this.btn_AddItem.Click += new System.EventHandler(this.btn_AddItem_Click);
+            this.button11.Location = new System.Drawing.Point(12, 12);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(171, 23);
+            this.button11.TabIndex = 34;
+            this.button11.Text = "Lisää uusi tavara tietokantaan";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // btn_DeleteItem
+            // button12
             // 
-            this.btn_DeleteItem.Location = new System.Drawing.Point(12, 41);
-            this.btn_DeleteItem.Name = "btn_DeleteItem";
-            this.btn_DeleteItem.Size = new System.Drawing.Size(171, 23);
-            this.btn_DeleteItem.TabIndex = 35;
-            this.btn_DeleteItem.Text = "Poista tavara tietokannasta";
-            this.btn_DeleteItem.UseVisualStyleBackColor = true;
+            this.button12.Location = new System.Drawing.Point(12, 41);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(171, 23);
+            this.button12.TabIndex = 35;
+            this.button12.Text = "Poista tavara tietokannasta";
+            this.button12.UseVisualStyleBackColor = true;
             // 
-            // grpBox_Language
+            // groupBox1
             // 
-            this.grpBox_Language.Controls.Add(this.rBtn_LangEng);
-            this.grpBox_Language.Controls.Add(this.rBtn_LangFin);
-            this.grpBox_Language.Location = new System.Drawing.Point(12, 178);
-            this.grpBox_Language.Name = "grpBox_Language";
-            this.grpBox_Language.Size = new System.Drawing.Size(90, 71);
-            this.grpBox_Language.TabIndex = 36;
-            this.grpBox_Language.TabStop = false;
-            this.grpBox_Language.Text = "Language";
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(90, 71);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Language";
             // 
-            // rBtn_LangEng
+            // radioButton2
             // 
-            this.rBtn_LangEng.AutoSize = true;
-            this.rBtn_LangEng.Checked = true;
-            this.rBtn_LangEng.Location = new System.Drawing.Point(6, 42);
-            this.rBtn_LangEng.Name = "rBtn_LangEng";
-            this.rBtn_LangEng.Size = new System.Drawing.Size(59, 17);
-            this.rBtn_LangEng.TabIndex = 1;
-            this.rBtn_LangEng.TabStop = true;
-            this.rBtn_LangEng.Text = "English";
-            this.rBtn_LangEng.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(59, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "English";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // rBtn_LangFin
+            // radioButton1
             // 
-            this.rBtn_LangFin.AutoSize = true;
-            this.rBtn_LangFin.Location = new System.Drawing.Point(6, 19);
-            this.rBtn_LangFin.Name = "rBtn_LangFin";
-            this.rBtn_LangFin.Size = new System.Drawing.Size(58, 17);
-            this.rBtn_LangFin.TabIndex = 0;
-            this.rBtn_LangFin.Text = "Finnish";
-            this.rBtn_LangFin.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.Text = "Finnish";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // SettingsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.grpBox_Language);
-            this.Controls.Add(this.btn_DeleteItem);
-            this.Controls.Add(this.btn_AddItem);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
             this.Name = "SettingsScreen";
             this.Text = "SettingsScreen";
-            this.grpBox_Language.ResumeLayout(false);
-            this.grpBox_Language.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_AddItem;
-        private System.Windows.Forms.Button btn_DeleteItem;
-        private System.Windows.Forms.GroupBox grpBox_Language;
-        private System.Windows.Forms.RadioButton rBtn_LangEng;
-        private System.Windows.Forms.RadioButton rBtn_LangFin;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

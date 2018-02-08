@@ -12,6 +12,7 @@ namespace Reservation_System.UI
 {
     public partial class AccountManagement : Form
     {
+       
         public AccountManagement()
         {
             InitializeComponent();
@@ -48,10 +49,23 @@ namespace Reservation_System.UI
 
         private void btn_applychanges2_Click(object sender, EventArgs e)
         {
-
+            //Change email
         }
 
         private void btn_applychanges_Click(object sender, EventArgs e)
+        {
+            if(txt_newpassword.Text == txt_confirmpassword.Text)
+            {
+                //change password
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
