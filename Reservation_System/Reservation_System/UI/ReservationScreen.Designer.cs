@@ -116,8 +116,7 @@
             this.btn_main_reservation.Size = new System.Drawing.Size(84, 31);
             this.btn_main_reservation.TabIndex = 44;
             this.btn_main_reservation.Text = "Päävalikko";
-            this.btn_main_reservation.UseVisualStyleBackColor = true;
-            this.btn_main_reservation.Click += new System.EventHandler(this.btn_main_reservation_Click);
+            this.btn_main_reservation.UseVisualStyleBackColor = true;           
             // 
             // ReserationScreen
             // 

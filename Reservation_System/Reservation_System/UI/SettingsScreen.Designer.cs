@@ -96,8 +96,7 @@
             this.btn_main_Settings.Size = new System.Drawing.Size(75, 23);
             this.btn_main_Settings.TabIndex = 37;
             this.btn_main_Settings.Text = "Päävalikko";
-            this.btn_main_Settings.UseVisualStyleBackColor = true;
-            this.btn_main_Settings.Click += new System.EventHandler(this.btn_main_Settings_Click);
+            this.btn_main_Settings.UseVisualStyleBackColor = true;            
             // 
             // SettingsScreen
             // 
