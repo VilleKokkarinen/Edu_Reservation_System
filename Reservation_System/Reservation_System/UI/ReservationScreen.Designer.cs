@@ -36,6 +36,7 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.btn_loan = new System.Windows.Forms.Button();
             this.chckboxlist_Items = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_showitemdetails
@@ -97,6 +98,7 @@
             this.btn_loan.TabIndex = 33;
             this.btn_loan.Text = "Lainaa";
             this.btn_loan.UseVisualStyleBackColor = true;
+            this.btn_loan.Click += new System.EventHandler(this.btn_loan_Click);
             // 
             // chckboxlist_Items
             // 
@@ -106,12 +108,22 @@
             this.chckboxlist_Items.Name = "chckboxlist_Items";
             this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
             this.chckboxlist_Items.TabIndex = 32;
+            this.chckboxlist_Items.SelectedIndexChanged += new System.EventHandler(this.chckboxlist_Items_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(313, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 43;
             // 
             // ReserationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_showitemdetails);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpReturnDate);
@@ -122,6 +134,7 @@
             this.Controls.Add(this.chckboxlist_Items);
             this.Name = "ReserationScreen";
             this.Text = "ReserationScreen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReserationScreen_Leave);
             this.Load += new System.EventHandler(this.ReserationScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,5 +151,6 @@
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.Button btn_loan;
         private System.Windows.Forms.CheckedListBox chckboxlist_Items;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
