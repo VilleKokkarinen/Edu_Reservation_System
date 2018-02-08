@@ -34,6 +34,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_main_returning = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button10
@@ -91,11 +92,22 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "__________________________________________________________";
             // 
+            // btn_main_returning
+            // 
+            this.btn_main_returning.Location = new System.Drawing.Point(372, 330);
+            this.btn_main_returning.Name = "btn_main_returning";
+            this.btn_main_returning.Size = new System.Drawing.Size(75, 23);
+            this.btn_main_returning.TabIndex = 42;
+            this.btn_main_returning.Text = "Päävalikko";
+            this.btn_main_returning.UseVisualStyleBackColor = true;
+            this.btn_main_returning.Click += new System.EventHandler(this.btn_main_returning_Click);
+            // 
             // ReturningScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 365);
+            this.Controls.Add(this.btn_main_returning);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label8);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_main_returning;
     }
 }

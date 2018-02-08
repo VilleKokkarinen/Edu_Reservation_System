@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Reservation_System.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,6 +93,11 @@ namespace Reservation_System
                     ((CheckBox)control).Text = string.Empty;
                 }
             }
+        }
+
+        private void btn_main_reservation_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
         }
     }
     class ComboItem

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reservation_System.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,11 @@ namespace Reservation_System
         private void button11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_main_Settings_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
         }
     }
 }
