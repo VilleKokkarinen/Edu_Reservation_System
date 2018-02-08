@@ -29,6 +29,7 @@ namespace Reservation_System.UI
                 button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
             }
+
         }
         public ReturningScreen()
         {

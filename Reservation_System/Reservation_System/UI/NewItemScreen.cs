@@ -77,7 +77,7 @@ namespace Reservation_System.UI
                     int index = items.FindIndex(x => x.Text == comboBox1.SelectedItem.ToString());
 
                     cmd.Parameters.AddWithValue("@name", txt_name.Text);
-                    cmd.Parameters.AddWithValue("@TYPE", index.ToString());
+                    cmd.Parameters.AddWithValue("@TYPE", index);
 
                     connection.Open();
                     int result = cmd.ExecuteNonQuery();
