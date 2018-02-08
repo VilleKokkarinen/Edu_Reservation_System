@@ -1,4 +1,6 @@
-﻿namespace Reservation_System
+﻿using System;
+
+namespace Reservation_System
 {
     partial class SettingsScreen
     {
@@ -125,5 +127,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button btn_main_Settings;
+        private EventHandler btn_main_Settings_Click;
     }
 }
