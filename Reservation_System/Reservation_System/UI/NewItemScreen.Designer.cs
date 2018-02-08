@@ -119,7 +119,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_addnewitem);
             this.Name = "NewItemScreen";
-            this.Text = "NewItemScreen";
+            this.Text = "8VRR";
             this.ResumeLayout(false);
             this.PerformLayout();
 
