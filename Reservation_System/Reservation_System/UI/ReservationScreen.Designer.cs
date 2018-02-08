@@ -92,7 +92,7 @@
             // 
             // btn_loan
             // 
-            this.btn_loan.Location = new System.Drawing.Point(27, 368);
+            this.btn_loan.Location = new System.Drawing.Point(27, 365);
             this.btn_loan.Name = "btn_loan";
             this.btn_loan.Size = new System.Drawing.Size(148, 23);
             this.btn_loan.TabIndex = 33;
