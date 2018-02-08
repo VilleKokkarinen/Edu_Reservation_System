@@ -24,6 +24,7 @@ namespace Reservation_System
             {
                 lbl_availableitems.Text = "Item's avalaible";
                 lbl_searchitems.Text = "Search items";
+
                 lbl_returndate.Text = "Return date";
                 btn_loan.Text = "Loan";
                 btn_showitemdetails.Text = "Show item details";
