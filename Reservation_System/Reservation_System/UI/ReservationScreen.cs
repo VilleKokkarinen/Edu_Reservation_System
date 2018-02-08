@@ -19,7 +19,8 @@ namespace Reservation_System
         public ReserationScreen()
         {
             InitializeComponent();
-            CenterToScreen();                        
+            CenterToScreen();  
+                                  
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();
@@ -45,7 +46,7 @@ namespace Reservation_System
             {
                 comboBox1.Items.Add(item);
             }
-
+           
         }
 
         private void btn_showitemdetails_Click(object sender, EventArgs e)
@@ -55,16 +56,13 @@ namespace Reservation_System
 
         private void ReserationScreen_Load(object sender, EventArgs e)
         {
-            items.Clear();
             chckboxlist_Items.Items.Clear();
             chckboxlist_Items.DisplayMember = "Description";
             foreach (User.LoanItem item in Program.user.AvailableItems)
             {
                 chckboxlist_Items.Items.Add(item);
-            }           
-                      
-        }
-
+            }
+        }       
         private void btn_loan_Click(object sender, EventArgs e)
         {
 
@@ -88,18 +86,15 @@ namespace Reservation_System
 
                         if (result < 0)
                         {
-                            MessageBox.Show("Error");
-                        }
-                        else
-                        {
-                            MessageBox.Show("reservation Created succesfully");
-                        }
+                            MessageBox.Show("Error in the system");                      
+                        }                       
                         connection.Close();
                     }
                 }
+                //Remove selected items from list // update list
             }
-        }
-        
+            MessageBox.Show("reservation(s) Created succesfully");
+        }        
     }
     class ComboItem
     {
