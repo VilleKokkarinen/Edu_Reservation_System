@@ -44,31 +44,37 @@ namespace Reservation_System.UI
 
         private void btn_Loan_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UserInterFace.ReservationScreen();
         }
 
         private void btn_return_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UserInterFace.ReturningScreen();
         }
 
         private void btn_reserve_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UserInterFace.PreReservationScreen();
         }
 
         private void btn_accountmngr_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UserInterFace.AccountManagementScreen();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UserInterFace.SettingsScreen();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             UserInterFace.ItemManagementScreen();
         }
     }

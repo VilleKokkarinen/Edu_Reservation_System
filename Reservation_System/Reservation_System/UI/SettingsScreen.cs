@@ -1,5 +1,4 @@
-﻿using Reservation_System.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,9 +38,10 @@ namespace Reservation_System
 
         }
 
-        private void btn_main_Settings_Click(object sender, EventArgs e)
+        private void SettingsScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            UserInterFace.MainScreen();
+           DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            e.Cancel = (exit == DialogResult.No);
         }
     }
 }

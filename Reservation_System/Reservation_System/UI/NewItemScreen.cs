@@ -33,14 +33,14 @@ namespace Reservation_System.UI
                         {
                             string text = (string)reader["IT_NAME"];
                             int id = (int)reader["IT_ID"];
-                            items.Add(new ComboItem { Text = text });                           
+                            items.Add(new ComboItem { Text = text, ID = id });                           
                         }
                     }
                 }
             }
             foreach (ComboItem item in items)
             {
-                comboBox1.Items.Add(item.Text);
+                comboBox1.Items.Add(item);
             }
 
         }
@@ -74,7 +74,7 @@ namespace Reservation_System.UI
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
 
-                    int index = items.FindIndex(x => x.Text == comboBox1.SelectedItem.ToString());
+                    int index = ((ComboItem)comboBox1.SelectedItem).ID;
 
                     cmd.Parameters.AddWithValue("@name", txt_name.Text);
                     cmd.Parameters.AddWithValue("@TYPE", index.ToString());
@@ -131,5 +131,6 @@ namespace Reservation_System.UI
     class ComboItem
     {
         public string Text { get; set; }
+        public int ID { get; set; }
     }
 }

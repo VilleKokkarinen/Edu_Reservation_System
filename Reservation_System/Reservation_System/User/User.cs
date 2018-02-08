@@ -29,6 +29,12 @@ namespace Reservation_System.User
             return _username;
         }
 
+        public int userid()
+        {
+            return _userid;
+        }
+
+
         public static User CreateUser(string username, int userid)
         {
             User user = new User(username, userid);            
