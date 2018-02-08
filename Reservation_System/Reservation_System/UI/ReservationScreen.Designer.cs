@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Reservation_System
+﻿namespace Reservation_System
 {
     partial class ReserationScreen
     {
@@ -153,6 +151,5 @@ namespace Reservation_System
         private System.Windows.Forms.CheckedListBox chckboxlist_Items;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_main_reservation;
-        private EventHandler btn_main_reservation_Click;
     }
 }
