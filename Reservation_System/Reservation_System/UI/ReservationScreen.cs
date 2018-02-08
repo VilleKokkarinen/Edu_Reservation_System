@@ -14,6 +14,26 @@ namespace Reservation_System
 {
     public partial class ReserationScreen : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_availableitems.Text = "Item's avalaible";
+                lbl_ReturnDate.Text = "Select return date";
+                lbl_searchitems.Text = "Search item";
+                btn_loan.Text = "Loan";
+                btn_showitemdetails.Text = "Show info about item";
+
+            }
+            else
+            {
+                lbl_availableitems.Text = "Saatavilla olevat tavarat";
+                lbl_ReturnDate.Text = "Valitse palautuspäivä";
+                lbl_searchitems.Text = "Hae tavara";
+                btn_loan.Text = "Lainaa";
+                btn_showitemdetails.Text = "Näytä tavaran tiedot";
+            }
+        }
         List<ComboItem> items = new List<ComboItem>();
 
         public ReserationScreen()

@@ -40,6 +40,7 @@
             this.btn_remove.TabIndex = 52;
             this.btn_remove.Text = "Poista valitut tavarat";
             this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // checklist_items
             // 

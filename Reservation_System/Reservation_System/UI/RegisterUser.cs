@@ -23,6 +23,7 @@ namespace Reservation_System.UI
                 lbl_lastname.Text = "Last name";
                 lbl_email.Text = "Email-address";
                 Text = "Registration";
+                btn_register.Text = "Register";
             }
             else
             {
@@ -32,6 +33,7 @@ namespace Reservation_System.UI
                 lbl_lastname.Text = "Sukunimi";
                 lbl_email.Text = "Sähköposti- osoite";
                 Text = "Rekisteröityminen";
+                btn_register.Text = "Rekisteröidy";
             }
         }
        
