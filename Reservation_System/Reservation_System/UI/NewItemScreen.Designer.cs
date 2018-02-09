@@ -85,6 +85,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(123, 21);
             this.comboBox1.TabIndex = 50;
+            this.comboBox1.DisplayMember = "Text";
             // 
             // textBox1
             // 

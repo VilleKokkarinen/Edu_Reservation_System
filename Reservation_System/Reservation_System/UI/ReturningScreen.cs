@@ -54,6 +54,11 @@ namespace Reservation_System.UI
         {
 
         }
+
+        private void btn_main_returning_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
+        }
     }
     
 }

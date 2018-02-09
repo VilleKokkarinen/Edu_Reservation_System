@@ -19,7 +19,8 @@ namespace Reservation_System
         public ReserationScreen()
         {
             InitializeComponent();
-            CenterToScreen();                        
+            CenterToScreen();  
+                                  
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();
@@ -43,9 +44,9 @@ namespace Reservation_System
             }           
             foreach (ComboItem item in items)
             {
-                comboBox1.Items.Add(item.Text);
+                comboBox1.Items.Add(item);
             }
-
+           
         }
 
         private void btn_showitemdetails_Click(object sender, EventArgs e)
@@ -55,44 +56,45 @@ namespace Reservation_System
 
         private void ReserationScreen_Load(object sender, EventArgs e)
         {
-            items.Clear();
             chckboxlist_Items.Items.Clear();
+            chckboxlist_Items.DisplayMember = "Description";
             foreach (User.LoanItem item in Program.user.AvailableItems)
             {
-                chckboxlist_Items.Items.Add(item.Description);
-            }           
-                      
-        }
-
+                chckboxlist_Items.Items.Add(item);
+            }
+        }       
         private void btn_loan_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void ReserationScreen_Leave(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ReserationScreen_Leave(object sender, FormClosedEventArgs e)
-        {
-            
-        }
-
-        private void chckboxlist_Items_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        void CleareAllcontrolsRecursive(Control container)
-        {
-            foreach (var control in container.Controls)
+            foreach (User.LoanItem item in chckboxlist_Items.CheckedItems)
             {
-                if (control is CheckBox)
+                string date = dtpReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
+                             
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
-                    ((CheckBox)control).Text = string.Empty;
+                    //Check before doing the query, if the username is already taken
+
+                    string query = "UPDATE ITEMS SET I_STATE =2 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE) VALUES (LAST_INSERT_ID(), @user, @itemid, CURRENT_TIMESTAMP, @returndate)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {                        
+                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
+                        cmd.Parameters.AddWithValue("@itemid", item.ItemID);
+                        cmd.Parameters.AddWithValue("@returndate", date);                       
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");                      
+                        }                       
+                        connection.Close();
+                    }
                 }
+                //Remove selected items from list // update list
             }
-        }
+            MessageBox.Show("reservation(s) Created succesfully");
+        }        
     }
     class ComboItem
     {

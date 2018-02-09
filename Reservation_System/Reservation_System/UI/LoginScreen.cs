@@ -72,9 +72,7 @@ namespace Reservation_System.UI
         {
             try
             {
-
                 Program.user = User.UserDataMapper.CreateFromDatabase(txt_username.Text, txt_password.Text);
-
             }
             catch
             {
@@ -132,8 +130,7 @@ namespace Reservation_System.UI
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            Program.Settings.RememberUserName = chkbox_remember_user.Checked;
-            
+            Program.Settings.RememberUserName = chkbox_remember_user.Checked;            
 
             if(Program.Settings.RememberUserName == true && txt_username.Text != "")
             {
@@ -150,8 +147,6 @@ namespace Reservation_System.UI
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'reservationsystemDataSet.USERS' table. You can move, or remove it, as needed.
-           
 
         }
     }

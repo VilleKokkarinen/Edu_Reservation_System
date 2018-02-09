@@ -15,10 +15,8 @@ namespace Reservation_System.UI
     {
         List<ComboItem> items = new List<ComboItem>();
 
-
         void updatetypes()
-        {
-            
+        {            
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();
@@ -35,19 +33,18 @@ namespace Reservation_System.UI
                         {
                             string text = (string)reader["IT_NAME"];
                             int id = (int)reader["IT_ID"];
-                            items.Add(new ComboItem { Text = text });
-                            
+                            items.Add(new ComboItem { Text = text, ID = id });                           
                         }
                     }
-
                 }
             }
             foreach (ComboItem item in items)
             {
-                comboBox1.Items.Add(item.Text);
+                comboBox1.Items.Add(item);
             }
 
         }
+
         public NewItemScreen()
         {
             InitializeComponent();
@@ -77,8 +74,7 @@ namespace Reservation_System.UI
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
 
-                    int index = items.FindIndex(x => x.Text == comboBox1.SelectedItem.ToString());
-
+                    int index = ((ComboItem)comboBox1.SelectedItem).ID;
 
                     cmd.Parameters.AddWithValue("@name", txt_name.Text);
                     cmd.Parameters.AddWithValue("@TYPE", index.ToString());
@@ -88,11 +84,11 @@ namespace Reservation_System.UI
 
                     if (result < 0)
                     {
-                        MessageBox.Show("Error creating user");
+                        MessageBox.Show("Error creating item");
                     }
                     else
                     {
-                        MessageBox.Show("Item Type: " + textBox1.Text + "\nCreated succesfully");
+                        MessageBox.Show("Item Created succesfully");
                         updatetypes();
                     }
                 }
@@ -120,11 +116,11 @@ namespace Reservation_System.UI
 
                     if (result < 0)
                     {
-                        MessageBox.Show("Error creating user");
+                        MessageBox.Show("Error creating new item type");
                     }
                     else
                     {                        
-                        MessageBox.Show("Item Type: " + textBox1.Text + "\nCreated succesfully");
+                        MessageBox.Show("Item Type Created succesfully");
                         updatetypes();
                     }
                 }
@@ -135,5 +131,6 @@ namespace Reservation_System.UI
     class ComboItem
     {
         public string Text { get; set; }
+        public int ID { get; set; }
     }
 }

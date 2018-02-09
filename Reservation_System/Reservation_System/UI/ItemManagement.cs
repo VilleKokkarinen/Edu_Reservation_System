@@ -34,5 +34,15 @@ namespace Reservation_System.UI
         {
             UserInterFace.NewItemScreen();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserInterFace.RemovingItemScreen();
+        }
+
+        private void btn_main_itemman_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
+        }
     }
 }

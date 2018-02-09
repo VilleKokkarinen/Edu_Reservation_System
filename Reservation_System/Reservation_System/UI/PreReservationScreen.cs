@@ -37,5 +37,10 @@ namespace Reservation_System.UI
         {
 
         }
+
+        private void btn_main_prereservation_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
+        }
     }
 }
