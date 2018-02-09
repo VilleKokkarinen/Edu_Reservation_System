@@ -77,7 +77,6 @@ namespace Reservation_System.UI
                 string query = "INSERT INTO ITEMS (I_NAME, I_STATE, I_TYPE) VALUES (@name, 1, @TYPE)";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
-
                     int index = ((ComboItem)comboBox1.SelectedItem).ID;
 
                     cmd.Parameters.AddWithValue("@name", txt_name.Text);
@@ -92,13 +91,11 @@ namespace Reservation_System.UI
                     }
                     else
                     {
-                        MessageBox.Show("Item Created succesfully");
-                        updatetypes();
+                        MessageBox.Show("Item Created succesfully");                      
                     }
                 }
                 connection.Close();
-            }
-        
+            }        
     }
 
         private void NewItemScreen_Load(object sender, EventArgs e)

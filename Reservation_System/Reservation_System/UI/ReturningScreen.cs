@@ -21,6 +21,7 @@ namespace Reservation_System.UI
                 label8.Text = "Borrowed items";               
                 button7.Text = "Return";                
                 button10.Text = "Show information about item";
+              
             }
             else
             {
@@ -28,6 +29,7 @@ namespace Reservation_System.UI
                 label8.Text = "Lainassa olevat tuotteet";               
                 button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
+               
             }
         }
         public ReturningScreen()
@@ -46,7 +48,7 @@ namespace Reservation_System.UI
                 using (MySqlCommand UserLoans = connection.CreateCommand())
                 {
                     UserLoans.CommandType = CommandType.Text;
-                    UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 2 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID AND RESERVATIONROWS.RR_USER =@USER";
+                    UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 2 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID AND RESERVATIONROWS.RR_USER =@USER AND RESERVATIONROWS.RR_RETURNED = 0";
                     UserLoans.Parameters.AddWithValue("@USER", Program.user.userid());
 
                     connection.Open();
@@ -85,6 +87,24 @@ namespace Reservation_System.UI
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {                       
                         cmd.Parameters.AddWithValue("@itemid", item.ItemID);                        
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE RESERVATIONROWS SET RR_RETURNED = 1 WHERE RESERVATIONROWS.RR_RETURNED = 0 AND RR_USER =@USER AND RR_ITEM =@itemid";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@itemid", item.ItemID);
+                        cmd.Parameters.AddWithValue("@USER", Program.user.userid());
 
                         connection.Open();
                         int result = cmd.ExecuteNonQuery();

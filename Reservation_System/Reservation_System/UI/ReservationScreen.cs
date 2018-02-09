@@ -98,7 +98,7 @@ namespace Reservation_System
                              
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {                  
-                    string query = "UPDATE ITEMS SET I_STATE =2 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE) VALUES (LAST_INSERT_ID(), @user, @itemid, CURRENT_TIMESTAMP, @returndate)";
+                    string query = "UPDATE ITEMS SET I_STATE =2 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE, RR_RETURNED) VALUES (LAST_INSERT_ID(), @user, @itemid, CURRENT_TIMESTAMP, @returndate, 0)";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {                        
                         cmd.Parameters.AddWithValue("@user", Program.user.userid());
