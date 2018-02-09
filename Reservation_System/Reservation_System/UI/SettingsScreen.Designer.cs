@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btn_main_Settings = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,27 +88,16 @@
             this.radioButton1.Text = "Finnish";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // btn_main_Settings
-            // 
-            this.btn_main_Settings.Location = new System.Drawing.Point(197, 226);
-            this.btn_main_Settings.Name = "btn_main_Settings";
-            this.btn_main_Settings.Size = new System.Drawing.Size(75, 23);
-            this.btn_main_Settings.TabIndex = 37;
-            this.btn_main_Settings.Text = "Päävalikko";
-            this.btn_main_Settings.UseVisualStyleBackColor = true;            
-            // 
             // SettingsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btn_main_Settings);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Name = "SettingsScreen";
-            this.Text = "SettingsScreen";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsScreen_FormClosing);
+            this.Text = "SettingsScreen";           
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -123,6 +111,5 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button btn_main_Settings;
     }
 }

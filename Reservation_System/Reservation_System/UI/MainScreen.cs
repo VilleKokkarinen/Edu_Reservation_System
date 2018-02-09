@@ -44,38 +44,44 @@ namespace Reservation_System.UI
 
         private void btn_Loan_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Close();
             UserInterFace.ReservationScreen();
         }
 
         private void btn_return_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Close();           
             UserInterFace.ReturningScreen();
         }
 
         private void btn_reserve_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Close();
             UserInterFace.PreReservationScreen();
         }
 
         private void btn_accountmngr_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Close();
             UserInterFace.AccountManagementScreen();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Close();
             UserInterFace.SettingsScreen();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Close();            
             UserInterFace.ItemManagementScreen();
+        }
+
+        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            e.Cancel = (exit == DialogResult.No);
         }
     }
 }

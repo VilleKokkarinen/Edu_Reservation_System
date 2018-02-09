@@ -36,18 +36,69 @@ namespace Reservation_System.UI
             CenterToScreen();
         }
 
-        private void ReturningScreen_Load(object sender, EventArgs e)
+        private void GetLoans()
         {
             checkedListBox2.Items.Clear();
-            foreach (User.LoanItem loan in Program.user.Loans)
+            checkedListBox2.DisplayMember = "Description";
+
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
-                checkedListBox2.Items.Add(loan.Description);
+                using (MySqlCommand UserLoans = connection.CreateCommand())
+                {
+                    UserLoans.CommandType = CommandType.Text;
+                    UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 2 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID AND RESERVATIONROWS.RR_USER =@USER";
+                    UserLoans.Parameters.AddWithValue("@USER", Program.user.userid());
+
+                    connection.Open();
+                    MySqlDataReader reader = UserLoans.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int ItemID = (int)reader["I_ID"];
+                            string Itemname = (string)reader["I_NAME"];
+                            int ItemType = (int)reader["I_TYPE"];
+                            int ItemState = (int)reader["I_STATE"];
+
+                            // Add the item to the User's inventory
+                            checkedListBox2.Items.Add(new User.LoanItem(new User.Item(ItemID, Itemname, ItemType, ItemState)));
+                        }
+                    }
+                }
+                connection.Close();
             }
+        }
+
+        private void ReturningScreen_Load(object sender, EventArgs e)
+        {
+            GetLoans();  
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            foreach (User.LoanItem item in checkedListBox2.CheckedItems)
+            {
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {                       
+                        cmd.Parameters.AddWithValue("@itemid", item.ItemID);                        
 
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            GetLoans();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -57,7 +108,15 @@ namespace Reservation_System.UI
 
         private void btn_main_returning_Click(object sender, EventArgs e)
         {
-            UserInterFace.MainScreen();
+            this.Close();
+            try
+            {
+                UserInterFace.MainScreen();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
     

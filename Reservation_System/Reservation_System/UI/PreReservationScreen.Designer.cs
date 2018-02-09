@@ -33,7 +33,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
             this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
-            this.btn_main_prereservation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button18
@@ -82,22 +81,11 @@
             this.checkedListBox4.Size = new System.Drawing.Size(226, 259);
             this.checkedListBox4.TabIndex = 58;
             // 
-            // btn_main_prereservation
-            // 
-            this.btn_main_prereservation.Location = new System.Drawing.Point(316, 316);
-            this.btn_main_prereservation.Name = "btn_main_prereservation";
-            this.btn_main_prereservation.Size = new System.Drawing.Size(75, 23);
-            this.btn_main_prereservation.TabIndex = 63;
-            this.btn_main_prereservation.Text = "Päävalikko";
-            this.btn_main_prereservation.UseVisualStyleBackColor = true;
-            this.btn_main_prereservation.Click += new System.EventHandler(this.btn_main_prereservation_Click);
-            // 
             // PreReservationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 351);
-            this.Controls.Add(this.btn_main_prereservation);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.textBox7);
@@ -117,6 +105,5 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.CheckedListBox checkedListBox4;
-        private System.Windows.Forms.Button btn_main_prereservation;
     }
 }

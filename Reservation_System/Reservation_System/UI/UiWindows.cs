@@ -32,8 +32,8 @@ namespace Reservation_System.UI
             _returningscreen.Parent = _Mainscreen;
             _accounmanagementscreen.Parent = _Mainscreen;
             _itemmanagementscreen.Parent = _Mainscreen;
-            _newitemscreen.Parent = _itemmanagementscreen;
-            _removeitemscreen.Parent = _itemmanagementscreen;
+            _newitemscreen.Parent = _Mainscreen;
+            _removeitemscreen.Parent = _Mainscreen;
         }            
     }
 }

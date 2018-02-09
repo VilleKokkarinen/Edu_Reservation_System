@@ -143,6 +143,7 @@
             this.Controls.Add(this.btn_reserve);
             this.Name = "MainScreen";
             this.Text = "MainScreen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
