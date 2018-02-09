@@ -72,6 +72,7 @@
             // 
             // checkedListBox4
             // 
+            this.checkedListBox4.CheckOnClick = true;
             this.checkedListBox4.FormattingEnabled = true;
             this.checkedListBox4.Items.AddRange(new object[] {
             "[Hilavitkutin] [Tyyppi X] [Saatavilla 7.5.18]",
