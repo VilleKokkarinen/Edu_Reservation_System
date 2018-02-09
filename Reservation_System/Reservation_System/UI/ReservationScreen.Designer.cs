@@ -91,6 +91,7 @@
             // 
             // chckboxlist_Items
             // 
+            this.chckboxlist_Items.CheckOnClick = true;
             this.chckboxlist_Items.DisplayMember = "Text";
             this.chckboxlist_Items.FormattingEnabled = true;
             this.chckboxlist_Items.HorizontalScrollbar = true;

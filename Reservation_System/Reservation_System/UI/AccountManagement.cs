@@ -28,8 +28,7 @@ namespace Reservation_System.UI
                 groupBox1.Text = "Change Password";
                 groupBox2.Text = "Change email-address";
                 btn_applychanges.Text = "Apply Changes";
-                btn_applychanges2.Text = "Apply Changes";
-                btn_main_AccountManagement.Text = "Main menu";
+                btn_applychanges2.Text = "Apply Changes";               
             }
             else
             {
@@ -40,7 +39,6 @@ namespace Reservation_System.UI
                 groupBox2.Text = "Vaihda sähköposti- osoite";
                 btn_applychanges.Text = "Hyväksy muutokset";
                 btn_applychanges2.Text = "Hyväksy muutokset";
-                btn_main_AccountManagement.Text = "Päävalikko";
             }
         }
 

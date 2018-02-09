@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.btn_reserve = new System.Windows.Forms.Button();
             this.btn_settings = new System.Windows.Forms.Button();
             this.lbl_welcome = new System.Windows.Forms.Label();
@@ -143,6 +144,7 @@
             this.Controls.Add(this.btn_accountmngr);
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_reserve);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainScreen";

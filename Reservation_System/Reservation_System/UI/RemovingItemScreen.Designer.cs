@@ -43,6 +43,7 @@
             // 
             // checklist_items
             // 
+            this.checklist_items.CheckOnClick = true;
             this.checklist_items.FormattingEnabled = true;
             this.checklist_items.Location = new System.Drawing.Point(12, 12);
             this.checklist_items.Name = "checklist_items";
