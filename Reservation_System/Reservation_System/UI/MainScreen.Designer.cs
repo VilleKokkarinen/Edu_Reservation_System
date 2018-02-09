@@ -131,8 +131,10 @@
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(449, 225);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -142,6 +144,7 @@
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_reserve);
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.MainScreen_Load);

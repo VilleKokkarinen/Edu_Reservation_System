@@ -19,14 +19,12 @@ namespace Reservation_System
                 button11.Text = "Add new item to database";
                 button12.Text = "Remove item from database";
                 groupBox1.Text = "Language";
-                btn_main_Settings.Text = "Main menu";
             }
             else
             {
                 button11.Text = "Lisää uusi tavara tietokantaan";
                 button12.Text = "Poista tavara tietokannasta";
                 groupBox1.Text = "Kieli";
-                btn_main_Settings.Text = "Päävälikko";
             }
         }
         public SettingsScreen()
