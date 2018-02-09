@@ -48,7 +48,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 35);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Remove a item";
+            this.button2.Text = "Remove an item";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // ItemManagement
