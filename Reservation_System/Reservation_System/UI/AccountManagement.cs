@@ -28,7 +28,7 @@ namespace Reservation_System.UI
                 groupBox1.Text = "Change Password";
                 groupBox2.Text = "Change email-address";
                 btn_applychanges.Text = "Apply Changes";
-                btn_applychanges2.Text = "Apply Changes";
+                btn_applychanges2.Text = "Apply Changes";               
             }
             else
             {

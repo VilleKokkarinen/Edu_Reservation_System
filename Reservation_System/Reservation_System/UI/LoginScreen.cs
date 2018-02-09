@@ -144,10 +144,5 @@ namespace Reservation_System.UI
         {
             UserInterFace.RegisterUserScreen();
         }
-
-        private void LoginScreen_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
