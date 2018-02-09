@@ -22,7 +22,7 @@ namespace Reservation_System.UI
                 lbl_firstname.Text = "First name";
                 lbl_lastname.Text = "Last name";
                 lbl_email.Text = "Email-address";
-                Text = "Registration";
+                Text = "Register";
             }
             else
             {

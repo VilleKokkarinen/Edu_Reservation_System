@@ -15,6 +15,21 @@ namespace Reservation_System.UI
 {
     public partial class ForgotPasswordScreen : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                button1.Text = "Recover password";
+                lbl_email.Text = "Email";
+                lbl_username.Text = "Username";
+            }
+            else
+            {
+                button1.Text = "Palauta salasana";
+                lbl_email.Text = "Sähköposti";
+                lbl_username.Text = "Käyttäjänimi";
+            }
+        }
         string newpassword = "password1";
 
         public ForgotPasswordScreen()

@@ -57,13 +57,17 @@ namespace Reservation_System.UI
 
                 lbl_name.Text = "Name";
                 lbl_type.Text = "Type";
-                btn_addtodatabase.Text = "Add to database";
+                btn_addtodatabase.Text = "Add item";
+                label1.Text = "Needed type is not listed? Add new type";
+                button1.Text = "Add type";
             }
             else
             {
                 lbl_name.Text = "Nimi";
                 lbl_type.Text = "Tyyppi";
-                btn_addtodatabase.Text = "Lisää tietokantaan";
+                btn_addtodatabase.Text = "Lisää tavara";
+                label1.Text = "Haluamaa tyyppiä ei listassa? Luo uusi tyyppi";
+                button1.Text = "Lisää tyyppi";
             }
         }
         private void button13_Click(object sender, EventArgs e)
@@ -126,6 +130,11 @@ namespace Reservation_System.UI
                 }
                 connection.Close();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     class ComboItem

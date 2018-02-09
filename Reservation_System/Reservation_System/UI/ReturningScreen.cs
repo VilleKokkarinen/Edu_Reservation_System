@@ -21,6 +21,7 @@ namespace Reservation_System.UI
                 label8.Text = "Borrowed items";               
                 button7.Text = "Return";                
                 button10.Text = "Show information about item";
+                btn_main_returning.Text = "Main menu";
             }
             else
             {
@@ -28,6 +29,7 @@ namespace Reservation_System.UI
                 label8.Text = "Lainassa olevat tuotteet";               
                 button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
+                btn_main_returning.Text = "Päävälikko";
             }
         }
         public ReturningScreen()
@@ -117,6 +119,11 @@ namespace Reservation_System.UI
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

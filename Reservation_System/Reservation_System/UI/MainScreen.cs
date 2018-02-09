@@ -20,6 +20,7 @@ namespace Reservation_System.UI
                 btn_reserve.Text = "Return loan(s)";
                 btn_return.Text = "Reservation";
                 btn_accountmngr.Text = "Account Managment";
+                button1.Text = "Item Managment";
                 btn_settings.Text = "Settings";
             }
             else
@@ -28,6 +29,7 @@ namespace Reservation_System.UI
                 btn_reserve.Text = "Palauta lainaus";
                 btn_return.Text = "Varaus *?*";
                 btn_accountmngr.Text = "Tilin hallinta";
+                button1.Text = "Tavaran hallinta";
                 btn_settings.Text = "Asetukset";
             }
         }

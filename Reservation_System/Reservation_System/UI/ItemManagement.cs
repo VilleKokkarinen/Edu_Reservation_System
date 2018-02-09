@@ -12,6 +12,19 @@ namespace Reservation_System.UI
 {
     public partial class ItemManagement : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                button1.Text = "Add a new item";
+                button2.Text = "Remove an item";
+            }
+            else
+            {
+                button1.Text = "Lisää tavara";
+                button2.Text = "Poista tavara";
+            }
+        }
         public ItemManagement()
         {
             InitializeComponent();
