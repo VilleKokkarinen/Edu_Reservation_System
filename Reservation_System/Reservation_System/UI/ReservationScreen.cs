@@ -14,6 +14,26 @@ namespace Reservation_System
 {
     public partial class ReserationScreen : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_availableitems.Text = "Available items";
+                lbl_searchitems.Text = "Search items";
+                label10.Text = "Return date";
+                btn_loan.Text = "Loan";
+                btn_main_reservation.Text = "Main menu";
+            }
+            else
+            {
+                lbl_availableitems.Text = "Saatavilla olevat tuotteet";
+                lbl_searchitems.Text = "Hae tavaroita";
+                label10.Text = "Palautuspäivä";
+                btn_loan.Text = "Lainaa";
+                btn_main_reservation.Text = "Päävälikko";
+            }
+        }
+
         List<ComboItem> items = new List<ComboItem>();
 
         public ReserationScreen()
@@ -94,7 +114,12 @@ namespace Reservation_System
                 //Remove selected items from list // update list
             }
             MessageBox.Show("reservation(s) Created succesfully");
-        }        
+        }
+
+        private void btn_main_reservation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     class ComboItem
     {

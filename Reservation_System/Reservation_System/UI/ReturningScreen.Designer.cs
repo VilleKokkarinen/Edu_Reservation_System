@@ -74,6 +74,7 @@
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 35;
             this.label7.Text = "Palautusvalikko";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // checkedListBox2
             // 

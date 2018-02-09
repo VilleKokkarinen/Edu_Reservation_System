@@ -92,22 +92,23 @@
             // 
             // chckboxlist_Items
             // 
+            this.chckboxlist_Items.CheckOnClick = true;
+            this.chckboxlist_Items.DisplayMember = "Text";
             this.chckboxlist_Items.FormattingEnabled = true;
             this.chckboxlist_Items.HorizontalScrollbar = true;
             this.chckboxlist_Items.Location = new System.Drawing.Point(24, 35);
             this.chckboxlist_Items.Name = "chckboxlist_Items";
             this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
             this.chckboxlist_Items.TabIndex = 32;
-            this.chckboxlist_Items.DisplayMember = "Text";          
             // 
             // comboBox1
             // 
+            this.comboBox1.DisplayMember = "Text";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(313, 106);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 43;
-            this.comboBox1.DisplayMember = "Text";
             // 
             // btn_main_reservation
             // 
@@ -116,7 +117,8 @@
             this.btn_main_reservation.Size = new System.Drawing.Size(84, 31);
             this.btn_main_reservation.TabIndex = 44;
             this.btn_main_reservation.Text = "Päävalikko";
-            this.btn_main_reservation.UseVisualStyleBackColor = true;           
+            this.btn_main_reservation.UseVisualStyleBackColor = true;
+            this.btn_main_reservation.Click += new System.EventHandler(this.btn_main_reservation_Click);
             // 
             // ReserationScreen
             // 
@@ -133,7 +135,7 @@
             this.Controls.Add(this.btn_loan);
             this.Controls.Add(this.chckboxlist_Items);
             this.Name = "ReserationScreen";
-            this.Text = "ReserationScreen";            
+            this.Text = "ReserationScreen";
             this.Load += new System.EventHandler(this.ReserationScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
