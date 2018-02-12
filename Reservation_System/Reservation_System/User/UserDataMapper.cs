@@ -27,7 +27,7 @@ namespace Reservation_System.User
                     using (MySqlCommand UserLogin = connection.CreateCommand())
                     {
                         UserLogin.CommandType = CommandType.Text;
-                        UserLogin.CommandText = "Select * from USERS where U_USERNAME=@user and U_PASSWORD=@password";
+                        UserLogin.CommandText = "Select * from USERS where U_USERNAME=@user COLLATE latin1_general_cs and U_PASSWORD=@password COLLATE latin1_general_cs";
                         UserLogin.Parameters.AddWithValue("@user", username);
                         UserLogin.Parameters.AddWithValue("@password", password);
                         

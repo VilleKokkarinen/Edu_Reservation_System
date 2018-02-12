@@ -63,7 +63,7 @@ namespace Reservation_System.UI
                 {
                     chkbox_remember_user.Checked = true;
                     txt_username.Text = Program.Settings.Username;
-                txt_password.Select();
+                    txt_password.Select();
 
                 }             
             }        

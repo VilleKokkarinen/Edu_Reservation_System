@@ -19,6 +19,7 @@ namespace Reservation_System
                 button11.Text = "Add new item to database";
                 button12.Text = "Remove item from database";
                 groupBox1.Text = "Language";
+                rbEnglish.Checked = true;
               
             }
             else
@@ -26,6 +27,7 @@ namespace Reservation_System
                 button11.Text = "Lisää uusi tavara tietokantaan";
                 button12.Text = "Poista tavara tietokannasta";
                 groupBox1.Text = "Kieli";
+                rbFinnish.Checked = true;
                 
             }
         }
@@ -33,6 +35,7 @@ namespace Reservation_System
         {
             InitializeComponent();
             CenterToScreen();
+            language();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -40,6 +43,37 @@ namespace Reservation_System
 
         }
 
-      
+        private void rbEnglish_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbEnglish.Checked == true)
+            {
+                Program.Settings.English = true;
+            }
+            else
+            {
+                Program.Settings.English = false;
+            }
+            Program.Settings.SaveFile();
+            Program.Settings.Checksettings();
+        }
+
+        private void rbFinnish_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbEnglish.Checked == true)
+            {
+                Program.Settings.English = true;
+            }
+            else
+            {
+                Program.Settings.English = false;
+            }
+            Program.Settings.SaveFile();
+            Program.Settings.Checksettings();
+        }
+
+        private void SettingsScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

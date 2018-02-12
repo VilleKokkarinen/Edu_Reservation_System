@@ -36,6 +36,7 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
             CenterToScreen();
+            language();
         }
 
         private void GetLoans()

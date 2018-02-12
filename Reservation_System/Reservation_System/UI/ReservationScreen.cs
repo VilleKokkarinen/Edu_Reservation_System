@@ -15,9 +15,30 @@ namespace Reservation_System
     public partial class ReserationScreen : Form
     {
         List<ComboItem> items = new List<ComboItem>();
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_availableitems.Text = "Return window";
+                lbl_searchitems.Text = "Borrowed items";
+                btn_loan.Text = "Return";
+                groupBox1.Text = "Show information about item";
+                this.Text = "Reservation";
+
+            }
+            else
+            {
+                lbl_availableitems.Text = "Return window";
+                lbl_searchitems.Text = "Borrowed items";
+                btn_loan.Text = "Return";
+                groupBox1.Text = "Show information about item";
+                this.Text = "Lainaus";
+            }
+        }
 
         public ReserationScreen()
         {
+            language();
             InitializeComponent();
             CenterToScreen();  
                                   

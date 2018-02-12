@@ -34,6 +34,7 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
             CenterToScreen();
+            language();
         }
 
         private void button18_Click(object sender, EventArgs e)
