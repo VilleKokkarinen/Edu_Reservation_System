@@ -64,5 +64,10 @@ namespace Reservation_System.UI
                 }
             }
         }
+
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

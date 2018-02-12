@@ -87,5 +87,10 @@ namespace Reservation_System.UI
                 }
             }
         }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Reservation_System
+﻿namespace Reservation_System.UI
 {
     partial class SettingsScreen
     {
@@ -28,13 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbFinnish = new System.Windows.Forms.RadioButton();
+            this.rbEnglish = new System.Windows.Forms.RadioButton();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbEnglish = new System.Windows.Forms.RadioButton();
-            this.rbFinnish = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbEnglish);
+            this.groupBox1.Controls.Add(this.rbFinnish);
+            this.groupBox1.Location = new System.Drawing.Point(12, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(90, 71);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Language";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 42);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(59, 17);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "English";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(58, 17);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.Text = "Finnish";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // rbFinnish
+            // 
+            this.rbFinnish.AutoSize = true;
+            this.rbFinnish.Location = new System.Drawing.Point(6, 19);
+            this.rbFinnish.Name = "rbFinnish";
+            this.rbFinnish.Size = new System.Drawing.Size(58, 17);
+            this.rbFinnish.TabIndex = 0;
+            this.rbFinnish.Text = "Finnish";
+            this.rbFinnish.UseVisualStyleBackColor = true;
+            this.rbFinnish.CheckedChanged += new System.EventHandler(this.rbEnglish_CheckedChanged);
+            // 
+            // rbEnglish
+            // 
+            this.rbEnglish.AutoSize = true;
+            this.rbEnglish.Checked = true;
+            this.rbEnglish.Location = new System.Drawing.Point(6, 42);
+            this.rbEnglish.Name = "rbEnglish";
+            this.rbEnglish.Size = new System.Drawing.Size(59, 17);
+            this.rbEnglish.TabIndex = 1;
+            this.rbEnglish.TabStop = true;
+            this.rbEnglish.Text = "English";
+            this.rbEnglish.UseVisualStyleBackColor = true;
+            this.rbEnglish.CheckedChanged += new System.EventHandler(this.rbFinnish_CheckedChanged);
             // 
             // button11
             // 
@@ -54,41 +113,7 @@
             this.button12.TabIndex = 35;
             this.button12.Text = "Poista tavara tietokannasta";
             this.button12.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbEnglish);
-            this.groupBox1.Controls.Add(this.rbFinnish);
-            this.groupBox1.Location = new System.Drawing.Point(12, 178);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(90, 71);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Language";
-            // 
-            // rbEnglish
-            // 
-            this.rbEnglish.AutoSize = true;
-            this.rbEnglish.Checked = true;
-            this.rbEnglish.Location = new System.Drawing.Point(6, 42);
-            this.rbEnglish.Name = "rbEnglish";
-            this.rbEnglish.Size = new System.Drawing.Size(59, 17);
-            this.rbEnglish.TabIndex = 1;
-            this.rbEnglish.TabStop = true;
-            this.rbEnglish.Text = "English";
-            this.rbEnglish.UseVisualStyleBackColor = true;
-            this.rbEnglish.CheckedChanged += new System.EventHandler(this.rbFinnish_CheckedChanged);
-            // 
-            // rbFinnish
-            // 
-            this.rbFinnish.AutoSize = true;
-            this.rbFinnish.Location = new System.Drawing.Point(6, 19);
-            this.rbFinnish.Name = "rbFinnish";
-            this.rbFinnish.Size = new System.Drawing.Size(58, 17);
-            this.rbFinnish.TabIndex = 0;
-            this.rbFinnish.Text = "Finnish";
-            this.rbFinnish.UseVisualStyleBackColor = true;
-            this.rbFinnish.CheckedChanged += new System.EventHandler(this.rbEnglish_CheckedChanged);
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // SettingsScreen
             // 
@@ -109,10 +134,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbEnglish;
         private System.Windows.Forms.RadioButton rbFinnish;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }

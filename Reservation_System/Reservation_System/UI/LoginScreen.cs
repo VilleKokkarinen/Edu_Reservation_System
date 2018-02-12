@@ -83,7 +83,10 @@ namespace Reservation_System.UI
             if (Program.user != null)
             {
                 this.Hide();
-                UserInterFace.MainScreen();
+                //UserInterFace.MainScreen();
+                Reservation_System.UI.MainScreen form = new MainScreen();
+                form.ShowDialog();
+
             }
             else
             {

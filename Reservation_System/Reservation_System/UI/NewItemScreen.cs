@@ -134,10 +134,5 @@ namespace Reservation_System.UI
         {
 
         }
-    }
-    class ComboItem
-    {
-        public string Text { get; set; }
-        public int ID { get; set; }
-    }
+    }  
 }

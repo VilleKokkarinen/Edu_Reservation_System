@@ -24,8 +24,7 @@ namespace Reservation_System
             Application.EnableVisualStyles();
 
             try
-            {
-                //show the first screen (login)
+            {               
                 UserInterFace.LoginScreen();
             }catch (Exception ex)
             {

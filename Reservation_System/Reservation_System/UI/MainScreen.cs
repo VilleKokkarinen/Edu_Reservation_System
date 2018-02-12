@@ -12,79 +12,609 @@ namespace Reservation_System.UI
 {
     public partial class MainScreen : Form
     {
-        void language()
-        {
-            if (Program.Settings.English == true)
-            {
-                btn_Loan.Text = "Loan item(s)";
-                btn_reserve.Text = "Return loan(s)";
-                btn_return.Text = "Reservation";
-                btn_accountmngr.Text = "Account Managment";
-                button1.Text = "Item Managment";
-                btn_settings.Text = "Settings";
-            }
-            else
-            {
-                btn_Loan.Text = "Lainaa tavara";
-                btn_reserve.Text = "Palauta lainaus";
-                btn_return.Text = "Varaus *?*";
-                btn_accountmngr.Text = "Tilin hallinta";
-                button1.Text = "Tavaran hallinta";
-                btn_settings.Text = "Asetukset";
-            }
-        }
         public MainScreen()
         {
             InitializeComponent();
-            CenterToScreen();
-            language();
-        }
-
-        private void MainScreen_Load(object sender, EventArgs e)
-        {
             lbl_username.Text = User.User._username;
         }
 
+        private void BlackForm_Load(object sender, EventArgs e)
+        {
+            _MaxButton.PerformClick();
+        }
+
+
+        bool isTopPanelDragged = false;
+        bool isLeftPanelDragged = false;
+        bool isRightPanelDragged = false;
+        bool isBottomPanelDragged = false;
+        bool isTopBorderPanelDragged = false;
+
+        bool isRightBottomPanelDragged = false;
+        bool isLeftBottomPanelDragged = false;
+        bool isRightTopPanelDragged = false;
+        bool isLeftTopPanelDragged = false;
+
+        bool isWindowMaximized = false;
+        Point offset;
+        Size _normalWindowSize;
+        Point _normalWindowLocation = Point.Empty;
+
+
+
+        private void TopBorderPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isTopBorderPanelDragged = true;
+            }
+            else
+            {
+                isTopBorderPanelDragged = false;
+            }
+        }
+
+
+        private void TopBorderPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Y < this.Location.Y)
+            {
+                if (isTopBorderPanelDragged)
+                {
+                    if (this.Height < 50)
+                    {
+                        this.Height = 50;
+                        isTopBorderPanelDragged = false;
+                    }
+                    else
+                    {
+                        this.Location = new Point(this.Location.X, this.Location.Y + e.Y);
+                        this.Height = this.Height - e.Y;
+                    }
+                }
+            }
+        }
+
+
+        private void TopBorderPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isTopBorderPanelDragged = false;
+        }
+
+
+
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isTopPanelDragged = true;
+                Point pointStartPosition = this.PointToScreen(new Point(e.X, e.Y));
+                offset = new Point();
+                offset.X = this.Location.X - pointStartPosition.X;
+                offset.Y = this.Location.Y - pointStartPosition.Y;
+            }
+            else
+            {
+                isTopPanelDragged = false;
+            }
+            if (e.Clicks == 2)
+            {
+                isTopPanelDragged = false;
+                _MaxButton_Click(sender, e);
+            }
+        }
+
+        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isTopPanelDragged)
+            {
+                Point newPoint = TopPanel.PointToScreen(new Point(e.X, e.Y));
+                newPoint.Offset(offset);
+                this.Location = newPoint;
+
+                if (this.Location.X > 2 || this.Location.Y > 2)
+                {
+                    if (this.WindowState == FormWindowState.Maximized)
+                    {
+                        this.Location = _normalWindowLocation;
+                        this.Size = _normalWindowSize;
+                        toolTip1.SetToolTip(_MaxButton, "Maximize");
+                        _MaxButton.CFormState = MinMaxButton.CustomFormState.Normal;
+                        isWindowMaximized = false;
+                    }
+                }
+            }
+        }
+
+
+        private void TopPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isTopPanelDragged = false;
+            if (this.Location.Y <= 5)
+            {
+                if (!isWindowMaximized)
+                {
+                    _normalWindowSize = this.Size;
+                    _normalWindowLocation = this.Location;
+
+                    Rectangle rect = Screen.PrimaryScreen.WorkingArea;
+                    this.Location = new Point(0, 0);
+                    this.Size = new System.Drawing.Size(rect.Width, rect.Height);
+                    toolTip1.SetToolTip(_MaxButton, "Restore Down");
+                    _MaxButton.CFormState = MinMaxButton.CustomFormState.Maximize;
+                    isWindowMaximized = true;
+                }
+            }
+        }
+
+
+
+        private void LeftPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.Location.X <= 0 || e.X < 0)
+            {
+                isLeftPanelDragged = false;
+                this.Location = new Point(10, this.Location.Y);
+            }
+            else
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    isLeftPanelDragged = true;
+                }
+                else
+                {
+                    isLeftPanelDragged = false;
+                }
+            }
+        }
+
+        private void LeftPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X < this.Location.X)
+            {
+                if (isLeftPanelDragged)
+                {
+                    if (this.Width < 100)
+                    {
+                        this.Width = 100;
+                        isLeftPanelDragged = false;
+                    }
+                    else
+                    {
+                        this.Location = new Point(this.Location.X + e.X, this.Location.Y);
+                        this.Width = this.Width - e.X;
+                    }
+                }
+            }
+        }
+
+        private void LeftPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isLeftPanelDragged = false;
+        }
+
+
+
+        private void RightPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isRightPanelDragged = true;
+            }
+            else
+            {
+                isRightPanelDragged = false;
+            }
+        }
+
+        private void RightPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isRightPanelDragged)
+            {
+                if (this.Width < 100)
+                {
+                    this.Width = 100;
+                    isRightPanelDragged = false;
+                }
+                else
+                {
+                    this.Width = this.Width + e.X;
+                }
+            }
+        }
+
+        private void RightPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isRightPanelDragged = false;
+        }
+
+
+
+        private void BottomPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isBottomPanelDragged = true;
+            }
+            else
+            {
+                isBottomPanelDragged = false;
+            }
+        }
+
+        private void BottomPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isBottomPanelDragged)
+            {
+                if (this.Height < 50)
+                {
+                    this.Height = 50;
+                    isBottomPanelDragged = false;
+                }
+                else
+                {
+                    this.Height = this.Height + e.Y;
+                }
+            }
+        }
+
+        private void BottomPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isBottomPanelDragged = false;
+        }
+
+
+        private void _MinButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void _MaxButton_Click(object sender, EventArgs e)
+        {
+            if (isWindowMaximized)
+            {
+                this.Location = _normalWindowLocation;
+                this.Size = _normalWindowSize;
+                toolTip1.SetToolTip(_MaxButton, "Maximize");
+                _MaxButton.CFormState = MinMaxButton.CustomFormState.Normal;
+                isWindowMaximized = false;
+            }
+            else
+            {
+                _normalWindowSize = this.Size;
+                _normalWindowLocation = this.Location;
+
+                Rectangle rect = Screen.PrimaryScreen.WorkingArea;
+                this.Location = new Point(0, 0);
+                this.Size = new System.Drawing.Size(rect.Width, rect.Height);
+                toolTip1.SetToolTip(_MaxButton, "Restore Down");
+                _MaxButton.CFormState = MinMaxButton.CustomFormState.Maximize;
+                isWindowMaximized = true;
+            }
+        }
+
+        private void _CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+
+        private void RightBottomPanel_1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isRightBottomPanelDragged = true;
+        }
+
+        private void RightBottomPanel_1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isRightBottomPanelDragged)
+            {
+                if (this.Width < 100 || this.Height < 50)
+                {
+                    this.Width = 100;
+                    this.Height = 50;
+                    isRightBottomPanelDragged = false;
+                }
+                else
+                {
+                    this.Width = this.Width + e.X;
+                    this.Height = this.Height + e.Y;
+                }
+            }
+        }
+
+
+        private void RightBottomPanel_1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isRightBottomPanelDragged = false;
+        }
+
+        private void RightBottomPanel_2_MouseDown(object sender, MouseEventArgs e)
+        {
+            RightBottomPanel_1_MouseDown(sender, e);
+        }
+
+        private void RightBottomPanel_2_MouseMove(object sender, MouseEventArgs e)
+        {
+            RightBottomPanel_1_MouseMove(sender, e);
+        }
+
+        private void RightBottomPanel_2_MouseUp(object sender, MouseEventArgs e)
+        {
+            RightBottomPanel_1_MouseUp(sender, e);
+        }
+
+
+
+        private void LeftBottomPanel_1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isLeftBottomPanelDragged = true;
+        }
+
+        private void LeftBottomPanel_1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X < this.Location.X)
+            {
+                if (isLeftBottomPanelDragged || this.Height < 50)
+                {
+                    if (this.Width < 100)
+                    {
+                        this.Width = 100;
+                        this.Height = 50;
+                        isLeftBottomPanelDragged = false;
+                    }
+                    else
+                    {
+                        this.Location = new Point(this.Location.X + e.X, this.Location.Y);
+                        this.Width = this.Width - e.X;
+                        this.Height = this.Height + e.Y;
+                    }
+                }
+            }
+        }
+
+        private void LeftBottomPanel_1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isLeftBottomPanelDragged = false;
+        }
+
+        private void LeftBottomPanel_2_MouseDown(object sender, MouseEventArgs e)
+        {
+            LeftBottomPanel_1_MouseDown(sender, e);
+        }
+
+        private void LeftBottomPanel_2_MouseMove(object sender, MouseEventArgs e)
+        {
+            LeftBottomPanel_1_MouseMove(sender, e);
+        }
+
+        private void LeftBottomPanel_2_MouseUp(object sender, MouseEventArgs e)
+        {
+            LeftBottomPanel_1_MouseUp(sender, e);
+        }
+
+
+
+
+        private void RightTopPanel_1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isRightTopPanelDragged = true;
+        }
+
+        private void RightTopPanel_1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Y < this.Location.Y || e.X < this.Location.X)
+            {
+                if (isRightTopPanelDragged)
+                {
+                    if (this.Height < 50 || this.Width < 100)
+                    {
+                        this.Height = 50;
+                        this.Width = 100;
+                        isRightTopPanelDragged = false;
+                    }
+                    else
+                    {
+                        this.Location = new Point(this.Location.X, this.Location.Y + e.Y);
+                        this.Height = this.Height - e.Y;
+                        this.Width = this.Width + e.X;
+                    }
+                }
+            }
+        }
+
+        private void RightTopPanel_1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isRightTopPanelDragged = false;
+        }
+
+        private void RightTopPanel_2_MouseDown(object sender, MouseEventArgs e)
+        {
+            RightTopPanel_1_MouseDown(sender, e);
+        }
+
+        private void RightTopPanel_2_MouseMove(object sender, MouseEventArgs e)
+        {
+            RightTopPanel_1_MouseMove(sender, e);
+        }
+
+        private void RightTopPanel_2_MouseUp(object sender, MouseEventArgs e)
+        {
+            RightTopPanel_1_MouseUp(sender, e);
+        }
+
+
+
+
+
+        private void LeftTopPanel_1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isLeftTopPanelDragged = true;
+        }
+
+        private void LeftTopPanel_1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X < this.Location.X || e.Y < this.Location.Y)
+            {
+                if (isLeftTopPanelDragged)
+                {
+                    if (this.Width < 100 || this.Height < 50)
+                    {
+                        this.Width = 100;
+                        this.Height = 100;
+                        isLeftTopPanelDragged = false;
+                    }
+                    else
+                    {
+                        this.Location = new Point(this.Location.X + e.X, this.Location.Y);
+                        this.Width = this.Width - e.X;
+                        this.Location = new Point(this.Location.X, this.Location.Y + e.Y);
+                        this.Height = this.Height - e.Y;
+                    }
+                }
+            }
+
+        }
+
+        private void LeftTopPanel_1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isLeftTopPanelDragged = false;
+        }
+
+        private void LeftTopPanel_2_MouseDown(object sender, MouseEventArgs e)
+        {
+            LeftTopPanel_1_MouseDown(sender, e);
+        }
+
+        private void LeftTopPanel_2_MouseMove(object sender, MouseEventArgs e)
+        {
+            LeftTopPanel_1_MouseMove(sender, e);
+        }
+
+        private void LeftTopPanel_2_MouseUp(object sender, MouseEventArgs e)
+        {
+            LeftTopPanel_1_MouseUp(sender, e);
+        }
+
+
+
+
+
+
         private void btn_Loan_Click(object sender, EventArgs e)
         {
-           // this.Close();
-            UserInterFace.ReservationScreen();
+            btn_Loan.BZBackColor = Color.Black;
+            btn_Loan.ChangeColorMouseHC = false;
+            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Settings.BZBackColor = Color.FromArgb(60, 60, 60);
+
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+            btn_Settings.ChangeColorMouseHC = true;
+
+            Loan_Panel.Visible = true;
+            Loan_Panel.BringToFront();
         }
 
-        private void btn_return_Click(object sender, EventArgs e)
+        private void btn_Loans_Click(object sender, EventArgs e)
         {
-           // this.Close();           
-            UserInterFace.ReturningScreen();
+            btn_Loans.BZBackColor = Color.Black;
+            btn_Loans.ChangeColorMouseHC = false;
+            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Settings.BZBackColor = Color.FromArgb(60, 60, 60);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+            btn_Settings.ChangeColorMouseHC = true;
+
+            panel_UserLoans.Visible = true;
+            panel_UserLoans.BringToFront();
         }
 
-        private void btn_reserve_Click(object sender, EventArgs e)
+        private void btn_Reserve_Click(object sender, EventArgs e)
         {
-           // this.Close();
-            UserInterFace.PreReservationScreen();
+            btn_Reservation.BZBackColor = Color.Black;
+            btn_Reservation.ChangeColorMouseHC = false;
+            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Settings.BZBackColor = Color.FromArgb(60, 60, 60);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Settings.ChangeColorMouseHC = true;
         }
 
-        private void btn_accountmngr_Click(object sender, EventArgs e)
+        private void btn_Settings_Click(object sender, EventArgs e)
         {
-           // this.Close();
-            UserInterFace.AccountManagementScreen();
+            btn_Settings.BZBackColor = Color.Black;
+            btn_Settings.ChangeColorMouseHC = false;
+            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;            
+            btn_Reservation.ChangeColorMouseHC = true;
+
+            Settings_Panel.Visible = true;
+            Settings_Panel.BringToFront();
         }
 
-        private void btn_settings_Click(object sender, EventArgs e)
+        private void run_button_Click(object sender, EventArgs e)
         {
-           // this.Close();
-            UserInterFace.SettingsScreen();
+            
+            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
+           
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void help_button_Click(object sender, EventArgs e)
         {
-            //this.Close();            
-            UserInterFace.ItemManagementScreen();
+          
+            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);            
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
         }
 
-        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
+
+
+
+
+        private void WindowTextLabel_MouseDown(object sender, MouseEventArgs e)
         {
-            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            e.Cancel = (exit == DialogResult.No);
+            TopPanel_MouseDown(sender, e);
+        }
+
+        private void WindowTextLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            TopPanel_MouseMove(sender, e);
+        }
+
+        private void WindowTextLabel_MouseUp(object sender, MouseEventArgs e)
+        {
+            TopPanel_MouseUp(sender, e);
+        }
+
+        private void shapedButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void Tool_Strip_Loans_NewLoan_Click(object sender, EventArgs e)
+        {
+            btn_Loan.PerformClick();           
         }
     }
 }

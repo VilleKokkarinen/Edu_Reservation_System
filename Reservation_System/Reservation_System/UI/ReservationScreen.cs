@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Reservation_System
+namespace Reservation_System.UI
 {
     public partial class ReserationScreen : Form
     {
@@ -79,8 +79,8 @@ namespace Reservation_System
         {
             
             
-            chckboxlist_Items.Items.Clear();
-            chckboxlist_Items.DisplayMember = "NAME";
+            checklist_Items.Items.Clear();
+            checklist_Items.DisplayMember = "NAME";
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 using (MySqlCommand availableItems = connection.CreateCommand())
@@ -100,7 +100,7 @@ namespace Reservation_System
                             int ItemType = (int)reader["I_TYPE"];
                             int ItemState = (int)reader["I_STATE"];
 
-                            chckboxlist_Items.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
+                            checklist_Items.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
                         }
                     }
                 }
@@ -115,7 +115,7 @@ namespace Reservation_System
         private void btn_loan_Click(object sender, EventArgs e)
         {
 
-            foreach (User.Item item in chckboxlist_Items.CheckedItems)
+            foreach (User.Item item in checklist_Items.CheckedItems)
             {
                 
                 string date = dtpReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
@@ -147,9 +147,9 @@ namespace Reservation_System
 
         private void chckboxlist_Items_SelectedValueChanged(object sender, EventArgs e)
         {
-            txt_itemid.Text = ((User.Item)chckboxlist_Items.SelectedItem).ID.ToString();
-            txt_itemstate.Text =((User.Item)chckboxlist_Items.SelectedItem).STATE.ToString();
-            txt_itemtype.Text = ((User.Item)chckboxlist_Items.SelectedItem).TYPE.ToString();
+            txt_itemid.Text = ((User.Item)checklist_Items.SelectedItem).ID.ToString();
+            txt_itemstate.Text =((User.Item)checklist_Items.SelectedItem).STATE.ToString();
+            txt_itemtype.Text = ((User.Item)checklist_Items.SelectedItem).TYPE.ToString();
             
         }
     }

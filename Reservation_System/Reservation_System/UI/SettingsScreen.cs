@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reservation_System.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Reservation_System
+namespace Reservation_System.UI
 {
     public partial class SettingsScreen : Form
     {
@@ -72,6 +73,11 @@ namespace Reservation_System
         }
 
         private void SettingsScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
         {
 
         }
