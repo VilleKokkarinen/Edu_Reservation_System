@@ -36,6 +36,11 @@
             this.btn_loan = new System.Windows.Forms.Button();
             this.chckboxlist_Items = new System.Windows.Forms.CheckedListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_itemid = new System.Windows.Forms.TextBox();
+            this.txt_itemtype = new System.Windows.Forms.TextBox();
+            this.txt_itemstate = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
@@ -99,6 +104,7 @@
             this.chckboxlist_Items.Name = "chckboxlist_Items";
             this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
             this.chckboxlist_Items.TabIndex = 32;
+            this.chckboxlist_Items.SelectedValueChanged += new System.EventHandler(this.chckboxlist_Items_SelectedValueChanged);
             // 
             // comboBox1
             // 
@@ -109,11 +115,45 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 43;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_itemstate);
+            this.groupBox1.Controls.Add(this.txt_itemtype);
+            this.groupBox1.Controls.Add(this.txt_itemid);
+            this.groupBox1.Location = new System.Drawing.Point(310, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(159, 100);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Valitun Tavaran tiedot";
+            // 
+            // txt_itemid
+            // 
+            this.txt_itemid.Location = new System.Drawing.Point(7, 20);
+            this.txt_itemid.Name = "txt_itemid";
+            this.txt_itemid.Size = new System.Drawing.Size(36, 20);
+            this.txt_itemid.TabIndex = 0;
+            // 
+            // txt_itemtype
+            // 
+            this.txt_itemtype.Location = new System.Drawing.Point(49, 20);
+            this.txt_itemtype.Name = "txt_itemtype";
+            this.txt_itemtype.Size = new System.Drawing.Size(100, 20);
+            this.txt_itemtype.TabIndex = 1;
+            // 
+            // txt_itemstate
+            // 
+            this.txt_itemstate.Location = new System.Drawing.Point(7, 46);
+            this.txt_itemstate.Name = "txt_itemstate";
+            this.txt_itemstate.Size = new System.Drawing.Size(142, 20);
+            this.txt_itemstate.TabIndex = 2;
+            // 
             // ReserationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 410);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpReturnDate);
@@ -125,6 +165,8 @@
             this.Name = "ReserationScreen";
             this.Text = "ReserationScreen";
             this.Load += new System.EventHandler(this.ReserationScreen_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +181,9 @@
         private System.Windows.Forms.Button btn_loan;
         private System.Windows.Forms.CheckedListBox chckboxlist_Items;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_itemstate;
+        private System.Windows.Forms.TextBox txt_itemtype;
+        private System.Windows.Forms.TextBox txt_itemid;
     }
 }

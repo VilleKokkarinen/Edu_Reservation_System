@@ -181,7 +181,6 @@
     <Compile Include="UI\UiWindows.cs" />
     <Compile Include="User\Item.cs" />
     <Compile Include="User\User.cs" />
-    <Compile Include="User\Loan.cs" />
     <Compile Include="User\UserDataMapper.cs" />
   </ItemGroup>
   <ItemGroup>
