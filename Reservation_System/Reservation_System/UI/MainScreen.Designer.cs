@@ -79,7 +79,7 @@
             this.rbFinnish = new System.Windows.Forms.RadioButton();
             this.Loan_Panel = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_ItemTypes = new System.Windows.Forms.ComboBox();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.btn_Loanitem = new Reservation_System.UI.ShapedButton();
             this.label10 = new System.Windows.Forms.Label();
@@ -91,7 +91,7 @@
             this.checklist_Items = new System.Windows.Forms.CheckedListBox();
             this.panel_UserLoans = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_itemtypes2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.shapedButton1 = new Reservation_System.UI.ShapedButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -557,19 +557,19 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.comboBox_ItemTypes);
             this.groupBox3.Controls.Add(this.txtSearchBox);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // comboBox1
+            // comboBox_ItemTypes
             // 
-            this.comboBox1.DisplayMember = "Text";
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Name = "comboBox1";
+            this.comboBox_ItemTypes.DisplayMember = "Text";
+            resources.ApplyResources(this.comboBox_ItemTypes, "comboBox_ItemTypes");
+            this.comboBox_ItemTypes.FormattingEnabled = true;
+            this.comboBox_ItemTypes.Name = "comboBox_ItemTypes";
             // 
             // txtSearchBox
             // 
@@ -602,6 +602,7 @@
             this.btn_Loanitem.Transparent1 = 250;
             this.btn_Loanitem.Transparent2 = 250;
             this.btn_Loanitem.UseVisualStyleBackColor = false;
+            this.btn_Loanitem.Click += new System.EventHandler(this.btn_Loanitem_Click);
             // 
             // label10
             // 
@@ -659,19 +660,19 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.comboBox_itemtypes2);
             this.groupBox4.Controls.Add(this.textBox1);
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // comboBox2
+            // comboBox_itemtypes2
             // 
-            this.comboBox2.DisplayMember = "Text";
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Name = "comboBox2";
+            this.comboBox_itemtypes2.DisplayMember = "Text";
+            resources.ApplyResources(this.comboBox_itemtypes2, "comboBox_itemtypes2");
+            this.comboBox_itemtypes2.FormattingEnabled = true;
+            this.comboBox_itemtypes2.Name = "comboBox_itemtypes2";
             // 
             // textBox1
             // 
@@ -737,14 +738,15 @@
             this.Checklist_UserLoans.FormattingEnabled = true;
             resources.ApplyResources(this.Checklist_UserLoans, "Checklist_UserLoans");
             this.Checklist_UserLoans.Name = "Checklist_UserLoans";
+            this.Checklist_UserLoans.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
             // 
-            // MainScreen2
+            // MainScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.panel_UserLoans);
             this.Controls.Add(this.Loan_Panel);
+            this.Controls.Add(this.panel_UserLoans);
             this.Controls.Add(this.Settings_Panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -764,7 +766,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
-            this.Name = "MainScreen2";
+            this.Name = "MainScreen";
             this.Load += new System.EventHandler(this.BlackForm_Load);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
@@ -840,7 +842,7 @@
         private System.Windows.Forms.TextBox txt_itemstate;
         private System.Windows.Forms.TextBox txt_itemtype;
         private System.Windows.Forms.TextBox txt_itemid;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_ItemTypes;
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtpReturnDate;
@@ -854,7 +856,7 @@
         private System.Windows.Forms.ToolStripMenuItem vaihdaSähköpostiOsoiteToolStripMenuItem;
         private System.Windows.Forms.Panel panel_UserLoans;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_itemtypes2;
         private System.Windows.Forms.TextBox textBox1;
         private ShapedButton shapedButton1;
         private System.Windows.Forms.GroupBox groupBox5;
