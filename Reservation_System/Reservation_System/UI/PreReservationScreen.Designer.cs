@@ -73,6 +73,7 @@
             // 
             // checkedListBox4
             // 
+            this.checkedListBox4.CheckOnClick = true;
             this.checkedListBox4.FormattingEnabled = true;
             this.checkedListBox4.Location = new System.Drawing.Point(12, 26);
             this.checkedListBox4.Name = "checkedListBox4";
