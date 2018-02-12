@@ -48,7 +48,8 @@ namespace Reservation_System.UI
         public NewItemScreen()
         {
             InitializeComponent();
-            CenterToScreen();         
+            CenterToScreen();
+            language();        
         }
         void language()
         {

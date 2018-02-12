@@ -35,7 +35,8 @@ namespace Reservation_System.UI
         public ForgotPasswordScreen()
         {
             InitializeComponent();
-            CenterToScreen();             
+            CenterToScreen();
+            language();          
         }
 
         private void checkuser()

@@ -13,21 +13,24 @@ namespace Reservation_System
     {
         public static SQL sql = new SQL();
         public static MySettings Settings = MySettings.LoadFile();
-        public static User.User user;
-        
-
+        public static User.User user;        
 
         [STAThread]
         static void Main(string[] args)
-        {
+        {                       
             Settings.Checksettings();
             Settings.SaveFile();
 
             Application.EnableVisualStyles();
-            
-            //show the first screen (login)
-            UserInterFace.LoginScreen();
-            
+
+            try
+            {
+                //show the first screen (login)
+                UserInterFace.LoginScreen();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

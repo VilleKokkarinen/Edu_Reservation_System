@@ -37,11 +37,11 @@ namespace Reservation_System
         }
 
         public ReserationScreen()
-        {
-            language();
+        {            
             InitializeComponent();
-            CenterToScreen();  
-                                  
+            CenterToScreen();
+            language();
+
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
                 connection.Open();

@@ -28,6 +28,7 @@ namespace Reservation_System.UI
         public ItemManagement()
         {
             InitializeComponent();
+            language();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -58,6 +58,7 @@ namespace Reservation_System.UI
                 InitializeComponent();                       
                 Center();
                 language();
+               
 
                 if(Program.Settings.RememberUserName == true)
                 {
@@ -143,6 +144,11 @@ namespace Reservation_System.UI
         private void button1_Click(object sender, EventArgs e)
         {
             UserInterFace.RegisterUserScreen();
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+            //language();
         }
     }
 }

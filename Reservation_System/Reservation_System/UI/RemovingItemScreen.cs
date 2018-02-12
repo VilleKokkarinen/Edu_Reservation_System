@@ -29,7 +29,7 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
             CenterToScreen();
-
+            language();
             checklist_items.Items.Clear();
         }
 

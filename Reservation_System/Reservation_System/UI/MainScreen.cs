@@ -37,6 +37,7 @@ namespace Reservation_System.UI
         {
             InitializeComponent();
             CenterToScreen();
+            language();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)

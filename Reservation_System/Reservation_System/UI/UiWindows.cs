@@ -8,8 +8,8 @@ namespace Reservation_System.UI
 {
     class UiWindows
     {
-        public RegisterUser _RegisterUserScreen = new RegisterUser();
-        public LoginScreen _Loginscreen = new LoginScreen();        
+        public LoginScreen _Loginscreen = new LoginScreen();
+        public RegisterUser _RegisterUserScreen = new RegisterUser();              
         public MainScreen _Mainscreen = new MainScreen();
         public ForgotPasswordScreen _forgotpasswordscreen = new ForgotPasswordScreen();
         public NewItemScreen _newitemscreen = new NewItemScreen();
