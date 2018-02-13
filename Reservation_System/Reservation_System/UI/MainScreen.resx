@@ -1314,6 +1314,9 @@
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="checklist_Items.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="checklist_Items.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>

@@ -645,8 +645,9 @@
             this.checklist_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.checklist_Items.CheckOnClick = true;
             this.checklist_Items.DisplayMember = "Text";
-            this.checklist_Items.FormattingEnabled = true;
             resources.ApplyResources(this.checklist_Items, "checklist_Items");
+            this.checklist_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_Items.FormattingEnabled = true;
             this.checklist_Items.Name = "checklist_Items";
             // 
             // panel_UserLoans
