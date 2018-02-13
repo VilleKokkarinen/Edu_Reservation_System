@@ -21,9 +21,10 @@ namespace Reservation_System.UI
 
         private void BlackForm_Load(object sender, EventArgs e)
         {
-            _MaxButton.PerformClick();
+            //_MaxButton.PerformClick();
         }
 
+        #region Draggin form events
 
         bool isTopPanelDragged = false;
         bool isLeftPanelDragged = false;
@@ -499,6 +500,7 @@ namespace Reservation_System.UI
             LeftTopPanel_1_MouseUp(sender, e);
         }
 
+        #endregion
 
         private void itemtypes()
         {
@@ -585,6 +587,7 @@ namespace Reservation_System.UI
             AvailableItems();
         }
 
+        #region LeftPanel_Buttons
         private void btn_Loan_Click(object sender, EventArgs e)
         {
             btn_Loan.BZBackColor = Color.Black;
@@ -592,6 +595,7 @@ namespace Reservation_System.UI
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
@@ -610,6 +614,7 @@ namespace Reservation_System.UI
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
@@ -626,6 +631,7 @@ namespace Reservation_System.UI
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
@@ -639,6 +645,7 @@ namespace Reservation_System.UI
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;            
@@ -647,6 +654,24 @@ namespace Reservation_System.UI
             Settings_Panel.Visible = true;
             Settings_Panel.BringToFront();
         }
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            buttonX1.BZBackColor = Color.Black;
+            buttonX1.ChangeColorMouseHC = false;
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+            btn_Settings.ChangeColorMouseHC = true;
+
+            Item_Management.Visible = true;
+            Item_Management.BringToFront();          
+        }
+        #endregion
 
         private void run_button_Click(object sender, EventArgs e)
         {
@@ -672,9 +697,10 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
         }
 
+        
 
 
-
+        #region clickevents
 
         private void WindowTextLabel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -712,5 +738,7 @@ namespace Reservation_System.UI
         {          
             ItemsToLoan();
         }
+
+        #endregion
     }
 }

@@ -126,7 +126,7 @@
     <value>20, 0</value>
   </data>
   <data name="TopBorderPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>913, 2</value>
+    <value>1560, 2</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TopBorderPanel.TabIndex" type="System.Int32, mscorlib">
@@ -142,16 +142,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopBorderPanel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="RightPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
   <data name="RightPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>951, 22</value>
+    <value>1598, 22</value>
   </data>
   <data name="RightPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 515</value>
+    <value>2, 857</value>
   </data>
   <data name="RightPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -166,7 +166,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightPanel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="LeftPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -175,7 +175,7 @@
     <value>0, 20</value>
   </data>
   <data name="LeftPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 515</value>
+    <value>2, 859</value>
   </data>
   <data name="LeftPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -190,16 +190,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftPanel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>1</value>
   </data>
   <data name="BottomPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
   <data name="BottomPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 556</value>
+    <value>15, 898</value>
   </data>
   <data name="BottomPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>915, 2</value>
+    <value>1566, 2</value>
   </data>
   <data name="BottomPanel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -214,7 +214,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BottomPanel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 6</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="_MinButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -225,8 +249,11 @@
   <data name="_MinButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 20.25pt, style=Bold</value>
   </data>
+  <data name="_MinButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="_MinButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>855, 6</value>
+    <value>1502, 6</value>
   </data>
   <data name="_MinButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 24</value>
@@ -253,7 +280,7 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;_MinButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="_MaxButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -261,8 +288,11 @@
   <data name="_MaxButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="_MaxButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="_MaxButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>886, 6</value>
+    <value>1533, 6</value>
   </data>
   <data name="_MaxButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 24</value>
@@ -286,25 +316,28 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="WindowTextLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="WindowTextLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 26.25pt</value>
+    <value>Copperplate Gothic Bold, 36pt, style=Italic</value>
+  </data>
+  <data name="WindowTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="WindowTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 6</value>
+    <value>143, 9</value>
   </data>
   <data name="WindowTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 39</value>
+    <value>590, 53</value>
   </data>
   <data name="WindowTextLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="WindowTextLabel.Text" xml:space="preserve">
-    <value>Varaus- järjestelmä</value>
+    <value>Varaus - järjestelmä</value>
   </data>
   <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
     <value>WindowTextLabel</value>
@@ -316,7 +349,7 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;WindowTextLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="_CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -327,8 +360,11 @@
   <data name="_CloseButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 12pt, style=Bold</value>
   </data>
+  <data name="_CloseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="_CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>917, 6</value>
+    <value>1564, 6</value>
   </data>
   <data name="_CloseButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 24</value>
@@ -352,7 +388,7 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="menuStripZ1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -457,7 +493,7 @@
     <value>Apua</value>
   </data>
   <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 33</value>
+    <value>1266, 33</value>
   </data>
   <data name="menuStripZ1.Size" type="System.Drawing.Size, System.Drawing">
     <value>285, 28</value>
@@ -478,7 +514,7 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;menuStripZ1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="TopPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -487,7 +523,7 @@
     <value>0, 0</value>
   </data>
   <data name="TopPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>953, 76</value>
+    <value>1600, 76</value>
   </data>
   <data name="TopPanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -502,13 +538,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="RightBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="RightBottomPanel_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 556</value>
+    <value>1580, 898</value>
   </data>
   <data name="RightBottomPanel_1.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 2</value>
@@ -526,13 +562,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="lbl_welcome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lbl_welcome.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="lbl_welcome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbl_welcome.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 24</value>
@@ -564,6 +603,9 @@
   <data name="lbl_username.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
+  <data name="lbl_username.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lbl_username.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 27</value>
   </data>
@@ -592,10 +634,10 @@
     <value>Bottom</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 487</value>
+    <value>0, 829</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>953, 71</value>
+    <value>1600, 71</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -610,13 +652,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="RightBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="RightBottomPanel_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>951, 537</value>
+    <value>1598, 879</value>
   </data>
   <data name="RightBottomPanel_2.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 19</value>
@@ -634,13 +676,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="LeftBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
   <data name="LeftBottomPanel_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 556</value>
+    <value>0, 898</value>
   </data>
   <data name="LeftBottomPanel_1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 2</value>
@@ -658,13 +700,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="LeftBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
   <data name="LeftBottomPanel_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 538</value>
+    <value>0, 880</value>
   </data>
   <data name="LeftBottomPanel_2.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 19</value>
@@ -682,13 +724,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="RightTopPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="RightTopPanel_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>951, 2</value>
+    <value>1598, 2</value>
   </data>
   <data name="RightTopPanel_1.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 20</value>
@@ -706,13 +748,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightTopPanel_1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="RightTopPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="RightTopPanel_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 0</value>
+    <value>1580, 0</value>
   </data>
   <data name="RightTopPanel_2.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 2</value>
@@ -730,7 +772,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightTopPanel_2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="LeftTopPanel_1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -751,7 +793,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="LeftTopPanel_2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -772,10 +814,46 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
+  </data>
+  <data name="buttonX1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="buttonX1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonX1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonX1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 140</value>
+  </data>
+  <data name="buttonX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 35</value>
+  </data>
+  <data name="buttonX1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonX1.Text" xml:space="preserve">
+    <value>Tavaroiden hallinta</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Name" xml:space="preserve">
+    <value>buttonX1</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Type" xml:space="preserve">
+    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="btn_Settings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -811,7 +889,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Settings.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btn_Reservation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -821,6 +899,9 @@
   </data>
   <data name="btn_Reservation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btn_Reservation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btn_Reservation.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 70</value>
@@ -844,7 +925,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btn_Loans.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -854,6 +935,9 @@
   </data>
   <data name="btn_Loans.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btn_Loans.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btn_Loans.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 35</value>
@@ -877,7 +961,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Loans.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btn_Loan.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -913,13 +997,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Loan.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 77</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 410</value>
+    <value>280, 752</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -934,7 +1018,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -943,7 +1027,7 @@
     <value>282, 78</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 409</value>
+    <value>2, 751</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -958,10 +1042,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="rbEnglish.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="rbEnglish.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="rbEnglish.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 54</value>
@@ -989,6 +1076,9 @@
   </data>
   <data name="rbFinnish.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="rbFinnish.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="rbFinnish.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 26</value>
@@ -1042,10 +1132,10 @@
     <value>0</value>
   </data>
   <data name="Settings_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 82</value>
+    <value>290, 80</value>
   </data>
   <data name="Settings_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>651, 396</value>
+    <value>1310, 750</value>
   </data>
   <data name="Settings_Panel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1063,7 +1153,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Settings_Panel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="comboBox_ItemTypes.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1175,6 +1265,9 @@
   </data>
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 249</value>
@@ -1291,7 +1384,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 142</value>
+    <value>239, 134</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 99</value>
@@ -1321,10 +1414,10 @@
     <value>True</value>
   </data>
   <data name="checklist_Items.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 12</value>
+    <value>9, 9</value>
   </data>
   <data name="checklist_Items.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 229</value>
+    <value>225, 225</value>
   </data>
   <data name="checklist_Items.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1342,10 +1435,10 @@
     <value>5</value>
   </data>
   <data name="Loan_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 81</value>
+    <value>290, 80</value>
   </data>
   <data name="Loan_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>652, 400</value>
+    <value>1310, 750</value>
   </data>
   <data name="Loan_Panel.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1363,7 +1456,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="comboBox_itemtypes2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1560,11 +1653,14 @@
   <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Checklist_UserLoans.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="Checklist_UserLoans.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 9</value>
   </data>
   <data name="Checklist_UserLoans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 229</value>
+    <value>225, 225</value>
   </data>
   <data name="Checklist_UserLoans.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -1582,10 +1678,10 @@
     <value>3</value>
   </data>
   <data name="panel_UserLoans.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 80</value>
+    <value>290, 80</value>
   </data>
   <data name="panel_UserLoans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>652, 400</value>
+    <value>1310, 750</value>
   </data>
   <data name="panel_UserLoans.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -1603,7 +1699,253 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_UserLoans.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 58</value>
+  </data>
+  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
+    <value>comboBox1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 23</value>
+  </data>
+  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 26</value>
+  </data>
+  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
+    <value>textBox5</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="groupBox6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1142, 79</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Hae Tavaroita</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>Item_Management</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="shapedButton2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="shapedButton2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="shapedButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shapedButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1111, 344</value>
+  </data>
+  <data name="shapedButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 55</value>
+  </data>
+  <data name="shapedButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;shapedButton2.Name" xml:space="preserve">
+    <value>shapedButton2</value>
+  </data>
+  <data name="&gt;&gt;shapedButton2.Type" xml:space="preserve">
+    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;shapedButton2.Parent" xml:space="preserve">
+    <value>Item_Management</value>
+  </data>
+  <data name="&gt;&gt;shapedButton2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
+  <data name="textBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="textBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
+    <value>textBox6</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 25</value>
+  </data>
+  <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 26</value>
+  </data>
+  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
+    <value>textBox7</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 25</value>
+  </data>
+  <data name="textBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 26</value>
+  </data>
+  <data name="textBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
+    <value>textBox8</value>
+  </data>
+  <data name="&gt;&gt;textBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox8.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1145, 200</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
+  </data>
+  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Tavaran tiedot</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
+    <value>Item_Management</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkedListBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="checkedListBox1.HorizontalScrollbar" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkedListBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>976, 79</value>
+  </data>
+  <data name="checkedListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 225</value>
+  </data>
+  <data name="checkedListBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;checkedListBox1.Name" xml:space="preserve">
+    <value>checkedListBox1</value>
+  </data>
+  <data name="&gt;&gt;checkedListBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkedListBox1.Parent" xml:space="preserve">
+    <value>Item_Management</value>
+  </data>
+  <data name="&gt;&gt;checkedListBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Item_Management.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 80</value>
+  </data>
+  <data name="Item_Management.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1310, 750</value>
+  </data>
+  <data name="Item_Management.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="Item_Management.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Item_Management.Name" xml:space="preserve">
+    <value>Item_Management</value>
+  </data>
+  <data name="&gt;&gt;Item_Management.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Item_Management.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1612,7 +1954,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>953, 558</value>
+    <value>1600, 900</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>My App</value>
