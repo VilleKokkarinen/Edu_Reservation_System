@@ -81,47 +81,47 @@
             this.rbFinnish = new System.Windows.Forms.RadioButton();
             this.Loan_Panel = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox_ItemTypes = new System.Windows.Forms.ComboBox();
-            this.txtSearchBox = new System.Windows.Forms.TextBox();
-            this.btn_Loanitem = new Reservation_System.UI.ShapedButton();
+            this.combobox_Loan_ItemType = new System.Windows.Forms.ComboBox();
+            this.txt_LoanItem_SearchItem = new System.Windows.Forms.TextBox();
+            this.btn_Loan_LoanItem = new Reservation_System.UI.ShapedButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtpReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Loan_ReturnDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_itemstate = new System.Windows.Forms.TextBox();
-            this.txt_itemtype = new System.Windows.Forms.TextBox();
-            this.txt_itemid = new System.Windows.Forms.TextBox();
-            this.checklist_Items = new System.Windows.Forms.CheckedListBox();
+            this.txt_Loan_Item_State = new System.Windows.Forms.TextBox();
+            this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
+            this.txt_Loan_ItemID = new System.Windows.Forms.TextBox();
+            this.checklist_Loan_Items = new System.Windows.Forms.CheckedListBox();
             this.panel_UserLoans = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox_itemtypes2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.shapedButton1 = new Reservation_System.UI.ShapedButton();
+            this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
+            this.txt_UserLoans_SearchItem = new System.Windows.Forms.TextBox();
+            this.btn_UserLoans_ReturnItem = new Reservation_System.UI.ShapedButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.Checklist_UserLoans = new System.Windows.Forms.CheckedListBox();
+            this.txt_UserLoans_ItemState = new System.Windows.Forms.TextBox();
+            this.txt_UserLoans_ItemType = new System.Windows.Forms.TextBox();
+            this.txt_UserLoans_ItemID = new System.Windows.Forms.TextBox();
+            this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Item_Management = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checklist_DeleteItem = new System.Windows.Forms.CheckedListBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_DeleteItem_ItemState = new System.Windows.Forms.TextBox();
+            this.txt_DeleteItem_ItemType = new System.Windows.Forms.TextBox();
+            this.txt_DeleteItem_ItemID = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.shapedButton2 = new Reservation_System.UI.ShapedButton();
+            this.ComboBox_DeleteItemType = new System.Windows.Forms.ComboBox();
+            this.txt_DeleteItemSearch = new System.Windows.Forms.TextBox();
+            this.btn_DeleteItem = new Reservation_System.UI.ShapedButton();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.shapedButton4 = new Reservation_System.UI.ShapedButton();
+            this.btn_CreateItem = new Reservation_System.UI.ShapedButton();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.txt_name = new System.Windows.Forms.TextBox();
+            this.txt_CreateItemName = new System.Windows.Forms.TextBox();
             this.lbl_type = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBoxCreateItemType = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.shapedButton3 = new Reservation_System.UI.ShapedButton();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.btn_CreateItemType = new Reservation_System.UI.ShapedButton();
+            this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -603,62 +603,62 @@
             // Loan_Panel
             // 
             this.Loan_Panel.Controls.Add(this.groupBox3);
-            this.Loan_Panel.Controls.Add(this.btn_Loanitem);
+            this.Loan_Panel.Controls.Add(this.btn_Loan_LoanItem);
             this.Loan_Panel.Controls.Add(this.label10);
-            this.Loan_Panel.Controls.Add(this.dtpReturnDate);
+            this.Loan_Panel.Controls.Add(this.dtp_Loan_ReturnDate);
             this.Loan_Panel.Controls.Add(this.groupBox2);
-            this.Loan_Panel.Controls.Add(this.checklist_Items);
+            this.Loan_Panel.Controls.Add(this.checklist_Loan_Items);
             resources.ApplyResources(this.Loan_Panel, "Loan_Panel");
             this.Loan_Panel.Name = "Loan_Panel";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox_ItemTypes);
-            this.groupBox3.Controls.Add(this.txtSearchBox);
+            this.groupBox3.Controls.Add(this.combobox_Loan_ItemType);
+            this.groupBox3.Controls.Add(this.txt_LoanItem_SearchItem);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // comboBox_ItemTypes
+            // combobox_Loan_ItemType
             // 
-            this.comboBox_ItemTypes.DisplayMember = "Text";
-            resources.ApplyResources(this.comboBox_ItemTypes, "comboBox_ItemTypes");
-            this.comboBox_ItemTypes.FormattingEnabled = true;
-            this.comboBox_ItemTypes.Name = "comboBox_ItemTypes";
+            this.combobox_Loan_ItemType.DisplayMember = "Text";
+            resources.ApplyResources(this.combobox_Loan_ItemType, "combobox_Loan_ItemType");
+            this.combobox_Loan_ItemType.FormattingEnabled = true;
+            this.combobox_Loan_ItemType.Name = "combobox_Loan_ItemType";
             // 
-            // txtSearchBox
+            // txt_LoanItem_SearchItem
             // 
-            resources.ApplyResources(this.txtSearchBox, "txtSearchBox");
-            this.txtSearchBox.Name = "txtSearchBox";
+            resources.ApplyResources(this.txt_LoanItem_SearchItem, "txt_LoanItem_SearchItem");
+            this.txt_LoanItem_SearchItem.Name = "txt_LoanItem_SearchItem";
             // 
-            // btn_Loanitem
+            // btn_Loan_LoanItem
             // 
-            this.btn_Loanitem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Loanitem.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Loanitem.BorderWidth = 2;
-            this.btn_Loanitem.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.btn_Loanitem.ButtonText = "Lainaa";
-            this.btn_Loanitem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Loanitem.FlatAppearance.BorderSize = 0;
-            this.btn_Loanitem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Loanitem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btn_Loanitem, "btn_Loanitem");
-            this.btn_Loanitem.ForeColor = System.Drawing.Color.White;
-            this.btn_Loanitem.GradientAngle = 90;
-            this.btn_Loanitem.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btn_Loanitem.MouseClickColor2 = System.Drawing.Color.Black;
-            this.btn_Loanitem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_Loanitem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_Loanitem.Name = "btn_Loanitem";
-            this.btn_Loanitem.ShowButtontext = true;
-            this.btn_Loanitem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Loanitem.TextLocation_X = 26;
-            this.btn_Loanitem.TextLocation_Y = 15;
-            this.btn_Loanitem.Transparent1 = 250;
-            this.btn_Loanitem.Transparent2 = 250;
-            this.btn_Loanitem.UseVisualStyleBackColor = false;
-            this.btn_Loanitem.Click += new System.EventHandler(this.btn_Loanitem_Click);
+            this.btn_Loan_LoanItem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Loan_LoanItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Loan_LoanItem.BorderWidth = 2;
+            this.btn_Loan_LoanItem.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_Loan_LoanItem.ButtonText = "Lainaa";
+            this.btn_Loan_LoanItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_Loan_LoanItem.FlatAppearance.BorderSize = 0;
+            this.btn_Loan_LoanItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Loan_LoanItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_Loan_LoanItem, "btn_Loan_LoanItem");
+            this.btn_Loan_LoanItem.ForeColor = System.Drawing.Color.White;
+            this.btn_Loan_LoanItem.GradientAngle = 90;
+            this.btn_Loan_LoanItem.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_Loan_LoanItem.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_Loan_LoanItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_Loan_LoanItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_Loan_LoanItem.Name = "btn_Loan_LoanItem";
+            this.btn_Loan_LoanItem.ShowButtontext = true;
+            this.btn_Loan_LoanItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_Loan_LoanItem.TextLocation_X = 26;
+            this.btn_Loan_LoanItem.TextLocation_Y = 15;
+            this.btn_Loan_LoanItem.Transparent1 = 250;
+            this.btn_Loan_LoanItem.Transparent2 = 250;
+            this.btn_Loan_LoanItem.UseVisualStyleBackColor = false;
+            this.btn_Loan_LoanItem.Click += new System.EventHandler(this.btn_Loanitem_Click);
             // 
             // label10
             // 
@@ -666,137 +666,138 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Name = "label10";
             // 
-            // dtpReturnDate
+            // dtp_Loan_ReturnDate
             // 
-            resources.ApplyResources(this.dtpReturnDate, "dtpReturnDate");
-            this.dtpReturnDate.Name = "dtpReturnDate";
+            resources.ApplyResources(this.dtp_Loan_ReturnDate, "dtp_Loan_ReturnDate");
+            this.dtp_Loan_ReturnDate.Name = "dtp_Loan_ReturnDate";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_itemstate);
-            this.groupBox2.Controls.Add(this.txt_itemtype);
-            this.groupBox2.Controls.Add(this.txt_itemid);
+            this.groupBox2.Controls.Add(this.txt_Loan_Item_State);
+            this.groupBox2.Controls.Add(this.txt_Loan_ItemType);
+            this.groupBox2.Controls.Add(this.txt_Loan_ItemID);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // txt_itemstate
+            // txt_Loan_Item_State
             // 
-            resources.ApplyResources(this.txt_itemstate, "txt_itemstate");
-            this.txt_itemstate.Name = "txt_itemstate";
+            resources.ApplyResources(this.txt_Loan_Item_State, "txt_Loan_Item_State");
+            this.txt_Loan_Item_State.Name = "txt_Loan_Item_State";
             // 
-            // txt_itemtype
+            // txt_Loan_ItemType
             // 
-            resources.ApplyResources(this.txt_itemtype, "txt_itemtype");
-            this.txt_itemtype.Name = "txt_itemtype";
+            resources.ApplyResources(this.txt_Loan_ItemType, "txt_Loan_ItemType");
+            this.txt_Loan_ItemType.Name = "txt_Loan_ItemType";
             // 
-            // txt_itemid
+            // txt_Loan_ItemID
             // 
-            resources.ApplyResources(this.txt_itemid, "txt_itemid");
-            this.txt_itemid.Name = "txt_itemid";
+            resources.ApplyResources(this.txt_Loan_ItemID, "txt_Loan_ItemID");
+            this.txt_Loan_ItemID.Name = "txt_Loan_ItemID";
             // 
-            // checklist_Items
+            // checklist_Loan_Items
             // 
-            this.checklist_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checklist_Items.CheckOnClick = true;
-            this.checklist_Items.DisplayMember = "Text";
-            resources.ApplyResources(this.checklist_Items, "checklist_Items");
-            this.checklist_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checklist_Items.FormattingEnabled = true;
-            this.checklist_Items.Name = "checklist_Items";
+            this.checklist_Loan_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_Loan_Items.CheckOnClick = true;
+            this.checklist_Loan_Items.DisplayMember = "Text";
+            resources.ApplyResources(this.checklist_Loan_Items, "checklist_Loan_Items");
+            this.checklist_Loan_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_Loan_Items.FormattingEnabled = true;
+            this.checklist_Loan_Items.Name = "checklist_Loan_Items";
+            this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
             // 
             // panel_UserLoans
             // 
             this.panel_UserLoans.Controls.Add(this.groupBox4);
-            this.panel_UserLoans.Controls.Add(this.shapedButton1);
+            this.panel_UserLoans.Controls.Add(this.btn_UserLoans_ReturnItem);
             this.panel_UserLoans.Controls.Add(this.groupBox5);
-            this.panel_UserLoans.Controls.Add(this.Checklist_UserLoans);
+            this.panel_UserLoans.Controls.Add(this.Checklist_UserLoans_Items);
             resources.ApplyResources(this.panel_UserLoans, "panel_UserLoans");
             this.panel_UserLoans.Name = "panel_UserLoans";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox_itemtypes2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.combobox_UserLoans_ItemType);
+            this.groupBox4.Controls.Add(this.txt_UserLoans_SearchItem);
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // comboBox_itemtypes2
+            // combobox_UserLoans_ItemType
             // 
-            this.comboBox_itemtypes2.DisplayMember = "Text";
-            resources.ApplyResources(this.comboBox_itemtypes2, "comboBox_itemtypes2");
-            this.comboBox_itemtypes2.FormattingEnabled = true;
-            this.comboBox_itemtypes2.Name = "comboBox_itemtypes2";
+            this.combobox_UserLoans_ItemType.DisplayMember = "Text";
+            resources.ApplyResources(this.combobox_UserLoans_ItemType, "combobox_UserLoans_ItemType");
+            this.combobox_UserLoans_ItemType.FormattingEnabled = true;
+            this.combobox_UserLoans_ItemType.Name = "combobox_UserLoans_ItemType";
             // 
-            // textBox1
+            // txt_UserLoans_SearchItem
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txt_UserLoans_SearchItem, "txt_UserLoans_SearchItem");
+            this.txt_UserLoans_SearchItem.Name = "txt_UserLoans_SearchItem";
             // 
-            // shapedButton1
+            // btn_UserLoans_ReturnItem
             // 
-            this.shapedButton1.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton1.BorderWidth = 2;
-            this.shapedButton1.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton1.ButtonText = "Palauta";
-            this.shapedButton1.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton1.FlatAppearance.BorderSize = 0;
-            this.shapedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton1, "shapedButton1");
-            this.shapedButton1.ForeColor = System.Drawing.Color.White;
-            this.shapedButton1.GradientAngle = 90;
-            this.shapedButton1.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton1.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton1.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton1.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton1.Name = "shapedButton1";
-            this.shapedButton1.ShowButtontext = true;
-            this.shapedButton1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton1.TextLocation_X = 22;
-            this.shapedButton1.TextLocation_Y = 16;
-            this.shapedButton1.Transparent1 = 250;
-            this.shapedButton1.Transparent2 = 250;
-            this.shapedButton1.UseVisualStyleBackColor = false;
+            this.btn_UserLoans_ReturnItem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.BorderWidth = 2;
+            this.btn_UserLoans_ReturnItem.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_UserLoans_ReturnItem.ButtonText = "Palauta";
+            this.btn_UserLoans_ReturnItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_UserLoans_ReturnItem.FlatAppearance.BorderSize = 0;
+            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_UserLoans_ReturnItem, "btn_UserLoans_ReturnItem");
+            this.btn_UserLoans_ReturnItem.ForeColor = System.Drawing.Color.White;
+            this.btn_UserLoans_ReturnItem.GradientAngle = 90;
+            this.btn_UserLoans_ReturnItem.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_UserLoans_ReturnItem.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_UserLoans_ReturnItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_UserLoans_ReturnItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_UserLoans_ReturnItem.Name = "btn_UserLoans_ReturnItem";
+            this.btn_UserLoans_ReturnItem.ShowButtontext = true;
+            this.btn_UserLoans_ReturnItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_UserLoans_ReturnItem.TextLocation_X = 22;
+            this.btn_UserLoans_ReturnItem.TextLocation_Y = 16;
+            this.btn_UserLoans_ReturnItem.Transparent1 = 250;
+            this.btn_UserLoans_ReturnItem.Transparent2 = 250;
+            this.btn_UserLoans_ReturnItem.UseVisualStyleBackColor = false;
+            this.btn_UserLoans_ReturnItem.Click += new System.EventHandler(this.btn_UserLoans_ReturnItem_Click);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemState);
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemType);
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemID);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
-            // textBox2
+            // txt_UserLoans_ItemState
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.txt_UserLoans_ItemState, "txt_UserLoans_ItemState");
+            this.txt_UserLoans_ItemState.Name = "txt_UserLoans_ItemState";
             // 
-            // textBox3
+            // txt_UserLoans_ItemType
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            resources.ApplyResources(this.txt_UserLoans_ItemType, "txt_UserLoans_ItemType");
+            this.txt_UserLoans_ItemType.Name = "txt_UserLoans_ItemType";
             // 
-            // textBox4
+            // txt_UserLoans_ItemID
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
+            resources.ApplyResources(this.txt_UserLoans_ItemID, "txt_UserLoans_ItemID");
+            this.txt_UserLoans_ItemID.Name = "txt_UserLoans_ItemID";
             // 
-            // Checklist_UserLoans
+            // Checklist_UserLoans_Items
             // 
-            this.Checklist_UserLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Checklist_UserLoans.CheckOnClick = true;
-            resources.ApplyResources(this.Checklist_UserLoans, "Checklist_UserLoans");
-            this.Checklist_UserLoans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Checklist_UserLoans.FormattingEnabled = true;
-            this.Checklist_UserLoans.Name = "Checklist_UserLoans";
-            this.Checklist_UserLoans.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
+            this.Checklist_UserLoans_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.Checklist_UserLoans_Items, "Checklist_UserLoans_Items");
+            this.Checklist_UserLoans_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Checklist_UserLoans_Items.FormattingEnabled = true;
+            this.Checklist_UserLoans_Items.Name = "Checklist_UserLoans_Items";
+            this.Checklist_UserLoans_Items.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
             // 
             // Item_Management
             // 
@@ -807,97 +808,98 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.checkedListBox1);
+            this.groupBox11.Controls.Add(this.checklist_DeleteItem);
             this.groupBox11.Controls.Add(this.groupBox7);
             this.groupBox11.Controls.Add(this.groupBox6);
-            this.groupBox11.Controls.Add(this.shapedButton2);
+            this.groupBox11.Controls.Add(this.btn_DeleteItem);
             resources.ApplyResources(this.groupBox11, "groupBox11");
             this.groupBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.TabStop = false;
             // 
-            // checkedListBox1
+            // checklist_DeleteItem
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.DisplayMember = "Text";
-            resources.ApplyResources(this.checkedListBox1, "checkedListBox1");
-            this.checkedListBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Name = "checkedListBox1";
+            this.checklist_DeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_DeleteItem.CheckOnClick = true;
+            this.checklist_DeleteItem.DisplayMember = "Text";
+            resources.ApplyResources(this.checklist_DeleteItem, "checklist_DeleteItem");
+            this.checklist_DeleteItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_DeleteItem.FormattingEnabled = true;
+            this.checklist_DeleteItem.Name = "checklist_DeleteItem";
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox6);
-            this.groupBox7.Controls.Add(this.textBox7);
-            this.groupBox7.Controls.Add(this.textBox8);
+            this.groupBox7.Controls.Add(this.txt_DeleteItem_ItemState);
+            this.groupBox7.Controls.Add(this.txt_DeleteItem_ItemType);
+            this.groupBox7.Controls.Add(this.txt_DeleteItem_ItemID);
             resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.TabStop = false;
             // 
-            // textBox6
+            // txt_DeleteItem_ItemState
             // 
-            resources.ApplyResources(this.textBox6, "textBox6");
-            this.textBox6.Name = "textBox6";
+            resources.ApplyResources(this.txt_DeleteItem_ItemState, "txt_DeleteItem_ItemState");
+            this.txt_DeleteItem_ItemState.Name = "txt_DeleteItem_ItemState";
             // 
-            // textBox7
+            // txt_DeleteItem_ItemType
             // 
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.Name = "textBox7";
+            resources.ApplyResources(this.txt_DeleteItem_ItemType, "txt_DeleteItem_ItemType");
+            this.txt_DeleteItem_ItemType.Name = "txt_DeleteItem_ItemType";
             // 
-            // textBox8
+            // txt_DeleteItem_ItemID
             // 
-            resources.ApplyResources(this.textBox8, "textBox8");
-            this.textBox8.Name = "textBox8";
+            resources.ApplyResources(this.txt_DeleteItem_ItemID, "txt_DeleteItem_ItemID");
+            this.txt_DeleteItem_ItemID.Name = "txt_DeleteItem_ItemID";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Controls.Add(this.textBox5);
+            this.groupBox6.Controls.Add(this.ComboBox_DeleteItemType);
+            this.groupBox6.Controls.Add(this.txt_DeleteItemSearch);
             resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
-            // comboBox1
+            // ComboBox_DeleteItemType
             // 
-            this.comboBox1.DisplayMember = "Text";
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Name = "comboBox1";
+            this.ComboBox_DeleteItemType.DisplayMember = "Text";
+            resources.ApplyResources(this.ComboBox_DeleteItemType, "ComboBox_DeleteItemType");
+            this.ComboBox_DeleteItemType.FormattingEnabled = true;
+            this.ComboBox_DeleteItemType.Name = "ComboBox_DeleteItemType";
             // 
-            // textBox5
+            // txt_DeleteItemSearch
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.txt_DeleteItemSearch, "txt_DeleteItemSearch");
+            this.txt_DeleteItemSearch.Name = "txt_DeleteItemSearch";
             // 
-            // shapedButton2
+            // btn_DeleteItem
             // 
-            this.shapedButton2.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton2.BorderWidth = 2;
-            this.shapedButton2.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton2.ButtonText = "Poista";
-            this.shapedButton2.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton2.FlatAppearance.BorderSize = 0;
-            this.shapedButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton2, "shapedButton2");
-            this.shapedButton2.ForeColor = System.Drawing.Color.White;
-            this.shapedButton2.GradientAngle = 90;
-            this.shapedButton2.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton2.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton2.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton2.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton2.Name = "shapedButton2";
-            this.shapedButton2.ShowButtontext = true;
-            this.shapedButton2.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton2.TextLocation_X = 28;
-            this.shapedButton2.TextLocation_Y = 17;
-            this.shapedButton2.Transparent1 = 250;
-            this.shapedButton2.Transparent2 = 250;
-            this.shapedButton2.UseVisualStyleBackColor = false;
+            this.btn_DeleteItem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DeleteItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_DeleteItem.BorderWidth = 2;
+            this.btn_DeleteItem.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_DeleteItem.ButtonText = "Poista";
+            this.btn_DeleteItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_DeleteItem.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_DeleteItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_DeleteItem, "btn_DeleteItem");
+            this.btn_DeleteItem.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteItem.GradientAngle = 90;
+            this.btn_DeleteItem.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_DeleteItem.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_DeleteItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_DeleteItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_DeleteItem.Name = "btn_DeleteItem";
+            this.btn_DeleteItem.ShowButtontext = true;
+            this.btn_DeleteItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_DeleteItem.TextLocation_X = 28;
+            this.btn_DeleteItem.TextLocation_Y = 17;
+            this.btn_DeleteItem.Transparent1 = 250;
+            this.btn_DeleteItem.Transparent2 = 250;
+            this.btn_DeleteItem.UseVisualStyleBackColor = false;
+            this.btn_DeleteItem.Click += new System.EventHandler(this.btn_DeleteItem_Click);
             // 
             // groupBox10
             // 
@@ -910,104 +912,106 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.shapedButton4);
+            this.groupBox9.Controls.Add(this.btn_CreateItem);
             this.groupBox9.Controls.Add(this.lbl_name);
-            this.groupBox9.Controls.Add(this.txt_name);
+            this.groupBox9.Controls.Add(this.txt_CreateItemName);
             this.groupBox9.Controls.Add(this.lbl_type);
-            this.groupBox9.Controls.Add(this.comboBox2);
+            this.groupBox9.Controls.Add(this.ComboBoxCreateItemType);
             resources.ApplyResources(this.groupBox9, "groupBox9");
             this.groupBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.TabStop = false;
             // 
-            // shapedButton4
+            // btn_CreateItem
             // 
-            this.shapedButton4.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.BorderWidth = 2;
-            this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.Circle;
-            this.shapedButton4.ButtonText = "+";
-            this.shapedButton4.EndColor = System.Drawing.Color.Black;
-            this.shapedButton4.FlatAppearance.BorderSize = 0;
-            this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton4, "shapedButton4");
-            this.shapedButton4.GradientAngle = 90;
-            this.shapedButton4.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton4.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton4.MouseHoverColor1 = System.Drawing.Color.Gray;
-            this.shapedButton4.MouseHoverColor2 = System.Drawing.Color.Silver;
-            this.shapedButton4.Name = "shapedButton4";
-            this.shapedButton4.ShowButtontext = true;
-            this.shapedButton4.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.shapedButton4.TextLocation_X = 2;
-            this.shapedButton4.TextLocation_Y = -3;
-            this.shapedButton4.Transparent1 = 250;
-            this.shapedButton4.Transparent2 = 250;
-            this.shapedButton4.UseVisualStyleBackColor = false;
+            this.btn_CreateItem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_CreateItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_CreateItem.BorderWidth = 2;
+            this.btn_CreateItem.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.Circle;
+            this.btn_CreateItem.ButtonText = "+";
+            this.btn_CreateItem.EndColor = System.Drawing.Color.Black;
+            this.btn_CreateItem.FlatAppearance.BorderSize = 0;
+            this.btn_CreateItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_CreateItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_CreateItem, "btn_CreateItem");
+            this.btn_CreateItem.GradientAngle = 90;
+            this.btn_CreateItem.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_CreateItem.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_CreateItem.MouseHoverColor1 = System.Drawing.Color.Gray;
+            this.btn_CreateItem.MouseHoverColor2 = System.Drawing.Color.Silver;
+            this.btn_CreateItem.Name = "btn_CreateItem";
+            this.btn_CreateItem.ShowButtontext = true;
+            this.btn_CreateItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_CreateItem.TextLocation_X = 2;
+            this.btn_CreateItem.TextLocation_Y = -3;
+            this.btn_CreateItem.Transparent1 = 250;
+            this.btn_CreateItem.Transparent2 = 250;
+            this.btn_CreateItem.UseVisualStyleBackColor = false;
+            this.btn_CreateItem.Click += new System.EventHandler(this.btn_CreateItem_Click);
             // 
             // lbl_name
             // 
             resources.ApplyResources(this.lbl_name, "lbl_name");
             this.lbl_name.Name = "lbl_name";
             // 
-            // txt_name
+            // txt_CreateItemName
             // 
-            resources.ApplyResources(this.txt_name, "txt_name");
-            this.txt_name.Name = "txt_name";
+            resources.ApplyResources(this.txt_CreateItemName, "txt_CreateItemName");
+            this.txt_CreateItemName.Name = "txt_CreateItemName";
             // 
             // lbl_type
             // 
             resources.ApplyResources(this.lbl_type, "lbl_type");
             this.lbl_type.Name = "lbl_type";
             // 
-            // comboBox2
+            // ComboBoxCreateItemType
             // 
-            this.comboBox2.DisplayMember = "Text";
-            this.comboBox2.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.Name = "comboBox2";
+            this.ComboBoxCreateItemType.DisplayMember = "Text";
+            this.ComboBoxCreateItemType.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBoxCreateItemType, "ComboBoxCreateItemType");
+            this.ComboBoxCreateItemType.Name = "ComboBoxCreateItemType";
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.shapedButton3);
-            this.groupBox8.Controls.Add(this.textBox9);
+            this.groupBox8.Controls.Add(this.btn_CreateItemType);
+            this.groupBox8.Controls.Add(this.txt_CreateItemType);
             this.groupBox8.Controls.Add(this.label1);
             resources.ApplyResources(this.groupBox8, "groupBox8");
             this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.TabStop = false;
             // 
-            // shapedButton3
+            // btn_CreateItemType
             // 
-            this.shapedButton3.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton3.BorderWidth = 2;
-            this.shapedButton3.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.Circle;
-            this.shapedButton3.ButtonText = "+";
-            this.shapedButton3.EndColor = System.Drawing.Color.Black;
-            this.shapedButton3.FlatAppearance.BorderSize = 0;
-            this.shapedButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton3, "shapedButton3");
-            this.shapedButton3.GradientAngle = 90;
-            this.shapedButton3.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton3.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton3.MouseHoverColor1 = System.Drawing.Color.Gray;
-            this.shapedButton3.MouseHoverColor2 = System.Drawing.Color.Silver;
-            this.shapedButton3.Name = "shapedButton3";
-            this.shapedButton3.ShowButtontext = true;
-            this.shapedButton3.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.shapedButton3.TextLocation_X = 2;
-            this.shapedButton3.TextLocation_Y = -3;
-            this.shapedButton3.Transparent1 = 250;
-            this.shapedButton3.Transparent2 = 250;
-            this.shapedButton3.UseVisualStyleBackColor = false;
+            this.btn_CreateItemType.BackColor = System.Drawing.Color.Transparent;
+            this.btn_CreateItemType.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_CreateItemType.BorderWidth = 2;
+            this.btn_CreateItemType.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.Circle;
+            this.btn_CreateItemType.ButtonText = "+";
+            this.btn_CreateItemType.EndColor = System.Drawing.Color.Black;
+            this.btn_CreateItemType.FlatAppearance.BorderSize = 0;
+            this.btn_CreateItemType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_CreateItemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_CreateItemType, "btn_CreateItemType");
+            this.btn_CreateItemType.GradientAngle = 90;
+            this.btn_CreateItemType.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_CreateItemType.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_CreateItemType.MouseHoverColor1 = System.Drawing.Color.Gray;
+            this.btn_CreateItemType.MouseHoverColor2 = System.Drawing.Color.Silver;
+            this.btn_CreateItemType.Name = "btn_CreateItemType";
+            this.btn_CreateItemType.ShowButtontext = true;
+            this.btn_CreateItemType.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_CreateItemType.TextLocation_X = 2;
+            this.btn_CreateItemType.TextLocation_Y = -3;
+            this.btn_CreateItemType.Transparent1 = 250;
+            this.btn_CreateItemType.Transparent2 = 250;
+            this.btn_CreateItemType.UseVisualStyleBackColor = false;
+            this.btn_CreateItemType.Click += new System.EventHandler(this.btn_CreateItemType_Click);
             // 
-            // textBox9
+            // txt_CreateItemType
             // 
-            resources.ApplyResources(this.textBox9, "textBox9");
-            this.textBox9.Name = "textBox9";
+            resources.ApplyResources(this.txt_CreateItemType, "txt_CreateItemType");
+            this.txt_CreateItemType.Name = "txt_CreateItemType";
             // 
             // label1
             // 
@@ -1021,9 +1025,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.panel_UserLoans);
+            this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -1124,16 +1128,16 @@
         private System.Windows.Forms.RadioButton rbEnglish;
         private System.Windows.Forms.RadioButton rbFinnish;
         private System.Windows.Forms.Panel Loan_Panel;
-        private System.Windows.Forms.CheckedListBox checklist_Items;
+        private System.Windows.Forms.CheckedListBox checklist_Loan_Items;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_itemstate;
-        private System.Windows.Forms.TextBox txt_itemtype;
-        private System.Windows.Forms.TextBox txt_itemid;
-        private System.Windows.Forms.ComboBox comboBox_ItemTypes;
-        private System.Windows.Forms.TextBox txtSearchBox;
+        private System.Windows.Forms.TextBox txt_Loan_Item_State;
+        private System.Windows.Forms.TextBox txt_Loan_ItemType;
+        private System.Windows.Forms.TextBox txt_Loan_ItemID;
+        private System.Windows.Forms.ComboBox combobox_Loan_ItemType;
+        private System.Windows.Forms.TextBox txt_LoanItem_SearchItem;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtpReturnDate;
-        private ShapedButton btn_Loanitem;
+        private System.Windows.Forms.DateTimePicker dtp_Loan_ReturnDate;
+        private ShapedButton btn_Loan_LoanItem;
         private System.Windows.Forms.GroupBox groupBox3;
         private ButtonX btn_Settings;
         private System.Windows.Forms.Label lbl_welcome;
@@ -1143,37 +1147,37 @@
         private System.Windows.Forms.ToolStripMenuItem vaihdaSähköpostiOsoiteToolStripMenuItem;
         private System.Windows.Forms.Panel panel_UserLoans;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox_itemtypes2;
-        private System.Windows.Forms.TextBox textBox1;
-        private ShapedButton shapedButton1;
+        private System.Windows.Forms.ComboBox combobox_UserLoans_ItemType;
+        private System.Windows.Forms.TextBox txt_UserLoans_SearchItem;
+        private ShapedButton btn_UserLoans_ReturnItem;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckedListBox Checklist_UserLoans;
+        private System.Windows.Forms.TextBox txt_UserLoans_ItemState;
+        private System.Windows.Forms.TextBox txt_UserLoans_ItemType;
+        private System.Windows.Forms.TextBox txt_UserLoans_ItemID;
+        private System.Windows.Forms.CheckedListBox Checklist_UserLoans_Items;
         private ButtonX buttonX1;
         private System.Windows.Forms.Panel Item_Management;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private ShapedButton shapedButton2;
+        private System.Windows.Forms.ComboBox ComboBox_DeleteItemType;
+        private System.Windows.Forms.TextBox txt_DeleteItemSearch;
+        private ShapedButton btn_DeleteItem;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TextBox txt_DeleteItem_ItemState;
+        private System.Windows.Forms.TextBox txt_DeleteItem_ItemType;
+        private System.Windows.Forms.TextBox txt_DeleteItem_ItemID;
+        private System.Windows.Forms.CheckedListBox checklist_DeleteItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox8;
-        private ShapedButton shapedButton3;
-        private System.Windows.Forms.TextBox textBox9;
+        private ShapedButton btn_CreateItemType;
+        private System.Windows.Forms.TextBox txt_CreateItemType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label lbl_name;
-        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.TextBox txt_CreateItemName;
         private System.Windows.Forms.Label lbl_type;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ComboBoxCreateItemType;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox10;
-        private ShapedButton shapedButton4;
+        private ShapedButton btn_CreateItem;
     }
 }
