@@ -19,19 +19,16 @@ namespace Reservation_System
             if (Program.Settings.English == true)
             {
                 lbl_availableitems.Text = "Item's avalaible";
-                lbl_ReturnDate.Text = "Select return date";
+                lblReturnDate.Text = "Select return date";
                 lbl_searchitems.Text = "Search item";
                 btn_loan.Text = "Loan";
-                btn_showitemdetails.Text = "Show info about item";
-
             }
             else
             {
                 lbl_availableitems.Text = "Saatavilla olevat tavarat";
-                lbl_ReturnDate.Text = "Valitse palautuspäivä";
+                lblReturnDate.Text = "Valitse palautuspäivä";
                 lbl_searchitems.Text = "Hae tavara";
                 btn_loan.Text = "Lainaa";
-                btn_showitemdetails.Text = "Näytä tavaran tiedot";
             }
         }
         List<ComboItem> items = new List<ComboItem>();
