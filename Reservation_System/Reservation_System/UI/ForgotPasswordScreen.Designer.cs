@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_recover = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.lbl_email = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_recover
             // 
-            this.button1.Location = new System.Drawing.Point(12, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(368, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Recover password";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_recover.Location = new System.Drawing.Point(12, 64);
+            this.btn_recover.Name = "btn_recover";
+            this.btn_recover.Size = new System.Drawing.Size(368, 23);
+            this.btn_recover.TabIndex = 0;
+            this.btn_recover.Text = "Recover password";
+            this.btn_recover.UseVisualStyleBackColor = true;
+            this.btn_recover.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_username
             // 
@@ -86,7 +86,7 @@
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.txt_username);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_recover);
             this.Name = "ForgotPasswordScreen";
             this.Text = "ForgotPasswordScreen";
             this.ResumeLayout(false);
@@ -96,7 +96,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_recover;
         private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Label lbl_email;
