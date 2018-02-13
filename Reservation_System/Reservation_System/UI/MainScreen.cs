@@ -589,9 +589,9 @@ namespace Reservation_System.UI
         {
             btn_Loan.BZBackColor = Color.Black;
             btn_Loan.ChangeColorMouseHC = false;
-            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Settings.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
 
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
@@ -607,9 +607,9 @@ namespace Reservation_System.UI
         {
             btn_Loans.BZBackColor = Color.Black;
             btn_Loans.ChangeColorMouseHC = false;
-            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Settings.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
@@ -623,9 +623,9 @@ namespace Reservation_System.UI
         {
             btn_Reservation.BZBackColor = Color.Black;
             btn_Reservation.ChangeColorMouseHC = false;
-            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Settings.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
@@ -636,9 +636,9 @@ namespace Reservation_System.UI
         {
             btn_Settings.BZBackColor = Color.Black;
             btn_Settings.ChangeColorMouseHC = false;
-            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;            
@@ -651,9 +651,9 @@ namespace Reservation_System.UI
         private void run_button_Click(object sender, EventArgs e)
         {
             
-            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
            
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
@@ -664,9 +664,9 @@ namespace Reservation_System.UI
         private void help_button_Click(object sender, EventArgs e)
         {
           
-            btn_Loan.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Loans.BZBackColor = Color.FromArgb(60, 60, 60);
-            btn_Reservation.BZBackColor = Color.FromArgb(60, 60, 60);            
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);            
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;

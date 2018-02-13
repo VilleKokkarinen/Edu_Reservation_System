@@ -441,7 +441,7 @@
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.btn_Settings);
             this.panel1.Controls.Add(this.btn_Reservation);
             this.panel1.Controls.Add(this.btn_Loans);
@@ -450,7 +450,7 @@
             // 
             // btn_Settings
             // 
-            this.btn_Settings.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_Settings.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btn_Settings.ChangeColorMouseHC = true;
             this.btn_Settings.DisplayText = "Asetukset";
             resources.ApplyResources(this.btn_Settings, "btn_Settings");
@@ -465,7 +465,7 @@
             // 
             // btn_Reservation
             // 
-            this.btn_Reservation.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_Reservation.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_Reservation.ChangeColorMouseHC = true;
             this.btn_Reservation.DisplayText = "Varaa tavaroita";
             resources.ApplyResources(this.btn_Reservation, "btn_Reservation");
@@ -481,7 +481,7 @@
             // btn_Loans
             // 
             this.btn_Loans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btn_Loans.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_Loans.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btn_Loans.ChangeColorMouseHC = true;
             this.btn_Loans.DisplayText = "Omat lainani";
             resources.ApplyResources(this.btn_Loans, "btn_Loans");
@@ -496,7 +496,7 @@
             // 
             // btn_Loan
             // 
-            this.btn_Loan.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_Loan.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_Loan.ChangeColorMouseHC = true;
             this.btn_Loan.DisplayText = "Lainaa tavaroita";
             resources.ApplyResources(this.btn_Loan, "btn_Loan");
