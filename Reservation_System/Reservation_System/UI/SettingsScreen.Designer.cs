@@ -98,6 +98,7 @@
             this.Controls.Add(this.button11);
             this.Name = "SettingsScreen";
             this.Text = "SettingsScreen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsScreen_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
