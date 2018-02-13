@@ -14,6 +14,23 @@ namespace Reservation_System.UI
 {
     public partial class ReserationScreen : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_availableitems.Text = "Item's avalaible";
+                lblReturnDate.Text = "Select return date";
+                lbl_searchitems.Text = "Search item";
+                btn_loan.Text = "Loan";
+            }
+            else
+            {
+                lbl_availableitems.Text = "Saatavilla olevat tavarat";
+                lblReturnDate.Text = "Valitse palautuspäivä";
+                lbl_searchitems.Text = "Hae tavara";
+                btn_loan.Text = "Lainaa";
+            }
+        }
         List<ComboItem> items = new List<ComboItem>();
         void language()
         {

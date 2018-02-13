@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblReturnDate = new System.Windows.Forms.Label();
             this.dtpReturnDate = new System.Windows.Forms.DateTimePicker();
             this.lbl_availableitems = new System.Windows.Forms.Label();
             this.lbl_searchitems = new System.Windows.Forms.Label();
@@ -43,14 +43,14 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label10
+            // lblReturnDate
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 329);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 13);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Palautuspäivä";
+            this.lblReturnDate.AutoSize = true;
+            this.lblReturnDate.Location = new System.Drawing.Point(24, 329);
+            this.lblReturnDate.Name = "lblReturnDate";
+            this.lblReturnDate.Size = new System.Drawing.Size(74, 13);
+            this.lblReturnDate.TabIndex = 39;
+            this.lblReturnDate.Text = "Palautuspäivä";
             // 
             // dtpReturnDate
             // 
@@ -155,7 +155,7 @@
             this.ClientSize = new System.Drawing.Size(481, 410);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblReturnDate);
             this.Controls.Add(this.dtpReturnDate);
             this.Controls.Add(this.lbl_availableitems);
             this.Controls.Add(this.lbl_searchitems);
@@ -173,7 +173,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblReturnDate;
         private System.Windows.Forms.DateTimePicker dtpReturnDate;
         private System.Windows.Forms.Label lbl_availableitems;
         private System.Windows.Forms.Label lbl_searchitems;
