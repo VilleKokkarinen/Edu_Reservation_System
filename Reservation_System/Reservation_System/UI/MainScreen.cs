@@ -995,5 +995,11 @@ namespace Reservation_System.UI
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            e.Cancel = (exit == DialogResult.No);
+        }
     }
 }

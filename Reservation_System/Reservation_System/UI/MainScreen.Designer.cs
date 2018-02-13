@@ -1046,6 +1046,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.BlackForm_Load);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
