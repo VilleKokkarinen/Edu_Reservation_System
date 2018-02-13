@@ -1,4 +1,4 @@
-﻿namespace Reservation_System
+﻿namespace Reservation_System.UI
 {
     partial class ReserationScreen
     {
@@ -34,8 +34,13 @@
             this.lbl_searchitems = new System.Windows.Forms.Label();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.btn_loan = new System.Windows.Forms.Button();
-            this.chckboxlist_Items = new System.Windows.Forms.CheckedListBox();
+            this.checklist_Items = new System.Windows.Forms.CheckedListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_itemstate = new System.Windows.Forms.TextBox();
+            this.txt_itemtype = new System.Windows.Forms.TextBox();
+            this.txt_itemid = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblReturnDate
@@ -89,29 +94,66 @@
             this.btn_loan.UseVisualStyleBackColor = true;
             this.btn_loan.Click += new System.EventHandler(this.btn_loan_Click);
             // 
-            // chckboxlist_Items
+            // checklist_Items
             // 
-            this.chckboxlist_Items.FormattingEnabled = true;
-            this.chckboxlist_Items.HorizontalScrollbar = true;
-            this.chckboxlist_Items.Location = new System.Drawing.Point(24, 35);
-            this.chckboxlist_Items.Name = "chckboxlist_Items";
-            this.chckboxlist_Items.Size = new System.Drawing.Size(280, 259);
-            this.chckboxlist_Items.TabIndex = 32;
-            this.chckboxlist_Items.SelectedIndexChanged += new System.EventHandler(this.chckboxlist_Items_SelectedIndexChanged);
+            this.checklist_Items.CheckOnClick = true;
+            this.checklist_Items.DisplayMember = "Text";
+            this.checklist_Items.FormattingEnabled = true;
+            this.checklist_Items.HorizontalScrollbar = true;
+            this.checklist_Items.Location = new System.Drawing.Point(24, 35);
+            this.checklist_Items.Name = "checklist_Items";
+            this.checklist_Items.Size = new System.Drawing.Size(280, 259);
+            this.checklist_Items.TabIndex = 32;
+            this.checklist_Items.SelectedValueChanged += new System.EventHandler(this.chckboxlist_Items_SelectedValueChanged);
             // 
             // comboBox1
             // 
+            this.comboBox1.DisplayMember = "Text";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(313, 106);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 43;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_itemstate);
+            this.groupBox1.Controls.Add(this.txt_itemtype);
+            this.groupBox1.Controls.Add(this.txt_itemid);
+            this.groupBox1.Location = new System.Drawing.Point(310, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(159, 100);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Valitun Tavaran tiedot";
+            // 
+            // txt_itemstate
+            // 
+            this.txt_itemstate.Location = new System.Drawing.Point(7, 46);
+            this.txt_itemstate.Name = "txt_itemstate";
+            this.txt_itemstate.Size = new System.Drawing.Size(142, 20);
+            this.txt_itemstate.TabIndex = 2;
+            // 
+            // txt_itemtype
+            // 
+            this.txt_itemtype.Location = new System.Drawing.Point(49, 20);
+            this.txt_itemtype.Name = "txt_itemtype";
+            this.txt_itemtype.Size = new System.Drawing.Size(100, 20);
+            this.txt_itemtype.TabIndex = 1;
+            // 
+            // txt_itemid
+            // 
+            this.txt_itemid.Location = new System.Drawing.Point(7, 20);
+            this.txt_itemid.Name = "txt_itemid";
+            this.txt_itemid.Size = new System.Drawing.Size(36, 20);
+            this.txt_itemid.TabIndex = 0;
+            // 
             // ReserationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 450);
+            this.ClientSize = new System.Drawing.Size(481, 410);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblReturnDate);
             this.Controls.Add(this.dtpReturnDate);
@@ -119,11 +161,12 @@
             this.Controls.Add(this.lbl_searchitems);
             this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.btn_loan);
-            this.Controls.Add(this.chckboxlist_Items);
+            this.Controls.Add(this.checklist_Items);
             this.Name = "ReserationScreen";
             this.Text = "ReserationScreen";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReserationScreen_Leave);
             this.Load += new System.EventHandler(this.ReserationScreen_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,7 +179,11 @@
         private System.Windows.Forms.Label lbl_searchitems;
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.Button btn_loan;
-        private System.Windows.Forms.CheckedListBox chckboxlist_Items;
+        private System.Windows.Forms.CheckedListBox checklist_Items;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_itemstate;
+        private System.Windows.Forms.TextBox txt_itemtype;
+        private System.Windows.Forms.TextBox txt_itemid;
     }
 }

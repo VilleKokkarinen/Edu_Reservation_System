@@ -48,7 +48,8 @@ namespace Reservation_System.UI
         public NewItemScreen()
         {
             InitializeComponent();
-            CenterToScreen();         
+            CenterToScreen();
+            language();        
         }
         void language()
         {
@@ -57,13 +58,17 @@ namespace Reservation_System.UI
 
                 lbl_name.Text = "Name";
                 lbl_type.Text = "Type";
-                btn_addtodatabase.Text = "Add to database";
+                btn_addtodatabase.Text = "Add item";
+                label1.Text = "Needed type is not listed? Add new type";
+                button1.Text = "Add type";
             }
             else
             {
                 lbl_name.Text = "Nimi";
                 lbl_type.Text = "Tyyppi";
-                btn_addtodatabase.Text = "Lisää tietokantaan";
+                btn_addtodatabase.Text = "Lisää tavara";
+                label1.Text = "Haluamaa tyyppiä ei listassa? Luo uusi tyyppi";
+                button1.Text = "Lisää tyyppi";
             }
         }
         private void button13_Click(object sender, EventArgs e)
@@ -73,7 +78,6 @@ namespace Reservation_System.UI
                 string query = "INSERT INTO ITEMS (I_NAME, I_STATE, I_TYPE) VALUES (@name, 1, @TYPE)";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
-
                     int index = ((ComboItem)comboBox1.SelectedItem).ID;
 
                     cmd.Parameters.AddWithValue("@name", txt_name.Text);
@@ -88,13 +92,11 @@ namespace Reservation_System.UI
                     }
                     else
                     {
-                        MessageBox.Show("Item Created succesfully");
-                        updatetypes();
+                        MessageBox.Show("Item Created succesfully");                      
                     }
                 }
                 connection.Close();
-            }
-        
+            }        
     }
 
         private void NewItemScreen_Load(object sender, EventArgs e)
@@ -127,10 +129,10 @@ namespace Reservation_System.UI
                 connection.Close();
             }
         }
-    }
-    class ComboItem
-    {
-        public string Text { get; set; }
-        public int ID { get; set; }
-    }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }  
 }

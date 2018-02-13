@@ -80,12 +80,12 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DisplayMember = "Text";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(6, 70);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(123, 21);
             this.comboBox1.TabIndex = 50;
-            this.comboBox1.DisplayMember = "Text";
             // 
             // textBox1
             // 
@@ -102,6 +102,7 @@
             this.label1.Size = new System.Drawing.Size(221, 13);
             this.label1.TabIndex = 52;
             this.label1.Text = "Haluamaa tyyppiä ei listassa? Luo uusi tyyppi:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 

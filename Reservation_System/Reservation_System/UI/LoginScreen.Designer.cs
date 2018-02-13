@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.chkbox_remember_user = new System.Windows.Forms.CheckBox();
             this.lbl_invalid_login_credentials = new System.Windows.Forms.Label();
             this.lblforgotpassword = new System.Windows.Forms.LinkLabel();
-            this.btn_registeruser = new System.Windows.Forms.Button();          
+            this.btn_registeruser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_username
@@ -110,7 +110,6 @@
             this.btn_registeruser.Text = "Register new user";
             this.btn_registeruser.UseVisualStyleBackColor = true;
             this.btn_registeruser.Click += new System.EventHandler(this.button1_Click);
-           
             // 
             // LoginScreen
             // 
@@ -124,9 +123,10 @@
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_username);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginScreen";
             this.Text = "LoginScreen";
-            this.Load += new System.EventHandler(this.LoginScreen_Load);           
+            this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

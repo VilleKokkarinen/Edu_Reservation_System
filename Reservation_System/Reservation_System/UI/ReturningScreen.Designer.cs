@@ -73,9 +73,11 @@
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 35;
             this.label7.Text = "Palautusvalikko";
+           
             // 
             // checkedListBox2
             // 
+            this.checkedListBox2.CheckOnClick = true;
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Location = new System.Drawing.Point(22, 55);
             this.checkedListBox2.Name = "checkedListBox2";

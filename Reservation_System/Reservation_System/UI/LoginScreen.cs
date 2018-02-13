@@ -58,12 +58,13 @@ namespace Reservation_System.UI
                 InitializeComponent();                       
                 Center();
                 language();
+               
 
                 if(Program.Settings.RememberUserName == true)
                 {
                     chkbox_remember_user.Checked = true;
                     txt_username.Text = Program.Settings.Username;
-                txt_password.Select();
+                    txt_password.Select();
 
                 }             
             }        
@@ -82,7 +83,10 @@ namespace Reservation_System.UI
             if (Program.user != null)
             {
                 this.Hide();
-                UserInterFace.MainScreen();
+                //UserInterFace.MainScreen();
+                Reservation_System.UI.MainScreen form = new MainScreen();
+                form.ShowDialog();
+
             }
             else
             {
@@ -147,7 +151,7 @@ namespace Reservation_System.UI
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-
+            //language();
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Reservation_System.UI
                 groupBox1.Text = "Change Password";
                 groupBox2.Text = "Change email-address";
                 btn_applychanges.Text = "Apply Changes";
-                btn_applychanges2.Text = "Apply Changes";
+                btn_applychanges2.Text = "Apply Changes";               
             }
             else
             {
@@ -68,6 +68,11 @@ namespace Reservation_System.UI
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_main_AccountManagement_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
         }
     }
 }

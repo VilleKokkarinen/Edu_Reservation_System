@@ -21,6 +21,7 @@ namespace Reservation_System.UI
                 label8.Text = "Borrowed items";               
                 button7.Text = "Return";                
                 button10.Text = "Show information about item";
+              
             }
             else
             {
@@ -28,32 +29,102 @@ namespace Reservation_System.UI
                 label8.Text = "Lainassa olevat tuotteet";               
                 button7.Text = "Palauta";               
                 button10.Text = "Näytä valitun tavaran tiedot";
+               
             }
         }
         public ReturningScreen()
         {
             InitializeComponent();
             CenterToScreen();
+            language();
+        }
+
+        private void GetLoans()
+        {
+            checkedListBox2.Items.Clear();
+            checkedListBox2.DisplayMember = "NAME";
+
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand UserLoans = connection.CreateCommand())
+                {
+                    UserLoans.CommandType = CommandType.Text;
+                    UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 1 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID AND RESERVATIONROWS.RR_USER =@USER AND RESERVATIONROWS.RR_RETURNED = 0";
+                    UserLoans.Parameters.AddWithValue("@USER", Program.user.userid());
+
+                    connection.Open();
+                    MySqlDataReader reader = UserLoans.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int ItemID = (int)reader["I_ID"];
+                            string Itemname = (string)reader["I_NAME"];
+                            int ItemType = (int)reader["I_TYPE"];
+                            int ItemState = (int)reader["I_STATE"];
+
+                            // Add the item to the User's inventory
+                            checkedListBox2.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
+                        }
+                    }
+                }
+                connection.Close();
+            }
         }
 
         private void ReturningScreen_Load(object sender, EventArgs e)
         {
-            checkedListBox2.Items.Clear();
-            foreach (User.LoanItem loan in Program.user.Loans)
-            {
-                checkedListBox2.Items.Add(loan.Description);
-            }
+            GetLoans();  
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            foreach (User.Item item in checkedListBox2.CheckedItems)
+            {
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {                       
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);                        
 
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE RESERVATIONROWS SET RR_RETURNED = 1 WHERE RESERVATIONROWS.RR_RETURNED = 0 AND RR_USER =@USER AND RR_ITEM =@itemid";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);
+                        cmd.Parameters.AddWithValue("@USER", Program.user.userid());
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            GetLoans();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
 
         }
-    }
-    
+    }    
 }

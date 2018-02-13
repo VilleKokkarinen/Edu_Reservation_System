@@ -16,20 +16,19 @@ namespace Reservation_System.UI
         {
             if (Program.Settings.English == true)
             {
-                btn_addnewitem.Text = "Add new item";
-                btn_removeitem.Text = "Remove item";
+                button1.Text = "Add a new item";
+                button2.Text = "Remove an item";
             }
-
             else
-
             {
-                btn_addnewitem.Text = "Lisää tavara";
-                btn_removeitem.Text = "Poista tavara";
+                button1.Text = "Lisää tavara";
+                button2.Text = "Poista tavara";
             }
         }
         public ItemManagement()
         {
             InitializeComponent();
+            language();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +39,11 @@ namespace Reservation_System.UI
         private void button2_Click(object sender, EventArgs e)
         {
             UserInterFace.RemovingItemScreen();
+        }
+
+        private void btn_main_itemman_Click(object sender, EventArgs e)
+        {
+            UserInterFace.MainScreen();
         }
     }
 }

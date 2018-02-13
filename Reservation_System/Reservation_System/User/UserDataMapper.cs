@@ -27,7 +27,7 @@ namespace Reservation_System.User
                     using (MySqlCommand UserLogin = connection.CreateCommand())
                     {
                         UserLogin.CommandType = CommandType.Text;
-                        UserLogin.CommandText = "Select * from USERS where U_USERNAME=@user and U_PASSWORD=@password";
+                        UserLogin.CommandText = "Select * from USERS where U_USERNAME=@user COLLATE latin1_general_cs and U_PASSWORD=@password COLLATE latin1_general_cs";
                         UserLogin.Parameters.AddWithValue("@user", username);
                         UserLogin.Parameters.AddWithValue("@password", password);
                         
@@ -44,59 +44,8 @@ namespace Reservation_System.User
                         reader.Read();
                         
                         // Create the User object, with the saved game values
-                        User = User.CreateUser(username, (int)reader["U_ID"]);
+                        User = User.CreateUser(username, (int)reader["U_ID"], (int)reader["U_ACCOUNTTYPE"]);
                     }                    
-
-                    // Read the rows/records from the Inventory table, and add them to the User
-                    using (MySqlCommand UserLoans = connection.CreateCommand())
-                    {
-                        UserLoans.CommandType = CommandType.Text;
-                        UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 2 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID";
-                        UserLoans.Parameters.AddWithValue("@USER", User._userid);
-                        
-                        MySqlDataReader reader = UserLoans.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                int ItemID = (int)reader["I_ID"];
-                                string Itemname = (string)reader["I_NAME"];
-                                int ItemType = (int)reader["I_TYPE"];
-                                int ItemState = (int)reader["I_STATE"];
-
-                                // Add the item to the User's inventory
-                                User.Loans.Add(new LoanItem(new Item(ItemID, Itemname, ItemType, ItemState)));
-                                
-                            }
-                        }
-                    }
-
-                    using (MySqlCommand availableItems = connection.CreateCommand())
-                    {
-                        availableItems.CommandType = CommandType.Text;
-                        availableItems.CommandText = "SELECT * FROM ITEMS WHERE ITEMS.I_STATE = 1";
-                        availableItems.Parameters.AddWithValue("@USER", User._userid);
-
-                        MySqlDataReader reader = availableItems.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                int ItemID = (int)reader["I_ID"];
-                                string Itemname = (string)reader["I_NAME"];
-                                int ItemType = (int)reader["I_TYPE"];
-                                int ItemState = (int)reader["I_STATE"];
-
-                                // Add the item to the User's inventory
-                                User.AvailableItems.Add(new LoanItem(new Item(ItemID, Itemname, ItemType, ItemState)));
-
-                            }
-                        }
-                    }
-
-                    // Now that the User has been built from the database, return it.
                     return User;
                 }
             }

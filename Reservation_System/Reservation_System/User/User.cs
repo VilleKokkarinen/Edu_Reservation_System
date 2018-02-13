@@ -12,16 +12,14 @@ namespace Reservation_System.User
         public static string _username;
         public static string _email;
         public static int _userid;
+        private static int _Accounttype;
 
-        public BindingList<LoanItem> Loans { get; set; }
-        public BindingList<LoanItem> AvailableItems { get; set; }
-
-        private User(string username, int userid)
+     
+        private User(string username, int userid, int accounttype)
         {
             _username = username;
             _userid = userid;
-            Loans = new BindingList<LoanItem>();
-            AvailableItems = new BindingList<LoanItem>();      
+            _Accounttype = accounttype;
         }
 
         public string username()
@@ -29,13 +27,19 @@ namespace Reservation_System.User
             return _username;
         }
 
-        public static User CreateUser(string username, int userid)
+        public int userid()
         {
-            User user = new User(username, userid);            
-            return user;
+            return _userid;
+        }
+        public int accounttype()
+        {
+            return _Accounttype;
         }
 
-
-
+        public static User CreateUser(string username, int userid, int accounttype)
+        {
+            User user = new User(username, userid, accounttype);            
+            return user;
+        }
     }
 }

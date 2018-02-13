@@ -19,15 +19,15 @@ namespace Reservation_System.UI
         {
             if (Program.Settings.English == true)
             {
+                button1.Text = "Recover password";
                 lbl_email.Text = "Email";
                 lbl_username.Text = "Username";
-                btn_recover.Text = "Recover password";
             }
             else
             {
+                button1.Text = "Palauta salasana";
                 lbl_email.Text = "Sähköposti";
                 lbl_username.Text = "Käyttäjänimi";
-                btn_recover.Text = "Palauta salasana";
             }
         }
         string newpassword = "password1";
@@ -35,7 +35,8 @@ namespace Reservation_System.UI
         public ForgotPasswordScreen()
         {
             InitializeComponent();
-            CenterToScreen();             
+            CenterToScreen();
+            language();          
         }
 
         private void checkuser()

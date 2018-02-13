@@ -28,6 +28,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,6 +59,10 @@
     <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Costura, Version=1.6.2.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.1.6.2\lib\dotnet\Costura.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.dll</HintPath>
     </Reference>
@@ -84,6 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Email\Email.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\MySettings.cs" />
     <Compile Include="Sql\SQL.cs" />
@@ -92,6 +103,12 @@
     </Compile>
     <Compile Include="UI\AccountManagement.Designer.cs">
       <DependentUpon>AccountManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ButtonZ.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ForgotPasswordScreen.cs">
       <SubType>Form</SubType>
@@ -118,11 +135,17 @@
     <Compile Include="UI\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainScreen.cs">
+    <Compile Include="UI\MainScreenOLD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainScreen.Designer.cs">
-      <DependentUpon>MainScreen.cs</DependentUpon>
+    <Compile Include="UI\MainScreenOLD.Designer.cs">
+      <DependentUpon>MainScreenOLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuStripZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\MinMaxButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\NewItemScreen.cs">
       <SubType>Form</SubType>
@@ -166,11 +189,19 @@
     <Compile Include="UI\SettingsScreen.Designer.cs">
       <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ShapedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UI.cs" />
     <Compile Include="UI\UiWindows.cs" />
     <Compile Include="User\Item.cs" />
     <Compile Include="User\User.cs" />
-    <Compile Include="User\Loan.cs" />
     <Compile Include="User\UserDataMapper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,8 +213,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainScreen.en.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ForgotPasswordScreen.resx">
       <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
@@ -194,8 +236,8 @@
     <EmbeddedResource Include="UI\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainScreen.resx">
-      <DependentUpon>MainScreen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\MainScreenOLD.resx">
+      <DependentUpon>MainScreenOLD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NewItemScreen.resx">
       <DependentUpon>NewItemScreen.cs</DependentUpon>
@@ -258,7 +300,25 @@
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icons\ProgramLogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.2.0.0\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\dotnet\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.2.0.0\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.2.0.0\build\dotnet\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

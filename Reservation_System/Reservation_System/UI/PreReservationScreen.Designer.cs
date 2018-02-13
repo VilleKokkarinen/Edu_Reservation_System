@@ -69,13 +69,12 @@
             this.button17.TabIndex = 59;
             this.button17.Text = "Varaa";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // checkedListBox4
             // 
+            this.checkedListBox4.CheckOnClick = true;
             this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Items.AddRange(new object[] {
-            "[Hilavitkutin] [Tyyppi X] [Saatavilla 7.5.18]",
-            "[Asia] [Tyyppi 43] [Saatavilla 9.5.18]"});
             this.checkedListBox4.Location = new System.Drawing.Point(12, 26);
             this.checkedListBox4.Name = "checkedListBox4";
             this.checkedListBox4.Size = new System.Drawing.Size(226, 259);
@@ -93,6 +92,7 @@
             this.Controls.Add(this.checkedListBox4);
             this.Name = "PreReservationScreen";
             this.Text = "PreReservationScreen";
+            this.Load += new System.EventHandler(this.PreReservationScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

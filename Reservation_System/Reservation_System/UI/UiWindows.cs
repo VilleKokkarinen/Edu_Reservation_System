@@ -8,9 +8,9 @@ namespace Reservation_System.UI
 {
     class UiWindows
     {
-        public RegisterUser _RegisterUserScreen = new RegisterUser();
-        public LoginScreen _Loginscreen = new LoginScreen();        
-        public MainScreen _Mainscreen = new MainScreen();
+        public LoginScreen _Loginscreen = new LoginScreen();
+        public RegisterUser _RegisterUserScreen = new RegisterUser();              
+        public MainScreenOLD _Mainscreen = new MainScreenOLD();
         public ForgotPasswordScreen _forgotpasswordscreen = new ForgotPasswordScreen();
         public NewItemScreen _newitemscreen = new NewItemScreen();
         public RemovingItemScreen _removeitemscreen = new RemovingItemScreen();
@@ -32,8 +32,8 @@ namespace Reservation_System.UI
             _returningscreen.Parent = _Mainscreen;
             _accounmanagementscreen.Parent = _Mainscreen;
             _itemmanagementscreen.Parent = _Mainscreen;
-            _newitemscreen.Parent = _itemmanagementscreen;
-            _removeitemscreen.Parent = _itemmanagementscreen;
+            _newitemscreen.Parent = _Mainscreen;
+            _removeitemscreen.Parent = _Mainscreen;
         }            
     }
 }
