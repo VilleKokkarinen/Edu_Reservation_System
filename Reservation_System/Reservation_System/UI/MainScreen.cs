@@ -549,7 +549,7 @@ namespace Reservation_System.UI
             btn_Settings.ChangeColorMouseHC = true;
 
             Loan_Panel.Visible = true;
-            Loan_Panel.BringToFront();
+            Controls.SetChildIndex(Loan_Panel, Controls.Count - 6);
             itemtypes();
             AvailableItems();
         }
@@ -568,7 +568,7 @@ namespace Reservation_System.UI
             btn_Settings.ChangeColorMouseHC = true;
 
             panel_UserLoans.Visible = true;
-            panel_UserLoans.BringToFront();
+            Controls.SetChildIndex(panel_UserLoans, Controls.Count - 6);
             itemtypes();
             GetLoans();
         }
@@ -601,7 +601,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Settings_Panel.Visible = true;
-            Settings_Panel.BringToFront();
+            Controls.SetChildIndex(Settings_Panel, Controls.Count - 6);
         }
         private void buttonX1_Click(object sender, EventArgs e)
         {
@@ -618,24 +618,33 @@ namespace Reservation_System.UI
             btn_Settings.ChangeColorMouseHC = true;
 
             Item_Management.Visible = true;
-            Item_Management.BringToFront();
+            Controls.SetChildIndex(Item_Management, Controls.Count - 6);
         }
           private void buttonX2_Click(object sender, EventArgs e)
         {
-            buttonX1.BZBackColor = Color.Black;
-            buttonX1.ChangeColorMouseHC = false;
+            buttonX2.BZBackColor = Color.Black;
+            buttonX2.ChangeColorMouseHC = false;
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+            buttonX1.BZBackColor = Color.FromArgb(50, 50, 50);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
             btn_Settings.ChangeColorMouseHC = true;
+            buttonX1.ChangeColorMouseHC = true;
 
-            Item_Management.Visible = true;
-            Item_Management.BringToFront();          
+            Waiting_Events_panel.Visible = true;
+            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count-6);
+            try
+            {
+                UpdatePendingLoans();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            } 
         }
 
         private void run_button_Click(object sender, EventArgs e)
@@ -753,7 +762,7 @@ namespace Reservation_System.UI
 
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
-                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE, RR_RETURNED) VALUES (LAST_INSERT_ID(), @user, @itemid, CURRENT_TIMESTAMP, @returndate, 0)";
+                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RETURNDATE, RR_PENDING_LOAN) VALUES (LAST_INSERT_ID(), @user, @itemid, @returndate, 1)";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@user", Program.user.userid());
@@ -795,6 +804,7 @@ namespace Reservation_System.UI
 
         #endregion
 
+
         #region Reservation panel
 
         #endregion
@@ -813,7 +823,7 @@ namespace Reservation_System.UI
                     using (MySqlCommand UserLoans = connection.CreateCommand())
                     {
                         UserLoans.CommandType = CommandType.Text;
-                        UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 1 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID AND RESERVATIONROWS.RR_USER =@USER AND RESERVATIONROWS.RR_RETURNED = 0";
+                        UserLoans.CommandText = "SELECT * FROM ITEMS, RESERVATION, RESERVATIONROWS WHERE ITEMS.I_STATE = 1 AND RESERVATION.R_USER =@USER AND RESERVATIONROWS.RR_R_ID = RESERVATION.R_ID AND RESERVATIONROWS.RR_ITEM = ITEMS.I_ID AND RESERVATIONROWS.RR_USER =@USER AND RESERVATIONROWS.RR_RETURNED = 0 AND RR_PENDING_LOAN = 0 AND RR_PENDING_RETURN = 0";
                         UserLoans.Parameters.AddWithValue("@USER", Program.user.userid());
 
                         connection.Open();
@@ -849,24 +859,7 @@ namespace Reservation_System.UI
                 {
                     using (MySqlConnection connection = Program.sql.MySqlConnection())
                     {
-                        string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid";
-                        using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                        {
-                            cmd.Parameters.AddWithValue("@itemid", item.ID);
-
-                            connection.Open();
-                            int result = cmd.ExecuteNonQuery();
-
-                            if (result < 0)
-                            {
-                                MessageBox.Show("Error in the system");
-                            }
-                            connection.Close();
-                        }
-                    }
-                    using (MySqlConnection connection = Program.sql.MySqlConnection())
-                    {
-                        string query = "UPDATE RESERVATIONROWS SET RR_RETURNED = 1 WHERE RESERVATIONROWS.RR_RETURNED = 0 AND RR_USER =@USER AND RR_ITEM =@itemid";
+                        string query = "UPDATE RESERVATIONROWS SET RR_PENDING_RETURN = 1 WHERE RESERVATIONROWS.RR_PENDING_RETURN = 0 AND RR_USER =@USER AND RR_ITEM =@itemid";
                         using (MySqlCommand cmd = new MySqlCommand(query, connection))
                         {
                             cmd.Parameters.AddWithValue("@itemid", item.ID);
@@ -953,58 +946,73 @@ namespace Reservation_System.UI
 
         #endregion
 
-        #region Pending loans
+        #region Pending loans and returns
 
-        private void UpdatePending()
+        private void UpdatePendingLoans()
         {
+            checklist_Waiting_PendingLoans.Items.Clear();
+            checklist_Waiting_PendingLoans.DisplayMember = "NAME";
+            checklist_Waiting_PendingReturns.Items.Clear();
+            checklist_Waiting_PendingReturns.DisplayMember = "NAME";
 
-        }
-
-        private void btnAcceptLoan_Click(object sender, EventArgs e)
-        {
-            Accept_Pending_Loans();
-        }
-
-        private void btnDenyLoan_Click(object sender, EventArgs e)
-        {
-            Deny_Pending_Loans();
-        }
-
-        private void Deny_Pending_Loans()
-        {
-            foreach (User.Item item in checklist_Waiting_Events.CheckedItems)
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                using (MySqlCommand availableItems = connection.CreateCommand())
                 {
-                    string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid; DELETE rows, res FROM RESERVATIONROWS rows JOIN RESERVATION res ON rows.RR_R_ID = res.R_ID WHERE RR_USER =@user AND RR_ITEM =@itemid AND RR_PENDING_LOAN = 1";
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    availableItems.CommandType = CommandType.Text;
+                    availableItems.CommandText = "SELECT I_ID, I_NAME, I_TYPE, I_STATE FROM ITEMS, RESERVATIONROWS WHERE I_ID = RR_ITEM AND RR_RETURNED = 0 AND RR_PENDING_LOAN = 1 AND RR_PENDING_RETURN = 0";
+
+                    connection.Open();
+
+                    MySqlDataReader reader = availableItems.ExecuteReader();
+                    if (reader.HasRows)
                     {
-                        cmd.Parameters.AddWithValue("@itemid", item.ID);
-
-                        connection.Open();
-                        int result = cmd.ExecuteNonQuery();
-
-                        if (result < 0)
+                        while (reader.Read())
                         {
-                            MessageBox.Show("Error in the system");
+                            int ItemID = (int)reader["I_ID"];
+                            string Itemname = (string)reader["I_NAME"];
+                            int ItemType = (int)reader["I_TYPE"];
+                            int ItemState = (int)reader["I_STATE"];
+
+                            checklist_Waiting_PendingLoans.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
                         }
-                        connection.Close();
                     }
                 }
-                //Remove selected items from list // update list
+                connection.Close();
+                using (MySqlCommand availableItems = connection.CreateCommand())
+                {
+                    availableItems.CommandType = CommandType.Text;
+                    availableItems.CommandText = "SELECT I_ID, I_NAME, I_TYPE, I_STATE FROM ITEMS, RESERVATIONROWS WHERE I_ID = RR_ITEM AND RR_RETURNED = 0 AND RR_PENDING_LOAN = 0 AND RR_PENDING_RETURN = 1";
+
+                    connection.Open();
+
+                    MySqlDataReader reader = availableItems.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int ItemID = (int)reader["I_ID"];
+                            string Itemname = (string)reader["I_NAME"];
+                            int ItemType = (int)reader["I_TYPE"];
+                            int ItemState = (int)reader["I_STATE"];
+
+                            checklist_Waiting_PendingReturns.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
+                        }
+                    }
+                    connection.Close();
+                }
             }
-            MessageBox.Show("reservation(s) Denied Succesfully");
-            UpdatePending();
         }
-        private void Accept_Pending_Loans()
+
+        private void Accept_Pending_Returns()
         {
-            foreach (User.Item item in checklist_Waiting_Events.CheckedItems)
+            foreach (User.Item item in checklist_Waiting_PendingReturns.CheckedItems)
             {
                 string date = dtp_Loan_ReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
 
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
-                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1 AND RR_USER =@user)";
+                    string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_RETURN = 0, RR_RETURNED = 1 WHERE RR_ITEM =@itemid AND RR_PENDING_RETURN = 1 AND RR_USER =@user";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@user", Program.user.userid());
@@ -1023,7 +1031,97 @@ namespace Reservation_System.UI
                 //Remove selected items from list // update list
             }
             MessageBox.Show("reservation(s) Accepted succesfully");
-            UpdatePending();
+            UpdatePendingLoans();
+        }
+        private void btnAcceptReturn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Accept_Pending_Returns();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnAcceptLoan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Accept_Pending_Loans();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnDenyLoan_Click(object sender, EventArgs e)
+        {
+            try {
+                Deny_Pending_Loans();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
+    
+        private void Deny_Pending_Loans()
+        {
+            foreach (User.Item item in checklist_Waiting_PendingLoans.CheckedItems)
+            {
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid; DELETE rows, res FROM RESERVATIONROWS rows JOIN RESERVATION res ON rows.RR_R_ID = res.R_ID WHERE RR_USER =@user AND RR_ITEM =@itemid AND RR_PENDING_LOAN = 1";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);
+                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
+
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            MessageBox.Show("reservation(s) Denied Succesfully");
+            UpdatePendingLoans();
+        }
+        private void Accept_Pending_Loans()
+        {
+            foreach (User.Item item in checklist_Waiting_PendingLoans.CheckedItems)
+            {
+                string date = dtp_Loan_ReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1 AND RR_USER =@user";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            MessageBox.Show("reservation(s) Accepted succesfully");
+            UpdatePendingLoans();
         }
         #endregion
 
@@ -1037,6 +1135,7 @@ namespace Reservation_System.UI
 
 
         #endregion
+
 
         #region Item Management panel
         private void btn_CreateItem_Click(object sender, EventArgs e)
@@ -1107,5 +1206,7 @@ namespace Reservation_System.UI
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (exit == DialogResult.No);
         }
+
+       
     }
 }
