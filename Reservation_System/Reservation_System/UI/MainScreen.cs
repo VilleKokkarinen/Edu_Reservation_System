@@ -31,6 +31,7 @@ namespace Reservation_System.UI
         bool isLeftPanelDragged = false;
         bool isRightPanelDragged = false;
         bool isBottomPanelDragged = false;
+        
         bool isTopBorderPanelDragged = false;
 
         bool isRightBottomPanelDragged = false;
@@ -149,9 +150,6 @@ namespace Reservation_System.UI
                 }
             }
         }
-
-
-
         private void LeftPanel_MouseDown(object sender, MouseEventArgs e)
         {
             if (this.Location.X <= 0 || e.X < 0)
@@ -547,8 +545,8 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
             btn_Settings.ChangeColorMouseHC = true;
 
-            Loan_Panel.Visible = true;
-            Loan_Panel.BringToFront();
+            Loan_Panel.Visible = true;           
+            this.Controls.SetChildIndex(Loan_Panel, this.Controls.Count - 5);            
             itemtypes();
             AvailableItems();
         }
@@ -567,7 +565,7 @@ namespace Reservation_System.UI
             btn_Settings.ChangeColorMouseHC = true;
 
             panel_UserLoans.Visible = true;
-            panel_UserLoans.BringToFront();
+            this.Controls.SetChildIndex(panel_UserLoans, this.Controls.Count - 5);
             itemtypes();
             GetLoans();
         }
@@ -600,7 +598,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Settings_Panel.Visible = true;
-            Settings_Panel.BringToFront();
+            this.Controls.SetChildIndex(Settings_Panel, this.Controls.Count-5);
         }
         private void buttonX1_Click(object sender, EventArgs e)
         {
@@ -617,7 +615,7 @@ namespace Reservation_System.UI
             btn_Settings.ChangeColorMouseHC = true;
 
             Item_Management.Visible = true;
-            Item_Management.BringToFront();          
+            this.Controls.SetChildIndex(Item_Management, this.Controls.Count - 5);
         }
         #endregion
 
@@ -1001,5 +999,7 @@ namespace Reservation_System.UI
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (exit == DialogResult.No);
         }
+
+     
     }
 }
