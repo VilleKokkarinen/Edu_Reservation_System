@@ -62,7 +62,7 @@
             this.LeftTopPanel_1 = new System.Windows.Forms.Panel();
             this.LeftTopPanel_2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_ItemManagment = new Reservation_System.UI.ButtonX();
+            this.buttonX1 = new Reservation_System.UI.ButtonX();
             this.btn_Settings = new Reservation_System.UI.ButtonX();
             this.btn_Reservation = new Reservation_System.UI.ButtonX();
             this.btn_Loans = new Reservation_System.UI.ButtonX();
@@ -73,13 +73,13 @@
             this.rbEnglish = new System.Windows.Forms.RadioButton();
             this.rbFinnish = new System.Windows.Forms.RadioButton();
             this.Loan_Panel = new System.Windows.Forms.Panel();
-            this.gBox_SearchItem = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.combobox_Loan_ItemType = new System.Windows.Forms.ComboBox();
             this.txt_LoanItem_SearchItem = new System.Windows.Forms.TextBox();
             this.btn_Loan_LoanItem = new Reservation_System.UI.ShapedButton();
-            this.lbl_ReturnDate = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.dtp_Loan_ReturnDate = new System.Windows.Forms.DateTimePicker();
-            this.gBox_ItemInfo = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Loan_Item_State = new System.Windows.Forms.TextBox();
             this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
             this.txt_Loan_ItemID = new System.Windows.Forms.TextBox();
@@ -116,9 +116,10 @@
             this.btn_CreateItemType = new Reservation_System.UI.ShapedButton();
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -126,7 +127,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -135,8 +135,8 @@
             this.Settings_Panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Loan_Panel.SuspendLayout();
-            this.gBox_SearchItem.SuspendLayout();
-            this.gBox_ItemInfo.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panel_UserLoans.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -147,8 +147,8 @@
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -439,27 +439,27 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.btn_ItemManagment);
+            this.panel1.Controls.Add(this.buttonX1);
             this.panel1.Controls.Add(this.btn_Settings);
             this.panel1.Controls.Add(this.btn_Reservation);
             this.panel1.Controls.Add(this.btn_Loans);
             this.panel1.Controls.Add(this.btn_Loan);
             this.panel1.Name = "panel1";
             // 
-            // btn_ItemManagment
+            // buttonX1
             // 
-            this.btn_ItemManagment.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btn_ItemManagment.ChangeColorMouseHC = true;
-            this.btn_ItemManagment.DisplayText = "_";
-            resources.ApplyResources(this.btn_ItemManagment, "btn_ItemManagment");
-            this.btn_ItemManagment.ForeColor = System.Drawing.Color.White;
-            this.btn_ItemManagment.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btn_ItemManagment.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_ItemManagment.Name = "btn_ItemManagment";
-            this.btn_ItemManagment.TextLocation_X = 75;
-            this.btn_ItemManagment.TextLocation_Y = 6;
-            this.btn_ItemManagment.UseVisualStyleBackColor = true;
-            this.btn_ItemManagment.Click += new System.EventHandler(this.buttonX1_Click);
+            this.buttonX1.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonX1.ChangeColorMouseHC = true;
+            this.buttonX1.DisplayText = "Tavaroiden hallinta";
+            resources.ApplyResources(this.buttonX1, "buttonX1");
+            this.buttonX1.ForeColor = System.Drawing.Color.White;
+            this.buttonX1.MouseClickColor1 = System.Drawing.Color.Black;
+            this.buttonX1.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.TextLocation_X = 75;
+            this.buttonX1.TextLocation_Y = 6;
+            this.buttonX1.UseVisualStyleBackColor = true;
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // btn_Settings
             // 
@@ -559,24 +559,24 @@
             // 
             // Loan_Panel
             // 
-            this.Loan_Panel.Controls.Add(this.gBox_SearchItem);
+            this.Loan_Panel.Controls.Add(this.groupBox3);
             this.Loan_Panel.Controls.Add(this.btn_Loan_LoanItem);
-            this.Loan_Panel.Controls.Add(this.lbl_ReturnDate);
+            this.Loan_Panel.Controls.Add(this.label10);
             this.Loan_Panel.Controls.Add(this.dtp_Loan_ReturnDate);
-            this.Loan_Panel.Controls.Add(this.gBox_ItemInfo);
+            this.Loan_Panel.Controls.Add(this.groupBox2);
             this.Loan_Panel.Controls.Add(this.checklist_Loan_Items);
             resources.ApplyResources(this.Loan_Panel, "Loan_Panel");
             this.Loan_Panel.Name = "Loan_Panel";
             this.Loan_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Loan_Panel_Paint);
             // 
-            // gBox_SearchItem
+            // groupBox3
             // 
-            this.gBox_SearchItem.Controls.Add(this.combobox_Loan_ItemType);
-            this.gBox_SearchItem.Controls.Add(this.txt_LoanItem_SearchItem);
-            this.gBox_SearchItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.gBox_SearchItem, "gBox_SearchItem");
-            this.gBox_SearchItem.Name = "gBox_SearchItem";
-            this.gBox_SearchItem.TabStop = false;
+            this.groupBox3.Controls.Add(this.combobox_Loan_ItemType);
+            this.groupBox3.Controls.Add(this.txt_LoanItem_SearchItem);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
             // 
             // combobox_Loan_ItemType
             // 
@@ -618,26 +618,26 @@
             this.btn_Loan_LoanItem.UseVisualStyleBackColor = false;
             this.btn_Loan_LoanItem.Click += new System.EventHandler(this.btn_Loanitem_Click);
             // 
-            // lbl_ReturnDate
+            // label10
             // 
-            this.lbl_ReturnDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.lbl_ReturnDate, "lbl_ReturnDate");
-            this.lbl_ReturnDate.Name = "lbl_ReturnDate";
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Name = "label10";
             // 
             // dtp_Loan_ReturnDate
             // 
             resources.ApplyResources(this.dtp_Loan_ReturnDate, "dtp_Loan_ReturnDate");
             this.dtp_Loan_ReturnDate.Name = "dtp_Loan_ReturnDate";
             // 
-            // gBox_ItemInfo
+            // groupBox2
             // 
-            this.gBox_ItemInfo.Controls.Add(this.txt_Loan_Item_State);
-            this.gBox_ItemInfo.Controls.Add(this.txt_Loan_ItemType);
-            this.gBox_ItemInfo.Controls.Add(this.txt_Loan_ItemID);
-            this.gBox_ItemInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.gBox_ItemInfo, "gBox_ItemInfo");
-            this.gBox_ItemInfo.Name = "gBox_ItemInfo";
-            this.gBox_ItemInfo.TabStop = false;
+            this.groupBox2.Controls.Add(this.txt_Loan_Item_State);
+            this.groupBox2.Controls.Add(this.txt_Loan_ItemType);
+            this.groupBox2.Controls.Add(this.txt_Loan_ItemID);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
             // 
             // txt_Loan_Item_State
             // 
@@ -663,7 +663,6 @@
             this.checklist_Loan_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Loan_Items.FormattingEnabled = true;
             this.checklist_Loan_Items.Name = "checklist_Loan_Items";
-            this.checklist_Loan_Items.SelectedIndexChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedIndexChanged);
             this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
             // 
             // panel_UserLoans
@@ -977,19 +976,13 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // groupBox12
+            // panel4
             // 
-            this.groupBox12.ForeColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.ForeColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.groupBox14, "groupBox14");
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.TabStop = false;
+            this.panel4.Controls.Add(this.groupBox13);
+            this.panel4.Controls.Add(this.groupBox14);
+            this.panel4.Controls.Add(this.groupBox12);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
             // 
             // groupBox13
             // 
@@ -1004,6 +997,20 @@
             resources.ApplyResources(this.groupBox13, "groupBox13");
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.TabStop = false;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.ForeColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.groupBox14, "groupBox14");
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.TabStop = false;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.ForeColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
             // 
             // textBox1
             // 
@@ -1042,19 +1049,12 @@
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.groupBox13);
-            this.panel4.Controls.Add(this.groupBox14);
-            this.panel4.Controls.Add(this.groupBox12);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.LeftPanel);
@@ -1075,7 +1075,6 @@
             this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
@@ -1093,10 +1092,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Loan_Panel.ResumeLayout(false);
-            this.gBox_SearchItem.ResumeLayout(false);
-            this.gBox_SearchItem.PerformLayout();
-            this.gBox_ItemInfo.ResumeLayout(false);
-            this.gBox_ItemInfo.PerformLayout();
+            this.Loan_Panel.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.panel_UserLoans.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1113,9 +1113,9 @@
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1158,16 +1158,16 @@
         private System.Windows.Forms.RadioButton rbFinnish;
         private System.Windows.Forms.Panel Loan_Panel;
         private System.Windows.Forms.CheckedListBox checklist_Loan_Items;
-        private System.Windows.Forms.GroupBox gBox_ItemInfo;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_Loan_Item_State;
         private System.Windows.Forms.TextBox txt_Loan_ItemType;
         private System.Windows.Forms.TextBox txt_Loan_ItemID;
         private System.Windows.Forms.ComboBox combobox_Loan_ItemType;
         private System.Windows.Forms.TextBox txt_LoanItem_SearchItem;
-        private System.Windows.Forms.Label lbl_ReturnDate;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtp_Loan_ReturnDate;
         private ShapedButton btn_Loan_LoanItem;
-        private System.Windows.Forms.GroupBox gBox_SearchItem;
+        private System.Windows.Forms.GroupBox groupBox3;
         private ButtonX btn_Settings;
         private System.Windows.Forms.Label lbl_welcome;
         private System.Windows.Forms.Label lbl_username;
@@ -1184,7 +1184,7 @@
         private System.Windows.Forms.TextBox txt_UserLoans_ItemType;
         private System.Windows.Forms.TextBox txt_UserLoans_ItemID;
         private System.Windows.Forms.CheckedListBox Checklist_UserLoans_Items;
-        private ButtonX btn_ItemManagment;
+        private ButtonX buttonX1;
         private System.Windows.Forms.Panel Item_Management;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ComboBox ComboBox_DeleteItemType;
@@ -1208,9 +1208,10 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox10;
         private ShapedButton btn_CreateItem;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
@@ -1218,6 +1219,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel4;
     }
 }

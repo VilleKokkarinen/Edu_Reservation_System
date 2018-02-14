@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopBorderPanel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="RightPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -166,7 +166,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="LeftPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BottomPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -214,7 +214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BottomPanel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -496,7 +496,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="RightBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -520,7 +520,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="lbl_welcome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -610,7 +610,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="RightBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -634,7 +634,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="LeftBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -658,7 +658,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="LeftBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -682,7 +682,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="RightTopPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -706,7 +706,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightTopPanel_1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="RightTopPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -730,7 +730,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightTopPanel_2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="LeftTopPanel_1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -751,7 +751,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="LeftTopPanel_2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -772,39 +772,45 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="btn_ItemManagment.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="buttonX1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="buttonX1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btn_ItemManagment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 20.25pt, style=Bold</value>
+  <data name="buttonX1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
   </data>
-  <data name="btn_ItemManagment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="buttonX1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="btn_ItemManagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
+  <data name="buttonX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 140</value>
   </data>
-  <data name="btn_ItemManagment.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="buttonX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 35</value>
   </data>
-  <data name="btn_ItemManagment.Text" xml:space="preserve">
-    <value>_</value>
+  <data name="buttonX1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;btn_ItemManagment.Name" xml:space="preserve">
-    <value>btn_ItemManagment</value>
+  <data name="buttonX1.Text" xml:space="preserve">
+    <value>Tavaroiden hallinta</value>
   </data>
-  <data name="&gt;&gt;btn_ItemManagment.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonX1.Name" xml:space="preserve">
+    <value>buttonX1</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Type" xml:space="preserve">
     <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btn_ItemManagment.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonX1.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;btn_ItemManagment.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonX1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btn_Settings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -970,7 +976,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -994,7 +1000,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="rbEnglish.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1105,7 +1111,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Settings_Panel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="combobox_Loan_ItemType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1126,7 +1132,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;combobox_Loan_ItemType.Parent" xml:space="preserve">
-    <value>gBox_SearchItem</value>
+    <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;combobox_Loan_ItemType.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1150,30 +1156,36 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txt_LoanItem_SearchItem.Parent" xml:space="preserve">
-    <value>gBox_SearchItem</value>
+    <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;txt_LoanItem_SearchItem.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="gBox_SearchItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="gBox_SearchItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 13</value>
   </data>
-  <data name="gBox_SearchItem.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
   </data>
-  <data name="&gt;&gt;gBox_SearchItem.Name" xml:space="preserve">
-    <value>gBox_SearchItem</value>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
   </data>
-  <data name="&gt;&gt;gBox_SearchItem.Type" xml:space="preserve">
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Hae Tavaroita</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gBox_SearchItem.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
     <value>Loan_Panel</value>
   </data>
-  <data name="&gt;&gt;gBox_SearchItem.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btn_Loan_LoanItem.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -1206,25 +1218,37 @@
   <data name="&gt;&gt;btn_Loan_LoanItem.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbl_ReturnDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="lbl_ReturnDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
-  <data name="lbl_ReturnDate.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;lbl_ReturnDate.Name" xml:space="preserve">
-    <value>lbl_ReturnDate</value>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 249</value>
   </data>
-  <data name="&gt;&gt;lbl_ReturnDate.Type" xml:space="preserve">
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 24</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Palautus PVM.</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_ReturnDate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>Loan_Panel</value>
   </data>
-  <data name="&gt;&gt;lbl_ReturnDate.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="dtp_Loan_ReturnDate.Font" type="System.Drawing.Font, System.Drawing">
@@ -1255,7 +1279,7 @@
     <value>6, 57</value>
   </data>
   <data name="txt_Loan_Item_State.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 20</value>
+    <value>143, 26</value>
   </data>
   <data name="txt_Loan_Item_State.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1267,7 +1291,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txt_Loan_Item_State.Parent" xml:space="preserve">
-    <value>gBox_ItemInfo</value>
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txt_Loan_Item_State.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1276,7 +1300,7 @@
     <value>49, 25</value>
   </data>
   <data name="txt_Loan_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>100, 26</value>
   </data>
   <data name="txt_Loan_ItemType.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1288,7 +1312,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txt_Loan_ItemType.Parent" xml:space="preserve">
-    <value>gBox_ItemInfo</value>
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txt_Loan_ItemType.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1297,7 +1321,7 @@
     <value>7, 25</value>
   </data>
   <data name="txt_Loan_ItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 20</value>
+    <value>36, 26</value>
   </data>
   <data name="txt_Loan_ItemID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1309,30 +1333,36 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txt_Loan_ItemID.Parent" xml:space="preserve">
-    <value>gBox_ItemInfo</value>
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txt_Loan_ItemID.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="gBox_ItemInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="gBox_ItemInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 134</value>
   </data>
-  <data name="gBox_ItemInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
   </data>
-  <data name="&gt;&gt;gBox_ItemInfo.Name" xml:space="preserve">
-    <value>gBox_ItemInfo</value>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
   </data>
-  <data name="&gt;&gt;gBox_ItemInfo.Type" xml:space="preserve">
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Tavaran tiedot</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gBox_ItemInfo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>Loan_Panel</value>
   </data>
-  <data name="&gt;&gt;gBox_ItemInfo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="checklist_Loan_Items.Font" type="System.Drawing.Font, System.Drawing">
@@ -1384,7 +1414,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="combobox_UserLoans_ItemType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1627,7 +1657,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_UserLoans.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="checklist_DeleteItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2176,58 +2206,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 15</value>
-  </data>
-  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 277</value>
-  </data>
-  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox12.Text" xml:space="preserve">
-    <value>Vaihda käyttäjänimi</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>735, 16</value>
-  </data>
-  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 277</value>
-  </data>
-  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBox14.Text" xml:space="preserve">
-    <value>Vaihda sähköposti- osoite</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>5</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 248</value>
@@ -2358,9 +2337,6 @@
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 36</value>
   </data>
@@ -2430,6 +2406,54 @@
   <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 16</value>
+  </data>
+  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 277</value>
+  </data>
+  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox14.Text" xml:space="preserve">
+    <value>Vaihda sähköposti- osoite</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
+    <value>groupBox14</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 15</value>
+  </data>
+  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 277</value>
+  </data>
+  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox12.Text" xml:space="preserve">
+    <value>Vaihda käyttäjänimi</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
+    <value>groupBox12</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 78</value>
   </data>
@@ -2449,7 +2473,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
