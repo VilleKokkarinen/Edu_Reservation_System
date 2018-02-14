@@ -402,48 +402,6 @@
   <data name="menuStripZ1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt</value>
   </data>
-  <data name="Tool_Strip_Loans_NewLoan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 24</value>
-  </data>
-  <data name="Tool_Strip_Loans_NewLoan.Text" xml:space="preserve">
-    <value>Luo uusi lainaus</value>
-  </data>
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 24</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Palauta lainauksia</value>
-  </data>
-  <data name="Tool_Strip_Loans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 24</value>
-  </data>
-  <data name="Tool_Strip_Loans.Text" xml:space="preserve">
-    <value>Lainat</value>
-  </data>
-  <data name="cutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 24</value>
-  </data>
-  <data name="cutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Uusi tavara</value>
-  </data>
-  <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 24</value>
-  </data>
-  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Poista tavara</value>
-  </data>
-  <data name="showAllItemsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 24</value>
-  </data>
-  <data name="showAllItemsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Näytä kaikki tavarat</value>
-  </data>
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
-  </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tavarat</value>
-  </data>
   <data name="vaihdaKäyttäjänimiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 24</value>
   </data>
@@ -493,10 +451,10 @@
     <value>Apua</value>
   </data>
   <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1266, 33</value>
+    <value>1303, 33</value>
   </data>
   <data name="menuStripZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 28</value>
+    <value>248, 28</value>
   </data>
   <data name="menuStripZ1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2250,6 +2208,27 @@
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 78</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1177, 574</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2264,48 +2243,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>My App</value>
-  </data>
-  <data name="&gt;&gt;Tool_Strip_Loans.Name" xml:space="preserve">
-    <value>Tool_Strip_Loans</value>
-  </data>
-  <data name="&gt;&gt;Tool_Strip_Loans.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Tool_Strip_Loans_NewLoan.Name" xml:space="preserve">
-    <value>Tool_Strip_Loans_NewLoan</value>
-  </data>
-  <data name="&gt;&gt;Tool_Strip_Loans_NewLoan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openToolStripMenuItem.Name" xml:space="preserve">
-    <value>openToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
-    <value>editToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cutToolStripMenuItem.Name" xml:space="preserve">
-    <value>cutToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;cutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyToolStripMenuItem.Name" xml:space="preserve">
-    <value>copyToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;copyToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showAllItemsToolStripMenuItem.Name" xml:space="preserve">
-    <value>showAllItemsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;showAllItemsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;accountToolStripMenuItem.Name" xml:space="preserve">
     <value>accountToolStripMenuItem</value>

@@ -41,13 +41,6 @@
             this.WindowTextLabel = new System.Windows.Forms.Label();
             this._CloseButton = new Reservation_System.UI.ButtonZ();
             this.menuStripZ1 = new Reservation_System.UI.MenuStripZ();
-            this.Tool_Strip_Loans = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tool_Strip_Loans_NewLoan = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showAllItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vaihdaKäyttäjänimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vaihdaSalasanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,6 +116,7 @@
             this.btn_CreateItemType = new Reservation_System.UI.ShapedButton();
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -266,61 +260,9 @@
             // 
             resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
             this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tool_Strip_Loans,
-            this.editToolStripMenuItem,
             this.accountToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStripZ1.Name = "menuStripZ1";
-            // 
-            // Tool_Strip_Loans
-            // 
-            this.Tool_Strip_Loans.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tool_Strip_Loans_NewLoan,
-            this.openToolStripMenuItem});
-            this.Tool_Strip_Loans.ForeColor = System.Drawing.Color.White;
-            this.Tool_Strip_Loans.Name = "Tool_Strip_Loans";
-            resources.ApplyResources(this.Tool_Strip_Loans, "Tool_Strip_Loans");
-            // 
-            // Tool_Strip_Loans_NewLoan
-            // 
-            this.Tool_Strip_Loans_NewLoan.ForeColor = System.Drawing.Color.White;
-            this.Tool_Strip_Loans_NewLoan.Name = "Tool_Strip_Loans_NewLoan";
-            resources.ApplyResources(this.Tool_Strip_Loans_NewLoan, "Tool_Strip_Loans_NewLoan");
-            this.Tool_Strip_Loans_NewLoan.Click += new System.EventHandler(this.Tool_Strip_Loans_NewLoan_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cutToolStripMenuItem,
-            this.copyToolStripMenuItem,
-            this.showAllItemsToolStripMenuItem});
-            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
-            // 
-            // cutToolStripMenuItem
-            // 
-            this.cutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            resources.ApplyResources(this.cutToolStripMenuItem, "cutToolStripMenuItem");
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
-            // 
-            // showAllItemsToolStripMenuItem
-            // 
-            this.showAllItemsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.showAllItemsToolStripMenuItem.Name = "showAllItemsToolStripMenuItem";
-            resources.ApplyResources(this.showAllItemsToolStripMenuItem, "showAllItemsToolStripMenuItem");
             // 
             // accountToolStripMenuItem
             // 
@@ -337,6 +279,7 @@
             this.vaihdaKäyttäjänimiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vaihdaKäyttäjänimiToolStripMenuItem.Name = "vaihdaKäyttäjänimiToolStripMenuItem";
             resources.ApplyResources(this.vaihdaKäyttäjänimiToolStripMenuItem, "vaihdaKäyttäjänimiToolStripMenuItem");
+            this.vaihdaKäyttäjänimiToolStripMenuItem.Click += new System.EventHandler(this.vaihdaKäyttäjänimiToolStripMenuItem_Click);
             // 
             // vaihdaSalasanaToolStripMenuItem
             // 
@@ -350,6 +293,7 @@
             this.vaihdaSähköpostiOsoiteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vaihdaSähköpostiOsoiteToolStripMenuItem.Name = "vaihdaSähköpostiOsoiteToolStripMenuItem";
             resources.ApplyResources(this.vaihdaSähköpostiOsoiteToolStripMenuItem, "vaihdaSähköpostiOsoiteToolStripMenuItem");
+            this.vaihdaSähköpostiOsoiteToolStripMenuItem.Click += new System.EventHandler(this.vaihdaSähköpostiOsoiteToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -1020,6 +964,11 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // panel4
+            // 
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
@@ -1045,6 +994,7 @@
             this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
@@ -1114,17 +1064,10 @@
         private ButtonX btn_Loans;
         private ButtonX btn_Reservation;
         private MenuStripZ menuStripZ1;
-        private System.Windows.Forms.ToolStripMenuItem Tool_Strip_Loans;
-        private System.Windows.Forms.ToolStripMenuItem Tool_Strip_Loans_NewLoan;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpContentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onlineHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showAllItemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.Panel Settings_Panel;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1182,5 +1125,6 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox10;
         private ShapedButton btn_CreateItem;
+        private System.Windows.Forms.Panel panel4;
     }
 }
