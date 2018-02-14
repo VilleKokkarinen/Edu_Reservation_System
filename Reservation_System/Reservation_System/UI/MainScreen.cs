@@ -13,7 +13,41 @@ namespace Reservation_System.UI
 {
     public partial class MainScreen : Form
     {
+        void language()
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_username.Text = "";
+                lbl_welcome.Text = "Welcome";
+                lbl_ReturnDate.Text = "Return date";
+                btn_Loan.Text = "Loan item's";
+                btn_Loans.Text = "My loan's";
+                btn_Reservation.Text = "Reserve item's";
+                btn_Settings.Text = "Settings";
+                btn_ItemManagment.Text = "Item managment";
+                btn_Loan_LoanItem.Text = "Loan";
+                gBox_ItemInfo.Text = "Item info";
+                gBox_SearchItem.Text = "Search item";
+                WindowTextLabel.Text = "Reservation system";
+            }
 
+            else
+
+            {
+                lbl_username.Text = "";
+                lbl_welcome.Text = "Tervetuloa";
+                lbl_ReturnDate.Text = "Palautus pvm";
+                btn_Loan.Text = "Lainaa tavaroita";
+                btn_Loans.Text = "Omat lainat";
+                btn_Reservation.Text = "Varaa tavaroita";
+                btn_Settings.Text = "Asetukset";
+                btn_ItemManagment.Text = "Tavaroiden hallinta";
+                btn_Loan_LoanItem.Text = "Lainaa";
+                gBox_ItemInfo.Text = "Tavaran tiedot";
+                gBox_SearchItem.Text = "Hae tavaroita";
+                WindowTextLabel.Text = "Varausjärjestelmä";
+            }
+        }
         public MainScreen()
         {
             InitializeComponent();
@@ -542,7 +576,7 @@ namespace Reservation_System.UI
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_ItemManagment.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
@@ -561,7 +595,7 @@ namespace Reservation_System.UI
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_ItemManagment.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
@@ -580,7 +614,7 @@ namespace Reservation_System.UI
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_ItemManagment.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
@@ -594,7 +628,7 @@ namespace Reservation_System.UI
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_ItemManagment.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;            
@@ -605,8 +639,8 @@ namespace Reservation_System.UI
         }
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            buttonX1.BZBackColor = Color.Black;
-            buttonX1.ChangeColorMouseHC = false;
+            btn_ItemManagment.BZBackColor = Color.Black;
+            btn_ItemManagment.ChangeColorMouseHC = false;
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
@@ -1024,6 +1058,11 @@ namespace Reservation_System.UI
         {
             panel4.Visible = true;
             panel4.BringToFront();
+        }
+
+        private void checklist_Loan_Items_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
