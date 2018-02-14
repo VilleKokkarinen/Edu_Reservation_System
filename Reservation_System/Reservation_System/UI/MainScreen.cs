@@ -540,13 +540,15 @@ namespace Reservation_System.UI
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
             buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            buttonX2.BZBackColor = Color.FromArgb(50, 50, 50);
 
+            buttonX2.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
             btn_Settings.ChangeColorMouseHC = true;
 
             Loan_Panel.Visible = true;           
-            this.Controls.SetChildIndex(Loan_Panel, this.Controls.Count - 5);            
+            this.Controls.SetChildIndex(Loan_Panel, this.Controls.Count - 6);            
             itemtypes();
             AvailableItems();
         }
@@ -559,13 +561,15 @@ namespace Reservation_System.UI
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
             buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            buttonX2.BZBackColor = Color.FromArgb(50, 50, 50);
 
+            buttonX2.ChangeColorMouseHC = true;
             btn_Loan.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
             btn_Settings.ChangeColorMouseHC = true;
 
             panel_UserLoans.Visible = true;
-            this.Controls.SetChildIndex(panel_UserLoans, this.Controls.Count - 5);
+            this.Controls.SetChildIndex(panel_UserLoans, this.Controls.Count - 6);
             itemtypes();
             GetLoans();
         }
@@ -578,7 +582,9 @@ namespace Reservation_System.UI
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
             buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            buttonX2.BZBackColor = Color.FromArgb(50, 50, 50);
 
+            buttonX2.ChangeColorMouseHC = true;
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Settings.ChangeColorMouseHC = true;
@@ -592,13 +598,15 @@ namespace Reservation_System.UI
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            buttonX2.BZBackColor = Color.FromArgb(50, 50, 50);
 
+            buttonX2.ChangeColorMouseHC = true;
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;            
             btn_Reservation.ChangeColorMouseHC = true;
 
             Settings_Panel.Visible = true;
-            this.Controls.SetChildIndex(Settings_Panel, this.Controls.Count-5);
+            this.Controls.SetChildIndex(Settings_Panel, this.Controls.Count-6);
         }
         private void buttonX1_Click(object sender, EventArgs e)
         {
@@ -608,15 +616,37 @@ namespace Reservation_System.UI
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+            buttonX2.BZBackColor = Color.FromArgb(50, 50, 50);
 
+            buttonX2.ChangeColorMouseHC = true;
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
             btn_Settings.ChangeColorMouseHC = true;
 
             Item_Management.Visible = true;
-            this.Controls.SetChildIndex(Item_Management, this.Controls.Count - 5);
+            this.Controls.SetChildIndex(Item_Management, this.Controls.Count - 6);
         }
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            buttonX2.BZBackColor = Color.Black;
+            buttonX2.ChangeColorMouseHC = false;
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+            btn_Settings.ChangeColorMouseHC = true;
+            buttonX1.ChangeColorMouseHC = true;
+
+            Waiting_Events_panel.Visible = true;
+            this.Controls.SetChildIndex(Waiting_Events_panel, this.Controls.Count - 6);
+        }
+
         #endregion
 
         private void run_button_Click(object sender, EventArgs e)
@@ -710,8 +740,9 @@ namespace Reservation_System.UI
                 connection.Close();
             }
         }
+        
 
-        private void ItemsToLoan()
+        private void AddItems_Pending_Loan()
         {
             foreach (User.Item item in checklist_Loan_Items.CheckedItems)
             {
@@ -719,7 +750,7 @@ namespace Reservation_System.UI
 
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
-                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE, RR_RETURNED) VALUES (LAST_INSERT_ID(), @user, @itemid, CURRENT_TIMESTAMP, @returndate, 0)";
+                    string query = "UPDATE ITEMS SET I_STATE = 5 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE, RR_PENDING_LOAN) VALUES (LAST_INSERT_ID(), @user, @itemid, CURRENT_TIMESTAMP, @returndate, 1)";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@user", Program.user.userid());
@@ -743,9 +774,84 @@ namespace Reservation_System.UI
         }
         private void btn_Loanitem_Click(object sender, EventArgs e)
         {
-            ItemsToLoan();
+            AddItems_Pending_Loan();
         }
 
+        #endregion
+
+
+        #region Pending loans
+
+        private void UpdatePending()
+        {
+
+        }
+
+        private void btnAcceptLoan_Click(object sender, EventArgs e)
+        {
+            Accept_Pending_Loans();
+        }
+
+        private void btnDenyLoan_Click(object sender, EventArgs e)
+        {
+            Deny_Pending_Loans();
+        }
+
+        private void Deny_Pending_Loans()
+        {
+            foreach (User.Item item in checklist_Waiting_Events.CheckedItems)
+            {
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid; DELETE rows, res FROM RESERVATIONROWS rows JOIN RESERVATION res ON rows.RR_R_ID = res.R_ID WHERE RR_USER =@user AND RR_ITEM =@itemid AND RR_PENDING_LOAN = 1";                    
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {                       
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);                       
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            MessageBox.Show("reservation(s) Denied Succesfully");
+            UpdatePending();
+        }
+        private void Accept_Pending_Loans()
+        {
+            foreach (User.Item item in checklist_Waiting_Events.CheckedItems)
+            {
+                string date = dtp_Loan_ReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1 AND RR_USER =@user)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);                        
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            MessageBox.Show("reservation(s) Accepted succesfully");
+            UpdatePending();
+        }
         #endregion
 
         #region Reservation panel

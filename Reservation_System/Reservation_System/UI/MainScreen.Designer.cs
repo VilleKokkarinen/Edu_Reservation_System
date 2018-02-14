@@ -118,16 +118,16 @@
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
-            this.shapedButton2 = new Reservation_System.UI.ShapedButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnDenyLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_UserName = new System.Windows.Forms.TextBox();
             this.txt_Waiting_UserID = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.combobox_waiting_Itemtype = new System.Windows.Forms.ComboBox();
             this.txt_Waiting_Itemsearch = new System.Windows.Forms.TextBox();
-            this.shapedButton1 = new Reservation_System.UI.ShapedButton();
+            this.btnAcceptLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.txt_Waiting_ReturnDate = new System.Windows.Forms.TextBox();
             this.txt_Waiting_ItemType = new System.Windows.Forms.TextBox();
             this.txt_Waiting_ItemState = new System.Windows.Forms.TextBox();
             this.txt_Waiting_ItemID = new System.Windows.Forms.TextBox();
@@ -464,6 +464,7 @@
             this.buttonX2.TextLocation_X = 25;
             this.buttonX2.TextLocation_Y = 6;
             this.buttonX2.UseVisualStyleBackColor = true;
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // buttonX1
             // 
@@ -996,41 +997,48 @@
             // 
             // Waiting_Events_panel
             // 
-            this.Waiting_Events_panel.Controls.Add(this.shapedButton2);
+            this.Waiting_Events_panel.Controls.Add(this.dateTimePicker1);
+            this.Waiting_Events_panel.Controls.Add(this.btnDenyLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox14);
             this.Waiting_Events_panel.Controls.Add(this.groupBox12);
-            this.Waiting_Events_panel.Controls.Add(this.shapedButton1);
+            this.Waiting_Events_panel.Controls.Add(this.btnAcceptLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox13);
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_Events);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
             // 
-            // shapedButton2
+            // dateTimePicker1
             // 
-            this.shapedButton2.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton2.BorderWidth = 2;
-            this.shapedButton2.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton2.ButtonText = "Peru laina";
-            this.shapedButton2.EndColor = System.Drawing.Color.Maroon;
-            this.shapedButton2.FlatAppearance.BorderSize = 0;
-            this.shapedButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton2, "shapedButton2");
-            this.shapedButton2.ForeColor = System.Drawing.Color.White;
-            this.shapedButton2.GradientAngle = 90;
-            this.shapedButton2.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton2.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton2.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton2.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton2.Name = "shapedButton2";
-            this.shapedButton2.ShowButtontext = true;
-            this.shapedButton2.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.shapedButton2.TextLocation_X = 12;
-            this.shapedButton2.TextLocation_Y = 16;
-            this.shapedButton2.Transparent1 = 250;
-            this.shapedButton2.Transparent2 = 250;
-            this.shapedButton2.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            // 
+            // btnDenyLoan
+            // 
+            this.btnDenyLoan.BackColor = System.Drawing.Color.Transparent;
+            this.btnDenyLoan.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDenyLoan.BorderWidth = 2;
+            this.btnDenyLoan.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnDenyLoan.ButtonText = "Peru laina";
+            this.btnDenyLoan.EndColor = System.Drawing.Color.Maroon;
+            this.btnDenyLoan.FlatAppearance.BorderSize = 0;
+            this.btnDenyLoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDenyLoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnDenyLoan, "btnDenyLoan");
+            this.btnDenyLoan.ForeColor = System.Drawing.Color.White;
+            this.btnDenyLoan.GradientAngle = 90;
+            this.btnDenyLoan.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnDenyLoan.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnDenyLoan.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnDenyLoan.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnDenyLoan.Name = "btnDenyLoan";
+            this.btnDenyLoan.ShowButtontext = true;
+            this.btnDenyLoan.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDenyLoan.TextLocation_X = 12;
+            this.btnDenyLoan.TextLocation_Y = 16;
+            this.btnDenyLoan.Transparent1 = 250;
+            this.btnDenyLoan.Transparent2 = 250;
+            this.btnDenyLoan.UseVisualStyleBackColor = false;
+            this.btnDenyLoan.Click += new System.EventHandler(this.btnDenyLoan_Click);
             // 
             // groupBox14
             // 
@@ -1072,36 +1080,36 @@
             resources.ApplyResources(this.txt_Waiting_Itemsearch, "txt_Waiting_Itemsearch");
             this.txt_Waiting_Itemsearch.Name = "txt_Waiting_Itemsearch";
             // 
-            // shapedButton1
+            // btnAcceptLoan
             // 
-            this.shapedButton1.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton1.BorderWidth = 2;
-            this.shapedButton1.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton1.ButtonText = "Hyväksy laina";
-            this.shapedButton1.EndColor = System.Drawing.Color.Blue;
-            this.shapedButton1.FlatAppearance.BorderSize = 0;
-            this.shapedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton1, "shapedButton1");
-            this.shapedButton1.ForeColor = System.Drawing.Color.White;
-            this.shapedButton1.GradientAngle = 90;
-            this.shapedButton1.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton1.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton1.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton1.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton1.Name = "shapedButton1";
-            this.shapedButton1.ShowButtontext = true;
-            this.shapedButton1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.shapedButton1.TextLocation_X = 15;
-            this.shapedButton1.TextLocation_Y = 16;
-            this.shapedButton1.Transparent1 = 250;
-            this.shapedButton1.Transparent2 = 250;
-            this.shapedButton1.UseVisualStyleBackColor = false;
+            this.btnAcceptLoan.BackColor = System.Drawing.Color.Transparent;
+            this.btnAcceptLoan.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAcceptLoan.BorderWidth = 2;
+            this.btnAcceptLoan.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnAcceptLoan.ButtonText = "Hyväksy laina";
+            this.btnAcceptLoan.EndColor = System.Drawing.Color.Blue;
+            this.btnAcceptLoan.FlatAppearance.BorderSize = 0;
+            this.btnAcceptLoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAcceptLoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnAcceptLoan, "btnAcceptLoan");
+            this.btnAcceptLoan.ForeColor = System.Drawing.Color.White;
+            this.btnAcceptLoan.GradientAngle = 90;
+            this.btnAcceptLoan.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnAcceptLoan.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnAcceptLoan.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAcceptLoan.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAcceptLoan.Name = "btnAcceptLoan";
+            this.btnAcceptLoan.ShowButtontext = true;
+            this.btnAcceptLoan.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAcceptLoan.TextLocation_X = 15;
+            this.btnAcceptLoan.TextLocation_Y = 16;
+            this.btnAcceptLoan.Transparent1 = 250;
+            this.btnAcceptLoan.Transparent2 = 250;
+            this.btnAcceptLoan.UseVisualStyleBackColor = false;
+            this.btnAcceptLoan.Click += new System.EventHandler(this.btnAcceptLoan_Click);
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.txt_Waiting_ReturnDate);
             this.groupBox13.Controls.Add(this.txt_Waiting_ItemType);
             this.groupBox13.Controls.Add(this.txt_Waiting_ItemState);
             this.groupBox13.Controls.Add(this.txt_Waiting_ItemID);
@@ -1109,11 +1117,6 @@
             this.groupBox13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.TabStop = false;
-            // 
-            // txt_Waiting_ReturnDate
-            // 
-            resources.ApplyResources(this.txt_Waiting_ReturnDate, "txt_Waiting_ReturnDate");
-            this.txt_Waiting_ReturnDate.Name = "txt_Waiting_ReturnDate";
             // 
             // txt_Waiting_ItemType
             // 
@@ -1150,8 +1153,8 @@
             this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.LeftTopPanel_1);
             this.Controls.Add(this.RightTopPanel_2);
-            this.Controls.Add(this.LeftBottomPanel_2);
             this.Controls.Add(this.RightTopPanel_1);
+            this.Controls.Add(this.LeftBottomPanel_2);
             this.Controls.Add(this.LeftBottomPanel_1);
             this.Controls.Add(this.RightBottomPanel_2);
             this.Controls.Add(this.RightBottomPanel_1);
@@ -1161,10 +1164,10 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.BtmPanel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Settings_Panel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Item_Management);
-            this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.panel_UserLoans);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
@@ -1311,13 +1314,13 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.ComboBox combobox_waiting_Itemtype;
         private System.Windows.Forms.TextBox txt_Waiting_Itemsearch;
-        private ShapedButton shapedButton1;
+        private ShapedButton btnAcceptLoan;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox txt_Waiting_ReturnDate;
         private System.Windows.Forms.TextBox txt_Waiting_ItemType;
         private System.Windows.Forms.TextBox txt_Waiting_ItemState;
         private System.Windows.Forms.TextBox txt_Waiting_ItemID;
         private System.Windows.Forms.CheckedListBox checklist_Waiting_Events;
-        private ShapedButton shapedButton2;
+        private ShapedButton btnDenyLoan;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
