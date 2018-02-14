@@ -16,12 +16,6 @@ namespace Reservation_System.UI
         {
             UI._Loginscreen.ShowDialog();            
         }
-
-        public static void MainScreen()
-        {
-            UI._Mainscreen.ShowDialog();
-        }
-
         public static void ForgotPasswordScreen()
         {
             UI._forgotpasswordscreen.ShowDialog();
@@ -31,45 +25,5 @@ namespace Reservation_System.UI
         {
             UI._RegisterUserScreen.ShowDialog();
         }
-
-        public static void SettingsScreen()
-        {
-            UI._settingscreen.ShowDialog();
-        }
-
-        public static void ReservationScreen()
-        {
-            UI._reservationscreen.ShowDialog();
-        }
-
-        public static void PreReservationScreen()
-        {
-            UI._prreservationscreen.ShowDialog();
-        }
-
-        public static void NewItemScreen()
-        {
-            UI._newitemscreen.ShowDialog();
-        }
-
-        public static void ReturningScreen()
-        {
-            UI._returningscreen.ShowDialog();
-        }
-        public static void AccountManagementScreen()
-        {
-            UI._accounmanagementscreen.ShowDialog();
-        }
-        public static void ItemManagementScreen()
-        {
-            UI._itemmanagementscreen.ShowDialog();
-        }
-        public static void RemovingItemScreen()
-        {
-            UI._removeitemscreen.ShowDialog();
-        }
-
-
-
     }
 }

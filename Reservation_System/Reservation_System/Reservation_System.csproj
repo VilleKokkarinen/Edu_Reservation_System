@@ -98,18 +98,13 @@
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\MySettings.cs" />
     <Compile Include="Sql\SQL.cs" />
-    <Compile Include="UI\AccountManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\AccountManagement.Designer.cs">
-      <DependentUpon>AccountManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\ButtonX.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ButtonZ.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ComboItem.cs" />
     <Compile Include="UI\ForgotPasswordScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,23 +118,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="UI\ItemManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\ItemManagement.Designer.cs">
-      <DependentUpon>ItemManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MainScreenOLD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MainScreenOLD.Designer.cs">
-      <DependentUpon>MainScreenOLD.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MenuStripZ.cs">
       <SubType>Component</SubType>
@@ -147,47 +130,11 @@
     <Compile Include="UI\MinMaxButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\NewItemScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\NewItemScreen.Designer.cs">
-      <DependentUpon>NewItemScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\PreReservationScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\PreReservationScreen.Designer.cs">
-      <DependentUpon>PreReservationScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\RegisterUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\RegisterUser.Designer.cs">
       <DependentUpon>RegisterUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\RemovingItemScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\RemovingItemScreen.Designer.cs">
-      <DependentUpon>RemovingItemScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ReservationScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\ReservationScreen.Designer.cs">
-      <DependentUpon>ReservationScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ReturningScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\ReturningScreen.Designer.cs">
-      <DependentUpon>ReturningScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\SettingsScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SettingsScreen.Designer.cs">
-      <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ShapedButton.cs">
       <SubType>Component</SubType>
@@ -218,9 +165,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\AccountManagement.resx">
-      <DependentUpon>AccountManagement.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\MainScreen.en.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,35 +174,11 @@
     <EmbeddedResource Include="UI\ForgotPasswordScreen.resx">
       <DependentUpon>ForgotPasswordScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ItemManagement.resx">
-      <DependentUpon>ItemManagement.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainScreenOLD.resx">
-      <DependentUpon>MainScreenOLD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\NewItemScreen.resx">
-      <DependentUpon>NewItemScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\PreReservationScreen.resx">
-      <DependentUpon>PreReservationScreen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\RegisterUser.resx">
       <DependentUpon>RegisterUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\RemovingItemScreen.resx">
-      <DependentUpon>RemovingItemScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\ReservationScreen.resx">
-      <DependentUpon>ReservationScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\ReturningScreen.resx">
-      <DependentUpon>ReturningScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\SettingsScreen.resx">
-      <DependentUpon>SettingsScreen.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
