@@ -1005,12 +1005,25 @@ namespace Reservation_System.UI
 
         private void vaihdaSalasanaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            panel4.Visible = true;
+            panel4.BringToFront();
         }
 
         private void Loan_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void vaihdaKäyttäjänimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            panel4.BringToFront();
+        }
+
+        private void vaihdaSähköpostiOsoiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            panel4.BringToFront();
         }
     }
 }
