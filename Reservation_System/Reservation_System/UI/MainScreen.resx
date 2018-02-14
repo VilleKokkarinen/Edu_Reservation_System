@@ -921,18 +921,6 @@
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="&gt;&gt;buttonX3.Name" xml:space="preserve">
-    <value>buttonX3</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;buttonX1.Name" xml:space="preserve">
     <value>buttonX1</value>
   </data>
@@ -943,7 +931,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;buttonX1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;btn_Settings.Name" xml:space="preserve">
     <value>btn_Settings</value>
@@ -955,7 +943,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Settings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.Name" xml:space="preserve">
     <value>btn_Reservation</value>
@@ -967,7 +955,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;btn_Loans.Name" xml:space="preserve">
     <value>btn_Loans</value>
@@ -979,7 +967,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Loans.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;btn_Loan.Name" xml:space="preserve">
     <value>btn_Loan</value>
@@ -991,7 +979,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Loan.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 77</value>
@@ -1013,42 +1001,6 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="buttonX3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="buttonX3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonX3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
-  </data>
-  <data name="buttonX3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 175</value>
-  </data>
-  <data name="buttonX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 35</value>
-  </data>
-  <data name="buttonX3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="buttonX3.Text" xml:space="preserve">
-    <value>Tiilin Asetukset</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.Name" xml:space="preserve">
-    <value>buttonX3</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;buttonX3.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="buttonX1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1084,7 +1036,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;buttonX1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="btn_Settings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1120,7 +1072,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Settings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btn_Reservation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1156,7 +1108,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btn_Loans.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1192,7 +1144,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Loans.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btn_Loan.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1228,7 +1180,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Loan.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -1835,99 +1787,6 @@
   </data>
   <data name="&gt;&gt;checklist_Loan_Items.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 42</value>
-  </data>
-  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 234</value>
-  </data>
-  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBox14.Text" xml:space="preserve">
-    <value>Vaihda sähköposti- osoite</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
-    <value>pnl_accountmanagment</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 37</value>
-  </data>
-  <data name="groupBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 239</value>
-  </data>
-  <data name="groupBox13.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBox13.Text" xml:space="preserve">
-    <value>Vaihda salasana</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.Name" xml:space="preserve">
-    <value>groupBox13</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.Parent" xml:space="preserve">
-    <value>pnl_accountmanagment</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 35</value>
-  </data>
-  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 241</value>
-  </data>
-  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox12.Text" xml:space="preserve">
-    <value>Vaihda käyttäjänimi</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
-    <value>pnl_accountmanagment</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pnl_accountmanagment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 82</value>
-  </data>
-  <data name="pnl_accountmanagment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1307, 745</value>
-  </data>
-  <data name="pnl_accountmanagment.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;pnl_accountmanagment.Name" xml:space="preserve">
-    <value>pnl_accountmanagment</value>
-  </data>
-  <data name="&gt;&gt;pnl_accountmanagment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_accountmanagment.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnl_accountmanagment.ZOrder" xml:space="preserve">
-    <value>20</value>
   </data>
   <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
     <value>groupBox4</value>

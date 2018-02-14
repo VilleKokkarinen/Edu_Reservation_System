@@ -69,7 +69,6 @@
             this.LeftTopPanel_1 = new System.Windows.Forms.Panel();
             this.LeftTopPanel_2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonX3 = new Reservation_System.UI.ButtonX();
             this.buttonX1 = new Reservation_System.UI.ButtonX();
             this.btn_Settings = new Reservation_System.UI.ButtonX();
             this.btn_Reservation = new Reservation_System.UI.ButtonX();
@@ -92,7 +91,6 @@
             this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
             this.txt_Loan_ItemID = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Items = new System.Windows.Forms.CheckedListBox();
-            this.pnl_accountmanagment = new System.Windows.Forms.Panel();
             this.panel_UserLoans = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
@@ -125,9 +123,6 @@
             this.btn_CreateItemType = new Reservation_System.UI.ShapedButton();
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -138,7 +133,6 @@
             this.Loan_Panel.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.pnl_accountmanagment.SuspendLayout();
             this.panel_UserLoans.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -489,28 +483,12 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.buttonX3);
             this.panel1.Controls.Add(this.buttonX1);
             this.panel1.Controls.Add(this.btn_Settings);
             this.panel1.Controls.Add(this.btn_Reservation);
             this.panel1.Controls.Add(this.btn_Loans);
             this.panel1.Controls.Add(this.btn_Loan);
             this.panel1.Name = "panel1";
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.buttonX3.ChangeColorMouseHC = true;
-            this.buttonX3.DisplayText = "Tiilin Asetukset";
-            resources.ApplyResources(this.buttonX3, "buttonX3");
-            this.buttonX3.ForeColor = System.Drawing.Color.White;
-            this.buttonX3.MouseClickColor1 = System.Drawing.Color.Black;
-            this.buttonX3.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.TextLocation_X = 75;
-            this.buttonX3.TextLocation_Y = 6;
-            this.buttonX3.UseVisualStyleBackColor = true;
-            this.buttonX3.Click += new System.EventHandler(this.buttonX3_Click);
             // 
             // buttonX1
             // 
@@ -729,14 +707,6 @@
             this.checklist_Loan_Items.FormattingEnabled = true;
             this.checklist_Loan_Items.Name = "checklist_Loan_Items";
             this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
-            // 
-            // pnl_accountmanagment
-            // 
-            this.pnl_accountmanagment.Controls.Add(this.groupBox14);
-            this.pnl_accountmanagment.Controls.Add(this.groupBox13);
-            this.pnl_accountmanagment.Controls.Add(this.groupBox12);
-            resources.ApplyResources(this.pnl_accountmanagment, "pnl_accountmanagment");
-            this.pnl_accountmanagment.Name = "pnl_accountmanagment";
             // 
             // panel_UserLoans
             // 
@@ -1049,27 +1019,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // groupBox12
-            // 
-            this.groupBox12.ForeColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.ForeColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.groupBox13, "groupBox13");
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.TabStop = false;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.ForeColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.groupBox14, "groupBox14");
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.TabStop = false;
-            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
@@ -1095,7 +1044,6 @@
             this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnl_accountmanagment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
@@ -1118,7 +1066,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.pnl_accountmanagment.ResumeLayout(false);
             this.panel_UserLoans.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1234,10 +1181,5 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox10;
         private ShapedButton btn_CreateItem;
-        private ButtonX buttonX3;
-        private System.Windows.Forms.Panel pnl_accountmanagment;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.GroupBox groupBox12;
     }
 }

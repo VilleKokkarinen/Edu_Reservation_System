@@ -1008,13 +1008,5 @@ namespace Reservation_System.UI
 
         }
 
-        private void buttonX3_Click(object sender, EventArgs e)
-        {
-            buttonX3.BZBackColor = Color.Black;
-            buttonX3.ChangeColorMouseHC = false;
-            pnl_accountmanagment.Visible = true;
-            pnl_accountmanagment.BringToFront();
-
-        }
     }
 }
