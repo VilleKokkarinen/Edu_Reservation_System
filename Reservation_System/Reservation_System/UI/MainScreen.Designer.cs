@@ -611,6 +611,7 @@
             this.Loan_Panel.Controls.Add(this.checklist_Loan_Items);
             resources.ApplyResources(this.Loan_Panel, "Loan_Panel");
             this.Loan_Panel.Name = "Loan_Panel";
+            this.Loan_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Loan_Panel_Paint);
             // 
             // groupBox3
             // 

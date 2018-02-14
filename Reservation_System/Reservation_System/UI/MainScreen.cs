@@ -1008,5 +1008,9 @@ namespace Reservation_System.UI
 
         }
 
+        private void Loan_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
