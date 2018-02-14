@@ -19,13 +19,13 @@ namespace Reservation_System.UI
         {
             if (Program.Settings.English == true)
             {
-                button1.Text = "Recover password";
+                btn_recover.Text = "Recover password";
                 lbl_email.Text = "Email";
                 lbl_username.Text = "Username";
             }
             else
             {
-                button1.Text = "Palauta salasana";
+                btn_recover.Text = "Palauta salasana";
                 lbl_email.Text = "Sähköposti";
                 lbl_username.Text = "Käyttäjänimi";
             }
