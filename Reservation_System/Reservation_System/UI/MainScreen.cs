@@ -13,6 +13,7 @@ namespace Reservation_System.UI
 {
     public partial class MainScreen : Form
     {
+
         public MainScreen()
         {
             InitializeComponent();
@@ -1000,6 +1001,19 @@ namespace Reservation_System.UI
         {
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (exit == DialogResult.No);
+        }
+
+        private void vaihdaSalasanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            buttonX3.BZBackColor = Color.Black;
+            buttonX3.ChangeColorMouseHC = false;
+            pnl_accountmanagment.Visible = true;
+            pnl_accountmanagment.BringToFront();
         }
     }
 }
