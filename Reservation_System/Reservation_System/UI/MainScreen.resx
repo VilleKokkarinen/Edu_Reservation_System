@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopBorderPanel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="RightPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -166,7 +166,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="LeftPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="BottomPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -214,7 +214,106 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BottomPanel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
+  </data>
+  <metadata name="menuStripZ1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Name" xml:space="preserve">
+    <value>_MinButton</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Type" xml:space="preserve">
+    <value>Reservation_System.UI.ButtonZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Name" xml:space="preserve">
+    <value>_MaxButton</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Type" xml:space="preserve">
+    <value>Reservation_System.UI.MinMaxButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
+    <value>WindowTextLabel</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Name" xml:space="preserve">
+    <value>_CloseButton</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Type" xml:space="preserve">
+    <value>Reservation_System.UI.ButtonZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.Name" xml:space="preserve">
+    <value>menuStripZ1</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.Type" xml:space="preserve">
+    <value>Reservation_System.UI.MenuStripZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TopPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TopPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TopPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1600, 76</value>
+  </data>
+  <data name="TopPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.Name" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -402,30 +501,6 @@
   <data name="menuStripZ1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt</value>
   </data>
-  <data name="Tool_Strip_Loans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 24</value>
-  </data>
-  <data name="Tool_Strip_Loans.Text" xml:space="preserve">
-    <value>Lainat</value>
-  </data>
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
-  </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tavarat</value>
-  </data>
-  <data name="accountToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 24</value>
-  </data>
-  <data name="accountToolStripMenuItem.Text" xml:space="preserve">
-    <value>Käyttäjätili</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 24</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apua</value>
-  </data>
   <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1266, 33</value>
   </data>
@@ -450,29 +525,11 @@
   <data name="&gt;&gt;menuStripZ1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="TopPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="Tool_Strip_Loans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
   </data>
-  <data name="TopPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TopPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1600, 76</value>
-  </data>
-  <data name="TopPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.Name" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="Tool_Strip_Loans.Text" xml:space="preserve">
+    <value>Lainat</value>
   </data>
   <data name="Tool_Strip_Loans_NewLoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 24</value>
@@ -485,6 +542,12 @@
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>Palauta lainauksia</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tavarat</value>
   </data>
   <data name="cutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 24</value>
@@ -504,6 +567,12 @@
   <data name="showAllItemsToolStripMenuItem.Text" xml:space="preserve">
     <value>Näytä kaikki tavarat</value>
   </data>
+  <data name="accountToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="accountToolStripMenuItem.Text" xml:space="preserve">
+    <value>Käyttäjätili</value>
+  </data>
   <data name="vaihdaKäyttäjänimiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 24</value>
   </data>
@@ -521,6 +590,12 @@
   </data>
   <data name="vaihdaSähköpostiOsoiteToolStripMenuItem.Text" xml:space="preserve">
     <value>Vaihda sähköposti- osoite</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apua</value>
   </data>
   <data name="helpContentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 24</value>
@@ -562,7 +637,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;lbl_welcome.Name" xml:space="preserve">
     <value>lbl_welcome</value>
@@ -610,7 +685,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <data name="lbl_welcome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -703,7 +778,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="LeftBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -727,7 +802,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="LeftBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -751,7 +826,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="RightTopPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -775,7 +850,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightTopPanel_1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="RightTopPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -799,7 +874,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightTopPanel_2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="LeftTopPanel_1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -820,7 +895,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="LeftTopPanel_2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -841,7 +916,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -937,7 +1012,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="buttonX3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1177,7 +1252,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -1213,7 +1288,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Settings_Panel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;rbEnglish.Name" xml:space="preserve">
     <value>rbEnglish</value>
@@ -1420,7 +1495,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;combobox_Loan_ItemType.Name" xml:space="preserve">
     <value>combobox_Loan_ItemType</value>
@@ -1852,7 +1927,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnl_accountmanagment.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
     <value>groupBox4</value>
@@ -1924,7 +1999,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_UserLoans.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;combobox_UserLoans_ItemType.Name" xml:space="preserve">
     <value>combobox_UserLoans_ItemType</value>
@@ -2251,7 +2326,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;checklist_DeleteItem.Name" xml:space="preserve">
     <value>checklist_DeleteItem</value>

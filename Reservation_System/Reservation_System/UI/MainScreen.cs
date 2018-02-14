@@ -1014,6 +1014,7 @@ namespace Reservation_System.UI
             buttonX3.ChangeColorMouseHC = false;
             pnl_accountmanagment.Visible = true;
             pnl_accountmanagment.BringToFront();
+
         }
     }
 }

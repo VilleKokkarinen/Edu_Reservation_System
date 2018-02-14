@@ -1051,18 +1051,21 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.ForeColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.groupBox12, "groupBox12");
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.TabStop = false;
             // 
             // groupBox13
             // 
+            this.groupBox13.ForeColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.groupBox13, "groupBox13");
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.TabStop = false;
             // 
             // groupBox14
             // 
+            this.groupBox14.ForeColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.groupBox14, "groupBox14");
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.TabStop = false;
@@ -1072,7 +1075,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.pnl_accountmanagment);
             this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.LeftPanel);
@@ -1093,6 +1095,7 @@
             this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnl_accountmanagment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
