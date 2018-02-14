@@ -50,7 +50,7 @@
             this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtmPanel = new System.Windows.Forms.Panel();
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -62,6 +62,7 @@
             this.LeftTopPanel_1 = new System.Windows.Forms.Panel();
             this.LeftTopPanel_2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonX2 = new Reservation_System.UI.ButtonX();
             this.buttonX1 = new Reservation_System.UI.ButtonX();
             this.btn_Settings = new Reservation_System.UI.ButtonX();
             this.btn_Reservation = new Reservation_System.UI.ButtonX();
@@ -116,21 +117,25 @@
             this.btn_CreateItemType = new Reservation_System.UI.ShapedButton();
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.Waiting_Events_panel = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnDenyLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.txt_Waiting_UserName = new System.Windows.Forms.TextBox();
+            this.txt_Waiting_UserID = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.combobox_waiting_Itemtype = new System.Windows.Forms.ComboBox();
+            this.txt_Waiting_Itemsearch = new System.Windows.Forms.TextBox();
+            this.btnAcceptLoan = new Reservation_System.UI.ShapedButton();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.txt_Waiting_ItemType = new System.Windows.Forms.TextBox();
+            this.txt_Waiting_ItemState = new System.Windows.Forms.TextBox();
+            this.txt_Waiting_ItemID = new System.Windows.Forms.TextBox();
+            this.checklist_Waiting_Events = new System.Windows.Forms.CheckedListBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.BtmPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -147,7 +152,9 @@
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.Waiting_Events_panel.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -291,21 +298,18 @@
             this.vaihdaKäyttäjänimiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vaihdaKäyttäjänimiToolStripMenuItem.Name = "vaihdaKäyttäjänimiToolStripMenuItem";
             resources.ApplyResources(this.vaihdaKäyttäjänimiToolStripMenuItem, "vaihdaKäyttäjänimiToolStripMenuItem");
-            this.vaihdaKäyttäjänimiToolStripMenuItem.Click += new System.EventHandler(this.vaihdaKäyttäjänimiToolStripMenuItem_Click);
             // 
             // vaihdaSalasanaToolStripMenuItem
             // 
             this.vaihdaSalasanaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vaihdaSalasanaToolStripMenuItem.Name = "vaihdaSalasanaToolStripMenuItem";
             resources.ApplyResources(this.vaihdaSalasanaToolStripMenuItem, "vaihdaSalasanaToolStripMenuItem");
-            this.vaihdaSalasanaToolStripMenuItem.Click += new System.EventHandler(this.vaihdaSalasanaToolStripMenuItem_Click);
             // 
             // vaihdaSähköpostiOsoiteToolStripMenuItem
             // 
             this.vaihdaSähköpostiOsoiteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vaihdaSähköpostiOsoiteToolStripMenuItem.Name = "vaihdaSähköpostiOsoiteToolStripMenuItem";
             resources.ApplyResources(this.vaihdaSähköpostiOsoiteToolStripMenuItem, "vaihdaSähköpostiOsoiteToolStripMenuItem");
-            this.vaihdaSähköpostiOsoiteToolStripMenuItem.Click += new System.EventHandler(this.vaihdaSähköpostiOsoiteToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -345,13 +349,13 @@
             this.RightBottomPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseMove);
             this.RightBottomPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseUp);
             // 
-            // panel2
+            // BtmPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel2.Controls.Add(this.lbl_welcome);
-            this.panel2.Controls.Add(this.lbl_username);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.BtmPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BtmPanel.Controls.Add(this.lbl_welcome);
+            this.BtmPanel.Controls.Add(this.lbl_username);
+            resources.ApplyResources(this.BtmPanel, "BtmPanel");
+            this.BtmPanel.Name = "BtmPanel";
             // 
             // lbl_welcome
             // 
@@ -439,12 +443,28 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.buttonX2);
             this.panel1.Controls.Add(this.buttonX1);
             this.panel1.Controls.Add(this.btn_Settings);
             this.panel1.Controls.Add(this.btn_Reservation);
             this.panel1.Controls.Add(this.btn_Loans);
             this.panel1.Controls.Add(this.btn_Loan);
             this.panel1.Name = "panel1";
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonX2.ChangeColorMouseHC = true;
+            this.buttonX2.DisplayText = "Odottavat tapahtumat";
+            resources.ApplyResources(this.buttonX2, "buttonX2");
+            this.buttonX2.ForeColor = System.Drawing.Color.White;
+            this.buttonX2.MouseClickColor1 = System.Drawing.Color.Black;
+            this.buttonX2.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.TextLocation_X = 25;
+            this.buttonX2.TextLocation_Y = 6;
+            this.buttonX2.UseVisualStyleBackColor = true;
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // buttonX1
             // 
@@ -456,7 +476,7 @@
             this.buttonX1.MouseClickColor1 = System.Drawing.Color.Black;
             this.buttonX1.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.buttonX1.Name = "buttonX1";
-            this.buttonX1.TextLocation_X = 75;
+            this.buttonX1.TextLocation_X = 25;
             this.buttonX1.TextLocation_Y = 6;
             this.buttonX1.UseVisualStyleBackColor = true;
             this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
@@ -471,7 +491,7 @@
             this.btn_Settings.MouseClickColor1 = System.Drawing.Color.Black;
             this.btn_Settings.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_Settings.Name = "btn_Settings";
-            this.btn_Settings.TextLocation_X = 75;
+            this.btn_Settings.TextLocation_X = 25;
             this.btn_Settings.TextLocation_Y = 6;
             this.btn_Settings.UseVisualStyleBackColor = true;
             this.btn_Settings.Click += new System.EventHandler(this.btn_Settings_Click);
@@ -486,7 +506,7 @@
             this.btn_Reservation.MouseClickColor1 = System.Drawing.Color.Black;
             this.btn_Reservation.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_Reservation.Name = "btn_Reservation";
-            this.btn_Reservation.TextLocation_X = 75;
+            this.btn_Reservation.TextLocation_X = 25;
             this.btn_Reservation.TextLocation_Y = 6;
             this.btn_Reservation.UseVisualStyleBackColor = true;
             this.btn_Reservation.Click += new System.EventHandler(this.btn_Reserve_Click);
@@ -502,7 +522,7 @@
             this.btn_Loans.MouseClickColor1 = System.Drawing.Color.Black;
             this.btn_Loans.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_Loans.Name = "btn_Loans";
-            this.btn_Loans.TextLocation_X = 75;
+            this.btn_Loans.TextLocation_X = 25;
             this.btn_Loans.TextLocation_Y = 6;
             this.btn_Loans.UseVisualStyleBackColor = false;
             this.btn_Loans.Click += new System.EventHandler(this.btn_Loans_Click);
@@ -517,7 +537,7 @@
             this.btn_Loan.MouseClickColor1 = System.Drawing.Color.Black;
             this.btn_Loan.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_Loan.Name = "btn_Loan";
-            this.btn_Loan.TextLocation_X = 75;
+            this.btn_Loan.TextLocation_X = 25;
             this.btn_Loan.TextLocation_Y = 6;
             this.btn_Loan.UseVisualStyleBackColor = true;
             this.btn_Loan.Click += new System.EventHandler(this.btn_Loan_Click);
@@ -567,7 +587,6 @@
             this.Loan_Panel.Controls.Add(this.checklist_Loan_Items);
             resources.ApplyResources(this.Loan_Panel, "Loan_Panel");
             this.Loan_Panel.Name = "Loan_Panel";
-            this.Loan_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Loan_Panel_Paint);
             // 
             // groupBox3
             // 
@@ -976,94 +995,162 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // panel4
+            // Waiting_Events_panel
             // 
-            this.panel4.Controls.Add(this.groupBox13);
-            this.panel4.Controls.Add(this.groupBox14);
-            this.panel4.Controls.Add(this.groupBox12);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
+            this.Waiting_Events_panel.Controls.Add(this.dateTimePicker1);
+            this.Waiting_Events_panel.Controls.Add(this.btnDenyLoan);
+            this.Waiting_Events_panel.Controls.Add(this.groupBox14);
+            this.Waiting_Events_panel.Controls.Add(this.groupBox12);
+            this.Waiting_Events_panel.Controls.Add(this.btnAcceptLoan);
+            this.Waiting_Events_panel.Controls.Add(this.groupBox13);
+            this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_Events);
+            resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
+            this.Waiting_Events_panel.Name = "Waiting_Events_panel";
             // 
-            // groupBox13
+            // dateTimePicker1
             // 
-            this.groupBox13.Controls.Add(this.button1);
-            this.groupBox13.Controls.Add(this.textBox3);
-            this.groupBox13.Controls.Add(this.textBox2);
-            this.groupBox13.Controls.Add(this.label4);
-            this.groupBox13.Controls.Add(this.label3);
-            this.groupBox13.Controls.Add(this.label2);
-            this.groupBox13.Controls.Add(this.textBox1);
-            this.groupBox13.ForeColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.groupBox13, "groupBox13");
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.TabStop = false;
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            // 
+            // btnDenyLoan
+            // 
+            this.btnDenyLoan.BackColor = System.Drawing.Color.Transparent;
+            this.btnDenyLoan.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDenyLoan.BorderWidth = 2;
+            this.btnDenyLoan.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnDenyLoan.ButtonText = "Peru laina";
+            this.btnDenyLoan.EndColor = System.Drawing.Color.Maroon;
+            this.btnDenyLoan.FlatAppearance.BorderSize = 0;
+            this.btnDenyLoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDenyLoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnDenyLoan, "btnDenyLoan");
+            this.btnDenyLoan.ForeColor = System.Drawing.Color.White;
+            this.btnDenyLoan.GradientAngle = 90;
+            this.btnDenyLoan.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnDenyLoan.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnDenyLoan.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnDenyLoan.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnDenyLoan.Name = "btnDenyLoan";
+            this.btnDenyLoan.ShowButtontext = true;
+            this.btnDenyLoan.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDenyLoan.TextLocation_X = 12;
+            this.btnDenyLoan.TextLocation_Y = 16;
+            this.btnDenyLoan.Transparent1 = 250;
+            this.btnDenyLoan.Transparent2 = 250;
+            this.btnDenyLoan.UseVisualStyleBackColor = false;
+            this.btnDenyLoan.Click += new System.EventHandler(this.btnDenyLoan_Click);
             // 
             // groupBox14
             // 
-            this.groupBox14.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox14.Controls.Add(this.txt_Waiting_UserName);
+            this.groupBox14.Controls.Add(this.txt_Waiting_UserID);
             resources.ApplyResources(this.groupBox14, "groupBox14");
+            this.groupBox14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.TabStop = false;
             // 
+            // txt_Waiting_UserName
+            // 
+            resources.ApplyResources(this.txt_Waiting_UserName, "txt_Waiting_UserName");
+            this.txt_Waiting_UserName.Name = "txt_Waiting_UserName";
+            // 
+            // txt_Waiting_UserID
+            // 
+            resources.ApplyResources(this.txt_Waiting_UserID, "txt_Waiting_UserID");
+            this.txt_Waiting_UserID.Name = "txt_Waiting_UserID";
+            // 
             // groupBox12
             // 
-            this.groupBox12.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox12.Controls.Add(this.combobox_waiting_Itemtype);
+            this.groupBox12.Controls.Add(this.txt_Waiting_Itemsearch);
             resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.TabStop = false;
             // 
-            // textBox1
+            // combobox_waiting_Itemtype
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            this.combobox_waiting_Itemtype.DisplayMember = "Text";
+            resources.ApplyResources(this.combobox_waiting_Itemtype, "combobox_waiting_Itemtype");
+            this.combobox_waiting_Itemtype.FormattingEnabled = true;
+            this.combobox_waiting_Itemtype.Name = "combobox_waiting_Itemtype";
             // 
-            // label2
+            // txt_Waiting_Itemsearch
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.txt_Waiting_Itemsearch, "txt_Waiting_Itemsearch");
+            this.txt_Waiting_Itemsearch.Name = "txt_Waiting_Itemsearch";
             // 
-            // label3
+            // btnAcceptLoan
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            this.btnAcceptLoan.BackColor = System.Drawing.Color.Transparent;
+            this.btnAcceptLoan.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAcceptLoan.BorderWidth = 2;
+            this.btnAcceptLoan.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnAcceptLoan.ButtonText = "Hyväksy laina";
+            this.btnAcceptLoan.EndColor = System.Drawing.Color.Blue;
+            this.btnAcceptLoan.FlatAppearance.BorderSize = 0;
+            this.btnAcceptLoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAcceptLoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnAcceptLoan, "btnAcceptLoan");
+            this.btnAcceptLoan.ForeColor = System.Drawing.Color.White;
+            this.btnAcceptLoan.GradientAngle = 90;
+            this.btnAcceptLoan.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnAcceptLoan.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnAcceptLoan.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAcceptLoan.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAcceptLoan.Name = "btnAcceptLoan";
+            this.btnAcceptLoan.ShowButtontext = true;
+            this.btnAcceptLoan.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAcceptLoan.TextLocation_X = 15;
+            this.btnAcceptLoan.TextLocation_Y = 16;
+            this.btnAcceptLoan.Transparent1 = 250;
+            this.btnAcceptLoan.Transparent2 = 250;
+            this.btnAcceptLoan.UseVisualStyleBackColor = false;
+            this.btnAcceptLoan.Click += new System.EventHandler(this.btnAcceptLoan_Click);
             // 
-            // label4
+            // groupBox13
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            this.groupBox13.Controls.Add(this.txt_Waiting_ItemType);
+            this.groupBox13.Controls.Add(this.txt_Waiting_ItemState);
+            this.groupBox13.Controls.Add(this.txt_Waiting_ItemID);
+            resources.ApplyResources(this.groupBox13, "groupBox13");
+            this.groupBox13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.TabStop = false;
             // 
-            // textBox2
+            // txt_Waiting_ItemType
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.txt_Waiting_ItemType, "txt_Waiting_ItemType");
+            this.txt_Waiting_ItemType.Name = "txt_Waiting_ItemType";
             // 
-            // textBox3
+            // txt_Waiting_ItemState
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            resources.ApplyResources(this.txt_Waiting_ItemState, "txt_Waiting_ItemState");
+            this.txt_Waiting_ItemState.Name = "txt_Waiting_ItemState";
             // 
-            // button1
+            // txt_Waiting_ItemID
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.txt_Waiting_ItemID, "txt_Waiting_ItemID");
+            this.txt_Waiting_ItemID.Name = "txt_Waiting_ItemID";
+            // 
+            // checklist_Waiting_Events
+            // 
+            this.checklist_Waiting_Events.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_Waiting_Events.CheckOnClick = true;
+            this.checklist_Waiting_Events.DisplayMember = "Text";
+            resources.ApplyResources(this.checklist_Waiting_Events, "checklist_Waiting_Events");
+            this.checklist_Waiting_Events.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_Waiting_Events.FormattingEnabled = true;
+            this.checklist_Waiting_Events.Name = "checklist_Waiting_Events";
             // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.RightPanel);
-            this.Controls.Add(this.Loan_Panel);
-            this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.panel_UserLoans);
-            this.Controls.Add(this.Item_Management);
-            this.Controls.Add(this.Settings_Panel);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LeftTopPanel_2);
+            this.Controls.Add(this.LeftPanel);
+            this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.LeftTopPanel_1);
             this.Controls.Add(this.RightTopPanel_2);
             this.Controls.Add(this.RightTopPanel_1);
@@ -1071,10 +1158,17 @@
             this.Controls.Add(this.LeftBottomPanel_1);
             this.Controls.Add(this.RightBottomPanel_2);
             this.Controls.Add(this.RightBottomPanel_1);
-            this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.BottomPanel);
+            this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Waiting_Events_panel);
+            this.Controls.Add(this.Settings_Panel);
+            this.Controls.Add(this.Loan_Panel);
+            this.Controls.Add(this.Item_Management);
+            this.Controls.Add(this.panel_UserLoans);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
@@ -1085,8 +1179,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripZ1.ResumeLayout(false);
             this.menuStripZ1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.BtmPanel.ResumeLayout(false);
+            this.BtmPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.Settings_Panel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1113,7 +1207,11 @@
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.Waiting_Events_panel.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
@@ -1131,7 +1229,7 @@
         private System.Windows.Forms.Panel RightBottomPanel_1;
         private System.Windows.Forms.Label WindowTextLabel;
         private MinMaxButton _MaxButton;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel BtmPanel;
         private ButtonZ _MinButton;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel RightBottomPanel_2;
@@ -1208,16 +1306,21 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox10;
         private ShapedButton btn_CreateItem;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.GroupBox groupBox13;
+        private ButtonX buttonX2;
+        private System.Windows.Forms.Panel Waiting_Events_panel;
         private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox txt_Waiting_UserName;
+        private System.Windows.Forms.TextBox txt_Waiting_UserID;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox combobox_waiting_Itemtype;
+        private System.Windows.Forms.TextBox txt_Waiting_Itemsearch;
+        private ShapedButton btnAcceptLoan;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TextBox txt_Waiting_ItemType;
+        private System.Windows.Forms.TextBox txt_Waiting_ItemState;
+        private System.Windows.Forms.TextBox txt_Waiting_ItemID;
+        private System.Windows.Forms.CheckedListBox checklist_Waiting_Events;
+        private ShapedButton btnDenyLoan;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

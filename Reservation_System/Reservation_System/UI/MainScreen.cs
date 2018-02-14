@@ -618,35 +618,66 @@ namespace Reservation_System.UI
             btn_Settings.ChangeColorMouseHC = true;
 
             Item_Management.Visible = true;
-            Item_Management.BringToFront();          
+            Item_Management.BringToFront();
         }
-        #endregion
-
-        private void run_button_Click(object sender, EventArgs e)
+          private void buttonX2_Click(object sender, EventArgs e)
         {
-            
+            buttonX1.BZBackColor = Color.Black;
+            buttonX1.ChangeColorMouseHC = false;
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-           
+            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
+
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
-           
+            btn_Settings.ChangeColorMouseHC = true;
+
+            Item_Management.Visible = true;
+            Item_Management.BringToFront();          
+        }
+
+        private void run_button_Click(object sender, EventArgs e)
+        {
+
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Loans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+
         }
 
         private void help_button_Click(object sender, EventArgs e)
         {
-          
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);            
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Loan.ChangeColorMouseHC = true;
             btn_Loans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
         }
 
-        
+        private void vaihdaSalasanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vaihdaKäyttäjänimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vaihdaSähköpostiOsoiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
 
 
         #region clickevents
@@ -747,6 +778,19 @@ namespace Reservation_System.UI
         private void btn_Loanitem_Click(object sender, EventArgs e)
         {
             ItemsToLoan();
+        }
+        private void checklist_Loan_Items_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_Loan_ItemID.Text = ((User.Item)checklist_Loan_Items.SelectedItem).ID.ToString();
+                txt_Loan_ItemType.Text = ((User.Item)checklist_Loan_Items.SelectedItem).TYPE.ToString();
+                txt_Loan_Item_State.Text = ((User.Item)checklist_Loan_Items.SelectedItem).STATE.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         #endregion
@@ -909,6 +953,80 @@ namespace Reservation_System.UI
 
         #endregion
 
+        #region Pending loans
+
+        private void UpdatePending()
+        {
+
+        }
+
+        private void btnAcceptLoan_Click(object sender, EventArgs e)
+        {
+            Accept_Pending_Loans();
+        }
+
+        private void btnDenyLoan_Click(object sender, EventArgs e)
+        {
+            Deny_Pending_Loans();
+        }
+
+        private void Deny_Pending_Loans()
+        {
+            foreach (User.Item item in checklist_Waiting_Events.CheckedItems)
+            {
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid; DELETE rows, res FROM RESERVATIONROWS rows JOIN RESERVATION res ON rows.RR_R_ID = res.R_ID WHERE RR_USER =@user AND RR_ITEM =@itemid AND RR_PENDING_LOAN = 1";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            MessageBox.Show("reservation(s) Denied Succesfully");
+            UpdatePending();
+        }
+        private void Accept_Pending_Loans()
+        {
+            foreach (User.Item item in checklist_Waiting_Events.CheckedItems)
+            {
+                string date = dtp_Loan_ReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    string query = "UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1 AND RR_USER =@user)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
+                        cmd.Parameters.AddWithValue("@itemid", item.ID);
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Error in the system");
+                        }
+                        connection.Close();
+                    }
+                }
+                //Remove selected items from list // update list
+            }
+            MessageBox.Show("reservation(s) Accepted succesfully");
+            UpdatePending();
+        }
+        #endregion
+
 
         #region Settings panel
 
@@ -983,47 +1101,11 @@ namespace Reservation_System.UI
 
         #endregion
 
-        private void checklist_Loan_Items_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                txt_Loan_ItemID.Text = ((User.Item)checklist_Loan_Items.SelectedItem).ID.ToString();                
-                txt_Loan_ItemType.Text = ((User.Item)checklist_Loan_Items.SelectedItem).TYPE.ToString();
-                txt_Loan_Item_State.Text = ((User.Item)checklist_Loan_Items.SelectedItem).STATE.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
+      
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (exit == DialogResult.No);
-        }
-
-        private void vaihdaSalasanaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panel4.Visible = true;
-            panel4.BringToFront();
-        }
-
-        private void Loan_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void vaihdaKäyttäjänimiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panel4.Visible = true;
-            panel4.BringToFront();
-        }
-
-        private void vaihdaSähköpostiOsoiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panel4.Visible = true;
-            panel4.BringToFront();
         }
     }
 }
