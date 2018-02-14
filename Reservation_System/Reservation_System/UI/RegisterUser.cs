@@ -17,7 +17,7 @@ namespace Reservation_System.UI
         {
             if (Program.Settings.English == true)
             {
-                lbl_username.Text = "Username";
+                
                 lbl_password.Text = "Password";                
                 lbl_firstname.Text = "First name";
                 lbl_lastname.Text = "Last name";
@@ -26,7 +26,7 @@ namespace Reservation_System.UI
             }
             else
             {
-                lbl_username.Text = "Käyttäjänimi";
+                
                 lbl_password.Text = "Salasana";
                 lbl_firstname.Text = "Etunimi";
                 lbl_lastname.Text = "Sukunimi";
@@ -89,6 +89,17 @@ namespace Reservation_System.UI
         }
 
         private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            if (Program.Settings.English == true)
+            {
+                lbl_username.Text = "Username";
+            }
+            else
+            {
+                lbl_username.Text = "Käyttäjänimi";
+            }
+        }
+        private void lbl_password_Click(object sender, EventArgs e)
         {
 
         }
