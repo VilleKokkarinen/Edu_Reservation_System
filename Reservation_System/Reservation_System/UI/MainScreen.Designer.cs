@@ -707,16 +707,19 @@
             // 
             resources.ApplyResources(this.txt_Loan_Item_State, "txt_Loan_Item_State");
             this.txt_Loan_Item_State.Name = "txt_Loan_Item_State";
+            this.txt_Loan_Item_State.ReadOnly = true;
             // 
             // txt_Loan_ItemType
             // 
             resources.ApplyResources(this.txt_Loan_ItemType, "txt_Loan_ItemType");
             this.txt_Loan_ItemType.Name = "txt_Loan_ItemType";
+            this.txt_Loan_ItemType.ReadOnly = true;
             // 
             // txt_Loan_ItemID
             // 
             resources.ApplyResources(this.txt_Loan_ItemID, "txt_Loan_ItemID");
             this.txt_Loan_ItemID.Name = "txt_Loan_ItemID";
+            this.txt_Loan_ItemID.ReadOnly = true;
             // 
             // checklist_Loan_Items
             // 
@@ -1221,6 +1224,7 @@
             resources.ApplyResources(this.combobox_waiting_LoanItemtype, "combobox_waiting_LoanItemtype");
             this.combobox_waiting_LoanItemtype.FormattingEnabled = true;
             this.combobox_waiting_LoanItemtype.Name = "combobox_waiting_LoanItemtype";
+            this.combobox_waiting_LoanItemtype.SelectedValueChanged += new System.EventHandler(this.combobox_waiting_LoanItemtype_SelectedValueChanged);
             // 
             // txt_Waiting_LoanItemsearch
             // 
