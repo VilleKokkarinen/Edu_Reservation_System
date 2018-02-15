@@ -24,6 +24,7 @@ namespace Reservation_System.UI
             if (Program.user.accounttype() >= 3)
             {
                 btnWaitingEvents.Visible = true;
+                ToolstripItems.Visible = true;
             }
 
         }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using MySql.Data.MySqlClient;
+using Reservation_System.User;
 
 namespace Reservation_System.UI
 {
@@ -58,7 +59,9 @@ namespace Reservation_System.UI
             }
             else
             {
-                
+                PasswordHash hash = new PasswordHash(txt_password.Text);
+                byte[] hashBytes = hash.ToArray();
+
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
                     //Check before doing the query, if the username is already taken
@@ -70,7 +73,7 @@ namespace Reservation_System.UI
                         cmd.Parameters.AddWithValue("@lastname", txt_surname.Text);
                         cmd.Parameters.AddWithValue("@email", txt_email.Text);
                         cmd.Parameters.AddWithValue("@username", txt_username.Text);
-                        cmd.Parameters.AddWithValue("@password", txt_password.Text);
+                        cmd.Parameters.AddWithValue("@password", hashBytes);
 
                         connection.Open();
                         int result = cmd.ExecuteNonQuery();
