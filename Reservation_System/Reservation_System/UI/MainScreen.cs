@@ -1098,6 +1098,14 @@ namespace Reservation_System.UI
             MessageBox.Show("reservation(s) Accepted succesfully");
             UpdatePendingLoans();
         }
+        private void combobox_waiting_LoanItemtype_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach(User.Item item in checklist_Waiting_PendingLoans.Items)
+            {
+                if (item.TYPE == ((ComboItem)combobox_waiting_LoanItemtype.SelectedItem).ID)
+                { }
+            }
+        }
         #endregion
 
 
@@ -1183,5 +1191,8 @@ namespace Reservation_System.UI
         }
 
        
+        
+
+        
     }
 }

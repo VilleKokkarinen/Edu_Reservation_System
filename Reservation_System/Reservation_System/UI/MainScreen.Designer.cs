@@ -1235,6 +1235,7 @@
             resources.ApplyResources(this.combobox_waiting_LoanItemtype, "combobox_waiting_LoanItemtype");
             this.combobox_waiting_LoanItemtype.FormattingEnabled = true;
             this.combobox_waiting_LoanItemtype.Name = "combobox_waiting_LoanItemtype";
+            this.combobox_waiting_LoanItemtype.SelectedValueChanged += new System.EventHandler(this.combobox_waiting_LoanItemtype_SelectedValueChanged);
             // 
             // txt_Waiting_LoanItemsearch
             // 
