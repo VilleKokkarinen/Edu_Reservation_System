@@ -19,6 +19,14 @@ namespace Reservation_System.UI
             InitializeComponent();
             lbl_username.Text = User.User._username;
             GetLoans();
+            
+
+            if (Program.user.accounttype() >= 3)
+            {
+                btnWaitingEvents.Visible = true;
+                ToolstripItems.Visible = true;
+            }
+
         }
 
         private void BlackForm_Load(object sender, EventArgs e)
@@ -1012,7 +1020,10 @@ namespace Reservation_System.UI
         {
             try
             {
-                Accept_Pending_Returns();
+                if (Program.user.accounttype() >= 3)
+                {
+                    Accept_Pending_Returns();
+                }
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -1023,7 +1034,10 @@ namespace Reservation_System.UI
         {
             try
             {
-                Accept_Pending_Loans();
+                if (Program.user.accounttype() >= 3)
+                {
+                    Accept_Pending_Loans();
+                }               
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -1033,7 +1047,10 @@ namespace Reservation_System.UI
         private void btnDenyLoan_Click(object sender, EventArgs e)
         {
             try {
-                Deny_Pending_Loans();
+                if (Program.user.accounttype() >= 3)
+                {
+                    Deny_Pending_Loans();
+                }
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());

@@ -72,7 +72,7 @@ namespace Reservation_System.UI
         void LoginUser()
         {
             try
-            {
+            {                
                 Program.user = User.UserDataMapper.CreateFromDatabase(txt_username.Text, txt_password.Text);
             }
             catch

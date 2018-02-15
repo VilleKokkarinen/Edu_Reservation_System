@@ -167,26 +167,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Reservation_Panel = new System.Windows.Forms.Panel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.combox_reservation_itemtype = new System.Windows.Forms.ComboBox();
+            this.txt_reservation_itemsearch = new System.Windows.Forms.TextBox();
             this.shapedButton4 = new Reservation_System.UI.ShapedButton();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.shapedButton5 = new Reservation_System.UI.ShapedButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.shapedButton6 = new Reservation_System.UI.ShapedButton();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.txt_reservation_Itemtype = new System.Windows.Forms.TextBox();
+            this.txt_reservation_Itemstate = new System.Windows.Forms.TextBox();
+            this.txt_reservation_ItemID = new System.Windows.Forms.TextBox();
+            this.checklist_Reservation = new System.Windows.Forms.CheckedListBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -224,10 +214,6 @@
             this.Reservation_Panel.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            this.groupBox27.SuspendLayout();
-            this.groupBox28.SuspendLayout();
-            this.groupBox29.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -721,16 +707,19 @@
             // 
             resources.ApplyResources(this.txt_Loan_Item_State, "txt_Loan_Item_State");
             this.txt_Loan_Item_State.Name = "txt_Loan_Item_State";
+            this.txt_Loan_Item_State.ReadOnly = true;
             // 
             // txt_Loan_ItemType
             // 
             resources.ApplyResources(this.txt_Loan_ItemType, "txt_Loan_ItemType");
             this.txt_Loan_ItemType.Name = "txt_Loan_ItemType";
+            this.txt_Loan_ItemType.ReadOnly = true;
             // 
             // txt_Loan_ItemID
             // 
             resources.ApplyResources(this.txt_Loan_ItemID, "txt_Loan_ItemID");
             this.txt_Loan_ItemID.Name = "txt_Loan_ItemID";
+            this.txt_Loan_ItemID.ReadOnly = true;
             // 
             // checklist_Loan_Items
             // 
@@ -1524,76 +1513,34 @@
             // Reservation_Panel
             // 
             this.Reservation_Panel.Controls.Add(this.groupBox24);
-            this.Reservation_Panel.Controls.Add(this.groupBox27);
+            this.Reservation_Panel.Controls.Add(this.shapedButton4);
+            this.Reservation_Panel.Controls.Add(this.label5);
+            this.Reservation_Panel.Controls.Add(this.dateTimePicker1);
+            this.Reservation_Panel.Controls.Add(this.groupBox25);
+            this.Reservation_Panel.Controls.Add(this.checklist_Reservation);
             resources.ApplyResources(this.Reservation_Panel, "Reservation_Panel");
             this.Reservation_Panel.Name = "Reservation_Panel";
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.checkedListBox2);
-            this.groupBox24.Controls.Add(this.groupBox25);
-            this.groupBox24.Controls.Add(this.groupBox26);
-            this.groupBox24.Controls.Add(this.shapedButton4);
+            this.groupBox24.Controls.Add(this.combox_reservation_itemtype);
+            this.groupBox24.Controls.Add(this.txt_reservation_itemsearch);
             resources.ApplyResources(this.groupBox24, "groupBox24");
-            this.groupBox24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.TabStop = false;
             // 
-            // checkedListBox2
+            // combox_reservation_itemtype
             // 
-            this.checkedListBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checkedListBox2.CheckOnClick = true;
-            this.checkedListBox2.DisplayMember = "Text";
-            resources.ApplyResources(this.checkedListBox2, "checkedListBox2");
-            this.checkedListBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Name = "checkedListBox2";
+            this.combox_reservation_itemtype.DisplayMember = "Text";
+            resources.ApplyResources(this.combox_reservation_itemtype, "combox_reservation_itemtype");
+            this.combox_reservation_itemtype.FormattingEnabled = true;
+            this.combox_reservation_itemtype.Name = "combox_reservation_itemtype";
             // 
-            // groupBox25
+            // txt_reservation_itemsearch
             // 
-            this.groupBox25.Controls.Add(this.textBox7);
-            this.groupBox25.Controls.Add(this.textBox8);
-            this.groupBox25.Controls.Add(this.textBox9);
-            resources.ApplyResources(this.groupBox25, "groupBox25");
-            this.groupBox25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.TabStop = false;
-            // 
-            // textBox7
-            // 
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.Name = "textBox7";
-            // 
-            // textBox8
-            // 
-            resources.ApplyResources(this.textBox8, "textBox8");
-            this.textBox8.Name = "textBox8";
-            // 
-            // textBox9
-            // 
-            resources.ApplyResources(this.textBox9, "textBox9");
-            this.textBox9.Name = "textBox9";
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Controls.Add(this.comboBox3);
-            this.groupBox26.Controls.Add(this.textBox10);
-            resources.ApplyResources(this.groupBox26, "groupBox26");
-            this.groupBox26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.TabStop = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DisplayMember = "Text";
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Name = "comboBox3";
-            // 
-            // textBox10
-            // 
-            resources.ApplyResources(this.textBox10, "textBox10");
-            this.textBox10.Name = "textBox10";
+            resources.ApplyResources(this.txt_reservation_itemsearch, "txt_reservation_itemsearch");
+            this.txt_reservation_itemsearch.Name = "txt_reservation_itemsearch";
             // 
             // shapedButton4
             // 
@@ -1601,7 +1548,7 @@
             this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
             this.shapedButton4.BorderWidth = 2;
             this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton4.ButtonText = "Poista";
+            this.shapedButton4.ButtonText = "Lainaa";
             this.shapedButton4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.shapedButton4.FlatAppearance.BorderSize = 0;
             this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1622,120 +1569,51 @@
             this.shapedButton4.Transparent2 = 250;
             this.shapedButton4.UseVisualStyleBackColor = false;
             // 
-            // groupBox27
-            // 
-            this.groupBox27.Controls.Add(this.groupBox28);
-            this.groupBox27.Controls.Add(this.groupBox29);
-            resources.ApplyResources(this.groupBox27, "groupBox27");
-            this.groupBox27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.TabStop = false;
-            // 
-            // groupBox28
-            // 
-            this.groupBox28.Controls.Add(this.shapedButton5);
-            this.groupBox28.Controls.Add(this.label5);
-            this.groupBox28.Controls.Add(this.textBox11);
-            this.groupBox28.Controls.Add(this.label6);
-            this.groupBox28.Controls.Add(this.comboBox4);
-            resources.ApplyResources(this.groupBox28, "groupBox28");
-            this.groupBox28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.TabStop = false;
-            // 
-            // shapedButton5
-            // 
-            this.shapedButton5.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton5.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton5.BorderWidth = 2;
-            this.shapedButton5.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.Circle;
-            this.shapedButton5.ButtonText = "+";
-            this.shapedButton5.EndColor = System.Drawing.Color.Black;
-            this.shapedButton5.FlatAppearance.BorderSize = 0;
-            this.shapedButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton5, "shapedButton5");
-            this.shapedButton5.GradientAngle = 90;
-            this.shapedButton5.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton5.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton5.MouseHoverColor1 = System.Drawing.Color.Gray;
-            this.shapedButton5.MouseHoverColor2 = System.Drawing.Color.Silver;
-            this.shapedButton5.Name = "shapedButton5";
-            this.shapedButton5.ShowButtontext = true;
-            this.shapedButton5.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.shapedButton5.TextLocation_X = 20;
-            this.shapedButton5.TextLocation_Y = 26;
-            this.shapedButton5.Transparent1 = 250;
-            this.shapedButton5.Transparent2 = 250;
-            this.shapedButton5.UseVisualStyleBackColor = false;
-            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Name = "label5";
             // 
-            // textBox11
+            // dateTimePicker1
             // 
-            resources.ApplyResources(this.textBox11, "textBox11");
-            this.textBox11.Name = "textBox11";
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Name = "dateTimePicker1";
             // 
-            // label6
+            // groupBox25
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            this.groupBox25.Controls.Add(this.txt_reservation_Itemtype);
+            this.groupBox25.Controls.Add(this.txt_reservation_Itemstate);
+            this.groupBox25.Controls.Add(this.txt_reservation_ItemID);
+            resources.ApplyResources(this.groupBox25, "groupBox25");
+            this.groupBox25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.TabStop = false;
             // 
-            // comboBox4
+            // txt_reservation_Itemtype
             // 
-            this.comboBox4.DisplayMember = "Text";
-            this.comboBox4.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox4, "comboBox4");
-            this.comboBox4.Name = "comboBox4";
+            resources.ApplyResources(this.txt_reservation_Itemtype, "txt_reservation_Itemtype");
+            this.txt_reservation_Itemtype.Name = "txt_reservation_Itemtype";
             // 
-            // groupBox29
+            // txt_reservation_Itemstate
             // 
-            this.groupBox29.Controls.Add(this.shapedButton6);
-            this.groupBox29.Controls.Add(this.textBox12);
-            this.groupBox29.Controls.Add(this.label7);
-            resources.ApplyResources(this.groupBox29, "groupBox29");
-            this.groupBox29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.TabStop = false;
+            resources.ApplyResources(this.txt_reservation_Itemstate, "txt_reservation_Itemstate");
+            this.txt_reservation_Itemstate.Name = "txt_reservation_Itemstate";
             // 
-            // shapedButton6
+            // txt_reservation_ItemID
             // 
-            this.shapedButton6.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton6.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton6.BorderWidth = 2;
-            this.shapedButton6.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.Circle;
-            this.shapedButton6.ButtonText = "+";
-            this.shapedButton6.EndColor = System.Drawing.Color.Black;
-            this.shapedButton6.FlatAppearance.BorderSize = 0;
-            this.shapedButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton6, "shapedButton6");
-            this.shapedButton6.GradientAngle = 90;
-            this.shapedButton6.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton6.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton6.MouseHoverColor1 = System.Drawing.Color.Gray;
-            this.shapedButton6.MouseHoverColor2 = System.Drawing.Color.Silver;
-            this.shapedButton6.Name = "shapedButton6";
-            this.shapedButton6.ShowButtontext = true;
-            this.shapedButton6.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.shapedButton6.TextLocation_X = 20;
-            this.shapedButton6.TextLocation_Y = 26;
-            this.shapedButton6.Transparent1 = 250;
-            this.shapedButton6.Transparent2 = 250;
-            this.shapedButton6.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.txt_reservation_ItemID, "txt_reservation_ItemID");
+            this.txt_reservation_ItemID.Name = "txt_reservation_ItemID";
             // 
-            // textBox12
+            // checklist_Reservation
             // 
-            resources.ApplyResources(this.textBox12, "textBox12");
-            this.textBox12.Name = "textBox12";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            this.checklist_Reservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_Reservation.CheckOnClick = true;
+            this.checklist_Reservation.DisplayMember = "Text";
+            resources.ApplyResources(this.checklist_Reservation, "checklist_Reservation");
+            this.checklist_Reservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_Reservation.FormattingEnabled = true;
+            this.checklist_Reservation.Name = "checklist_Reservation";
             // 
             // MainScreen
             // 
@@ -1758,13 +1636,13 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.BtmPanel);
             this.Controls.Add(this.Left_Button_Panel);
+            this.Controls.Add(this.Reservation_Panel);
+            this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.panel_UserLoans);
             this.Controls.Add(this.Settings_Panel);
-            this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.AccountManagement_Panel);
-            this.Controls.Add(this.Reservation_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
             this.Name = "MainScreen";
@@ -1828,16 +1706,11 @@
             this.groupBox23.ResumeLayout(false);
             this.groupBox23.PerformLayout();
             this.Reservation_Panel.ResumeLayout(false);
+            this.Reservation_Panel.PerformLayout();
             this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox26.PerformLayout();
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox28.ResumeLayout(false);
-            this.groupBox28.PerformLayout();
-            this.groupBox29.ResumeLayout(false);
-            this.groupBox29.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1981,25 +1854,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel Reservation_Panel;
         private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.GroupBox groupBox26;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.ComboBox combox_reservation_itemtype;
+        private System.Windows.Forms.TextBox txt_reservation_itemsearch;
         private ShapedButton shapedButton4;
-        private System.Windows.Forms.GroupBox groupBox27;
-        private System.Windows.Forms.GroupBox groupBox28;
-        private ShapedButton shapedButton5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.GroupBox groupBox29;
-        private ShapedButton shapedButton6;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.TextBox txt_reservation_Itemtype;
+        private System.Windows.Forms.TextBox txt_reservation_Itemstate;
+        private System.Windows.Forms.TextBox txt_reservation_ItemID;
+        private System.Windows.Forms.CheckedListBox checklist_Reservation;
     }
 }
