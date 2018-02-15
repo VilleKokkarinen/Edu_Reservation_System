@@ -1372,7 +1372,7 @@
     <value>5</value>
   </data>
   <data name="Loan_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
+    <value>290, 79</value>
   </data>
   <data name="Loan_Panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1310, 750</value>
