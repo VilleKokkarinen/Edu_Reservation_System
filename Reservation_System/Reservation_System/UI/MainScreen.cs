@@ -539,36 +539,31 @@ namespace Reservation_System.UI
         {
             btn_Loan.BZBackColor = Color.Black;
             btn_Loan.ChangeColorMouseHC = false;
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
-
-            btn_Loans.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;
-            btn_Settings.ChangeColorMouseHC = true;
+            
+            btn_UsersLoans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;           
 
             Loan_Panel.Visible = true;
-            Controls.SetChildIndex(Loan_Panel, Controls.Count - 6);
+            Controls.SetChildIndex(Loan_Panel, Controls.Count - 8);
             itemtypes();
             AvailableItems();
         }
 
         private void btn_Loans_Click(object sender, EventArgs e)
         {
-            btn_Loans.BZBackColor = Color.Black;
-            btn_Loans.ChangeColorMouseHC = false;
+            btn_UsersLoans.BZBackColor = Color.Black;
+            btn_UsersLoans.ChangeColorMouseHC = false;
+
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
-
+           
             btn_Loan.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;
-            btn_Settings.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;           
 
             panel_UserLoans.Visible = true;
-            Controls.SetChildIndex(panel_UserLoans, Controls.Count - 6);
+            Controls.SetChildIndex(panel_UserLoans, Controls.Count - 8);
             itemtypes();
             GetLoans();
         }
@@ -577,67 +572,33 @@ namespace Reservation_System.UI
         {
             btn_Reservation.BZBackColor = Color.Black;
             btn_Reservation.ChangeColorMouseHC = false;
+
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);            
 
             btn_Loan.ChangeColorMouseHC = true;
-            btn_Loans.ChangeColorMouseHC = true;
-            btn_Settings.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
+
+            Reservation_Panel.Visible = true;
+            Controls.SetChildIndex(Reservation_Panel, Controls.Count - 8);
+
         }
 
-        private void btn_Settings_Click(object sender, EventArgs e)
+       
+          private void Btn_Waiting_Events_Click(object sender, EventArgs e)
         {
-            btn_Settings.BZBackColor = Color.Black;
-            btn_Settings.ChangeColorMouseHC = false;
+            btnWaitingEvents.BZBackColor = Color.Black;
+            btnWaitingEvents.ChangeColorMouseHC = false;
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            buttonX1.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);            
 
             btn_Loan.ChangeColorMouseHC = true;
-            btn_Loans.ChangeColorMouseHC = true;            
-            btn_Reservation.ChangeColorMouseHC = true;
-
-            Settings_Panel.Visible = true;
-            Controls.SetChildIndex(Settings_Panel, Controls.Count - 6);
-        }
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
-            buttonX1.BZBackColor = Color.Black;
-            buttonX1.ChangeColorMouseHC = false;
-            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-
-            btn_Loan.ChangeColorMouseHC = true;
-            btn_Loans.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;
-            btn_Settings.ChangeColorMouseHC = true;
-
-            Item_Management.Visible = true;
-            Controls.SetChildIndex(Item_Management, Controls.Count - 6);
-        }
-          private void buttonX2_Click(object sender, EventArgs e)
-        {
-            buttonX2.BZBackColor = Color.Black;
-            buttonX2.ChangeColorMouseHC = false;
-            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Settings.BZBackColor = Color.FromArgb(50, 50, 50);
-            buttonX1.BZBackColor = Color.FromArgb(50, 50, 50);
-
-            btn_Loan.ChangeColorMouseHC = true;
-            btn_Loans.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;
-            btn_Settings.ChangeColorMouseHC = true;
-            buttonX1.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;            
 
             Waiting_Events_panel.Visible = true;
-            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count-6);
+            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count-8);
             try
             {
                 UpdatePendingLoans();
@@ -645,46 +606,60 @@ namespace Reservation_System.UI
             {
                 MessageBox.Show(ex.ToString());
             } 
-        }
-
-        private void run_button_Click(object sender, EventArgs e)
-        {
-
-            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-
-            btn_Loan.ChangeColorMouseHC = true;
-            btn_Loans.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;
-
-        }
+        }       
 
         private void help_button_Click(object sender, EventArgs e)
         {
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_Loans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+
             btn_Loan.ChangeColorMouseHC = true;
-            btn_Loans.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
         }
-
-        private void vaihdaSalasanaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Language_Settings_Button_Click(object sender, EventArgs e)
         {
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
 
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+
+            Settings_Panel.Visible = true;
+            Controls.SetChildIndex(Settings_Panel, Controls.Count - 8);
+        }
+        private void toolStripItemManagement_Click(object sender, EventArgs e)
+        {
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+            
+            Item_Management.Visible = true;
+            Controls.SetChildIndex(Item_Management, Controls.Count - 8);
         }
 
-        private void vaihdaKäyttäjänimiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripAccountManagement_Click(object sender, EventArgs e)
         {
 
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+
+
+            AccountManagement_Panel.Visible = true;
+            Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 8);
         }
-
-        private void vaihdaSähköpostiOsoiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         #endregion
 
 
