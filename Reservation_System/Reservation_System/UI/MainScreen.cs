@@ -1105,7 +1105,7 @@ namespace Reservation_System.UI
 
                         if (result < 0)
                         {
-                            MessageBox.Show("Error in the system");
+                            MessageBox.Show("Error in the system");                           
                         }
                         connection.Close();
                     }

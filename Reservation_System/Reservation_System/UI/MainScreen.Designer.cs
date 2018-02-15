@@ -1544,7 +1544,7 @@
             this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
             this.shapedButton4.BorderWidth = 2;
             this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton4.ButtonText = "Lainaa";
+            this.shapedButton4.ButtonText = "Varaa";
             this.shapedButton4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.shapedButton4.FlatAppearance.BorderSize = 0;
             this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1559,8 +1559,8 @@
             this.shapedButton4.Name = "shapedButton4";
             this.shapedButton4.ShowButtontext = true;
             this.shapedButton4.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton4.TextLocation_X = 39;
-            this.shapedButton4.TextLocation_Y = 23;
+            this.shapedButton4.TextLocation_X = 29;
+            this.shapedButton4.TextLocation_Y = 17;
             this.shapedButton4.Transparent1 = 250;
             this.shapedButton4.Transparent2 = 250;
             this.shapedButton4.UseVisualStyleBackColor = false;
