@@ -1105,7 +1105,7 @@ namespace Reservation_System.UI
 
                         if (result < 0)
                         {
-                            MessageBox.Show("Error in the system");
+                            MessageBox.Show("Error in the system");                           
                         }
                         connection.Close();
                     }
@@ -1114,6 +1114,14 @@ namespace Reservation_System.UI
             }
             MessageBox.Show("reservation(s) Accepted succesfully");
             UpdatePendingLoans();
+        }
+        private void combobox_waiting_LoanItemtype_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach(User.Item item in checklist_Waiting_PendingLoans.Items)
+            {
+                if (item.TYPE == ((ComboItem)combobox_waiting_LoanItemtype.SelectedItem).ID)
+                { }
+            }
         }
         #endregion
 
@@ -1199,9 +1207,9 @@ namespace Reservation_System.UI
             e.Cancel = (exit == DialogResult.No);
         }
 
-        private void shapedButton4_Click_1(object sender, EventArgs e)
-        {
+       
+        
 
-        }
+        
     }
 }
