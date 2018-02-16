@@ -1567,6 +1567,7 @@
             this.shapedButton4.Transparent1 = 250;
             this.shapedButton4.Transparent2 = 250;
             this.shapedButton4.UseVisualStyleBackColor = false;
+            this.shapedButton4.Click += new System.EventHandler(this.shapedButton4_Click_1);
             // 
             // label5
             // 

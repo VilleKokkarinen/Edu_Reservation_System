@@ -1199,6 +1199,9 @@ namespace Reservation_System.UI
             e.Cancel = (exit == DialogResult.No);
         }
 
-       
+        private void shapedButton4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
