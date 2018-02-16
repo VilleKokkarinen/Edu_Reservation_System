@@ -958,7 +958,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Left_Button_Panel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="Separator_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -1093,16 +1093,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Settings_Panel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="combobox_Loan_ItemType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="combobox_Loan_ItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
+    <value>7, 58</value>
   </data>
   <data name="combobox_Loan_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
+    <value>140, 28</value>
   </data>
   <data name="combobox_Loan_ItemType.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1123,7 +1123,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txt_LoanItem_SearchItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 23</value>
+    <value>7, 23</value>
   </data>
   <data name="txt_LoanItem_SearchItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 26</value>
@@ -1150,7 +1150,7 @@
     <value>238, 13</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
+    <value>187, 99</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1180,7 +1180,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Loan_LoanItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 324</value>
+    <value>7, 395</value>
   </data>
   <data name="btn_Loan_LoanItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 55</value>
@@ -1210,7 +1210,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 249</value>
+    <value>3, 320</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 24</value>
@@ -1237,7 +1237,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="dtp_Loan_ReturnDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 278</value>
+    <value>7, 349</value>
   </data>
   <data name="dtp_Loan_ReturnDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>339, 26</value>
@@ -1257,8 +1257,29 @@
   <data name="&gt;&gt;dtp_Loan_ReturnDate.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="txt_Loan_ReservedTill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 92</value>
+  </data>
+  <data name="txt_Loan_ReservedTill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 26</value>
+  </data>
+  <data name="txt_Loan_ReservedTill.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txt_Loan_ReservedTill.Name" xml:space="preserve">
+    <value>txt_Loan_ReservedTill</value>
+  </data>
+  <data name="&gt;&gt;txt_Loan_ReservedTill.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_Loan_ReservedTill.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txt_Loan_ReservedTill.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="txt_Loan_Item_State.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 57</value>
+    <value>6, 59</value>
   </data>
   <data name="txt_Loan_Item_State.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 26</value>
@@ -1276,13 +1297,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txt_Loan_Item_State.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txt_Loan_ItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 25</value>
+    <value>6, 25</value>
   </data>
   <data name="txt_Loan_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
+    <value>144, 26</value>
   </data>
   <data name="txt_Loan_ItemType.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1297,37 +1318,16 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txt_Loan_ItemType.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txt_Loan_ItemID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 25</value>
-  </data>
-  <data name="txt_Loan_ItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 26</value>
-  </data>
-  <data name="txt_Loan_ItemID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txt_Loan_ItemID.Name" xml:space="preserve">
-    <value>txt_Loan_ItemID</value>
-  </data>
-  <data name="&gt;&gt;txt_Loan_ItemID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_Loan_ItemID.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txt_Loan_ItemID.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 134</value>
+    <value>239, 160</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
+    <value>186, 124</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -1357,7 +1357,7 @@
     <value>9, 9</value>
   </data>
   <data name="checklist_Loan_Items.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 225</value>
+    <value>225, 276</value>
   </data>
   <data name="checklist_Loan_Items.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1396,7 +1396,130 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
+  </data>
+  <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 62</value>
+  </data>
+  <data name="txt_user_reservations_enddate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_user_reservations_enddate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.Name" xml:space="preserve">
+    <value>txt_user_reservations_enddate</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.Parent" xml:space="preserve">
+    <value>groupBox26</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_user_reservations_startdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="txt_user_reservations_startdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_user_reservations_startdate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.Name" xml:space="preserve">
+    <value>txt_user_reservations_startdate</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.Parent" xml:space="preserve">
+    <value>groupBox26</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>786, 57</value>
+  </data>
+  <data name="groupBox26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
+  </data>
+  <data name="groupBox26.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="groupBox26.Text" xml:space="preserve">
+    <value>Tavaran tiedot</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.Name" xml:space="preserve">
+    <value>groupBox26</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.Parent" xml:space="preserve">
+    <value>panel_UserLoans</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="shapedButton4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="shapedButton4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="shapedButton4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shapedButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>586, 239</value>
+  </data>
+  <data name="shapedButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 55</value>
+  </data>
+  <data name="shapedButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;shapedButton4.Name" xml:space="preserve">
+    <value>shapedButton4</value>
+  </data>
+  <data name="&gt;&gt;shapedButton4.Type" xml:space="preserve">
+    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;shapedButton4.Parent" xml:space="preserve">
+    <value>panel_UserLoans</value>
+  </data>
+  <data name="&gt;&gt;shapedButton4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checklist_user_reservations.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="checklist_user_reservations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>553, 8</value>
+  </data>
+  <data name="checklist_user_reservations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 225</value>
+  </data>
+  <data name="checklist_user_reservations.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.Name" xml:space="preserve">
+    <value>checklist_user_reservations</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.Parent" xml:space="preserve">
+    <value>panel_UserLoans</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="combobox_UserLoans_ItemType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1405,7 +1528,7 @@
     <value>6, 58</value>
   </data>
   <data name="combobox_UserLoans_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
+    <value>140, 28</value>
   </data>
   <data name="combobox_UserLoans_ItemType.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1471,7 +1594,7 @@
     <value>panel_UserLoans</value>
   </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="btn_UserLoans_ReturnItem.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1501,7 +1624,7 @@
     <value>panel_UserLoans</value>
   </data>
   <data name="&gt;&gt;btn_UserLoans_ReturnItem.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="txt_UserLoans_ItemState.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 57</value>
@@ -1525,10 +1648,10 @@
     <value>0</value>
   </data>
   <data name="txt_UserLoans_ItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 25</value>
+    <value>6, 25</value>
   </data>
   <data name="txt_UserLoans_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
+    <value>143, 26</value>
   </data>
   <data name="txt_UserLoans_ItemType.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1544,27 +1667,6 @@
   </data>
   <data name="&gt;&gt;txt_UserLoans_ItemType.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="txt_UserLoans_ItemID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 25</value>
-  </data>
-  <data name="txt_UserLoans_ItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 26</value>
-  </data>
-  <data name="txt_UserLoans_ItemID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemID.Name" xml:space="preserve">
-    <value>txt_UserLoans_ItemID</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemID.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemID.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="groupBox5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1591,7 +1693,7 @@
     <value>panel_UserLoans</value>
   </data>
   <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="Checklist_UserLoans_Items.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -1615,7 +1717,7 @@
     <value>panel_UserLoans</value>
   </data>
   <data name="&gt;&gt;Checklist_UserLoans_Items.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="panel_UserLoans.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 80</value>
@@ -1639,7 +1741,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_UserLoans.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="checklist_DeleteItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2200,31 +2302,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="dtp_Waiting_ReturnReturnDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="dtp_Waiting_ReturnReturnDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>841, 214</value>
-  </data>
-  <data name="dtp_Waiting_ReturnReturnDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 20</value>
-  </data>
-  <data name="dtp_Waiting_ReturnReturnDate.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.Name" xml:space="preserve">
-    <value>dtp_Waiting_ReturnReturnDate</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.Parent" xml:space="preserve">
-    <value>Waiting_Events_panel</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>20</value>
   </data>
   <data name="txt_Waiting_ReturnUserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 27</value>
@@ -2272,7 +2350,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox15.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="combobox_waiting_ReturnItemtype.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2347,7 +2425,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox16.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btnAcceptReturn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2377,13 +2455,37 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
+  </data>
+  <data name="dtp_Waiting_ReturnReturnDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtp_Waiting_ReturnReturnDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 61</value>
+  </data>
+  <data name="dtp_Waiting_ReturnReturnDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 26</value>
+  </data>
+  <data name="dtp_Waiting_ReturnReturnDate.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.Name" xml:space="preserve">
+    <value>dtp_Waiting_ReturnReturnDate</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.Parent" xml:space="preserve">
+    <value>groupBox17</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_ReturnReturnDate.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txt_Waiting_ReturnItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 59</value>
+    <value>71, 25</value>
   </data>
   <data name="txt_Waiting_ReturnItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
+    <value>230, 26</value>
   </data>
   <data name="txt_Waiting_ReturnItemType.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2398,34 +2500,13 @@
     <value>groupBox17</value>
   </data>
   <data name="&gt;&gt;txt_Waiting_ReturnItemType.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 25</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemState.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemState.Name" xml:space="preserve">
-    <value>txt_Waiting_ReturnItemState</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemState.Parent" xml:space="preserve">
-    <value>groupBox17</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemState.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="txt_Waiting_ReturnItemID.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 25</value>
   </data>
   <data name="txt_Waiting_ReturnItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 26</value>
+    <value>58, 26</value>
   </data>
   <data name="txt_Waiting_ReturnItemID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2446,10 +2527,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 119</value>
+    <value>836, 139</value>
   </data>
   <data name="groupBox17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 130</value>
+    <value>314, 103</value>
   </data>
   <data name="groupBox17.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -2467,7 +2548,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox17.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="checklist_Waiting_PendingReturns.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2494,31 +2575,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;checklist_Waiting_PendingReturns.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="dtp_Waiting_LoanReturnDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="dtp_Waiting_LoanReturnDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 214</value>
-  </data>
-  <data name="dtp_Waiting_LoanReturnDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 20</value>
-  </data>
-  <data name="dtp_Waiting_LoanReturnDate.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.Name" xml:space="preserve">
-    <value>dtp_Waiting_LoanReturnDate</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.Parent" xml:space="preserve">
-    <value>Waiting_Events_panel</value>
-  </data>
-  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="btnDenyLoan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2548,7 +2605,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="txt_Waiting_LoanUserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 27</value>
@@ -2596,7 +2653,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="combobox_waiting_LoanItemtype.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2671,7 +2728,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="btnAcceptLoan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2701,13 +2758,13 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="txt_Waiting_LoanItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 59</value>
+    <value>66, 25</value>
   </data>
   <data name="txt_Waiting_LoanItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
+    <value>213, 26</value>
   </data>
   <data name="txt_Waiting_LoanItemType.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2724,32 +2781,11 @@
   <data name="&gt;&gt;txt_Waiting_LoanItemType.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txt_Waiting_LoanItemState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 25</value>
-  </data>
-  <data name="txt_Waiting_LoanItemState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="txt_Waiting_LoanItemState.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_LoanItemState.Name" xml:space="preserve">
-    <value>txt_Waiting_LoanItemState</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_LoanItemState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_LoanItemState.Parent" xml:space="preserve">
-    <value>groupBox13</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_LoanItemState.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="txt_Waiting_LoanItemID.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 25</value>
   </data>
   <data name="txt_Waiting_LoanItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 26</value>
+    <value>53, 26</value>
   </data>
   <data name="txt_Waiting_LoanItemID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2764,16 +2800,40 @@
     <value>groupBox13</value>
   </data>
   <data name="&gt;&gt;txt_Waiting_LoanItemID.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtp_Waiting_LoanReturnDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtp_Waiting_LoanReturnDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 59</value>
+  </data>
+  <data name="dtp_Waiting_LoanReturnDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 26</value>
+  </data>
+  <data name="dtp_Waiting_LoanReturnDate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.Name" xml:space="preserve">
+    <value>dtp_Waiting_LoanReturnDate</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.Parent" xml:space="preserve">
+    <value>groupBox13</value>
+  </data>
+  <data name="&gt;&gt;dtp_Waiting_LoanReturnDate.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="groupBox13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 119</value>
+    <value>240, 142</value>
   </data>
   <data name="groupBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 130</value>
+    <value>285, 97</value>
   </data>
   <data name="groupBox13.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -2791,7 +2851,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="checklist_Waiting_PendingLoans.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2818,7 +2878,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;checklist_Waiting_PendingLoans.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="Waiting_Events_panel.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 80</value>
@@ -2842,7 +2902,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Waiting_Events_panel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="checkedListBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -3405,6 +3465,63 @@
   <data name="&gt;&gt;AccountManagement_Panel.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 334</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 24</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Tähän päivään</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>Reservation_Panel</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dtp_Reserve_EndDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="dtp_Reserve_EndDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 363</value>
+  </data>
+  <data name="dtp_Reserve_EndDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 26</value>
+  </data>
+  <data name="dtp_Reserve_EndDate.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;dtp_Reserve_EndDate.Name" xml:space="preserve">
+    <value>dtp_Reserve_EndDate</value>
+  </data>
+  <data name="&gt;&gt;dtp_Reserve_EndDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_Reserve_EndDate.Parent" xml:space="preserve">
+    <value>Reservation_Panel</value>
+  </data>
+  <data name="&gt;&gt;dtp_Reserve_EndDate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="combox_reservation_itemtype.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -3412,7 +3529,7 @@
     <value>6, 58</value>
   </data>
   <data name="combox_reservation_itemtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
+    <value>139, 28</value>
   </data>
   <data name="combox_reservation_itemtype.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -3478,37 +3595,37 @@
     <value>Reservation_Panel</value>
   </data>
   <data name="&gt;&gt;groupBox24.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
-  <data name="shapedButton4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btn_Reserve.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="shapedButton4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btn_Reserve.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
-  <data name="shapedButton4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btn_Reserve.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="shapedButton4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 336</value>
+  <data name="btn_Reserve.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 422</value>
   </data>
-  <data name="shapedButton4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btn_Reserve.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 55</value>
   </data>
-  <data name="shapedButton4.TabIndex" type="System.Int32, mscorlib">
+  <data name="btn_Reserve.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="&gt;&gt;shapedButton4.Name" xml:space="preserve">
-    <value>shapedButton4</value>
+  <data name="&gt;&gt;btn_Reserve.Name" xml:space="preserve">
+    <value>btn_Reserve</value>
   </data>
-  <data name="&gt;&gt;shapedButton4.Type" xml:space="preserve">
+  <data name="&gt;&gt;btn_Reserve.Type" xml:space="preserve">
     <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;shapedButton4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btn_Reserve.Parent" xml:space="preserve">
     <value>Reservation_Panel</value>
   </data>
-  <data name="&gt;&gt;shapedButton4.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;btn_Reserve.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3523,13 +3640,13 @@
     <value>20, 261</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 24</value>
+    <value>227, 24</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Varaa tavara tästä päivästä eteenpäin</value>
+    <value>Varaa tavara tästä päivästä</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -3541,37 +3658,37 @@
     <value>Reservation_Panel</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
-  <data name="dateTimePicker1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="dtp_Reserve_StartDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dtp_Reserve_StartDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 290</value>
   </data>
-  <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dtp_Reserve_StartDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>339, 26</value>
   </data>
-  <data name="dateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dtp_Reserve_StartDate.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
-    <value>dateTimePicker1</value>
+  <data name="&gt;&gt;dtp_Reserve_StartDate.Name" xml:space="preserve">
+    <value>dtp_Reserve_StartDate</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dtp_Reserve_StartDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dtp_Reserve_StartDate.Parent" xml:space="preserve">
     <value>Reservation_Panel</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;dtp_Reserve_StartDate.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="txt_reservation_Itemtype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 57</value>
+    <value>6, 26</value>
   </data>
   <data name="txt_reservation_Itemtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
+    <value>336, 26</value>
   </data>
   <data name="txt_reservation_Itemtype.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3589,10 +3706,10 @@
     <value>0</value>
   </data>
   <data name="txt_reservation_Itemstate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 25</value>
+    <value>6, 64</value>
   </data>
   <data name="txt_reservation_Itemstate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
+    <value>143, 26</value>
   </data>
   <data name="txt_reservation_Itemstate.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3609,27 +3726,6 @@
   <data name="&gt;&gt;txt_reservation_Itemstate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txt_reservation_ItemID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 25</value>
-  </data>
-  <data name="txt_reservation_ItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 26</value>
-  </data>
-  <data name="txt_reservation_ItemID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txt_reservation_ItemID.Name" xml:space="preserve">
-    <value>txt_reservation_ItemID</value>
-  </data>
-  <data name="&gt;&gt;txt_reservation_ItemID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_reservation_ItemID.Parent" xml:space="preserve">
-    <value>groupBox25</value>
-  </data>
-  <data name="&gt;&gt;txt_reservation_ItemID.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="groupBox25.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -3637,7 +3733,7 @@
     <value>252, 146</value>
   </data>
   <data name="groupBox25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
+    <value>348, 99</value>
   </data>
   <data name="groupBox25.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -3655,7 +3751,7 @@
     <value>Reservation_Panel</value>
   </data>
   <data name="&gt;&gt;groupBox25.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="checklist_Reservation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -3682,7 +3778,7 @@
     <value>Reservation_Panel</value>
   </data>
   <data name="&gt;&gt;checklist_Reservation.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="Reservation_Panel.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 80</value>
@@ -3706,7 +3802,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Reservation_Panel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

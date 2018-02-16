@@ -81,11 +81,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dtp_Loan_ReturnDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_Loan_ReservedTill = new System.Windows.Forms.TextBox();
             this.txt_Loan_Item_State = new System.Windows.Forms.TextBox();
             this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
-            this.txt_Loan_ItemID = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Items = new System.Windows.Forms.CheckedListBox();
             this.panel_UserLoans = new System.Windows.Forms.Panel();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.txt_user_reservations_enddate = new System.Windows.Forms.TextBox();
+            this.txt_user_reservations_startdate = new System.Windows.Forms.TextBox();
+            this.shapedButton4 = new Reservation_System.UI.ShapedButton();
+            this.checklist_user_reservations = new System.Windows.Forms.CheckedListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
             this.txt_UserLoans_SearchItem = new System.Windows.Forms.TextBox();
@@ -93,7 +98,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txt_UserLoans_ItemState = new System.Windows.Forms.TextBox();
             this.txt_UserLoans_ItemType = new System.Windows.Forms.TextBox();
-            this.txt_UserLoans_ItemID = new System.Windows.Forms.TextBox();
             this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Item_Management = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -118,7 +122,6 @@
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
-            this.dtp_Waiting_ReturnReturnDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_ReturnUserName = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
@@ -126,11 +129,10 @@
             this.txt_Waiting_ReturnItemsearch = new System.Windows.Forms.TextBox();
             this.btnAcceptReturn = new Reservation_System.UI.ShapedButton();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.dtp_Waiting_ReturnReturnDate = new System.Windows.Forms.DateTimePicker();
             this.txt_Waiting_ReturnItemType = new System.Windows.Forms.TextBox();
-            this.txt_Waiting_ReturnItemState = new System.Windows.Forms.TextBox();
             this.txt_Waiting_ReturnItemID = new System.Windows.Forms.TextBox();
             this.checklist_Waiting_PendingReturns = new System.Windows.Forms.CheckedListBox();
-            this.dtp_Waiting_LoanReturnDate = new System.Windows.Forms.DateTimePicker();
             this.btnDenyLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_LoanUserName = new System.Windows.Forms.TextBox();
@@ -140,8 +142,8 @@
             this.btnAcceptLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_LoanItemType = new System.Windows.Forms.TextBox();
-            this.txt_Waiting_LoanItemState = new System.Windows.Forms.TextBox();
             this.txt_Waiting_LoanItemID = new System.Windows.Forms.TextBox();
+            this.dtp_Waiting_LoanReturnDate = new System.Windows.Forms.DateTimePicker();
             this.checklist_Waiting_PendingLoans = new System.Windows.Forms.CheckedListBox();
             this.AccountManagement_Panel = new System.Windows.Forms.Panel();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
@@ -166,16 +168,17 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Reservation_Panel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtp_Reserve_EndDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.combox_reservation_itemtype = new System.Windows.Forms.ComboBox();
             this.txt_reservation_itemsearch = new System.Windows.Forms.TextBox();
-            this.shapedButton4 = new Reservation_System.UI.ShapedButton();
+            this.btn_Reserve = new Reservation_System.UI.ShapedButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Reserve_StartDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.txt_reservation_Itemtype = new System.Windows.Forms.TextBox();
             this.txt_reservation_Itemstate = new System.Windows.Forms.TextBox();
-            this.txt_reservation_ItemID = new System.Windows.Forms.TextBox();
             this.checklist_Reservation = new System.Windows.Forms.CheckedListBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -188,6 +191,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel_UserLoans.SuspendLayout();
+            this.groupBox26.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.Item_Management.SuspendLayout();
@@ -695,13 +699,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_Loan_ReservedTill);
             this.groupBox2.Controls.Add(this.txt_Loan_Item_State);
             this.groupBox2.Controls.Add(this.txt_Loan_ItemType);
-            this.groupBox2.Controls.Add(this.txt_Loan_ItemID);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txt_Loan_ReservedTill
+            // 
+            resources.ApplyResources(this.txt_Loan_ReservedTill, "txt_Loan_ReservedTill");
+            this.txt_Loan_ReservedTill.Name = "txt_Loan_ReservedTill";
+            this.txt_Loan_ReservedTill.ReadOnly = true;
             // 
             // txt_Loan_Item_State
             // 
@@ -715,12 +725,6 @@
             this.txt_Loan_ItemType.Name = "txt_Loan_ItemType";
             this.txt_Loan_ItemType.ReadOnly = true;
             // 
-            // txt_Loan_ItemID
-            // 
-            resources.ApplyResources(this.txt_Loan_ItemID, "txt_Loan_ItemID");
-            this.txt_Loan_ItemID.Name = "txt_Loan_ItemID";
-            this.txt_Loan_ItemID.ReadOnly = true;
-            // 
             // checklist_Loan_Items
             // 
             this.checklist_Loan_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -730,16 +734,75 @@
             this.checklist_Loan_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Loan_Items.FormattingEnabled = true;
             this.checklist_Loan_Items.Name = "checklist_Loan_Items";
+            this.checklist_Loan_Items.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Loan_Items_ItemCheck);
             this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
             // 
             // panel_UserLoans
             // 
+            this.panel_UserLoans.Controls.Add(this.groupBox26);
+            this.panel_UserLoans.Controls.Add(this.shapedButton4);
+            this.panel_UserLoans.Controls.Add(this.checklist_user_reservations);
             this.panel_UserLoans.Controls.Add(this.groupBox4);
             this.panel_UserLoans.Controls.Add(this.btn_UserLoans_ReturnItem);
             this.panel_UserLoans.Controls.Add(this.groupBox5);
             this.panel_UserLoans.Controls.Add(this.Checklist_UserLoans_Items);
             resources.ApplyResources(this.panel_UserLoans, "panel_UserLoans");
             this.panel_UserLoans.Name = "panel_UserLoans";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.txt_user_reservations_enddate);
+            this.groupBox26.Controls.Add(this.txt_user_reservations_startdate);
+            resources.ApplyResources(this.groupBox26, "groupBox26");
+            this.groupBox26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.TabStop = false;
+            // 
+            // txt_user_reservations_enddate
+            // 
+            resources.ApplyResources(this.txt_user_reservations_enddate, "txt_user_reservations_enddate");
+            this.txt_user_reservations_enddate.Name = "txt_user_reservations_enddate";
+            // 
+            // txt_user_reservations_startdate
+            // 
+            resources.ApplyResources(this.txt_user_reservations_startdate, "txt_user_reservations_startdate");
+            this.txt_user_reservations_startdate.Name = "txt_user_reservations_startdate";
+            // 
+            // shapedButton4
+            // 
+            this.shapedButton4.BackColor = System.Drawing.Color.Transparent;
+            this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
+            this.shapedButton4.BorderWidth = 2;
+            this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.shapedButton4.ButtonText = "Peru lainaus";
+            this.shapedButton4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.shapedButton4.FlatAppearance.BorderSize = 0;
+            this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shapedButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.shapedButton4, "shapedButton4");
+            this.shapedButton4.ForeColor = System.Drawing.Color.White;
+            this.shapedButton4.GradientAngle = 90;
+            this.shapedButton4.MouseClickColor1 = System.Drawing.Color.Black;
+            this.shapedButton4.MouseClickColor2 = System.Drawing.Color.Black;
+            this.shapedButton4.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.shapedButton4.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shapedButton4.Name = "shapedButton4";
+            this.shapedButton4.ShowButtontext = true;
+            this.shapedButton4.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shapedButton4.TextLocation_X = 13;
+            this.shapedButton4.TextLocation_Y = 16;
+            this.shapedButton4.Transparent1 = 250;
+            this.shapedButton4.Transparent2 = 250;
+            this.shapedButton4.UseVisualStyleBackColor = false;
+            // 
+            // checklist_user_reservations
+            // 
+            this.checklist_user_reservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.checklist_user_reservations, "checklist_user_reservations");
+            this.checklist_user_reservations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_user_reservations.FormattingEnabled = true;
+            this.checklist_user_reservations.Name = "checklist_user_reservations";
+            this.checklist_user_reservations.SelectedValueChanged += new System.EventHandler(this.checklist_user_reservations_SelectedValueChanged);
             // 
             // groupBox4
             // 
@@ -794,7 +857,6 @@
             // 
             this.groupBox5.Controls.Add(this.txt_UserLoans_ItemState);
             this.groupBox5.Controls.Add(this.txt_UserLoans_ItemType);
-            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemID);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox5.Name = "groupBox5";
@@ -809,11 +871,6 @@
             // 
             resources.ApplyResources(this.txt_UserLoans_ItemType, "txt_UserLoans_ItemType");
             this.txt_UserLoans_ItemType.Name = "txt_UserLoans_ItemType";
-            // 
-            // txt_UserLoans_ItemID
-            // 
-            resources.ApplyResources(this.txt_UserLoans_ItemID, "txt_UserLoans_ItemID");
-            this.txt_UserLoans_ItemID.Name = "txt_UserLoans_ItemID";
             // 
             // Checklist_UserLoans_Items
             // 
@@ -851,6 +908,7 @@
             this.checklist_DeleteItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_DeleteItem.FormattingEnabled = true;
             this.checklist_DeleteItem.Name = "checklist_DeleteItem";
+            this.checklist_DeleteItem.SelectedValueChanged += new System.EventHandler(this.checklist_DeleteItem_SelectedValueChanged);
             // 
             // groupBox7
             // 
@@ -1045,13 +1103,11 @@
             // 
             // Waiting_Events_panel
             // 
-            this.Waiting_Events_panel.Controls.Add(this.dtp_Waiting_ReturnReturnDate);
             this.Waiting_Events_panel.Controls.Add(this.groupBox15);
             this.Waiting_Events_panel.Controls.Add(this.groupBox16);
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptReturn);
             this.Waiting_Events_panel.Controls.Add(this.groupBox17);
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingReturns);
-            this.Waiting_Events_panel.Controls.Add(this.dtp_Waiting_LoanReturnDate);
             this.Waiting_Events_panel.Controls.Add(this.btnDenyLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox14);
             this.Waiting_Events_panel.Controls.Add(this.groupBox12);
@@ -1060,11 +1116,6 @@
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
-            // 
-            // dtp_Waiting_ReturnReturnDate
-            // 
-            resources.ApplyResources(this.dtp_Waiting_ReturnReturnDate, "dtp_Waiting_ReturnReturnDate");
-            this.dtp_Waiting_ReturnReturnDate.Name = "dtp_Waiting_ReturnReturnDate";
             // 
             // groupBox15
             // 
@@ -1130,23 +1181,23 @@
             // 
             // groupBox17
             // 
+            this.groupBox17.Controls.Add(this.dtp_Waiting_ReturnReturnDate);
             this.groupBox17.Controls.Add(this.txt_Waiting_ReturnItemType);
-            this.groupBox17.Controls.Add(this.txt_Waiting_ReturnItemState);
             this.groupBox17.Controls.Add(this.txt_Waiting_ReturnItemID);
             resources.ApplyResources(this.groupBox17, "groupBox17");
             this.groupBox17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.TabStop = false;
             // 
+            // dtp_Waiting_ReturnReturnDate
+            // 
+            resources.ApplyResources(this.dtp_Waiting_ReturnReturnDate, "dtp_Waiting_ReturnReturnDate");
+            this.dtp_Waiting_ReturnReturnDate.Name = "dtp_Waiting_ReturnReturnDate";
+            // 
             // txt_Waiting_ReturnItemType
             // 
             resources.ApplyResources(this.txt_Waiting_ReturnItemType, "txt_Waiting_ReturnItemType");
             this.txt_Waiting_ReturnItemType.Name = "txt_Waiting_ReturnItemType";
-            // 
-            // txt_Waiting_ReturnItemState
-            // 
-            resources.ApplyResources(this.txt_Waiting_ReturnItemState, "txt_Waiting_ReturnItemState");
-            this.txt_Waiting_ReturnItemState.Name = "txt_Waiting_ReturnItemState";
             // 
             // txt_Waiting_ReturnItemID
             // 
@@ -1162,11 +1213,7 @@
             this.checklist_Waiting_PendingReturns.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Waiting_PendingReturns.FormattingEnabled = true;
             this.checklist_Waiting_PendingReturns.Name = "checklist_Waiting_PendingReturns";
-            // 
-            // dtp_Waiting_LoanReturnDate
-            // 
-            resources.ApplyResources(this.dtp_Waiting_LoanReturnDate, "dtp_Waiting_LoanReturnDate");
-            this.dtp_Waiting_LoanReturnDate.Name = "dtp_Waiting_LoanReturnDate";
+            this.checklist_Waiting_PendingReturns.SelectedValueChanged += new System.EventHandler(this.checklist_Waiting_PendingReturns_SelectedValueChanged);
             // 
             // btnDenyLoan
             // 
@@ -1262,8 +1309,8 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.txt_Waiting_LoanItemType);
-            this.groupBox13.Controls.Add(this.txt_Waiting_LoanItemState);
             this.groupBox13.Controls.Add(this.txt_Waiting_LoanItemID);
+            this.groupBox13.Controls.Add(this.dtp_Waiting_LoanReturnDate);
             resources.ApplyResources(this.groupBox13, "groupBox13");
             this.groupBox13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox13.Name = "groupBox13";
@@ -1274,15 +1321,15 @@
             resources.ApplyResources(this.txt_Waiting_LoanItemType, "txt_Waiting_LoanItemType");
             this.txt_Waiting_LoanItemType.Name = "txt_Waiting_LoanItemType";
             // 
-            // txt_Waiting_LoanItemState
-            // 
-            resources.ApplyResources(this.txt_Waiting_LoanItemState, "txt_Waiting_LoanItemState");
-            this.txt_Waiting_LoanItemState.Name = "txt_Waiting_LoanItemState";
-            // 
             // txt_Waiting_LoanItemID
             // 
             resources.ApplyResources(this.txt_Waiting_LoanItemID, "txt_Waiting_LoanItemID");
             this.txt_Waiting_LoanItemID.Name = "txt_Waiting_LoanItemID";
+            // 
+            // dtp_Waiting_LoanReturnDate
+            // 
+            resources.ApplyResources(this.dtp_Waiting_LoanReturnDate, "dtp_Waiting_LoanReturnDate");
+            this.dtp_Waiting_LoanReturnDate.Name = "dtp_Waiting_LoanReturnDate";
             // 
             // checklist_Waiting_PendingLoans
             // 
@@ -1293,6 +1340,7 @@
             this.checklist_Waiting_PendingLoans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Waiting_PendingLoans.FormattingEnabled = true;
             this.checklist_Waiting_PendingLoans.Name = "checklist_Waiting_PendingLoans";
+            this.checklist_Waiting_PendingLoans.SelectedValueChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedValueChanged);
             // 
             // AccountManagement_Panel
             // 
@@ -1512,14 +1560,27 @@
             // 
             // Reservation_Panel
             // 
+            this.Reservation_Panel.Controls.Add(this.label6);
+            this.Reservation_Panel.Controls.Add(this.dtp_Reserve_EndDate);
             this.Reservation_Panel.Controls.Add(this.groupBox24);
-            this.Reservation_Panel.Controls.Add(this.shapedButton4);
+            this.Reservation_Panel.Controls.Add(this.btn_Reserve);
             this.Reservation_Panel.Controls.Add(this.label5);
-            this.Reservation_Panel.Controls.Add(this.dateTimePicker1);
+            this.Reservation_Panel.Controls.Add(this.dtp_Reserve_StartDate);
             this.Reservation_Panel.Controls.Add(this.groupBox25);
             this.Reservation_Panel.Controls.Add(this.checklist_Reservation);
             resources.ApplyResources(this.Reservation_Panel, "Reservation_Panel");
             this.Reservation_Panel.Name = "Reservation_Panel";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Name = "label6";
+            // 
+            // dtp_Reserve_EndDate
+            // 
+            resources.ApplyResources(this.dtp_Reserve_EndDate, "dtp_Reserve_EndDate");
+            this.dtp_Reserve_EndDate.Name = "dtp_Reserve_EndDate";
             // 
             // groupBox24
             // 
@@ -1542,32 +1603,33 @@
             resources.ApplyResources(this.txt_reservation_itemsearch, "txt_reservation_itemsearch");
             this.txt_reservation_itemsearch.Name = "txt_reservation_itemsearch";
             // 
-            // shapedButton4
+            // btn_Reserve
             // 
-            this.shapedButton4.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.BorderWidth = 2;
-            this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton4.ButtonText = "Varaa";
-            this.shapedButton4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton4.FlatAppearance.BorderSize = 0;
-            this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton4, "shapedButton4");
-            this.shapedButton4.ForeColor = System.Drawing.Color.White;
-            this.shapedButton4.GradientAngle = 90;
-            this.shapedButton4.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton4.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton4.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton4.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.shapedButton4.Name = "shapedButton4";
-            this.shapedButton4.ShowButtontext = true;
-            this.shapedButton4.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.shapedButton4.TextLocation_X = 29;
-            this.shapedButton4.TextLocation_Y = 17;
-            this.shapedButton4.Transparent1 = 250;
-            this.shapedButton4.Transparent2 = 250;
-            this.shapedButton4.UseVisualStyleBackColor = false;
+            this.btn_Reserve.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Reserve.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Reserve.BorderWidth = 2;
+            this.btn_Reserve.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_Reserve.ButtonText = "Varaa";
+            this.btn_Reserve.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_Reserve.FlatAppearance.BorderSize = 0;
+            this.btn_Reserve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Reserve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_Reserve, "btn_Reserve");
+            this.btn_Reserve.ForeColor = System.Drawing.Color.White;
+            this.btn_Reserve.GradientAngle = 90;
+            this.btn_Reserve.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_Reserve.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_Reserve.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_Reserve.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_Reserve.Name = "btn_Reserve";
+            this.btn_Reserve.ShowButtontext = true;
+            this.btn_Reserve.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_Reserve.TextLocation_X = 29;
+            this.btn_Reserve.TextLocation_Y = 17;
+            this.btn_Reserve.Transparent1 = 250;
+            this.btn_Reserve.Transparent2 = 250;
+            this.btn_Reserve.UseVisualStyleBackColor = false;
+            this.btn_Reserve.Click += new System.EventHandler(this.btn_Reserve_Click_1);
             // 
             // label5
             // 
@@ -1575,16 +1637,15 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Name = "label5";
             // 
-            // dateTimePicker1
+            // dtp_Reserve_StartDate
             // 
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Name = "dateTimePicker1";
+            resources.ApplyResources(this.dtp_Reserve_StartDate, "dtp_Reserve_StartDate");
+            this.dtp_Reserve_StartDate.Name = "dtp_Reserve_StartDate";
             // 
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.txt_reservation_Itemtype);
             this.groupBox25.Controls.Add(this.txt_reservation_Itemstate);
-            this.groupBox25.Controls.Add(this.txt_reservation_ItemID);
             resources.ApplyResources(this.groupBox25, "groupBox25");
             this.groupBox25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox25.Name = "groupBox25";
@@ -1600,11 +1661,6 @@
             resources.ApplyResources(this.txt_reservation_Itemstate, "txt_reservation_Itemstate");
             this.txt_reservation_Itemstate.Name = "txt_reservation_Itemstate";
             // 
-            // txt_reservation_ItemID
-            // 
-            resources.ApplyResources(this.txt_reservation_ItemID, "txt_reservation_ItemID");
-            this.txt_reservation_ItemID.Name = "txt_reservation_ItemID";
-            // 
             // checklist_Reservation
             // 
             this.checklist_Reservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -1614,6 +1670,7 @@
             this.checklist_Reservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Reservation.FormattingEnabled = true;
             this.checklist_Reservation.Name = "checklist_Reservation";
+            this.checklist_Reservation.SelectedValueChanged += new System.EventHandler(this.checklist_Reservation_SelectedValueChanged);
             // 
             // MainScreen
             // 
@@ -1635,13 +1692,13 @@
             this.Controls.Add(this.Separator_Panel);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.Left_Button_Panel);
-            this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.panel_UserLoans);
-            this.Controls.Add(this.Settings_Panel);
+            this.Controls.Add(this.Left_Button_Panel);
+            this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.Item_Management);
+            this.Controls.Add(this.Settings_Panel);
             this.Controls.Add(this.AccountManagement_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
@@ -1666,6 +1723,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel_UserLoans.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1756,7 +1815,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_Loan_Item_State;
         private System.Windows.Forms.TextBox txt_Loan_ItemType;
-        private System.Windows.Forms.TextBox txt_Loan_ItemID;
         private System.Windows.Forms.ComboBox combobox_Loan_ItemType;
         private System.Windows.Forms.TextBox txt_LoanItem_SearchItem;
         private System.Windows.Forms.Label label10;
@@ -1774,7 +1832,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txt_UserLoans_ItemState;
         private System.Windows.Forms.TextBox txt_UserLoans_ItemType;
-        private System.Windows.Forms.TextBox txt_UserLoans_ItemID;
         private System.Windows.Forms.CheckedListBox Checklist_UserLoans_Items;
         private System.Windows.Forms.Panel Item_Management;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -1808,7 +1865,6 @@
         private ShapedButton btnAcceptLoan;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.TextBox txt_Waiting_LoanItemType;
-        private System.Windows.Forms.TextBox txt_Waiting_LoanItemState;
         private System.Windows.Forms.TextBox txt_Waiting_LoanItemID;
         private System.Windows.Forms.CheckedListBox checklist_Waiting_PendingLoans;
         private ShapedButton btnDenyLoan;
@@ -1822,7 +1878,6 @@
         private ShapedButton btnAcceptReturn;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.TextBox txt_Waiting_ReturnItemType;
-        private System.Windows.Forms.TextBox txt_Waiting_ReturnItemState;
         private System.Windows.Forms.TextBox txt_Waiting_ReturnItemID;
         private System.Windows.Forms.CheckedListBox checklist_Waiting_PendingReturns;
         private ButtonX btnWaitingEvents;
@@ -1856,13 +1911,20 @@
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.ComboBox combox_reservation_itemtype;
         private System.Windows.Forms.TextBox txt_reservation_itemsearch;
-        private ShapedButton shapedButton4;
+        private ShapedButton btn_Reserve;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_Reserve_StartDate;
         private System.Windows.Forms.GroupBox groupBox25;
         private System.Windows.Forms.TextBox txt_reservation_Itemtype;
         private System.Windows.Forms.TextBox txt_reservation_Itemstate;
-        private System.Windows.Forms.TextBox txt_reservation_ItemID;
         private System.Windows.Forms.CheckedListBox checklist_Reservation;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtp_Reserve_EndDate;
+        private ShapedButton shapedButton4;
+        private System.Windows.Forms.CheckedListBox checklist_user_reservations;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.TextBox txt_user_reservations_enddate;
+        private System.Windows.Forms.TextBox txt_user_reservations_startdate;
+        private System.Windows.Forms.TextBox txt_Loan_ReservedTill;
     }
 }
