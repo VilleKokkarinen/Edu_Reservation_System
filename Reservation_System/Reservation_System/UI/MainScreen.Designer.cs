@@ -53,8 +53,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
             this.BtmPanel = new System.Windows.Forms.Panel();
-            this.lbl_welcome = new System.Windows.Forms.Label();
-            this.lbl_username = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.RightBottomPanel_2 = new System.Windows.Forms.Panel();
             this.LeftBottomPanel_1 = new System.Windows.Forms.Panel();
@@ -183,7 +181,6 @@
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
-            this.BtmPanel.SuspendLayout();
             this.Left_Button_Panel.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -341,8 +338,8 @@
             // 
             resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
             this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolstripItems,
             this.toolstripaccount,
+            this.ToolstripItems,
             this.ToolStripSettings,
             this.ToolStripHelp});
             this.menuStripZ1.Name = "menuStripZ1";
@@ -433,22 +430,8 @@
             // BtmPanel
             // 
             this.BtmPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.BtmPanel.Controls.Add(this.lbl_welcome);
-            this.BtmPanel.Controls.Add(this.lbl_username);
             resources.ApplyResources(this.BtmPanel, "BtmPanel");
             this.BtmPanel.Name = "BtmPanel";
-            // 
-            // lbl_welcome
-            // 
-            resources.ApplyResources(this.lbl_welcome, "lbl_welcome");
-            this.lbl_welcome.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_welcome.Name = "lbl_welcome";
-            // 
-            // lbl_username
-            // 
-            resources.ApplyResources(this.lbl_username, "lbl_username");
-            this.lbl_username.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_username.Name = "lbl_username";
             // 
             // RightBottomPanel_2
             // 
@@ -1710,8 +1693,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripZ1.ResumeLayout(false);
             this.menuStripZ1.PerformLayout();
-            this.BtmPanel.ResumeLayout(false);
-            this.BtmPanel.PerformLayout();
             this.Left_Button_Panel.ResumeLayout(false);
             this.Settings_Panel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1821,8 +1802,6 @@
         private System.Windows.Forms.DateTimePicker dtp_Loan_ReturnDate;
         private ShapedButton btn_Loan_LoanItem;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lbl_welcome;
-        private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.ToolStripMenuItem SettingsToolStrip_LanguageSelect;
         private System.Windows.Forms.Panel panel_UserLoans;
         private System.Windows.Forms.GroupBox groupBox4;

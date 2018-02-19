@@ -17,7 +17,7 @@ namespace Reservation_System.UI
         public MainScreen()
         {
             InitializeComponent();
-            lbl_username.Text = User.User._username;
+            toolstripaccount.Text = User.User._username;
             GetLoans();
             try
             {
