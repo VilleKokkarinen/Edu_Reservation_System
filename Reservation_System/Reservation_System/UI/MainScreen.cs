@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Reservation_System.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace Reservation_System.UI
 {
@@ -22,7 +25,8 @@ namespace Reservation_System.UI
             try
             {
                 Update_ReservationsToLoans();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -546,9 +550,9 @@ namespace Reservation_System.UI
                         }
                     }
                 }
-            }           
+            }
         }
-     
+
 
         #region LeftPanel_Buttons
         private void btn_Loan_Click(object sender, EventArgs e)
@@ -557,9 +561,9 @@ namespace Reservation_System.UI
             btn_Loan.ChangeColorMouseHC = false;
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-            
+
             btn_UsersLoans.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;           
+            btn_Reservation.ChangeColorMouseHC = true;
 
             Loan_Panel.Visible = true;
             Controls.SetChildIndex(Loan_Panel, Controls.Count - 8);
@@ -574,12 +578,12 @@ namespace Reservation_System.UI
 
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
-           
-            btn_Loan.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;           
 
-            panel_UserLoans.Visible = true;
-            Controls.SetChildIndex(panel_UserLoans, Controls.Count - 8);
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+
+            UserLoans_Panel.Visible = true;
+            Controls.SetChildIndex(UserLoans_Panel, Controls.Count - 8);
             itemtypes();
             GetLoans();
             GetReservations();
@@ -591,7 +595,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = false;
 
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
-            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);            
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_UsersLoans.ChangeColorMouseHC = true;
@@ -602,29 +606,30 @@ namespace Reservation_System.UI
             itemtypes();
         }
 
-       
-          private void Btn_Waiting_Events_Click(object sender, EventArgs e)
+
+        private void Btn_Waiting_Events_Click(object sender, EventArgs e)
         {
             btnWaitingEvents.BZBackColor = Color.Black;
             btnWaitingEvents.ChangeColorMouseHC = false;
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
-            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);            
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_UsersLoans.ChangeColorMouseHC = true;
-            btn_Reservation.ChangeColorMouseHC = true;            
+            btn_Reservation.ChangeColorMouseHC = true;
 
             Waiting_Events_panel.Visible = true;
-            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count-8);
+            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count - 8);
             try
             {
                 UpdatePendingLoans();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            } 
-        }       
+            }
+        }
 
         private void help_button_Click(object sender, EventArgs e)
         {
@@ -658,7 +663,7 @@ namespace Reservation_System.UI
             btn_Loan.ChangeColorMouseHC = true;
             btn_UsersLoans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
-            
+
             Item_Management.Visible = true;
             Controls.SetChildIndex(Item_Management, Controls.Count - 8);
         }
@@ -673,7 +678,6 @@ namespace Reservation_System.UI
             btn_Loan.ChangeColorMouseHC = true;
             btn_UsersLoans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
-
 
             AccountManagement_Panel.Visible = true;
             Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 8);
@@ -704,13 +708,6 @@ namespace Reservation_System.UI
 
         }
         
-        private void Tool_Strip_Loans_NewLoan_Click(object sender, EventArgs e)
-        {
-            btn_Loan.PerformClick();           
-        }
-
-
-
 
         #endregion
 
@@ -792,7 +789,7 @@ namespace Reservation_System.UI
         private void checklist_Loan_Items_SelectedValueChanged(object sender, EventArgs e)
         {
             try
-            {               
+            {
                 txt_Loan_ItemType.Text = ((User.Item)checklist_Loan_Items.SelectedItem).TYPE.ToString();
                 txt_Loan_Item_State.Text = ((User.Item)checklist_Loan_Items.SelectedItem).STATE.ToString();
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
@@ -841,7 +838,7 @@ namespace Reservation_System.UI
                 }
 
 
-                var varatut = checklist_Loan_Items.CheckedItems.Cast<User.Item>().Where(x => x.STATE == 2);               
+                var varatut = checklist_Loan_Items.CheckedItems.Cast<User.Item>().Where(x => x.STATE == 2);
                 List<DateTime> lista = new List<DateTime>();
 
                 if (varatut.Count() == 0)
@@ -853,38 +850,38 @@ namespace Reservation_System.UI
 
                 foreach (User.Item item in varatut)
                 {
-                                   
-                        using (MySqlConnection connection = Program.sql.MySqlConnection())
+
+                    using (MySqlConnection connection = Program.sql.MySqlConnection())
+                    {
+                        using (MySqlCommand ItemType = connection.CreateCommand())
                         {
-                            using (MySqlCommand ItemType = connection.CreateCommand())
+                            ItemType.CommandType = CommandType.Text;
+                            ItemType.CommandText = "SELECT RR_RESERVATIONDATE FROM RESERVATIONROWS WHERE RR_ITEM =@itemid AND RR_RETURNED = 0 AND RR_PRE_RESERVATION = 1 AND RR_PENDING_LOAN = 0";
+                            ItemType.Parameters.AddWithValue("@itemid", (item.ID.ToString()));
+
+                            connection.Open();
+                            MySqlDataReader reader = ItemType.ExecuteReader();
+
+                            if (reader.HasRows)
                             {
-                                ItemType.CommandType = CommandType.Text;
-                                ItemType.CommandText = "SELECT RR_RESERVATIONDATE FROM RESERVATIONROWS WHERE RR_ITEM =@itemid AND RR_RETURNED = 0 AND RR_PRE_RESERVATION = 1 AND RR_PENDING_LOAN = 0";
-                                ItemType.Parameters.AddWithValue("@itemid", (item.ID.ToString()));
-
-                                connection.Open();
-                                MySqlDataReader reader = ItemType.ExecuteReader();
-
-                                if (reader.HasRows)
+                                while (reader.Read())
                                 {
-                                    while (reader.Read())
-                                    {
-                                        DateTime date = (DateTime)reader["RR_RESERVATIONDATE"];
-                                        txt_Loan_ReservedTill.Text = date.ToShortDateString();                                             
-                                            lista.Add(date);
-                                    }
+                                    DateTime date = (DateTime)reader["RR_RESERVATIONDATE"];
+                                    txt_Loan_ReservedTill.Text = date.ToShortDateString();
+                                    lista.Add(date);
                                 }
                             }
-                            connection.Close();
                         }
-                    
+                        connection.Close();
+                    }
+
                 }
 
-                if(lista.Count != 0)
+                if (lista.Count != 0)
                 {
                     dtp_Loan_ReturnDate.MaxDate = lista.Min();
                     lista.Clear();
-                }               
+                }
                 dtp_Loan_ReturnDate.MinDate = DateTime.Now;
             }
             catch (Exception ex)
@@ -898,7 +895,63 @@ namespace Reservation_System.UI
 
         #region Reservation panel
 
+        private void checklist_Reservation_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_reservation_Itemtype.Text = ((User.Item)checklist_Reservation.SelectedItem).TYPE.ToString();
+                txt_reservation_Itemstate.Text = ((User.Item)checklist_Reservation.SelectedItem).STATE.ToString();
 
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
+                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_reservation_Itemtype.Text);
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string itemtype = (string)reader["IT_NAME"];
+                                txt_reservation_Itemtype.Text = itemtype;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT IS_NAME FROM ITEMSTATE WHERE IS_ID =@ITEMSTATEID";
+                        ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_UserLoans_ItemType.Text);
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string itemstate = (string)reader["IS_NAME"];
+                                txt_reservation_Itemstate.Text = itemstate;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void GetReservations()
         {
             try
@@ -927,7 +980,7 @@ namespace Reservation_System.UI
                                 int ItemState = (int)reader["I_STATE"];
 
                                 // Add the item to the User's inventory
-                                checklist_user_reservations.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));                                
+                                checklist_user_reservations.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
                             }
                         }
                     }
@@ -942,23 +995,23 @@ namespace Reservation_System.UI
 
         private void Update_ReservationsToLoans()
         {
-                string startdate = dtp_Reserve_StartDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
-                string returndate = dtp_Reserve_EndDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {                  
+            string startdate = dtp_Reserve_StartDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
+            string returndate = dtp_Reserve_EndDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
                 string query = "UPDATE ITEMS i, RESERVATIONROWS rr SET i.I_STATE = 1, rr.RR_PENDING_LOAN = 1, rr.RR_PRE_RESERVATION = 0 WHERE rr.RR_PRE_RESERVATION = 1 AND i.I_STATE = 2 AND rr.RR_RESERVATIONDATE < NOW() ;";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                    {                                               
-                        connection.Open();
-                        int result = cmd.ExecuteNonQuery();
+                {
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
 
-                        if (result < 0)
-                        {
-                            MessageBox.Show("Error in the system");
-                        }
-                        connection.Close();
+                    if (result < 0)
+                    {
+                        MessageBox.Show("Error in the system");
                     }
+                    connection.Close();
                 }
+            }
         }
 
         private void ItemsToReserve()
@@ -1001,6 +1054,68 @@ namespace Reservation_System.UI
 
 
         #region Returning loan panel
+
+
+
+        private void checklist_user_reservations_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_reservation_Itemtype.Text = ((User.Item)checklist_user_reservations.SelectedItem).TYPE.ToString();
+                txt_reservation_Itemstate.Text = ((User.Item)checklist_user_reservations.SelectedItem).STATE.ToString();
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
+                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_reservation_Itemtype.Text);
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string itemtype = (string)reader["IT_NAME"];
+                                txt_reservation_Itemtype.Text = itemtype;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT IS_NAME FROM ITEMSTATE WHERE IS_ID =@ITEMSTATEID";
+                        ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_UserLoans_ItemType.Text);
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string itemstate = (string)reader["IS_NAME"];
+                                txt_reservation_Itemstate.Text = itemstate;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
         private void GetLoans()
         {
             try
@@ -1035,7 +1150,8 @@ namespace Reservation_System.UI
                     }
                     connection.Close();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -1067,7 +1183,8 @@ namespace Reservation_System.UI
                     }
                 }
                 GetLoans();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -1076,7 +1193,7 @@ namespace Reservation_System.UI
         private void Checklist_UserLoans_SelectedValueChanged(object sender, EventArgs e)
         {
             try
-            {                          
+            {
                 txt_UserLoans_ItemType.Text = ((User.Item)Checklist_UserLoans_Items.SelectedItem).TYPE.ToString();
                 txt_UserLoans_ItemState.Text = ((User.Item)Checklist_UserLoans_Items.SelectedItem).STATE.ToString();
 
@@ -1085,7 +1202,7 @@ namespace Reservation_System.UI
                     using (MySqlCommand ItemType = connection.CreateCommand())
                     {
                         ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";                        
+                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
                         ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_UserLoans_ItemType.Text);
 
                         connection.Open();
@@ -1137,6 +1254,127 @@ namespace Reservation_System.UI
 
         #region Pending loans and returns
 
+        private void checklist_Waiting_PendingLoans_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_Waiting_LoanItemType.Text = ((User.Item)checklist_Waiting_PendingLoans.SelectedItem).TYPE.ToString();
+                txt_Waiting_LoanItemID.Text = ((User.Item)checklist_Waiting_PendingLoans.SelectedItem).ID.ToString();
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT user.U_USERNAME, rr.RR_RETURNDATE FROM USERS user, RESERVATIONROWS rr WHERE RR_ITEM =@itemid AND RR_USER = user.U_ID";
+                        ItemType.Parameters.AddWithValue("@itemid", ((User.Item)checklist_Waiting_PendingLoans.SelectedItem).ID.ToString());
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string user = (string)reader["U_USERNAME"];
+                                DateTime date = (DateTime)reader["RR_RETURNDATE"];
+                                txt_Waiting_LoanUserName.Text = user;
+                                dtp_Waiting_LoanReturnDate.Value = date;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
+                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_Waiting_LoanItemType.Text);
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string itemtype = (string)reader["IT_NAME"];
+                                txt_Waiting_LoanItemType.Text = itemtype;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void checklist_Waiting_PendingReturns_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_Waiting_ReturnItemType.Text = ((User.Item)checklist_Waiting_PendingReturns.SelectedItem).TYPE.ToString();
+                txt_Waiting_ReturnItemID.Text = ((User.Item)checklist_Waiting_PendingReturns.SelectedItem).ID.ToString();
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT user.U_USERNAME, rr.RR_RETURNDATE FROM USERS user, RESERVATIONROWS rr WHERE RR_ITEM =@itemid AND RR_USER = user.U_ID";
+                        ItemType.Parameters.AddWithValue("@itemid", ((User.Item)checklist_Waiting_PendingReturns.SelectedItem).ID.ToString());
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string user = (string)reader["U_USERNAME"];
+                                DateTime date = (DateTime)reader["RR_RETURNDATE"];
+                                txt_Waiting_ReturnUserName.Text = user;
+                                dtp_Waiting_ReturnReturnDate.Value = date;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+
+                using (MySqlConnection connection = Program.sql.MySqlConnection())
+                {
+                    using (MySqlCommand ItemType = connection.CreateCommand())
+                    {
+                        ItemType.CommandType = CommandType.Text;
+                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
+                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_Waiting_ReturnItemType.Text);
+
+                        connection.Open();
+                        MySqlDataReader reader = ItemType.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string itemtype = (string)reader["IT_NAME"];
+                                txt_Waiting_ReturnItemType.Text = itemtype;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void UpdatePendingLoans()
         {
             checklist_Waiting_PendingLoans.Items.Clear();
@@ -1230,7 +1468,8 @@ namespace Reservation_System.UI
                 {
                     Accept_Pending_Returns();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -1243,8 +1482,9 @@ namespace Reservation_System.UI
                 if (Program.user.accounttype() >= 3)
                 {
                     Accept_Pending_Loans();
-                }               
-            }catch (Exception ex)
+                }
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -1252,18 +1492,20 @@ namespace Reservation_System.UI
 
         private void btnDenyLoan_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 if (Program.user.accounttype() >= 3)
                 {
                     Deny_Pending_Loans();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
-    
+
         private void Deny_Pending_Loans()
         {
             foreach (User.Item item in checklist_Waiting_PendingLoans.CheckedItems)
@@ -1311,7 +1553,7 @@ namespace Reservation_System.UI
 
                         if (result < 0)
                         {
-                            MessageBox.Show("Error in the system");                           
+                            MessageBox.Show("Error in the system");
                         }
                         connection.Close();
                     }
@@ -1323,7 +1565,7 @@ namespace Reservation_System.UI
         }
         private void combobox_waiting_LoanItemtype_SelectedValueChanged(object sender, EventArgs e)
         {
-            foreach(User.Item item in checklist_Waiting_PendingLoans.Items)
+            foreach (User.Item item in checklist_Waiting_PendingLoans.Items)
             {
                 if (item.TYPE == ((ComboItem)combobox_waiting_LoanItemtype.SelectedItem).ID)
                 { }
@@ -1338,12 +1580,63 @@ namespace Reservation_System.UI
 
 
         #region Account management panel
+        private void kirjauduUlosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+            LoginScreen l = new LoginScreen();
+            l.ShowDialog();
+        }
+        private void btn_AM_ChangePassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                User.User user = User.UserDataMapper.CreateFromDatabase(Program.user.username(), txt_AM_OldPW.Text);
 
+                if (txt_AM_NewPW.Text == txt_AM_NewPW_Confirm.Text && user != null)
+                {
+                    PasswordHash hash = new PasswordHash(txt_AM_NewPW.Text);
+                    byte[] hashBytes = hash.ToArray();
+
+                    using (MySqlConnection connection = Program.sql.MySqlConnection())
+                    {
+                        using (MySqlCommand cmd = connection.CreateCommand())
+                        {
+
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "UPDATE USERS SET U_PASSWORD =@newpassword where U_USERNAME=@user";
+                            cmd.Parameters.AddWithValue("@user", Program.user.username());
+                            cmd.Parameters.AddWithValue("@newpassword", hashBytes);
+
+                            connection.Open();
+                            cmd.ExecuteNonQuery();
+                            connection.Close();
+                            MessageBox.Show("Salasana vaihdettu");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Salasanat eivät täsmää");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nykyinen Salasana väärin" + ex.ToString());
+            }
+        }
 
         #endregion
 
 
         #region Item Management panel
+        
+        private void checklist_DeleteItem_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_CreateItem_Click(object sender, EventArgs e)
         {
             try
@@ -1372,7 +1665,8 @@ namespace Reservation_System.UI
                     }
                     connection.Close();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -1412,255 +1706,22 @@ namespace Reservation_System.UI
 
         #endregion
 
-      
+
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (exit == DialogResult.No);
         }
 
-        private void checklist_Reservation_SelectedValueChanged(object sender, EventArgs e)
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                txt_reservation_Itemtype.Text = ((User.Item)checklist_Reservation.SelectedItem).TYPE.ToString();
-                txt_reservation_Itemstate.Text = ((User.Item)checklist_Reservation.SelectedItem).STATE.ToString();
+            string dev = "Main Dev & Coder: Ville Kokkarinen\nEmail: kokkarinen.ville@gmail.com\nGithub: VilleKokkarinen\n\n";
+            string devteam = "Dev Team:\nArtur Motin - UI & Code \nAnton Happonen -UI & Documenting\nOtto Tirkkonen- UI & Documenting \nTomi Oksman - Documenting";
 
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
-                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_reservation_Itemtype.Text);
+            MessageBox.Show(dev + devteam);
+            
 
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string itemtype = (string)reader["IT_NAME"];
-                                txt_reservation_Itemtype.Text = itemtype;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IS_NAME FROM ITEMSTATE WHERE IS_ID =@ITEMSTATEID";
-                        ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_UserLoans_ItemType.Text);
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string itemstate = (string)reader["IS_NAME"];
-                                txt_reservation_Itemstate.Text = itemstate;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-         }
-
-        private void checklist_user_reservations_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                txt_reservation_Itemtype.Text = ((User.Item)checklist_user_reservations.SelectedItem).TYPE.ToString();
-                txt_reservation_Itemstate.Text = ((User.Item)checklist_user_reservations.SelectedItem).STATE.ToString();
-
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
-                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_reservation_Itemtype.Text);
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string itemtype = (string)reader["IT_NAME"];
-                                txt_reservation_Itemtype.Text = itemtype;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IS_NAME FROM ITEMSTATE WHERE IS_ID =@ITEMSTATEID";
-                        ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_UserLoans_ItemType.Text);
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string itemstate = (string)reader["IS_NAME"];
-                                txt_reservation_Itemstate.Text = itemstate;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+        
         }
-
-        private void checklist_Waiting_PendingLoans_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                txt_Waiting_LoanItemType.Text = ((User.Item)checklist_Waiting_PendingLoans.SelectedItem).TYPE.ToString();               
-                txt_Waiting_LoanItemID.Text = ((User.Item)checklist_Waiting_PendingLoans.SelectedItem).ID.ToString();
-
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT user.U_USERNAME, rr.RR_RETURNDATE FROM USERS user, RESERVATIONROWS rr WHERE RR_ITEM =@itemid AND RR_USER = user.U_ID";
-                        ItemType.Parameters.AddWithValue("@itemid", ((User.Item)checklist_Waiting_PendingLoans.SelectedItem).ID.ToString());
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string user = (string)reader["U_USERNAME"];
-                                DateTime date = (DateTime)reader["RR_RETURNDATE"];
-                                txt_Waiting_LoanUserName.Text = user;
-                                dtp_Waiting_LoanReturnDate.Value = date;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
-                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_Waiting_LoanItemType.Text);
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string itemtype = (string)reader["IT_NAME"];
-                                txt_Waiting_LoanItemType.Text = itemtype;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void checklist_Waiting_PendingReturns_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                txt_Waiting_ReturnItemType.Text = ((User.Item)checklist_Waiting_PendingReturns.SelectedItem).TYPE.ToString();
-                txt_Waiting_ReturnItemID.Text = ((User.Item)checklist_Waiting_PendingReturns.SelectedItem).ID.ToString();
-
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT user.U_USERNAME, rr.RR_RETURNDATE FROM USERS user, RESERVATIONROWS rr WHERE RR_ITEM =@itemid AND RR_USER = user.U_ID";
-                        ItemType.Parameters.AddWithValue("@itemid", ((User.Item)checklist_Waiting_PendingReturns.SelectedItem).ID.ToString());
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string user = (string)reader["U_USERNAME"];
-                                DateTime date = (DateTime)reader["RR_RETURNDATE"];
-                                txt_Waiting_ReturnUserName.Text = user;
-                                dtp_Waiting_ReturnReturnDate.Value = date;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-
-                using (MySqlConnection connection = Program.sql.MySqlConnection())
-                {
-                    using (MySqlCommand ItemType = connection.CreateCommand())
-                    {
-                        ItemType.CommandType = CommandType.Text;
-                        ItemType.CommandText = "SELECT IT_NAME FROM ITEMTYPE WHERE IT_ID =@ITEMTYPEID";
-                        ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_Waiting_ReturnItemType.Text);
-
-                        connection.Open();
-                        MySqlDataReader reader = ItemType.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                string itemtype = (string)reader["IT_NAME"];
-                                txt_Waiting_ReturnItemType.Text = itemtype;
-                            }
-                        }
-                    }
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void checklist_DeleteItem_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

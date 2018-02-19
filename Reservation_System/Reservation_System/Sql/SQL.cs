@@ -63,7 +63,5 @@ namespace Reservation_System
             MySqlCommand cmd = new MySqlCommand("Select * from ITEMS ORDER BY I_ID", connection);
             return cmd;
         }
-
-
     }
 }

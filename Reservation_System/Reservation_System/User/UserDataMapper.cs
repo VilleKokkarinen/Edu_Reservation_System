@@ -51,9 +51,9 @@ namespace Reservation_System.User
         private static readonly string _connectionString = "SERVER=10.12.132.34;DATABASE=Ville_Kokkarinen_OHTU;UID=p119980;PASSWORD=12345;";
 
         public static User CreateFromDatabase(string username, string password)
-        {        
+        {
             try
-            {               
+            {
                 // This is our connection to the database
                 using (MySqlConnection connection = new MySqlConnection(_connectionString))
                 {
@@ -65,8 +65,8 @@ namespace Reservation_System.User
                     {
                         UserLogin.CommandType = CommandType.Text;
                         UserLogin.CommandText = "Select * from USERS where U_USERNAME=@user COLLATE latin1_general_cs";
-                        UserLogin.Parameters.AddWithValue("@user", username);                       
-                        
+                        UserLogin.Parameters.AddWithValue("@user", username);
+
                         // Use ExecuteReader when you expect the query to return a row, or rows
                         MySqlDataReader reader = UserLogin.ExecuteReader();
 
@@ -81,17 +81,18 @@ namespace Reservation_System.User
 
                         byte[] hashBytes = (byte[])reader["U_PASSWORD"];
                         PasswordHash hash = new PasswordHash(hashBytes);
-                        if (!hash.Verify(password))                        
+                        if (!hash.Verify(password))
                             throw new UnauthorizedAccessException();
-                                            
+
                         // Create the User object, with the saved game values
                         User = User.CreateUser(username, (int)reader["U_ID"], (int)reader["U_ACCOUNTTYPE"]);
-                    }                    
+                    }
                     return User;
                 }
             }
             catch (Exception)
-            {            }
+            { }
+
             return null;
         }        
     }
