@@ -121,6 +121,7 @@
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
+            this.check2 = new System.Windows.Forms.CheckBox();
             this.check_1 = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_ReturnUserName = new System.Windows.Forms.TextBox();
@@ -1088,6 +1089,7 @@
             // 
             // Waiting_Events_panel
             // 
+            this.Waiting_Events_panel.Controls.Add(this.check2);
             this.Waiting_Events_panel.Controls.Add(this.check_1);
             this.Waiting_Events_panel.Controls.Add(this.groupBox15);
             this.Waiting_Events_panel.Controls.Add(this.groupBox16);
@@ -1102,6 +1104,14 @@
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
+            // 
+            // check2
+            // 
+            resources.ApplyResources(this.check2, "check2");
+            this.check2.ForeColor = System.Drawing.SystemColors.Control;
+            this.check2.Name = "check2";
+            this.check2.UseVisualStyleBackColor = true;
+            this.check2.CheckedChanged += new System.EventHandler(this.check2_CheckedChanged);
             // 
             // check_1
             // 
@@ -1828,5 +1838,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox check_1;
+        private System.Windows.Forms.CheckBox check2;
     }
 }

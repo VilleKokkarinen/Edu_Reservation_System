@@ -2253,11 +2253,41 @@
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="check2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="check2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="check2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 8</value>
+  </data>
+  <data name="check2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 17</value>
+  </data>
+  <data name="check2.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="check2.Text" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="&gt;&gt;check2.Name" xml:space="preserve">
+    <value>check2</value>
+  </data>
+  <data name="&gt;&gt;check2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check2.Parent" xml:space="preserve">
+    <value>Waiting_Events_panel</value>
+  </data>
+  <data name="&gt;&gt;check2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="check_1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="check_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 8</value>
+    <value>7, 8</value>
   </data>
   <data name="check_1.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
@@ -2278,7 +2308,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;check_1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txt_Waiting_ReturnUserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 27</value>
@@ -2326,7 +2356,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox15.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="combobox_waiting_ReturnItemtype.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2401,7 +2431,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox16.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnAcceptReturn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2431,7 +2461,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="dtp_Waiting_ReturnReturnDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2524,7 +2554,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox17.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="checklist_Waiting_PendingReturns.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2551,7 +2581,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;checklist_Waiting_PendingReturns.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnDenyLoan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2581,7 +2611,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txt_Waiting_LoanUserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 27</value>
@@ -2629,7 +2659,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="combobox_waiting_LoanItemtype.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2704,7 +2734,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnAcceptLoan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2734,7 +2764,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txt_Waiting_LoanItemType.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 25</value>
@@ -2827,7 +2857,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="checklist_Waiting_PendingLoans.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2854,7 +2884,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;checklist_Waiting_PendingLoans.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="Waiting_Events_panel.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 80</value>

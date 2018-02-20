@@ -1690,10 +1690,8 @@ namespace Reservation_System.UI
             if (check_1.Checked == true)
             {
                 for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
-                {
-                   
+                { 
                     checklist_Waiting_PendingLoans.SetItemChecked(i, true);
-                    
                 }
             }
             else if (check_1.Checked == false)
@@ -1708,6 +1706,24 @@ namespace Reservation_System.UI
         private void checklist_Waiting_PendingLoans_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void check2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check2.Checked == true)
+            {
+                for (int i = 0; i < checklist_Waiting_PendingReturns.Items.Count; i++)
+                {
+                    checklist_Waiting_PendingReturns.SetItemChecked(i, true);
+                }
+            }
+            else if (check2.Checked == false)
+            {
+                for (int i = 0; i < checklist_Waiting_PendingReturns.Items.Count; i++)
+                {
+                    checklist_Waiting_PendingReturns.SetItemChecked(i, false);
+                }
+            }
         }
     }
 }
