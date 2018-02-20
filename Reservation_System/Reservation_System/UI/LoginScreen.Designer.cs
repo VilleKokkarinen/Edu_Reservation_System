@@ -40,12 +40,10 @@
             // 
             // txt_username
             // 
-            this.txt_username.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_username.Location = new System.Drawing.Point(8, 28);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(194, 20);
-            this.txt_username.TabIndex = 1;
-            this.txt_username.Text = "username";
+            this.txt_username.Size = new System.Drawing.Size(265, 20);
+            this.txt_username.TabIndex = 0;
             // 
             // txt_password
             // 
