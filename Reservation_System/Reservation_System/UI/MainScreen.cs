@@ -1392,7 +1392,6 @@ namespace Reservation_System.UI
                 {
                     using (MySqlCommand cmd = Program.sql.MySqlAcceptPendingReturns(connection))
                     {
-                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
                         cmd.Parameters.AddWithValue("@itemid", item.ID);
 
                         connection.Open();
@@ -1486,22 +1485,26 @@ namespace Reservation_System.UI
         {
             foreach (Item item in checklist_Waiting_PendingLoans.CheckedItems)
             {
-
                 using (MySqlConnection connection = Program.sql.MySqlConnection())
                 {
                     using (MySqlCommand cmd = Program.sql.MySqlAcceptPendingLoans(connection))
                     {
-                        cmd.Parameters.AddWithValue("@user", Program.user.userid());
-                        cmd.Parameters.AddWithValue("@itemid", item.ID);
-
-                        connection.Open();
-                        int result = cmd.ExecuteNonQuery();
-
-                        if (result < 0)
+                        try
                         {
-                            MessageBox.Show("Error in the system");
+                            cmd.Parameters.AddWithValue("@itemid", item.ID);
+
+                            connection.Open();
+                            int result = cmd.ExecuteNonQuery();
+
+                            if (result < 0)
+                            {
+                                MessageBox.Show("Error in the system");
+                            }
+                            connection.Close();
+                        }catch  (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
                         }
-                        connection.Close();
                     }
                 }
                 //Remove selected items from list // update list

@@ -160,7 +160,7 @@ namespace Reservation_System
 
         public MySqlCommand MySqlAcceptPendingReturns(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_RETURN = 0, RR_RETURNED = 1 WHERE RR_ITEM =@itemid AND RR_PENDING_RETURN = 1 AND RR_USER =@user", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_RETURN = 0, RR_RETURNED = 1 WHERE RR_ITEM =@itemid AND RR_PENDING_RETURN = 1", connection);
             return cmd;
         }
 
@@ -172,7 +172,7 @@ namespace Reservation_System
 
         public MySqlCommand MySqlAcceptPendingLoans(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1 AND RR_USER =@user", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1", connection);
             return cmd;
         }
 
