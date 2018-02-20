@@ -92,7 +92,6 @@ namespace Reservation_System.UI
                     int result = cmdnewpw.ExecuteNonQuery();
 
                     connection.Close();
-
                     if (result < 0)
                     {
                         MessageBox.Show("Error changing password");

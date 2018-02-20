@@ -481,10 +481,10 @@
     <value>Apua</value>
   </data>
   <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1168, 33</value>
+    <value>1328, 33</value>
   </data>
   <data name="menuStripZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 28</value>
+    <value>223, 28</value>
   </data>
   <data name="menuStripZ1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -907,7 +907,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Left_Button_Panel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="Separator_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -1345,7 +1345,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 62</value>
@@ -1690,7 +1690,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UserLoans_Panel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="checklist_DeleteItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2851,7 +2851,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Waiting_Events_panel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3232,7 +3232,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AccountManagement_Panel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3457,7 +3457,7 @@
     <value>6, 26</value>
   </data>
   <data name="txt_reservation_Itemtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>336, 26</value>
+    <value>143, 26</value>
   </data>
   <data name="txt_reservation_Itemtype.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3502,7 +3502,7 @@
     <value>252, 146</value>
   </data>
   <data name="groupBox25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 99</value>
+    <value>157, 99</value>
   </data>
   <data name="groupBox25.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -3571,7 +3571,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Reservation_Panel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>16</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -780,6 +780,7 @@
             // checklist_user_reservations
             // 
             this.checklist_user_reservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_user_reservations.CheckOnClick = true;
             resources.ApplyResources(this.checklist_user_reservations, "checklist_user_reservations");
             this.checklist_user_reservations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_user_reservations.FormattingEnabled = true;
@@ -857,6 +858,7 @@
             // Checklist_UserLoans_Items
             // 
             this.Checklist_UserLoans_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Checklist_UserLoans_Items.CheckOnClick = true;
             resources.ApplyResources(this.Checklist_UserLoans_Items, "Checklist_UserLoans_Items");
             this.Checklist_UserLoans_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Checklist_UserLoans_Items.FormattingEnabled = true;
@@ -1373,6 +1375,7 @@
             this.btn_AM_ChangeEmail.Transparent1 = 250;
             this.btn_AM_ChangeEmail.Transparent2 = 250;
             this.btn_AM_ChangeEmail.UseVisualStyleBackColor = false;
+            this.btn_AM_ChangeEmail.Click += new System.EventHandler(this.btn_AM_ChangeEmail_Click);
             // 
             // label3
             // 
@@ -1594,12 +1597,12 @@
             this.Controls.Add(this.Separator_Panel);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.Loan_Panel);
-            this.Controls.Add(this.Waiting_Events_panel);
-            this.Controls.Add(this.UserLoans_Panel);
-            this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.Reservation_Panel);
+            this.Controls.Add(this.UserLoans_Panel);
+            this.Controls.Add(this.AccountManagement_Panel);
+            this.Controls.Add(this.Waiting_Events_panel);
+            this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
