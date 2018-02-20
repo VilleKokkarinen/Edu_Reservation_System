@@ -121,6 +121,7 @@
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
+            this.check_1 = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_ReturnUserName = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
@@ -1087,6 +1088,7 @@
             // 
             // Waiting_Events_panel
             // 
+            this.Waiting_Events_panel.Controls.Add(this.check_1);
             this.Waiting_Events_panel.Controls.Add(this.groupBox15);
             this.Waiting_Events_panel.Controls.Add(this.groupBox16);
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptReturn);
@@ -1100,6 +1102,14 @@
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
+            // 
+            // check_1
+            // 
+            resources.ApplyResources(this.check_1, "check_1");
+            this.check_1.ForeColor = System.Drawing.SystemColors.Control;
+            this.check_1.Name = "check_1";
+            this.check_1.UseVisualStyleBackColor = true;
+            this.check_1.CheckedChanged += new System.EventHandler(this.check_1_CheckedChanged);
             // 
             // groupBox15
             // 
@@ -1324,6 +1334,7 @@
             this.checklist_Waiting_PendingLoans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Waiting_PendingLoans.FormattingEnabled = true;
             this.checklist_Waiting_PendingLoans.Name = "checklist_Waiting_PendingLoans";
+            this.checklist_Waiting_PendingLoans.SelectedIndexChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedIndexChanged);
             this.checklist_Waiting_PendingLoans.SelectedValueChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedValueChanged);
             // 
             // AccountManagement_Panel
@@ -1596,13 +1607,13 @@
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.Separator_Panel);
             this.Controls.Add(this.BottomPanel);
+            this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.AccountManagement_Panel);
-            this.Controls.Add(this.Waiting_Events_panel);
-            this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1644,6 +1655,7 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.Waiting_Events_panel.ResumeLayout(false);
+            this.Waiting_Events_panel.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
@@ -1815,5 +1827,6 @@
         private ShapedButton btn_AM_ChangeEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox check_1;
     }
 }
