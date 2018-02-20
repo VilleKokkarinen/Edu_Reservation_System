@@ -756,7 +756,7 @@
             this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
             this.shapedButton4.BorderWidth = 2;
             this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton4.ButtonText = "Peru lainaus";
+            this.shapedButton4.ButtonText = "Peru varaus";
             this.shapedButton4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.shapedButton4.FlatAppearance.BorderSize = 0;
             this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1597,9 +1597,9 @@
             this.Controls.Add(this.Separator_Panel);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Reservation_Panel);
-            this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Left_Button_Panel);
