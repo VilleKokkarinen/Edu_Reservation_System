@@ -58,7 +58,6 @@ namespace Reservation_System.UI
                 InitializeComponent();                       
                 Center();
                 language();
-               
 
                 if(Program.Settings.RememberUserName == true)
                 {
@@ -82,9 +81,10 @@ namespace Reservation_System.UI
 
             if (Program.user != null)
             {
-                this.Hide();
+                this.Close();
+                this.Dispose();
                 //UserInterFace.MainScreen();
-                Reservation_System.UI.MainScreen form = new MainScreen();
+                MainScreen form = new MainScreen();
                 form.ShowDialog();
 
             }
@@ -95,15 +95,8 @@ namespace Reservation_System.UI
         }
         
         private void btn_login_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                LoginUser();    
-                      
-            }catch
-            {
-              
-            }
+        {           
+          LoginUser();            
         }
 
         private void txt_password_Enabled(object sender, EventArgs e)
