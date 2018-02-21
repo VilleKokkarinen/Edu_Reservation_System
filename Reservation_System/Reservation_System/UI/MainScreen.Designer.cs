@@ -38,7 +38,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._MinButton = new Reservation_System.UI.ButtonZ();
             this._MaxButton = new Reservation_System.UI.MinMaxButton();
-            this.WindowTextLabel = new System.Windows.Forms.Label();
             this._CloseButton = new Reservation_System.UI.ButtonZ();
             this.menuStripZ1 = new Reservation_System.UI.MenuStripZ();
             this.toolstripaccount = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +51,7 @@
             this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WindowTextLabel = new System.Windows.Forms.Label();
             this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
             this.BtmPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -254,9 +254,9 @@
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Controls.Add(this._MinButton);
             this.TopPanel.Controls.Add(this._MaxButton);
-            this.TopPanel.Controls.Add(this.WindowTextLabel);
             this.TopPanel.Controls.Add(this._CloseButton);
             this.TopPanel.Controls.Add(this.menuStripZ1);
+            this.TopPanel.Controls.Add(this.WindowTextLabel);
             resources.ApplyResources(this.TopPanel, "TopPanel");
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
@@ -300,15 +300,6 @@
             this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
             this._MaxButton.UseVisualStyleBackColor = true;
             this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
-            // 
-            // WindowTextLabel
-            // 
-            resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
-            this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
-            this.WindowTextLabel.Name = "WindowTextLabel";
-            this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
-            this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
-            this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
             // 
             // _CloseButton
             // 
@@ -409,6 +400,7 @@
             this.onlineHelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
             resources.ApplyResources(this.onlineHelpToolStripMenuItem, "onlineHelpToolStripMenuItem");
+            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -416,6 +408,15 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // WindowTextLabel
+            // 
+            resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
+            this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
+            this.WindowTextLabel.Name = "WindowTextLabel";
+            this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
+            this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
+            this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
             // 
             // RightBottomPanel_1
             // 
@@ -640,6 +641,7 @@
             // 
             resources.ApplyResources(this.txt_LoanItem_SearchItem, "txt_LoanItem_SearchItem");
             this.txt_LoanItem_SearchItem.Name = "txt_LoanItem_SearchItem";
+            this.txt_LoanItem_SearchItem.TextChanged += new System.EventHandler(this.txt_LoanItem_SearchItem_TextChanged);
             // 
             // btn_Loan_LoanItem
             // 
@@ -1334,7 +1336,6 @@
             this.checklist_Waiting_PendingLoans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Waiting_PendingLoans.FormattingEnabled = true;
             this.checklist_Waiting_PendingLoans.Name = "checklist_Waiting_PendingLoans";
-            this.checklist_Waiting_PendingLoans.SelectedIndexChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedIndexChanged);
             this.checklist_Waiting_PendingLoans.SelectedValueChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedValueChanged);
             // 
             // AccountManagement_Panel
@@ -1593,24 +1594,24 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.LeftTopPanel_2);
             this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.LeftTopPanel_1);
+            this.Controls.Add(this.LeftTopPanel_2);
+            this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.RightTopPanel_2);
             this.Controls.Add(this.RightTopPanel_1);
+            this.Controls.Add(this.TopBorderPanel);
+            this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftBottomPanel_2);
             this.Controls.Add(this.LeftBottomPanel_1);
             this.Controls.Add(this.RightBottomPanel_2);
             this.Controls.Add(this.RightBottomPanel_1);
-            this.Controls.Add(this.TopBorderPanel);
-            this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.Separator_Panel);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Loan_Panel);
+            this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.AccountManagement_Panel);

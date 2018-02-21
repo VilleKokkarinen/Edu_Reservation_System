@@ -121,7 +121,7 @@ namespace Reservation_System.UI
         {
             if (Keyboard.IsKeyDown(Key.Enter))
             {
-                btn_login.PerformClick();
+                LoginUser();
             } 
         }
 

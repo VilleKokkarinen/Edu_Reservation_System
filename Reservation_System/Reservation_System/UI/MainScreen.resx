@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopBorderPanel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>6</value>
   </data>
   <data name="RightPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -166,13 +166,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="LeftPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="LeftPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 21</value>
+    <value>0, 20</value>
   </data>
   <data name="LeftPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 859</value>
@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="BottomPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -318,39 +318,6 @@
   <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="WindowTextLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="WindowTextLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Copperplate Gothic Bold, 36pt, style=Italic</value>
-  </data>
-  <data name="WindowTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="WindowTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 9</value>
-  </data>
-  <data name="WindowTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 53</value>
-  </data>
-  <data name="WindowTextLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="WindowTextLabel.Text" xml:space="preserve">
-    <value>Varaus - järjestelmä</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
-    <value>WindowTextLabel</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="_CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -388,7 +355,7 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="menuStripZ1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -502,6 +469,39 @@
     <value>TopPanel</value>
   </data>
   <data name="&gt;&gt;menuStripZ1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="WindowTextLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WindowTextLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Copperplate Gothic Bold, 36pt, style=Italic</value>
+  </data>
+  <data name="WindowTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="WindowTextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 9</value>
+  </data>
+  <data name="WindowTextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 53</value>
+  </data>
+  <data name="WindowTextLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="WindowTextLabel.Text" xml:space="preserve">
+    <value>Varaus - järjestelmä</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
+    <value>WindowTextLabel</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="TopPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -526,7 +526,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="RightBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -550,7 +550,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="BtmPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -598,7 +598,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RightBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="LeftBottomPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -622,7 +622,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="LeftBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -646,7 +646,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftBottomPanel_2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="RightTopPanel_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -715,7 +715,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="LeftTopPanel_2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -736,7 +736,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LeftTopPanel_2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Left_Button_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -1345,7 +1345,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 62</value>
@@ -2878,7 +2878,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Waiting_Events_panel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

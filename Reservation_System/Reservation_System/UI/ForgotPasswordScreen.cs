@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net.Mail;
 
 using MySql.Data.MySqlClient;
+using Reservation_System.User;
 
 namespace Reservation_System.UI
 {
@@ -30,8 +31,8 @@ namespace Reservation_System.UI
                 lbl_username.Text = "Käyttäjänimi";
             }
         }
-        string newpassword = "password1";
-
+        string newpassword = "";
+        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZqwertyuiopasdfghjklzxcvbnm".ToCharArray();
         public ForgotPasswordScreen()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace Reservation_System.UI
             {
 
                 MySqlConnection connection = Program.sql.MySqlConnection();
-                MySqlCommand cmd = Program.sql.MySqlLogin(txt_username.Text, txt_email.Text, connection);
+                MySqlCommand cmd = Program.sql.SelectUserByUserNameAndEmail(txt_username.Text, txt_email.Text, connection);
 
                 connection.Open();
 
@@ -61,19 +62,30 @@ namespace Reservation_System.UI
                 if (count == 1)
                 {                   
                     this.Hide();
-                    changepassword();
+
+                    Random r = new Random();
+
+                    for(int i = 0; i < 7; i ++)
+                    {
+                        newpassword += alphabet[r.Next(0,alphabet.Count()-1)];
+                    }
 
                     Email.Email email = new Email.Email(txt_email.Text, "Password reset request", "You've requested a password change.\n" +
-                        "Here is your new password:" + newpassword);
+                        "Here is your new password:" + newpassword + "\n" +
+                        "Please change your password ASAP, when logging in!");
+                    email.send();
+                    changepassword();
+
+                    
                 }
                 else
                 {
                     MessageBox.Show("No user found with provided information");
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //do something with the error code ex
+                MessageBox.Show(ex.ToString());
             }
 
 
@@ -82,10 +94,12 @@ namespace Reservation_System.UI
 
         private void changepassword()
         {
+            PasswordHash hash = new PasswordHash(newpassword);
+            byte[] hashBytes = hash.ToArray();
 
             using (MySqlConnection connection = Program.sql.MySqlConnection())
             {
-                using (MySqlCommand cmdnewpw = Program.sql.MySqlLogin(txt_username.Text, newpassword, connection))
+                using (MySqlCommand cmdnewpw = Program.sql.MySqlChangePassword(txt_username.Text, hashBytes, connection))
                 {
                     connection.Open();
 

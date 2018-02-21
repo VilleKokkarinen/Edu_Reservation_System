@@ -16,13 +16,17 @@ namespace Reservation_System.UI
 {
     public partial class MainScreen : Form
     {
-
+        TypeAssistant assistant;
         public MainScreen()
         {
             InitializeComponent();
+            assistant = new TypeAssistant();
+            assistant.Idled += assistant_Idled;
+
             toolstripaccount.Text = User.User._username;
-            GetLoans();
+            GetLoans();           
             try
+
             {
                 Update_ReservationsToLoans();
             }
@@ -38,7 +42,14 @@ namespace Reservation_System.UI
             }
 
         }
-
+        void assistant_Idled(object sender, EventArgs e)
+        {
+            this.Invoke(
+            new MethodInvoker(() =>
+            {
+                MessageBox.Show("Input ended");
+            }));
+        }
         private void BlackForm_Load(object sender, EventArgs e)
         {
             //_MaxButton.PerformClick();
@@ -567,7 +578,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Loan_Panel.Visible = true;
-            Controls.SetChildIndex(Loan_Panel, Controls.Count - 8);
+            Controls.SetChildIndex(Loan_Panel, Controls.Count - 7);
             itemtypes();
             AvailableItems();
         }
@@ -584,7 +595,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             UserLoans_Panel.Visible = true;
-            Controls.SetChildIndex(UserLoans_Panel, Controls.Count - 8);
+            Controls.SetChildIndex(UserLoans_Panel, Controls.Count - 7);
             itemtypes();
             GetLoans();
             GetReservations();
@@ -602,7 +613,7 @@ namespace Reservation_System.UI
             btn_UsersLoans.ChangeColorMouseHC = true;
 
             Reservation_Panel.Visible = true;
-            Controls.SetChildIndex(Reservation_Panel, Controls.Count - 8);
+            Controls.SetChildIndex(Reservation_Panel, Controls.Count - 7);
             AvailableItems();
             itemtypes();
         }
@@ -621,7 +632,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Waiting_Events_panel.Visible = true;
-            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count - 8);
+            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count - 7);
             try
             {
                 UpdatePendingLoansAndReturns();
@@ -653,7 +664,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Settings_Panel.Visible = true;
-            Controls.SetChildIndex(Settings_Panel, Controls.Count - 8);
+            Controls.SetChildIndex(Settings_Panel, Controls.Count - 7);
         }
         private void toolStripItemManagement_Click(object sender, EventArgs e)
         {
@@ -666,7 +677,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Item_Management.Visible = true;
-            Controls.SetChildIndex(Item_Management, Controls.Count - 8);
+            Controls.SetChildIndex(Item_Management, Controls.Count - 7);
         }
 
         private void ToolStripAccountManagement_Click(object sender, EventArgs e)
@@ -681,7 +692,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             AccountManagement_Panel.Visible = true;
-            Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 8);
+            Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 7);
         }
         #endregion
 
@@ -1221,6 +1232,26 @@ namespace Reservation_System.UI
 
         #region Pending loans and returns
 
+        private void check_1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_1.Checked == true)
+            {
+                for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
+                {
+
+                    checklist_Waiting_PendingLoans.SetItemChecked(i, true);
+
+                }
+            }
+            else if (check_1.Checked == false)
+            {
+                for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
+                {
+                    checklist_Waiting_PendingLoans.SetItemChecked(i, false);
+                }
+            }
+        }
+
         private void checklist_Waiting_PendingLoans_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -1409,6 +1440,7 @@ namespace Reservation_System.UI
             MessageBox.Show("reservation(s) Accepted succesfully");
             UpdatePendingLoansAndReturns();
         }
+
         private void btnAcceptReturn_Click(object sender, EventArgs e)
         {
             try
@@ -1481,6 +1513,7 @@ namespace Reservation_System.UI
             MessageBox.Show("reservation(s) Denied Succesfully");
             UpdatePendingLoansAndReturns();
         }
+
         private void Accept_Pending_Loans()
         {
             foreach (Item item in checklist_Waiting_PendingLoans.CheckedItems)
@@ -1512,6 +1545,7 @@ namespace Reservation_System.UI
             MessageBox.Show("reservation(s) Accepted succesfully");
             UpdatePendingLoansAndReturns();
         }
+
         private void combobox_waiting_LoanItemtype_SelectedValueChanged(object sender, EventArgs e)
         {
             foreach (Item item in checklist_Waiting_PendingLoans.Items)
@@ -1683,34 +1717,18 @@ namespace Reservation_System.UI
             string devteam = "Dev Team:\nArtur Motin - UI & Code \nAnton Happonen -UI & Documenting\nOtto Tirkkonen- UI & Documenting \nTomi Oksman - Documenting";
 
             MessageBox.Show(dev + devteam);
-            
+        }
 
         
+
+        private void onlineHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/VilleKokkarinen/Edu_Reservation_System");
         }
 
-        private void check_1_CheckedChanged(object sender, EventArgs e)
+        private void txt_LoanItem_SearchItem_TextChanged(object sender, EventArgs e)
         {
-            if (check_1.Checked == true)
-            {
-                for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
-                {
-                   
-                    checklist_Waiting_PendingLoans.SetItemChecked(i, true);
-                    
-                }
-            }
-            else if (check_1.Checked == false)
-            {
-                for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
-                {                    
-                    checklist_Waiting_PendingLoans.SetItemChecked(i, false);
-                }
-            }
-        }
-
-        private void checklist_Waiting_PendingLoans_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            assistant.TextChanged();
         }
     }
 }

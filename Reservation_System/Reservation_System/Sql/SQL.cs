@@ -49,9 +49,9 @@ namespace Reservation_System
 
         public MySqlCommand MySqlChangeEmail(string user, string newemail, MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE USERS SET U_PASSWORD =@newpassword where U_USERNAME=@user", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE USERS SET U_EMAIL =@newemail where U_USERNAME=@user", connection);
             cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@newpassword", newemail);
+            cmd.Parameters.AddWithValue("@newemail", newemail);
 
             return cmd;
         }
