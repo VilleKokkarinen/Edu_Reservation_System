@@ -1252,6 +1252,25 @@ namespace Reservation_System.UI
             }
         }
 
+        private void check2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check2.Checked == true)
+            {
+                for (int i = 0; i < checklist_Waiting_PendingReturns.Items.Count; i++)
+                {
+
+                    checklist_Waiting_PendingReturns.SetItemChecked(i, true);
+
+                }
+            }
+            else if (check2.Checked == false)
+            {
+                for (int i = 0; i < checklist_Waiting_PendingReturns.Items.Count; i++)
+                {
+                    checklist_Waiting_PendingReturns.SetItemChecked(i, false);
+                }
+            }
+        }
         private void checklist_Waiting_PendingLoans_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -1730,5 +1749,6 @@ namespace Reservation_System.UI
         {
             assistant.TextChanged();
         }
+
     }
 }

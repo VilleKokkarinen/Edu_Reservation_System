@@ -1620,8 +1620,8 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
+            this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.AccountManagement_Panel);
