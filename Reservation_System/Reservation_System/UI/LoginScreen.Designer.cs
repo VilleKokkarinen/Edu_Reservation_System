@@ -40,22 +40,23 @@
             // 
             // txt_username
             // 
+            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_username.Location = new System.Drawing.Point(8, 28);
+            this.txt_username.Location = new System.Drawing.Point(8, 29);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(194, 20);
             this.txt_username.TabIndex = 1;
-            this.txt_username.Text = "username";
             // 
             // txt_password
             // 
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_password.Location = new System.Drawing.Point(8, 53);
+            this.txt_password.Location = new System.Drawing.Point(8, 55);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(194, 20);
             this.txt_password.TabIndex = 1;
             this.txt_password.Text = "password";
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enabled);
             this.txt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyDown);
             // 
@@ -72,7 +73,7 @@
             // chkbox_remember_user
             // 
             this.chkbox_remember_user.AutoSize = true;
-            this.chkbox_remember_user.Location = new System.Drawing.Point(8, 79);
+            this.chkbox_remember_user.Location = new System.Drawing.Point(8, 85);
             this.chkbox_remember_user.Name = "chkbox_remember_user";
             this.chkbox_remember_user.Size = new System.Drawing.Size(100, 17);
             this.chkbox_remember_user.TabIndex = 4;

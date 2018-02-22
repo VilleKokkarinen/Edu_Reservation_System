@@ -146,5 +146,10 @@ namespace Reservation_System.UI
         {
             //language();
         }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
