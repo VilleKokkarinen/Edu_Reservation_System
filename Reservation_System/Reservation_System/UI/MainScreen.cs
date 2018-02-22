@@ -1754,5 +1754,15 @@ namespace Reservation_System.UI
         {
             Process.Start("https://edusakky-my.sharepoint.com/:b:/g/personal/p119993_edu_sakky_fi/EeLoadLzgRJDu3ND1I_EDeoBCEAbAT-dpT7fRB3BsOXBDQ?e=4ITYER");
         }
+
+        private void WindowTextLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Waiting_Events_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
