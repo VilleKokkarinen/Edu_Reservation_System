@@ -395,6 +395,7 @@
             this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
             resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
             // 
             // onlineHelpToolStripMenuItem
             // 

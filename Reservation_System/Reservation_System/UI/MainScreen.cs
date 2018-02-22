@@ -1750,5 +1750,9 @@ namespace Reservation_System.UI
             assistant.TextChanged();
         }
 
+        private void helpContentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://edusakky-my.sharepoint.com/:b:/g/personal/p119993_edu_sakky_fi/EeLoadLzgRJDu3ND1I_EDeoBCEAbAT-dpT7fRB3BsOXBDQ?e=4ITYER");
+        }
     }
 }
