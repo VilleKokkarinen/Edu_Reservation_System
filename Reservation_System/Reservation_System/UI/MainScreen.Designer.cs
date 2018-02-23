@@ -174,7 +174,6 @@
             this.txt_reservation_Itemtype = new System.Windows.Forms.TextBox();
             this.txt_reservation_Itemstate = new System.Windows.Forms.TextBox();
             this.checklist_Reservation = new System.Windows.Forms.CheckedListBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -208,7 +207,6 @@
             this.Reservation_Panel.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -1288,7 +1286,6 @@
             // 
             resources.ApplyResources(this.txt_Waiting_LoanItemsearch, "txt_Waiting_LoanItemsearch");
             this.txt_Waiting_LoanItemsearch.Name = "txt_Waiting_LoanItemsearch";
-            this.txt_Waiting_LoanItemsearch.TextChanged += new System.EventHandler(this.txt_Waiting_LoanItemsearch_TextChanged);
             // 
             // btnAcceptLoan
             // 
@@ -1696,7 +1693,6 @@
             this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1847,6 +1843,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox check_1;
         private System.Windows.Forms.CheckBox check2;
-        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
