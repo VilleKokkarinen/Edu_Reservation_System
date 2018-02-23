@@ -70,13 +70,13 @@ namespace Reservation_System.UI
                         newpassword += alphabet[r.Next(0,alphabet.Count()-1)];
                     }
 
-                    Email.Email email = new Email.Email(txt_email.Text, "Password reset request", "You've requested a password change.\n" +
-                        "Here is your new password:" + newpassword + "\n" +
-                        "Please change your password ASAP, when logging in!");
-                    email.send();
-                    changepassword();
-
-                    
+                    Email.Email email = new Email.Email(txt_email.Text, "Password reset request", "Your account "+ txt_username.Text + "'s password has had a reset request.\n\n\n" +
+                        "New randomly generated password: " + newpassword + "\n\n" +
+                        "Change the password ASAP, during first login.\n\n\n" +
+                        "Email sent from -Insert Software name here-\n" +
+                        "@ " + DateTime.Now + " " + TimeZone.CurrentTimeZone.StandardName);
+                        email.send();
+                        changepassword();
                 }
                 else
                 {
