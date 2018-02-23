@@ -698,8 +698,12 @@ namespace Reservation_System.UI
             AccountManagement_Panel.Visible = true;
             Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 7);
 
-
-            GetUsers();
+            if(Program.user.accounttype() >= 3)
+            {
+                GetUsers();
+                groupBox20.Visible = true;
+            }
+           
 
         }
 
@@ -1077,6 +1081,11 @@ namespace Reservation_System.UI
 
         #region Returning loan panel
         
+        private void btnCancelReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void checklist_user_reservations_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -1662,18 +1671,21 @@ namespace Reservation_System.UI
                             cmd.ExecuteNonQuery();
                             connection.Close();
                             MessageBox.Show("Salasana vaihdettu");
+                            txt_AM_NewPW.Clear();
+                            txt_AM_NewPW_Confirm.Clear();
+                            txt_AM_OldPW.Clear();
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Salasanat eivät täsmää");
+                    MessageBox.Show("Salasanat eivät täsmää, tai nykyinen salasana on väärin");
                 }
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Nykyinen Salasana väärin" + ex.ToString());
+                MessageBox.Show("Salasanat eivät täsmää, tai nykyinen salasana on väärin \n\n" + ex.ToString());
             }
         }
 
@@ -1780,6 +1792,11 @@ namespace Reservation_System.UI
         {
             assistant.TextChanged();
         }
+        private void txt_Waiting_LoanItemsearch_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+     
     }
 }

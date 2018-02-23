@@ -88,7 +88,7 @@
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.txt_user_reservations_enddate = new System.Windows.Forms.TextBox();
             this.txt_user_reservations_startdate = new System.Windows.Forms.TextBox();
-            this.shapedButton4 = new Reservation_System.UI.ShapedButton();
+            this.btnCancelReservation = new Reservation_System.UI.ShapedButton();
             this.checklist_user_reservations = new System.Windows.Forms.CheckedListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
@@ -731,7 +731,7 @@
             // UserLoans_Panel
             // 
             this.UserLoans_Panel.Controls.Add(this.groupBox26);
-            this.UserLoans_Panel.Controls.Add(this.shapedButton4);
+            this.UserLoans_Panel.Controls.Add(this.btnCancelReservation);
             this.UserLoans_Panel.Controls.Add(this.checklist_user_reservations);
             this.UserLoans_Panel.Controls.Add(this.groupBox4);
             this.UserLoans_Panel.Controls.Add(this.btn_UserLoans_ReturnItem);
@@ -759,32 +759,33 @@
             resources.ApplyResources(this.txt_user_reservations_startdate, "txt_user_reservations_startdate");
             this.txt_user_reservations_startdate.Name = "txt_user_reservations_startdate";
             // 
-            // shapedButton4
+            // btnCancelReservation
             // 
-            this.shapedButton4.BackColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.BorderWidth = 2;
-            this.shapedButton4.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.shapedButton4.ButtonText = "Peru lainaus";
-            this.shapedButton4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.shapedButton4.FlatAppearance.BorderSize = 0;
-            this.shapedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.shapedButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.shapedButton4, "shapedButton4");
-            this.shapedButton4.ForeColor = System.Drawing.Color.White;
-            this.shapedButton4.GradientAngle = 90;
-            this.shapedButton4.MouseClickColor1 = System.Drawing.Color.Black;
-            this.shapedButton4.MouseClickColor2 = System.Drawing.Color.Black;
-            this.shapedButton4.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.shapedButton4.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.shapedButton4.Name = "shapedButton4";
-            this.shapedButton4.ShowButtontext = true;
-            this.shapedButton4.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.shapedButton4.TextLocation_X = 13;
-            this.shapedButton4.TextLocation_Y = 16;
-            this.shapedButton4.Transparent1 = 250;
-            this.shapedButton4.Transparent2 = 250;
-            this.shapedButton4.UseVisualStyleBackColor = false;
+            this.btnCancelReservation.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.BorderWidth = 2;
+            this.btnCancelReservation.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnCancelReservation.ButtonText = "Peru varaus";
+            this.btnCancelReservation.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelReservation.FlatAppearance.BorderSize = 0;
+            this.btnCancelReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnCancelReservation, "btnCancelReservation");
+            this.btnCancelReservation.ForeColor = System.Drawing.Color.White;
+            this.btnCancelReservation.GradientAngle = 90;
+            this.btnCancelReservation.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnCancelReservation.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnCancelReservation.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelReservation.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelReservation.Name = "btnCancelReservation";
+            this.btnCancelReservation.ShowButtontext = true;
+            this.btnCancelReservation.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelReservation.TextLocation_X = 13;
+            this.btnCancelReservation.TextLocation_Y = 16;
+            this.btnCancelReservation.Transparent1 = 250;
+            this.btnCancelReservation.Transparent2 = 250;
+            this.btnCancelReservation.UseVisualStyleBackColor = false;
+            this.btnCancelReservation.Click += new System.EventHandler(this.btnCancelReservation_Click);
             // 
             // checklist_user_reservations
             // 
@@ -1668,11 +1669,11 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
-            this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Reservation_Panel);
-            this.Controls.Add(this.UserLoans_Panel);
+            this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1867,7 +1868,7 @@
         private System.Windows.Forms.CheckedListBox checklist_Reservation;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtp_Reserve_EndDate;
-        private ShapedButton shapedButton4;
+        private ShapedButton btnCancelReservation;
         private System.Windows.Forms.CheckedListBox checklist_user_reservations;
         private System.Windows.Forms.GroupBox groupBox26;
         private System.Windows.Forms.TextBox txt_user_reservations_enddate;
