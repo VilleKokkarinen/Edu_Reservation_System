@@ -16,7 +16,11 @@ namespace Reservation_System.UI
 {
     public partial class MainScreen : Form
     {
+        private MySqlDataAdapter mydtadp = new MySqlDataAdapter();
+        private BindingSource bindingSource1 = new BindingSource();
         TypeAssistant assistant;
+
+
         public MainScreen()
         {
             InitializeComponent();
@@ -693,7 +697,34 @@ namespace Reservation_System.UI
 
             AccountManagement_Panel.Visible = true;
             Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 7);
+
+
+            GetUsers();
+
         }
+
+        private void GetUsers()
+        {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand availableItems = Program.sql.MySqlGetAllUsers(connection))
+                {
+                    connection.Open();
+
+                    MySqlCommandBuilder cmbl;
+                    mydtadp.SelectCommand = new MySqlCommand("select U_ID, U_FIRST_NAME, U_LAST_NAME, U_EMAIL,U_USERNAME, U_ACCOUNTTYPE from USERS", connection);
+                    cmbl = new MySqlCommandBuilder(mydtadp);
+
+                    DataTable table = new DataTable();
+                    mydtadp.Fill(table);
+
+                    bindingSource1.DataSource = table;
+                    datagrid_Users.DataSource = bindingSource1;
+                }
+                connection.Close();
+            }
+        }
+
         #endregion
 
 

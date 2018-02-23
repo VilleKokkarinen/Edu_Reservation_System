@@ -47,7 +47,7 @@ namespace Reservation_System.UI
             {
 
                 MySqlConnection connection = Program.sql.MySqlConnection();
-                MySqlCommand cmd = Program.sql.SelectUserByUserNameAndEmail(txt_username.Text, txt_email.Text, connection);
+                MySqlCommand cmd = Program.sql.MySqlSelectUserByUserNameAndEmail(txt_username.Text, txt_email.Text, connection);
 
                 connection.Open();
 

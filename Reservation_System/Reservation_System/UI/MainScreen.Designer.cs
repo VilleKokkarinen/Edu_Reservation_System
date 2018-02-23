@@ -147,6 +147,9 @@
             this.dtp_Waiting_LoanReturnDate = new System.Windows.Forms.DateTimePicker();
             this.checklist_Waiting_PendingLoans = new System.Windows.Forms.CheckedListBox();
             this.AccountManagement_Panel = new System.Windows.Forms.Panel();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.datagrid_Users = new System.Windows.Forms.DataGridView();
+            this.btn_UpdateUserDetails = new Reservation_System.UI.ShapedButton();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_AM_ChangeEmail = new Reservation_System.UI.ShapedButton();
@@ -202,6 +205,8 @@
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.AccountManagement_Panel.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Users)).BeginInit();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.Reservation_Panel.SuspendLayout();
@@ -1350,10 +1355,53 @@
             // 
             // AccountManagement_Panel
             // 
+            this.AccountManagement_Panel.Controls.Add(this.groupBox20);
             this.AccountManagement_Panel.Controls.Add(this.groupBox19);
             this.AccountManagement_Panel.Controls.Add(this.groupBox18);
             resources.ApplyResources(this.AccountManagement_Panel, "AccountManagement_Panel");
             this.AccountManagement_Panel.Name = "AccountManagement_Panel";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.datagrid_Users);
+            this.groupBox20.Controls.Add(this.btn_UpdateUserDetails);
+            resources.ApplyResources(this.groupBox20, "groupBox20");
+            this.groupBox20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.TabStop = false;
+            // 
+            // datagrid_Users
+            // 
+            this.datagrid_Users.BackgroundColor = System.Drawing.Color.White;
+            this.datagrid_Users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.datagrid_Users, "datagrid_Users");
+            this.datagrid_Users.Name = "datagrid_Users";
+            // 
+            // btn_UpdateUserDetails
+            // 
+            this.btn_UpdateUserDetails.BackColor = System.Drawing.Color.Transparent;
+            this.btn_UpdateUserDetails.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_UpdateUserDetails.BorderWidth = 2;
+            this.btn_UpdateUserDetails.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_UpdateUserDetails.ButtonText = "Päivitä käyttäjätiedot";
+            this.btn_UpdateUserDetails.EndColor = System.Drawing.Color.Black;
+            this.btn_UpdateUserDetails.FlatAppearance.BorderSize = 0;
+            this.btn_UpdateUserDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_UpdateUserDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_UpdateUserDetails, "btn_UpdateUserDetails");
+            this.btn_UpdateUserDetails.GradientAngle = 90;
+            this.btn_UpdateUserDetails.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_UpdateUserDetails.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_UpdateUserDetails.MouseHoverColor1 = System.Drawing.Color.Gray;
+            this.btn_UpdateUserDetails.MouseHoverColor2 = System.Drawing.Color.Gray;
+            this.btn_UpdateUserDetails.Name = "btn_UpdateUserDetails";
+            this.btn_UpdateUserDetails.ShowButtontext = true;
+            this.btn_UpdateUserDetails.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_UpdateUserDetails.TextLocation_X = 16;
+            this.btn_UpdateUserDetails.TextLocation_Y = 17;
+            this.btn_UpdateUserDetails.Transparent1 = 250;
+            this.btn_UpdateUserDetails.Transparent2 = 250;
+            this.btn_UpdateUserDetails.UseVisualStyleBackColor = false;
             // 
             // groupBox19
             // 
@@ -1620,11 +1668,11 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.UserLoans_Panel);
-            this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1680,6 +1728,8 @@
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.AccountManagement_Panel.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Users)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
             this.groupBox18.ResumeLayout(false);
@@ -1840,5 +1890,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox check_1;
         private System.Windows.Forms.CheckBox check2;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private ShapedButton btn_UpdateUserDetails;
+        private System.Windows.Forms.DataGridView datagrid_Users;
     }
 }
