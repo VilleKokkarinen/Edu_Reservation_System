@@ -145,6 +145,7 @@
     <Compile Include="UI\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TypeAssistant.cs" />
     <Compile Include="UI\UI.cs" />
     <Compile Include="UI\UiWindows.cs" />
     <Compile Include="User\Item.cs" />

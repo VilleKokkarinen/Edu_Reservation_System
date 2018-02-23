@@ -29,12 +29,18 @@ namespace Reservation_System
             return cmd;
         }
 
-        public MySqlCommand SelectUserByUserNameAndEmail(string user, string email, MySqlConnection connection)
+        public MySqlCommand MySqlSelectUserByUserNameAndEmail(string user, string email, MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("Select * from USERS where U_USERNAME=@user and U_EMAIL=@email", connection);
             cmd.Parameters.AddWithValue("@user", user);
             cmd.Parameters.AddWithValue("@email", email);
 
+            return cmd;
+        }
+
+        public MySqlCommand MySqlGetAllUsers(MySqlConnection connection)
+        {
+            MySqlCommand cmd = new MySqlCommand("Select * from USERS", connection);          
             return cmd;
         }
 
@@ -49,9 +55,9 @@ namespace Reservation_System
 
         public MySqlCommand MySqlChangeEmail(string user, string newemail, MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE USERS SET U_PASSWORD =@newpassword where U_USERNAME=@user", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE USERS SET U_EMAIL =@newemail where U_USERNAME=@user", connection);
             cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@newpassword", newemail);
+            cmd.Parameters.AddWithValue("@newemail", newemail);
 
             return cmd;
         }
@@ -160,7 +166,7 @@ namespace Reservation_System
 
         public MySqlCommand MySqlAcceptPendingReturns(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_RETURN = 0, RR_RETURNED = 1 WHERE RR_ITEM =@itemid AND RR_PENDING_RETURN = 1 AND RR_USER =@user", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_RETURN = 0, RR_RETURNED = 1 WHERE RR_ITEM =@itemid AND RR_PENDING_RETURN = 1", connection);
             return cmd;
         }
 
@@ -172,7 +178,7 @@ namespace Reservation_System
 
         public MySqlCommand MySqlAcceptPendingLoans(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1 AND RR_USER =@user", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1", connection);
             return cmd;
         }
 

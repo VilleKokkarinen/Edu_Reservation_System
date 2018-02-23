@@ -20,7 +20,7 @@ namespace Reservation_System.Email
             mail.Body = message;
 
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("reservationsystem.forgotpw@gmail.com", "aaaaaaaaaa!#");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("reservationsystem.forgotpw@gmail.com", "Qwertyui1!");
             SmtpServer.EnableSsl = true;
         }
 
