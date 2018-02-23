@@ -397,6 +397,7 @@
             this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
             resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
             // 
             // onlineHelpToolStripMenuItem
             // 
@@ -417,6 +418,7 @@
             resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
             this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
             this.WindowTextLabel.Name = "WindowTextLabel";
+            this.WindowTextLabel.Click += new System.EventHandler(this.WindowTextLabel_Click);
             this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
             this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
             this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
@@ -1108,6 +1110,7 @@
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
+            this.Waiting_Events_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Waiting_Events_panel_Paint);
             // 
             // check2
             // 
