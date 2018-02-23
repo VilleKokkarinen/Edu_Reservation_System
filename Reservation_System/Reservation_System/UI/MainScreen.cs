@@ -1749,6 +1749,9 @@ namespace Reservation_System.UI
         {
             assistant.TextChanged();
         }
+        private void txt_Waiting_LoanItemsearch_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
