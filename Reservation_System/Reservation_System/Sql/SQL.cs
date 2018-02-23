@@ -29,12 +29,18 @@ namespace Reservation_System
             return cmd;
         }
 
-        public MySqlCommand SelectUserByUserNameAndEmail(string user, string email, MySqlConnection connection)
+        public MySqlCommand MySqlSelectUserByUserNameAndEmail(string user, string email, MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("Select * from USERS where U_USERNAME=@user and U_EMAIL=@email", connection);
             cmd.Parameters.AddWithValue("@user", user);
             cmd.Parameters.AddWithValue("@email", email);
 
+            return cmd;
+        }
+
+        public MySqlCommand MySqlGetAllUsers(MySqlConnection connection)
+        {
+            MySqlCommand cmd = new MySqlCommand("Select * from USERS", connection);          
             return cmd;
         }
 
