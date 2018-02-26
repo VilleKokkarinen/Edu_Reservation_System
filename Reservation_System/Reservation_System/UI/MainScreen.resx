@@ -484,13 +484,13 @@
     <value>76, 23</value>
   </data>
   <data name="WindowTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 53</value>
+    <value>555, 53</value>
   </data>
   <data name="WindowTextLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="WindowTextLabel.Text" xml:space="preserve">
-    <value>Varaus - järjestelmä</value>
+    <value>Varausjärjestelmä</value>
   </data>
   <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
     <value>WindowTextLabel</value>
