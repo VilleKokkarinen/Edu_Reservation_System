@@ -23,7 +23,7 @@ namespace Reservation_System.UI
             }
             public void TextChanged()
             {
-                waitingTimer.Change(WaitingMilliSeconds, System.Threading.Timeout.Infinite);
+                waitingTimer.Change(WaitingMilliSeconds, Timeout.Infinite);
             }
         }
     

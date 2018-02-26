@@ -62,24 +62,26 @@ namespace Reservation_System
             return cmd;
         }
 
-        public MySqlCommand MySqlGetAvailableItems(MySqlConnection connection)
+        public MySqlCommand MySqlGetAvailableItems(MySqlConnection connection, string name = "", int Type = 999)
         {
-            MySqlCommand cmd = new MySqlCommand("select * from ITEMS where ITEMS.I_STATE=1", connection);
+            MySqlCommand cmd = new MySqlCommand();
+            if (Type != 999)
+            {
+                cmd = new MySqlCommand("select * from ITEMS where (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2) AND ITEMS.I_NAME LIKE '" + name + "%'"+ "AND ITEMS.I_TYPE =@type", connection);
+                cmd.Parameters.AddWithValue("@type", Type);
+            }   
+            else
+            {
+                cmd = new MySqlCommand("select * from ITEMS where (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2) AND ITEMS.I_NAME LIKE '" + name + "%'", connection);
+            }                     
+           
             return cmd;
         }
-
         public MySqlCommand MySqlGetItemTypes(MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("select * from ITEMTYPE ORDER BY IT_ID", connection);            
             return cmd;
-        }
-
-        public MySqlCommand MySqlSelectLoanableItems(MySqlConnection connection)
-        {            
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM ITEMS WHERE (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2)", connection);
-            return cmd;
-        }
-
+        }        
         public MySqlCommand MySqlLoanItems(MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RETURNDATE, RR_PENDING_LOAN) VALUES (LAST_INSERT_ID(), @user, @itemid, @returndate, 1)", connection);

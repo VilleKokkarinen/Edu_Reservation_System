@@ -137,9 +137,6 @@
             this.btnDenyLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_LoanUserName = new System.Windows.Forms.TextBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.combobox_waiting_LoanItemtype = new System.Windows.Forms.ComboBox();
-            this.txt_Waiting_LoanItemsearch = new System.Windows.Forms.TextBox();
             this.btnAcceptLoan = new Reservation_System.UI.ShapedButton();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_LoanItemType = new System.Windows.Forms.TextBox();
@@ -202,7 +199,6 @@
             this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox14.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.AccountManagement_Panel.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -642,12 +638,13 @@
             resources.ApplyResources(this.combobox_Loan_ItemType, "combobox_Loan_ItemType");
             this.combobox_Loan_ItemType.FormattingEnabled = true;
             this.combobox_Loan_ItemType.Name = "combobox_Loan_ItemType";
+            this.combobox_Loan_ItemType.SelectedValueChanged += new System.EventHandler(this.combobox_Loan_ItemType_SelectedValueChanged);
             // 
             // txt_LoanItem_SearchItem
             // 
             resources.ApplyResources(this.txt_LoanItem_SearchItem, "txt_LoanItem_SearchItem");
             this.txt_LoanItem_SearchItem.Name = "txt_LoanItem_SearchItem";
-            this.txt_LoanItem_SearchItem.TextChanged += new System.EventHandler(this.txt_LoanItem_SearchItem_TextChanged);
+            this.txt_LoanItem_SearchItem.TextChanged += new System.EventHandler(this.Loan_Assistant_Idled);
             // 
             // btn_Loan_LoanItem
             // 
@@ -1106,7 +1103,6 @@
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingReturns);
             this.Waiting_Events_panel.Controls.Add(this.btnDenyLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox14);
-            this.Waiting_Events_panel.Controls.Add(this.groupBox12);
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox13);
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
@@ -1267,28 +1263,6 @@
             // 
             resources.ApplyResources(this.txt_Waiting_LoanUserName, "txt_Waiting_LoanUserName");
             this.txt_Waiting_LoanUserName.Name = "txt_Waiting_LoanUserName";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.combobox_waiting_LoanItemtype);
-            this.groupBox12.Controls.Add(this.txt_Waiting_LoanItemsearch);
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
-            // combobox_waiting_LoanItemtype
-            // 
-            this.combobox_waiting_LoanItemtype.DisplayMember = "Text";
-            resources.ApplyResources(this.combobox_waiting_LoanItemtype, "combobox_waiting_LoanItemtype");
-            this.combobox_waiting_LoanItemtype.FormattingEnabled = true;
-            this.combobox_waiting_LoanItemtype.Name = "combobox_waiting_LoanItemtype";
-            this.combobox_waiting_LoanItemtype.SelectedValueChanged += new System.EventHandler(this.combobox_waiting_LoanItemtype_SelectedValueChanged);
-            // 
-            // txt_Waiting_LoanItemsearch
-            // 
-            resources.ApplyResources(this.txt_Waiting_LoanItemsearch, "txt_Waiting_LoanItemsearch");
-            this.txt_Waiting_LoanItemsearch.Name = "txt_Waiting_LoanItemsearch";
             // 
             // btnAcceptLoan
             // 
@@ -1573,11 +1547,13 @@
             resources.ApplyResources(this.combox_reservation_itemtype, "combox_reservation_itemtype");
             this.combox_reservation_itemtype.FormattingEnabled = true;
             this.combox_reservation_itemtype.Name = "combox_reservation_itemtype";
+            this.combox_reservation_itemtype.SelectedValueChanged += new System.EventHandler(this.combox_reservation_itemtype_SelectedValueChanged);
             // 
             // txt_reservation_itemsearch
             // 
             resources.ApplyResources(this.txt_reservation_itemsearch, "txt_reservation_itemsearch");
             this.txt_reservation_itemsearch.Name = "txt_reservation_itemsearch";
+            this.txt_reservation_itemsearch.TextChanged += new System.EventHandler(this.Reservation_Assistant_Idled);
             // 
             // btn_Reserve
             // 
@@ -1669,11 +1645,11 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.UserLoans_Panel);
-            this.Controls.Add(this.AccountManagement_Panel);
-            this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.Loan_Panel);
+            this.Controls.Add(this.Waiting_Events_panel);
+            this.Controls.Add(this.AccountManagement_Panel);
+            this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1724,8 +1700,6 @@
             this.groupBox17.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.AccountManagement_Panel.ResumeLayout(false);
@@ -1828,9 +1802,6 @@
         private System.Windows.Forms.Panel Waiting_Events_panel;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.TextBox txt_Waiting_LoanUserName;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.ComboBox combobox_waiting_LoanItemtype;
-        private System.Windows.Forms.TextBox txt_Waiting_LoanItemsearch;
         private ShapedButton btnAcceptLoan;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.TextBox txt_Waiting_LoanItemType;
