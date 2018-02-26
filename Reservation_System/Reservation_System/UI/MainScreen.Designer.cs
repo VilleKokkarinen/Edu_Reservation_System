@@ -52,6 +52,7 @@
             this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WindowTextLabel = new System.Windows.Forms.Label();
+            this.lblCurrentDate = new System.Windows.Forms.Label();
             this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
             this.BtmPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -177,6 +178,7 @@
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
+            this.BtmPanel.SuspendLayout();
             this.Left_Button_Panel.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -420,6 +422,12 @@
             this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
             this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
             // 
+            // lblCurrentDate
+            // 
+            resources.ApplyResources(this.lblCurrentDate, "lblCurrentDate");
+            this.lblCurrentDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblCurrentDate.Name = "lblCurrentDate";
+            // 
             // RightBottomPanel_1
             // 
             resources.ApplyResources(this.RightBottomPanel_1, "RightBottomPanel_1");
@@ -433,6 +441,7 @@
             // BtmPanel
             // 
             this.BtmPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BtmPanel.Controls.Add(this.lblCurrentDate);
             resources.ApplyResources(this.BtmPanel, "BtmPanel");
             this.BtmPanel.Name = "BtmPanel";
             // 
@@ -1662,6 +1671,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripZ1.ResumeLayout(false);
             this.menuStripZ1.PerformLayout();
+            this.BtmPanel.ResumeLayout(false);
+            this.BtmPanel.PerformLayout();
             this.Left_Button_Panel.ResumeLayout(false);
             this.Settings_Panel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1865,5 +1876,6 @@
         private System.Windows.Forms.GroupBox groupBox20;
         private ShapedButton btn_UpdateUserDetails;
         private System.Windows.Forms.DataGridView datagrid_Users;
+        private System.Windows.Forms.Label lblCurrentDate;
     }
 }

@@ -65,7 +65,7 @@ namespace Reservation_System.UI
         public MainScreen()
         {
             InitializeComponent();
-
+           
             Loan_Assistant = new TypeAssistant();
             Loan_Assistant.Idled += Loan_Assistant_Idled;
 
@@ -76,11 +76,24 @@ namespace Reservation_System.UI
             Reservation_Assistant.Idled += Reservation_Assistant_Idled;
             
             toolstripaccount.Text = User.User._username;
-            GetLoans();           
+            GetLoans();
+            lblCurrentDate.Text = DateTime.Now.ToShortDateString();
             try
 
             {
                 Update_ReservationsToLoans();
+                if (Program.user.accounttype() >= 3)
+                {                
+                    UpdatePendingLoansAndReturns();
+                    int pending = checklist_Waiting_PendingReturns.Items.Count + checklist_Waiting_PendingLoans.Items.Count;
+
+                    if(pending > 1)
+                    {
+                        btnWaitingEvents.Text += " (" +pending + ")";
+                        btnWaitingEvents.ForeColor = Color.Red;
+                    }
+                   
+                }
             }
             catch (Exception ex)
             {
@@ -633,9 +646,11 @@ namespace Reservation_System.UI
             btn_Loan.ChangeColorMouseHC = false;
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            btnWaitingEvents.BZBackColor = Color.Gray;
 
             btn_UsersLoans.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
+            btnWaitingEvents.ChangeColorMouseHC = true;
 
             Loan_Panel.Visible = true;
             Controls.SetChildIndex(Loan_Panel, Controls.Count - 7);
@@ -650,9 +665,11 @@ namespace Reservation_System.UI
 
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+            btnWaitingEvents.BZBackColor = Color.Gray;
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_Reservation.ChangeColorMouseHC = true;
+            btnWaitingEvents.ChangeColorMouseHC = true;
 
             UserLoans_Panel.Visible = true;
             Controls.SetChildIndex(UserLoans_Panel, Controls.Count - 7);
@@ -668,10 +685,11 @@ namespace Reservation_System.UI
 
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btnWaitingEvents.BZBackColor = Color.Gray;
 
             btn_Loan.ChangeColorMouseHC = true;
             btn_UsersLoans.ChangeColorMouseHC = true;
-
+            btnWaitingEvents.ChangeColorMouseHC = true;
             Reservation_Panel.Visible = true;
             Controls.SetChildIndex(Reservation_Panel, Controls.Count - 7);
             AvailableItemsByNameAndType();
@@ -695,6 +713,8 @@ namespace Reservation_System.UI
             Controls.SetChildIndex(Waiting_Events_panel, Controls.Count - 7);
             try
             {
+                btnWaitingEvents.ForeColor = Color.White;
+                btnWaitingEvents.Text = btnWaitingEvents.Text.Substring(0, 20);
                 UpdatePendingLoansAndReturns();
             }
             catch (Exception ex)
@@ -1250,10 +1270,11 @@ namespace Reservation_System.UI
                                 int ItemState = (int)reader["I_STATE"];
 
                                 // Add the item to the User's inventory
-                                Checklist_UserLoans_Items.Items.Add(new User.Item(ItemID, Itemname, ItemType, ItemState));
+                                Checklist_UserLoans_Items.Items.Add(new Item(ItemID, Itemname, ItemType, ItemState));
                             }
                         }
                     }
+                    
                     connection.Close();
                 }
             }
@@ -1532,6 +1553,7 @@ namespace Reservation_System.UI
 
                             checklist_Waiting_PendingLoans.Items.Add(new Item(ItemID, Itemname, ItemType, ItemState));
                         }
+                        
                     }
                 }
                 connection.Close();
@@ -1555,6 +1577,8 @@ namespace Reservation_System.UI
                     connection.Close();
                 }
             }
+           
+                
         }
 
         private void Accept_Pending_Returns()
