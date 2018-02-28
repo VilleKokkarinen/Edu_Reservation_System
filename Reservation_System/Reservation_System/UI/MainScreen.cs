@@ -65,7 +65,7 @@ namespace Reservation_System.UI
         public MainScreen()
         {
             InitializeComponent();
-           
+
             Loan_Assistant = new TypeAssistant();
             Loan_Assistant.Idled += Loan_Assistant_Idled;
 
@@ -653,7 +653,7 @@ namespace Reservation_System.UI
             btnWaitingEvents.ChangeColorMouseHC = true;
 
             Loan_Panel.Visible = true;
-            Controls.SetChildIndex(Loan_Panel, Controls.Count - 7);
+            Controls.SetChildIndex(Loan_Panel, Controls.Count - 8);
             itemtypes();
             AvailableItemsByNameAndType();
         }
@@ -672,7 +672,7 @@ namespace Reservation_System.UI
             btnWaitingEvents.ChangeColorMouseHC = true;
 
             UserLoans_Panel.Visible = true;
-            Controls.SetChildIndex(UserLoans_Panel, Controls.Count - 7);
+            Controls.SetChildIndex(UserLoans_Panel, Controls.Count - 8);
             itemtypes();
             GetLoans();
             GetReservations();
@@ -691,7 +691,7 @@ namespace Reservation_System.UI
             btn_UsersLoans.ChangeColorMouseHC = true;
             btnWaitingEvents.ChangeColorMouseHC = true;
             Reservation_Panel.Visible = true;
-            Controls.SetChildIndex(Reservation_Panel, Controls.Count - 7);
+            Controls.SetChildIndex(Reservation_Panel, Controls.Count - 8);
             AvailableItemsByNameAndType();
             itemtypes();
         }
@@ -710,7 +710,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Waiting_Events_panel.Visible = true;
-            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count - 7);
+            Controls.SetChildIndex(Waiting_Events_panel, Controls.Count - 8);
             try
             {
                 btnWaitingEvents.ForeColor = Color.White;
@@ -744,7 +744,7 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Settings_Panel.Visible = true;
-            Controls.SetChildIndex(Settings_Panel, Controls.Count - 7);
+            Controls.SetChildIndex(Settings_Panel, Controls.Count - 8);
         }
         private void toolStripItemManagement_Click(object sender, EventArgs e)
         {
@@ -757,12 +757,11 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             Item_Management.Visible = true;
-            Controls.SetChildIndex(Item_Management, Controls.Count - 7);
+            Controls.SetChildIndex(Item_Management, Controls.Count - 8);
         }
 
         private void ToolStripAccountManagement_Click(object sender, EventArgs e)
         {
-
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
@@ -772,16 +771,33 @@ namespace Reservation_System.UI
             btn_Reservation.ChangeColorMouseHC = true;
 
             AccountManagement_Panel.Visible = true;
-            Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 7);
+            Controls.SetChildIndex(AccountManagement_Panel, Controls.Count - 8);
 
             if(Program.user.accounttype() >= 3)
             {
                 GetUsers();
                 groupBox20.Visible = true;
-            }
-           
-
+            } 
         }
+
+        private void lainausHistoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
+            btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
+            btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
+
+            btn_Loan.ChangeColorMouseHC = true;
+            btn_UsersLoans.ChangeColorMouseHC = true;
+            btn_Reservation.ChangeColorMouseHC = true;
+            
+            if (Program.user.accounttype() >= 3)
+            {
+                LoanHistoryPanel.Visible = true;
+                Controls.SetChildIndex(LoanHistoryPanel, Controls.Count - 8);
+                GetAllUsers();
+            }
+        }
+
 
         private void GetUsers()
         {
@@ -1864,7 +1880,78 @@ namespace Reservation_System.UI
 
         #endregion
 
+        #region History
 
+        private void cb_LoanHistory_User_SelectedValueChanged(object sender, EventArgs e)
+        {
+            GetUsersLoanHistory(((ComboItem)cb_LoanHistory_User.SelectedItem).ID);
+        }
+
+        void GetUsersLoanHistory(int userid)
+        {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand availableItems = Program.sql.MySqlUserLoanhistory(connection, userid))
+                {
+                    connection.Open();
+
+                    MySqlCommandBuilder cmbl;
+
+                    cmbl = new MySqlCommandBuilder(mydtadp);
+                    mydtadp.SelectCommand = availableItems;
+                    DataTable table = new DataTable();
+                    mydtadp.Fill(table);
+
+                    bindingSource1.DataSource = table;
+                    dataGridView1.DataSource = bindingSource1;
+
+                    /*
+                    MySqlDataReader reader = availableItems.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string message = "";
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                dataGridView1
+                            }
+
+                        }
+                    }*/
+
+
+                }
+                connection.Close();
+            }
+        }
+
+        void GetAllUsers()
+        {
+            cb_LoanHistory_User.Items.Clear();
+            cb_LoanHistory_User.DisplayMember = "Text";
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand availableItems = Program.sql.MySqlGetAllUsers(connection))
+                {
+                    connection.Open();
+
+                    MySqlDataReader reader = availableItems.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int UserID = (int)reader["U_ID"];
+                            string Username = (string)reader["U_USERNAME"];
+                            cb_LoanHistory_User.Items.Add(new ComboItem {Text = Username, ID = UserID });
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
+        #endregion
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1909,5 +1996,6 @@ namespace Reservation_System.UI
                 connection.Close();
             }
         }
+
     }
 }

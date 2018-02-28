@@ -9,13 +9,12 @@ namespace Reservation_System.User
 {
     class User
     {
-        public static string _username;
-        public static string _email;
+        public static string _username;        
         public static int _userid;
         private static int _Accounttype;
 
      
-        private User(string username, int userid, int accounttype)
+        public User(string username, int userid, int accounttype)
         {
             _username = username;
             _userid = userid;

@@ -40,7 +40,7 @@ namespace Reservation_System
 
         public MySqlCommand MySqlGetAllUsers(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("Select * from USERS", connection);          
+            MySqlCommand cmd = new MySqlCommand("Select * from USERS ORDER BY U_ID", connection);          
             return cmd;
         }
 
@@ -62,7 +62,8 @@ namespace Reservation_System
             return cmd;
         }
 
-        public MySqlCommand MySqlGetAvailableItems(MySqlConnection connection, string name = "", int Type = 999)
+        public MySqlCommand MySqlGetAvailableItems
+            (MySqlConnection connection, string name = "", int Type = 999)
         {
             MySqlCommand cmd = new MySqlCommand();
             if (Type != 999)
@@ -77,6 +78,19 @@ namespace Reservation_System
            
             return cmd;
         }
+        public MySqlCommand MySqlUserLoanhistory(MySqlConnection connection, int userid)
+        {
+            MySqlCommand cmd = new MySqlCommand(
+            "SELECT USERS.U_FIRST_NAME as etunimi, USERS.U_LAST_NAME as sukunimi, RESERVATIONROWS.RR_RESERVATIONDATE as lainauspvm, RESERVATIONROWS.RR_RETURNDATE as palautuspvm, ITEMS.I_NAME as tavara, ITEMS.I_ID as tavara_id, ITEMSTATE.IS_NAME as tila, ITEMTYPE.IT_NAME as tyyppi " +
+            "FROM RESERVATIONROWS " +
+            "INNER JOIN USERS ON USERS.U_ID = RESERVATIONROWS.RR_USER " +
+            "INNER JOIN ITEMS ON ITEMS.I_ID = RESERVATIONROWS.RR_ITEM " +
+            "INNER JOIN ITEMTYPE ON ITEMTYPE.IT_ID = ITEMS.I_TYPE " +
+            "INNER JOIN ITEMSTATE ON ITEMSTATE.IS_ID = ITEMS.I_STATE " +
+            "WHERE RESERVATIONROWS.RR_USER = @userid ", connection);
+            cmd.Parameters.AddWithValue("@userid", userid);
+            return cmd;
+        } 
         public MySqlCommand MySqlGetItemTypes(MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("select * from ITEMTYPE ORDER BY IT_ID", connection);            

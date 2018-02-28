@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TopBorderPanel = new System.Windows.Forms.Panel();
             this.RightPanel = new System.Windows.Forms.Panel();
             this.LeftPanel = new System.Windows.Forms.Panel();
@@ -40,11 +42,12 @@
             this._MaxButton = new Reservation_System.UI.MinMaxButton();
             this._CloseButton = new Reservation_System.UI.ButtonZ();
             this.menuStripZ1 = new Reservation_System.UI.MenuStripZ();
+            this.ToolstripItems = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripItemManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstripaccount = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.kirjauduUlosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolstripItems = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripItemManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.lainausHistoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStrip_LanguageSelect = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -175,6 +178,13 @@
             this.txt_reservation_Itemtype = new System.Windows.Forms.TextBox();
             this.txt_reservation_Itemstate = new System.Windows.Forms.TextBox();
             this.checklist_Reservation = new System.Windows.Forms.CheckedListBox();
+            this.LoanHistoryPanel = new System.Windows.Forms.Panel();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.cb_LoanHistory_Item = new System.Windows.Forms.ComboBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -210,6 +220,11 @@
             this.Reservation_Panel.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.LoanHistoryPanel.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -324,17 +339,33 @@
             // 
             resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
             this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolstripaccount,
             this.ToolstripItems,
+            this.toolstripaccount,
             this.ToolStripSettings,
             this.ToolStripHelp});
             this.menuStripZ1.Name = "menuStripZ1";
+            // 
+            // ToolstripItems
+            // 
+            this.ToolstripItems.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripItemManagement});
+            this.ToolstripItems.ForeColor = System.Drawing.Color.White;
+            this.ToolstripItems.Name = "ToolstripItems";
+            resources.ApplyResources(this.ToolstripItems, "ToolstripItems");
+            // 
+            // toolStripItemManagement
+            // 
+            this.toolStripItemManagement.ForeColor = System.Drawing.Color.White;
+            this.toolStripItemManagement.Name = "toolStripItemManagement";
+            resources.ApplyResources(this.toolStripItemManagement, "toolStripItemManagement");
+            this.toolStripItemManagement.Click += new System.EventHandler(this.toolStripItemManagement_Click);
             // 
             // toolstripaccount
             // 
             this.toolstripaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripAccountManagement,
-            this.kirjauduUlosToolStripMenuItem});
+            this.kirjauduUlosToolStripMenuItem,
+            this.lainausHistoriaToolStripMenuItem});
             resources.ApplyResources(this.toolstripaccount, "toolstripaccount");
             this.toolstripaccount.ForeColor = System.Drawing.Color.White;
             this.toolstripaccount.Name = "toolstripaccount";
@@ -353,20 +384,12 @@
             this.kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
             this.kirjauduUlosToolStripMenuItem.Click += new System.EventHandler(this.kirjauduUlosToolStripMenuItem_Click);
             // 
-            // ToolstripItems
+            // lainausHistoriaToolStripMenuItem
             // 
-            this.ToolstripItems.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripItemManagement});
-            this.ToolstripItems.ForeColor = System.Drawing.Color.White;
-            this.ToolstripItems.Name = "ToolstripItems";
-            resources.ApplyResources(this.ToolstripItems, "ToolstripItems");
-            // 
-            // toolStripItemManagement
-            // 
-            this.toolStripItemManagement.ForeColor = System.Drawing.Color.White;
-            this.toolStripItemManagement.Name = "toolStripItemManagement";
-            resources.ApplyResources(this.toolStripItemManagement, "toolStripItemManagement");
-            this.toolStripItemManagement.Click += new System.EventHandler(this.toolStripItemManagement_Click);
+            resources.ApplyResources(this.lainausHistoriaToolStripMenuItem, "lainausHistoriaToolStripMenuItem");
+            this.lainausHistoriaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.lainausHistoriaToolStripMenuItem.Name = "lainausHistoriaToolStripMenuItem";
+            this.lainausHistoriaToolStripMenuItem.Click += new System.EventHandler(this.lainausHistoriaToolStripMenuItem_Click);
             // 
             // ToolStripSettings
             // 
@@ -1633,6 +1656,74 @@
             this.checklist_Reservation.Name = "checklist_Reservation";
             this.checklist_Reservation.SelectedValueChanged += new System.EventHandler(this.checklist_Reservation_SelectedValueChanged);
             // 
+            // LoanHistoryPanel
+            // 
+            this.LoanHistoryPanel.Controls.Add(this.groupBox21);
+            this.LoanHistoryPanel.Controls.Add(this.groupBox12);
+            resources.ApplyResources(this.LoanHistoryPanel, "LoanHistoryPanel");
+            this.LoanHistoryPanel.Name = "LoanHistoryPanel";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.cb_LoanHistory_Item);
+            this.groupBox21.Controls.Add(this.dataGridView2);
+            resources.ApplyResources(this.groupBox21, "groupBox21");
+            this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.TabStop = false;
+            // 
+            // cb_LoanHistory_Item
+            // 
+            this.cb_LoanHistory_Item.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
+            this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.cb_LoanHistory_User);
+            this.groupBox12.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
+            // 
+            // cb_LoanHistory_User
+            // 
+            this.cb_LoanHistory_User.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_LoanHistory_User, "cb_LoanHistory_User");
+            this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
+            this.cb_LoanHistory_User.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_User_SelectedValueChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
@@ -1654,6 +1745,7 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.LoanHistoryPanel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
@@ -1726,6 +1818,11 @@
             this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
+            this.LoanHistoryPanel.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1877,5 +1974,13 @@
         private ShapedButton btn_UpdateUserDetails;
         private System.Windows.Forms.DataGridView datagrid_Users;
         private System.Windows.Forms.Label lblCurrentDate;
+        private System.Windows.Forms.ToolStripMenuItem lainausHistoriaToolStripMenuItem;
+        private System.Windows.Forms.Panel LoanHistoryPanel;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.ComboBox cb_LoanHistory_Item;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.ComboBox cb_LoanHistory_User;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
