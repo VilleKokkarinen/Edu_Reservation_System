@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TopBorderPanel = new System.Windows.Forms.Panel();
             this.RightPanel = new System.Windows.Forms.Panel();
             this.LeftPanel = new System.Windows.Forms.Panel();
@@ -421,6 +419,7 @@
             this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
             resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
             // 
             // onlineHelpToolStripMenuItem
             // 
@@ -1683,14 +1682,6 @@
             // 
             this.dataGridItemLoanHistory.BackgroundColor = System.Drawing.Color.White;
             this.dataGridItemLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridItemLoanHistory.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.dataGridItemLoanHistory, "dataGridItemLoanHistory");
             this.dataGridItemLoanHistory.Name = "dataGridItemLoanHistory";
             // 
@@ -1714,14 +1705,6 @@
             // 
             this.dataGridUserLoanHistory.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridUserLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUserLoanHistory.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.dataGridUserLoanHistory, "dataGridUserLoanHistory");
             this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
             this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
