@@ -1100,6 +1100,53 @@ namespace Reservation_System.UI
                     }
                     connection.Close();
                 }
+
+                var varatut = checklist_Reservation.CheckedItems.Cast<User.Item>().Where(x => x.STATE == 2);
+                List<DateTime> lista = new List<DateTime>();
+
+                if (varatut.Count() == 0)
+                {
+                    dtp_Reserve_StartDate.MaxDate = DateTime.Now.AddDays(24);
+                    dtp_Reserve_StartDate.MinDate = DateTime.Now.AddDays(1);
+
+                    dtp_Reserve_EndDate.MaxDate = DateTime.Now.AddDays(36);
+                    dtp_Reserve_EndDate.MinDate = DateTime.Now.AddDays(2);
+
+                }
+
+                foreach (Item item in varatut)
+                {
+                    using (MySqlConnection connection = Program.sql.MySqlConnection())
+                    {
+                        using (MySqlCommand ItemType = Program.sql.MySqlGetReservationDateForItem(connection))
+                        {
+                            ItemType.Parameters.AddWithValue("@itemid", (item.ID.ToString()));
+
+                            connection.Open();
+                            MySqlDataReader reader = ItemType.ExecuteReader();
+
+                            if (reader.HasRows)
+                            {
+                                while (reader.Read())
+                                {
+                                    DateTime date = (DateTime)reader["RR_RESERVATIONDATE"];
+                                    lista.Add(date);
+                                }
+                            }
+                        }
+                        connection.Close();
+                    }
+
+                }
+
+                if (lista.Count != 0)
+                {
+                    
+                    dtp_Reserve_EndDate.MaxDate = lista.Min();
+                    dtp_Reserve_StartDate.MaxDate = dtp_Reserve_EndDate.MaxDate;                   
+                    dtp_Reserve_StartDate.MinDate = DateTime.Now;
+                    lista.Clear();
+                }
             }
             catch (Exception ex)
             {
