@@ -17,8 +17,11 @@
 - Cancelling reservations is under progress
 - Language setting does not change the language ( Stuck on Finnish )
 - Dates are formatted as (DD/MM/YYYY) and there is no way to change this.
-
 - Dates found in date time pickers, are only availabe with Finnish names
+- Re-sizing the windows, does not move nor scale objects inside
+- Start page is empty
+- Logo is blurry on the bottom 
+- Some textboxes do not clear information when they should be empty
 
 ## General help?
 > Consult the "manual.PDF" found at the root folder of this github project
