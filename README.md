@@ -6,6 +6,7 @@
 
 ## Got suggestions to improve the software?
 > Throw me some mail =>
+
 > kokkarinen.ville@gmail.com
 
 > p119980@edu.sakky.fi
