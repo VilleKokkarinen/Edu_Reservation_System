@@ -18,6 +18,9 @@ namespace Reservation_System.UI
     {
         private MySqlDataAdapter mydtadp = new MySqlDataAdapter();
         private BindingSource bindingSource1 = new BindingSource();
+        private MySqlDataAdapter mydtadp2 = new MySqlDataAdapter();
+        private BindingSource bindingSource2 = new BindingSource();
+
         TypeAssistant Loan_Assistant;
         TypeAssistant UserLoans_Assistant;        
         TypeAssistant Reservation_Assistant;
@@ -795,6 +798,7 @@ namespace Reservation_System.UI
                 LoanHistoryPanel.Visible = true;
                 Controls.SetChildIndex(LoanHistoryPanel, Controls.Count - 8);
                 GetAllUsers();
+                GetAllItems();
             }
         }
 
@@ -1887,6 +1891,31 @@ namespace Reservation_System.UI
             GetUsersLoanHistory(((ComboItem)cb_LoanHistory_User.SelectedItem).ID);
         }
 
+        private void cb_LoanHistory_Item_SelectedValueChanged(object sender, EventArgs e)
+        {
+            GetItemsLoanHistory(((ComboItem)cb_LoanHistory_Item.SelectedItem).ID);
+        }
+
+        void GetItemsLoanHistory(int itemid)
+        {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand availableItems = Program.sql.MySqlItemLoanhistory(connection, itemid))
+                {
+                    connection.Open();
+
+                    MySqlCommandBuilder cmbl= new MySqlCommandBuilder(mydtadp2);
+                    mydtadp2.SelectCommand = availableItems;
+                    DataTable table = new DataTable();
+                    mydtadp2.Fill(table);
+
+                    bindingSource2.DataSource = table;
+                    dataGridItemLoanHistory.DataSource = bindingSource2;
+                }
+                connection.Close();
+            }
+        }
+
         void GetUsersLoanHistory(int userid)
         {
             using (MySqlConnection connection = Program.sql.MySqlConnection())
@@ -1903,24 +1932,7 @@ namespace Reservation_System.UI
                     mydtadp.Fill(table);
 
                     bindingSource1.DataSource = table;
-                    dataGridView1.DataSource = bindingSource1;
-
-                    /*
-                    MySqlDataReader reader = availableItems.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string message = "";
-                            for (int i = 0; i < reader.FieldCount; i++)
-                            {
-                                dataGridView1
-                            }
-
-                        }
-                    }*/
-
-
+                    dataGridUserLoanHistory.DataSource = bindingSource1;
                 }
                 connection.Close();
             }
@@ -1950,8 +1962,35 @@ namespace Reservation_System.UI
                 connection.Close();
             }
         }
+        void GetAllItems()
+        {
+            cb_LoanHistory_Item.Items.Clear();
+            cb_LoanHistory_Item.DisplayMember = "Text";
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand availableItems = Program.sql.MySqlGetAllItems(connection))
+                {
+                    connection.Open();
+
+                    MySqlDataReader reader = availableItems.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int itemid = (int)reader["I_ID"];
+                            string itemname = (string)reader["I_NAME"];
+                            cb_LoanHistory_Item.Items.Add(new ComboItem { Text = itemname, ID = itemid });
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
 
         #endregion
+
+
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

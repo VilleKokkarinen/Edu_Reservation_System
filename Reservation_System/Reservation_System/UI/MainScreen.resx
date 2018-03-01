@@ -3685,7 +3685,7 @@
     <value>12, 27</value>
   </data>
   <data name="cb_LoanHistory_Item.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 26</value>
+    <value>233, 26</value>
   </data>
   <data name="cb_LoanHistory_Item.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -3702,25 +3702,25 @@
   <data name="&gt;&gt;cb_LoanHistory_Item.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dataGridItemLoanHistory.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 128</value>
   </data>
-  <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dataGridItemLoanHistory.Size" type="System.Drawing.Size, System.Drawing">
     <value>543, 511</value>
   </data>
-  <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
+  <data name="dataGridItemLoanHistory.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
-    <value>dataGridView2</value>
+  <data name="&gt;&gt;dataGridItemLoanHistory.Name" xml:space="preserve">
+    <value>dataGridItemLoanHistory</value>
   </data>
-  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridItemLoanHistory.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridItemLoanHistory.Parent" xml:space="preserve">
     <value>groupBox21</value>
   </data>
-  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dataGridItemLoanHistory.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="groupBox21.Font" type="System.Drawing.Font, System.Drawing">
@@ -3754,7 +3754,7 @@
     <value>12, 27</value>
   </data>
   <data name="cb_LoanHistory_User.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 26</value>
+    <value>191, 26</value>
   </data>
   <data name="cb_LoanHistory_User.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -3771,25 +3771,25 @@
   <data name="&gt;&gt;cb_LoanHistory_User.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dataGridUserLoanHistory.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 128</value>
   </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dataGridUserLoanHistory.Size" type="System.Drawing.Size, System.Drawing">
     <value>543, 511</value>
   </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dataGridUserLoanHistory.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
+  <data name="&gt;&gt;dataGridUserLoanHistory.Name" xml:space="preserve">
+    <value>dataGridUserLoanHistory</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridUserLoanHistory.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridUserLoanHistory.Parent" xml:space="preserve">
     <value>groupBox12</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dataGridUserLoanHistory.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="groupBox12.Font" type="System.Drawing.Font, System.Drawing">

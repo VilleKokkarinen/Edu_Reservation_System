@@ -181,10 +181,10 @@
             this.LoanHistoryPanel = new System.Windows.Forms.Panel();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.cb_LoanHistory_Item = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridItemLoanHistory = new System.Windows.Forms.DataGridView();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridUserLoanHistory = new System.Windows.Forms.DataGridView();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -222,9 +222,9 @@
             this.groupBox25.SuspendLayout();
             this.LoanHistoryPanel.SuspendLayout();
             this.groupBox21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).BeginInit();
             this.groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -1666,7 +1666,7 @@
             // groupBox21
             // 
             this.groupBox21.Controls.Add(this.cb_LoanHistory_Item);
-            this.groupBox21.Controls.Add(this.dataGridView2);
+            this.groupBox21.Controls.Add(this.dataGridItemLoanHistory);
             resources.ApplyResources(this.groupBox21, "groupBox21");
             this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox21.Name = "groupBox21";
@@ -1677,11 +1677,12 @@
             this.cb_LoanHistory_Item.FormattingEnabled = true;
             resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
             this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
+            this.cb_LoanHistory_Item.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_Item_SelectedValueChanged);
             // 
-            // dataGridView2
+            // dataGridItemLoanHistory
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridItemLoanHistory.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridItemLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
@@ -1689,14 +1690,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridItemLoanHistory.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.dataGridItemLoanHistory, "dataGridItemLoanHistory");
+            this.dataGridItemLoanHistory.Name = "dataGridItemLoanHistory";
             // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.cb_LoanHistory_User);
-            this.groupBox12.Controls.Add(this.dataGridView1);
+            this.groupBox12.Controls.Add(this.dataGridUserLoanHistory);
             resources.ApplyResources(this.groupBox12, "groupBox12");
             this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox12.Name = "groupBox12";
@@ -1709,10 +1710,10 @@
             this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
             this.cb_LoanHistory_User.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_User_SelectedValueChanged);
             // 
-            // dataGridView1
+            // dataGridUserLoanHistory
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridUserLoanHistory.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridUserLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
@@ -1720,9 +1721,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridUserLoanHistory.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.dataGridUserLoanHistory, "dataGridUserLoanHistory");
+            this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
+            this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             // 
             // MainScreen
             // 
@@ -1820,9 +1822,9 @@
             this.groupBox25.PerformLayout();
             this.LoanHistoryPanel.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).EndInit();
             this.groupBox12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1978,9 +1980,9 @@
         private System.Windows.Forms.Panel LoanHistoryPanel;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.ComboBox cb_LoanHistory_Item;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridItemLoanHistory;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.ComboBox cb_LoanHistory_User;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridUserLoanHistory;
     }
 }
