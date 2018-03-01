@@ -12,5 +12,15 @@
 > p119980@edu.sakky.fi
 
 
+### currently aware of the following "problems", or "faults"
+
+- Cancelling reservations is under progress
+
+- Language setting does not change the language ( Stuck on Finnish )
+
+- Dates are formatted as (DD/MM/YYYY) and there is no way to change this.
+
+- Dates found in date time pickers, are only availabe with Finnish names
+
 ## General help?
 > Consult the "manual.PDF" found at the root folder of this github project
