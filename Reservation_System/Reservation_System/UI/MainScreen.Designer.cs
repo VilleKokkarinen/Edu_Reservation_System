@@ -123,8 +123,8 @@
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
-            this.check2 = new System.Windows.Forms.CheckBox();
-            this.check_1 = new System.Windows.Forms.CheckBox();
+            this.checkbox_AcceptAllLoans = new System.Windows.Forms.CheckBox();
+            this.checkbox_AcceptAllReturns = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_ReturnUserName = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
@@ -675,7 +675,7 @@
             // 
             resources.ApplyResources(this.txt_LoanItem_SearchItem, "txt_LoanItem_SearchItem");
             this.txt_LoanItem_SearchItem.Name = "txt_LoanItem_SearchItem";
-            this.txt_LoanItem_SearchItem.TextChanged += new System.EventHandler(this.Loan_Assistant_Idled);
+            this.txt_LoanItem_SearchItem.TextChanged += new System.EventHandler(this.txt_Loan_itemsearch_TextChanged);
             // 
             // btn_Loan_LoanItem
             // 
@@ -845,6 +845,7 @@
             // 
             resources.ApplyResources(this.txt_UserLoans_SearchItem, "txt_UserLoans_SearchItem");
             this.txt_UserLoans_SearchItem.Name = "txt_UserLoans_SearchItem";
+            this.txt_UserLoans_SearchItem.TextChanged += new System.EventHandler(this.txt_UserLoans_itemsearch_TextChanged);
             // 
             // btn_UserLoans_ReturnItem
             // 
@@ -1125,8 +1126,8 @@
             // 
             // Waiting_Events_panel
             // 
-            this.Waiting_Events_panel.Controls.Add(this.check2);
-            this.Waiting_Events_panel.Controls.Add(this.check_1);
+            this.Waiting_Events_panel.Controls.Add(this.checkbox_AcceptAllLoans);
+            this.Waiting_Events_panel.Controls.Add(this.checkbox_AcceptAllReturns);
             this.Waiting_Events_panel.Controls.Add(this.groupBox15);
             this.Waiting_Events_panel.Controls.Add(this.groupBox16);
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptReturn);
@@ -1140,21 +1141,21 @@
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
             // 
-            // check2
+            // checkbox_AcceptAllLoans
             // 
-            resources.ApplyResources(this.check2, "check2");
-            this.check2.ForeColor = System.Drawing.SystemColors.Control;
-            this.check2.Name = "check2";
-            this.check2.UseVisualStyleBackColor = true;
-            this.check2.CheckedChanged += new System.EventHandler(this.check2_CheckedChanged);
+            resources.ApplyResources(this.checkbox_AcceptAllLoans, "checkbox_AcceptAllLoans");
+            this.checkbox_AcceptAllLoans.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkbox_AcceptAllLoans.Name = "checkbox_AcceptAllLoans";
+            this.checkbox_AcceptAllLoans.UseVisualStyleBackColor = true;
+            this.checkbox_AcceptAllLoans.CheckedChanged += new System.EventHandler(this.check2_CheckedChanged);
             // 
-            // check_1
+            // checkbox_AcceptAllReturns
             // 
-            resources.ApplyResources(this.check_1, "check_1");
-            this.check_1.ForeColor = System.Drawing.SystemColors.Control;
-            this.check_1.Name = "check_1";
-            this.check_1.UseVisualStyleBackColor = true;
-            this.check_1.CheckedChanged += new System.EventHandler(this.check_1_CheckedChanged);
+            resources.ApplyResources(this.checkbox_AcceptAllReturns, "checkbox_AcceptAllReturns");
+            this.checkbox_AcceptAllReturns.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkbox_AcceptAllReturns.Name = "checkbox_AcceptAllReturns";
+            this.checkbox_AcceptAllReturns.UseVisualStyleBackColor = true;
+            this.checkbox_AcceptAllReturns.CheckedChanged += new System.EventHandler(this.check_1_CheckedChanged);
             // 
             // groupBox15
             // 
@@ -1584,7 +1585,7 @@
             // 
             resources.ApplyResources(this.txt_reservation_itemsearch, "txt_reservation_itemsearch");
             this.txt_reservation_itemsearch.Name = "txt_reservation_itemsearch";
-            this.txt_reservation_itemsearch.TextChanged += new System.EventHandler(this.Reservation_Assistant_Idled);
+            this.txt_reservation_itemsearch.TextChanged += new System.EventHandler(this.txt_reservation_itemsearch_TextChanged);
             // 
             // btn_Reserve
             // 
@@ -1653,6 +1654,8 @@
             this.checklist_Reservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Reservation.FormattingEnabled = true;
             this.checklist_Reservation.Name = "checklist_Reservation";
+            this.checklist_Reservation.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Reservation_ItemCheck);
+            this.checklist_Reservation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checklist_Reservation_MouseClick);
             this.checklist_Reservation.SelectedValueChanged += new System.EventHandler(this.checklist_Reservation_SelectedValueChanged);
             // 
             // LoanHistoryPanel
@@ -1730,12 +1733,12 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.LoanHistoryPanel);
             this.Controls.Add(this.Loan_Panel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.AccountManagement_Panel);
-            this.Controls.Add(this.UserLoans_Panel);
             this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1953,8 +1956,8 @@
         private ShapedButton btn_AM_ChangeEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox check_1;
-        private System.Windows.Forms.CheckBox check2;
+        private System.Windows.Forms.CheckBox checkbox_AcceptAllReturns;
+        private System.Windows.Forms.CheckBox checkbox_AcceptAllLoans;
         private System.Windows.Forms.GroupBox groupBox20;
         private ShapedButton btn_UpdateUserDetails;
         private System.Windows.Forms.DataGridView datagrid_Users;

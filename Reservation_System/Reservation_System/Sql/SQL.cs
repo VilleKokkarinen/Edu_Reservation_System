@@ -20,6 +20,19 @@ namespace Reservation_System
             MySqlConnection connection = new MySqlConnection(connectionString);
             return connection;
         }
+        public MySqlConnection MySqlConnection2()
+        {
+            string server = "10.12.132.34";
+            string database = "Ville_Kokkarinen_OHTU";
+            string uid = "p119980";
+            string password = "12345";
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            return connection;
+        }
+
+
         public MySqlCommand MySqlLogin(string user, string password, MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("Select * from USERS where U_USERNAME=@user and U_PASSWORD=@password", connection);
@@ -68,12 +81,12 @@ namespace Reservation_System
             MySqlCommand cmd = new MySqlCommand();
             if (Type != 999)
             {
-                cmd = new MySqlCommand("select * from ITEMS where (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2) AND ITEMS.I_NAME LIKE '" + name + "%'"+ "AND ITEMS.I_TYPE =@type", connection);
+                cmd = new MySqlCommand("select * from ITEMS where (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2) AND ITEMS.I_NAME LIKE '%" + name + "%'"+ "AND ITEMS.I_TYPE =@type", connection);
                 cmd.Parameters.AddWithValue("@type", Type);
             }   
             else
             {
-                cmd = new MySqlCommand("select * from ITEMS where (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2) AND ITEMS.I_NAME LIKE '" + name + "%'", connection);
+                cmd = new MySqlCommand("select * from ITEMS where (ITEMS.I_STATE = 0 OR ITEMS.I_STATE = 2) AND ITEMS.I_NAME LIKE '%" + name + "%'", connection);
             }                     
            
             return cmd;
@@ -110,9 +123,15 @@ namespace Reservation_System
             MySqlCommand cmd = new MySqlCommand("select * from ITEMTYPE ORDER BY IT_ID", connection);            
             return cmd;
         }        
+
         public MySqlCommand MySqlLoanItems(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RETURNDATE, RR_PENDING_LOAN) VALUES (LAST_INSERT_ID(), @user, @itemid, @returndate, 1)", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid; INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RETURNDATE, RR_PENDING_LOAN) VALUES ((SELECT MAX(R_ID) FROM RESERVATION res), @user, @itemid, @returndate, 1)", connection);                                                                                                                                                                                                                                               
+            return cmd;
+        }
+        public MySqlCommand MySqlMakeReservation(MySqlConnection connection)
+        {
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO RESERVATION(R_USER) VALUES(@user)", connection);
             return cmd;
         }
 
@@ -154,13 +173,13 @@ namespace Reservation_System
 
         public MySqlCommand MySqlGetUpdateReservationsToLoans(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS i, RESERVATIONROWS rr SET i.I_STATE = 1, rr.RR_PENDING_LOAN = 1, rr.RR_PRE_RESERVATION = 0 WHERE rr.RR_PRE_RESERVATION = 1 AND i.I_STATE = 2 AND rr.RR_RESERVATIONDATE < NOW();", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS i, RESERVATIONROWS rr SET i.I_STATE = 1, rr.RR_PENDING_LOAN = 1, rr.RR_PRE_RESERVATION = 0 WHERE rr.RR_PRE_RESERVATION = 1 AND i.I_STATE = 2 AND rr.RR_RESERVATIONDATE < NOW()", connection);
             return cmd;
         }
 
         public MySqlCommand MySqlReserveItems(MySqlConnection connection)
         {
-            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 2 WHERE I_ID =@itemid;INSERT INTO RESERVATION (R_USER) VALUES (@user); INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE, RR_PENDING_LOAN, RR_PRE_RESERVATION) VALUES (LAST_INSERT_ID(), @user, @itemid, @startdate, @returndate, 0, 1)", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 2 WHERE I_ID =@itemid; INSERT INTO RESERVATIONROWS (RR_R_ID, RR_USER, RR_ITEM, RR_RESERVATIONDATE, RR_RETURNDATE, RR_PRE_RESERVATION) VALUES ((SELECT MAX(R_ID) FROM RESERVATION res), @user, @itemid, @startdate, @returndate, 1)", connection);
             return cmd;
         }
 
@@ -206,6 +225,11 @@ namespace Reservation_System
             return cmd;
         }
 
+        public MySqlCommand MySqlCancelReservation(MySqlConnection connection)
+        {
+            MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 0 WHERE I_ID =@itemid; DELETE rows, res FROM RESERVATIONROWS rows JOIN RESERVATION res ON rows.RR_R_ID = res.R_ID WHERE RR_USER =@user AND RR_ITEM =@itemid AND RR_PRE_RESERVATION = 1", connection);
+            return cmd;
+        }
         public MySqlCommand MySqlAcceptPendingLoans(MySqlConnection connection)
         {
             MySqlCommand cmd = new MySqlCommand("UPDATE ITEMS SET I_STATE = 1 WHERE I_ID =@itemid;UPDATE RESERVATIONROWS SET RR_PENDING_LOAN = 0 WHERE RR_ITEM =@itemid AND RR_PENDING_LOAN = 1", connection);

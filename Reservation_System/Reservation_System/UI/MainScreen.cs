@@ -25,12 +25,27 @@ namespace Reservation_System.UI
         TypeAssistant UserLoans_Assistant;        
         TypeAssistant Reservation_Assistant;
 
+        private void txt_reservation_itemsearch_TextChanged(object sender, EventArgs e)
+        {
+            Reservation_Assistant.TextChanged();
+        }
+        private void txt_UserLoans_itemsearch_TextChanged(object sender, EventArgs e)
+        {
+            UserLoans_Assistant.TextChanged();
+        }
+        private void txt_Loan_itemsearch_TextChanged(object sender, EventArgs e)
+        {
+            Loan_Assistant.TextChanged();
+        }
         void Loan_Assistant_Idled(object sender, EventArgs e)
         {
             Invoke(new MethodInvoker(() =>
             {
                 if(combobox_Loan_ItemType.SelectedItem == null)
-                AvailableItemsByNameAndType(txt_LoanItem_SearchItem.Text);
+                {
+                    AvailableItemsByNameAndType(txt_LoanItem_SearchItem.Text);
+                }
+                
                 else
                 {
                     AvailableItemsByNameAndType(txt_LoanItem_SearchItem.Text, ((ComboItem)combobox_Loan_ItemType.SelectedItem).ID);
@@ -719,6 +734,8 @@ namespace Reservation_System.UI
                 btnWaitingEvents.ForeColor = Color.White;
                 btnWaitingEvents.Text = btnWaitingEvents.Text.Substring(0, 20);
                 UpdatePendingLoansAndReturns();
+                checkbox_AcceptAllReturns.CheckState = CheckState.Unchecked;
+                checkbox_AcceptAllLoans.CheckState = CheckState.Unchecked;
             }
             catch (Exception ex)
             {
@@ -916,6 +933,23 @@ namespace Reservation_System.UI
 
         private void ItemsToLoan()
         {
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand cmd = Program.sql.MySqlMakeReservation(connection))
+                {
+                    cmd.Parameters.AddWithValue("@user", Program.user.userid());
+
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result < 0)
+                    {
+                        MessageBox.Show("Error in the system");
+                    }
+                    connection.Close();
+                }
+            }
+
             foreach (Item item in checklist_Loan_Items.CheckedItems)
             {
                 string date = dtp_Loan_ReturnDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
@@ -1213,7 +1247,24 @@ namespace Reservation_System.UI
 
         private void ItemsToReserve()
         {
-            foreach (User.Item item in checklist_Reservation.CheckedItems)
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand cmd = Program.sql.MySqlMakeReservation(connection))
+                {
+                    cmd.Parameters.AddWithValue("@user", Program.user.userid());
+
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result < 0)
+                    {
+                        MessageBox.Show("Error in the system");
+                    }
+                    connection.Close();
+                }
+            }
+
+            foreach (Item item in checklist_Reservation.CheckedItems)
             {
                 string startdate = dtp_Reserve_StartDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
                 string returndate = dtp_Reserve_EndDate.Value.Date.ToString("yyyy-MM-dd HH':'mm':'ss");
@@ -1253,7 +1304,34 @@ namespace Reservation_System.UI
         
         private void btnCancelReservation_Click(object sender, EventArgs e)
         {
+            try
+            {
+                foreach (Item item in checklist_user_reservations.CheckedItems)
+                {
+                    using (MySqlConnection connection = Program.sql.MySqlConnection())
+                    {
+                        using (MySqlCommand cmd = Program.sql.MySqlCancelReservation(connection))
+                        {
+                            cmd.Parameters.AddWithValue("@itemid", item.ID);
+                            cmd.Parameters.AddWithValue("@USER", Program.user.userid());
 
+                            connection.Open();
+                            int result = cmd.ExecuteNonQuery();
+
+                            if (result < 0)
+                            {
+                                MessageBox.Show("Error in the system");
+                            }
+                            connection.Close();
+                        }
+                    }
+                }
+                GetReservations();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void checklist_user_reservations_SelectedValueChanged(object sender, EventArgs e)
@@ -1445,7 +1523,7 @@ namespace Reservation_System.UI
 
         private void check_1_CheckedChanged(object sender, EventArgs e)
         {
-            if (check_1.Checked == true)
+            if (checkbox_AcceptAllReturns.Checked == true)
             {
                 for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
                 {
@@ -1454,7 +1532,7 @@ namespace Reservation_System.UI
 
                 }
             }
-            else if (check_1.Checked == false)
+            else if (checkbox_AcceptAllReturns.Checked == false)
             {
                 for (int i = 0; i < checklist_Waiting_PendingLoans.Items.Count; i++)
                 {
@@ -1465,7 +1543,7 @@ namespace Reservation_System.UI
 
         private void check2_CheckedChanged(object sender, EventArgs e)
         {
-            if (check2.Checked == true)
+            if (checkbox_AcceptAllLoans.Checked == true)
             {
                 for (int i = 0; i < checklist_Waiting_PendingReturns.Items.Count; i++)
                 {
@@ -1474,7 +1552,7 @@ namespace Reservation_System.UI
 
                 }
             }
-            else if (check2.Checked == false)
+            else if (checkbox_AcceptAllLoans.Checked == false)
             {
                 for (int i = 0; i < checklist_Waiting_PendingReturns.Items.Count; i++)
                 {
@@ -2085,7 +2163,27 @@ namespace Reservation_System.UI
 
         private void helpContentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://edusakky-my.sharepoint.com/:b:/g/personal/p119993_edu_sakky_fi/EeLoadLzgRJDu3ND1I_EDeoBCEAbAT-dpT7fRB3BsOXBDQ?e=9IMbQR");
+            Process.Start("https://github.com/VilleKokkarinen/Edu_Reservation_System/blob/master/Ohje_dokumentti.pdf");
+        }
+
+        private void checklist_Reservation_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if(e.CurrentValue == CheckState.Checked)
+            {
+                txt_reservation_Itemstate.Text = "";
+                txt_reservation_Itemtype.Text = "";
+                e.NewValue = CheckState.Unchecked;
+            }
+            if (e.NewValue == CheckState.Unchecked)
+            {
+                txt_reservation_Itemstate.Text = "";
+                txt_reservation_Itemtype.Text = "";
+            }
+
+        }
+
+        private void checklist_Reservation_MouseClick(object sender, MouseEventArgs e)
+        {
         }
     }
 }

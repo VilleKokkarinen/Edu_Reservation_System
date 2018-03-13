@@ -6,25 +6,25 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace Reservation_System.UI
-{   
-        public class TypeAssistant
-        {
-            public event EventHandler Idled = delegate { };
-            public int WaitingMilliSeconds { get; set; }
-            System.Threading.Timer waitingTimer;
+{
+    public class TypeAssistant
+    {
+        public event EventHandler Idled = delegate { };
+        public int WaitingMilliSeconds { get; set; }
+        System.Threading.Timer waitingTimer;
 
-            public TypeAssistant(int waitingMilliSeconds = 1000)
+        public TypeAssistant(int waitingMilliSeconds = 500)
+        {
+            WaitingMilliSeconds = waitingMilliSeconds;
+            waitingTimer = new Timer(p =>
             {
-                WaitingMilliSeconds = waitingMilliSeconds;
-                waitingTimer = new Timer(p =>
-                {
-                    Idled(this, EventArgs.Empty);
-                });
-            }
-            public void TextChanged()
-            {
-                waitingTimer.Change(WaitingMilliSeconds, Timeout.Infinite);
-            }
+                Idled(this, EventArgs.Empty);
+            });
         }
-    
+        public void TextChanged()
+        {
+            waitingTimer.Change(WaitingMilliSeconds, System.Threading.Timeout.Infinite);
+        }
+    }
+
 }

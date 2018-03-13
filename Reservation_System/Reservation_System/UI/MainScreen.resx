@@ -457,10 +457,10 @@
     <value>Apua</value>
   </data>
   <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1168, 33</value>
+    <value>1328, 33</value>
   </data>
   <data name="menuStripZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 28</value>
+    <value>223, 28</value>
   </data>
   <data name="menuStripZ1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1384,7 +1384,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 62</value>
@@ -1729,7 +1729,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UserLoans_Panel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>16</value>
   </data>
   <data name="checklist_DeleteItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2292,61 +2292,61 @@
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="check2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="checkbox_AcceptAllLoans.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="check2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="checkbox_AcceptAllLoans.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="check2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="checkbox_AcceptAllLoans.Location" type="System.Drawing.Point, System.Drawing">
     <value>606, 8</value>
   </data>
-  <data name="check2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkbox_AcceptAllLoans.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
   </data>
-  <data name="check2.TabIndex" type="System.Int32, mscorlib">
+  <data name="checkbox_AcceptAllLoans.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
-  <data name="check2.Text" xml:space="preserve">
+  <data name="checkbox_AcceptAllLoans.Text" xml:space="preserve">
     <value>Select all</value>
   </data>
-  <data name="&gt;&gt;check2.Name" xml:space="preserve">
-    <value>check2</value>
+  <data name="&gt;&gt;checkbox_AcceptAllLoans.Name" xml:space="preserve">
+    <value>checkbox_AcceptAllLoans</value>
   </data>
-  <data name="&gt;&gt;check2.Type" xml:space="preserve">
+  <data name="&gt;&gt;checkbox_AcceptAllLoans.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;check2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkbox_AcceptAllLoans.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
   </data>
-  <data name="&gt;&gt;check2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkbox_AcceptAllLoans.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="check_1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="checkbox_AcceptAllReturns.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="check_1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="checkbox_AcceptAllReturns.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 8</value>
   </data>
-  <data name="check_1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkbox_AcceptAllReturns.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
   </data>
-  <data name="check_1.TabIndex" type="System.Int32, mscorlib">
+  <data name="checkbox_AcceptAllReturns.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="check_1.Text" xml:space="preserve">
+  <data name="checkbox_AcceptAllReturns.Text" xml:space="preserve">
     <value>Select all</value>
   </data>
-  <data name="&gt;&gt;check_1.Name" xml:space="preserve">
-    <value>check_1</value>
+  <data name="&gt;&gt;checkbox_AcceptAllReturns.Name" xml:space="preserve">
+    <value>checkbox_AcceptAllReturns</value>
   </data>
-  <data name="&gt;&gt;check_1.Type" xml:space="preserve">
+  <data name="&gt;&gt;checkbox_AcceptAllReturns.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;check_1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkbox_AcceptAllReturns.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
   </data>
-  <data name="&gt;&gt;check_1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkbox_AcceptAllReturns.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="txt_Waiting_ReturnUserName.Location" type="System.Drawing.Point, System.Drawing">
@@ -2872,7 +2872,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Waiting_Events_panel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="datagrid_Users.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 18</value>
@@ -3340,7 +3340,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AccountManagement_Panel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3679,7 +3679,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Reservation_Panel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="cb_LoanHistory_Item.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>
@@ -3841,7 +3841,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LoanHistoryPanel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
