@@ -1384,7 +1384,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 62</value>
@@ -1729,106 +1729,169 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UserLoans_Panel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>21</value>
   </data>
-  <data name="checklist_DeleteItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="checklist_DeleteItem.HorizontalScrollbar" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checklist_DeleteItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 28</value>
-  </data>
-  <data name="checklist_DeleteItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 225</value>
-  </data>
-  <data name="checklist_DeleteItem.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;checklist_DeleteItem.Name" xml:space="preserve">
-    <value>checklist_DeleteItem</value>
-  </data>
-  <data name="&gt;&gt;checklist_DeleteItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checklist_DeleteItem.Parent" xml:space="preserve">
-    <value>groupBox11</value>
-  </data>
-  <data name="&gt;&gt;checklist_DeleteItem.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_DeleteItem_ItemState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 57</value>
-  </data>
-  <data name="txt_DeleteItem_ItemState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
-  <data name="txt_DeleteItem_ItemState.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemState.Name" xml:space="preserve">
-    <value>txt_DeleteItem_ItemState</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemState.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemState.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_DeleteItem_ItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 25</value>
-  </data>
-  <data name="txt_DeleteItem_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="txt_DeleteItem_ItemType.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemType.Name" xml:space="preserve">
-    <value>txt_DeleteItem_ItemType</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemType.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemType.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txt_DeleteItem_ItemID.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txt_ItemNewName.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 25</value>
   </data>
-  <data name="txt_DeleteItem_ItemID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 26</value>
+  <data name="txt_ItemNewName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 26</value>
   </data>
-  <data name="txt_DeleteItem_ItemID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="txt_ItemNewName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemID.Name" xml:space="preserve">
-    <value>txt_DeleteItem_ItemID</value>
+  <data name="&gt;&gt;txt_ItemNewName.Name" xml:space="preserve">
+    <value>txt_ItemNewName</value>
   </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemID.Type" xml:space="preserve">
+  <data name="&gt;&gt;txt_ItemNewName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemID.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txt_ItemNewName.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;txt_ItemNewName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cb_ItemNewState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 58</value>
+  </data>
+  <data name="cb_ItemNewState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 28</value>
+  </data>
+  <data name="cb_ItemNewState.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;cb_ItemNewState.Name" xml:space="preserve">
+    <value>cb_ItemNewState</value>
+  </data>
+  <data name="&gt;&gt;cb_ItemNewState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_ItemNewState.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cb_ItemNewState.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 140</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 99</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Tavaran uudet tiedot</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>groupBox11</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cb_EditItemDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 42</value>
+  </data>
+  <data name="cb_EditItemDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 32</value>
+  </data>
+  <data name="cb_EditItemDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;cb_EditItemDetails.Name" xml:space="preserve">
+    <value>cb_EditItemDetails</value>
+  </data>
+  <data name="&gt;&gt;cb_EditItemDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_EditItemDetails.Parent" xml:space="preserve">
+    <value>groupBox11</value>
+  </data>
+  <data name="&gt;&gt;cb_EditItemDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txt_ChangeItem_ItemState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
+  <data name="txt_ChangeItem_ItemState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_ChangeItem_ItemState.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemState.Name" xml:space="preserve">
+    <value>txt_ChangeItem_ItemState</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemState.Parent" xml:space="preserve">
     <value>groupBox7</value>
   </data>
-  <data name="&gt;&gt;txt_DeleteItem_ItemID.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txt_ChangeItem_ItemState.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_ChangeItem_ItemType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 25</value>
+  </data>
+  <data name="txt_ChangeItem_ItemType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 26</value>
+  </data>
+  <data name="txt_ChangeItem_ItemType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemType.Name" xml:space="preserve">
+    <value>txt_ChangeItem_ItemType</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemType.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemType.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txt_ChangeItem_ItemID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 25</value>
+  </data>
+  <data name="txt_ChangeItem_ItemID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 26</value>
+  </data>
+  <data name="txt_ChangeItem_ItemID.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemID.Name" xml:space="preserve">
+    <value>txt_ChangeItem_ItemID</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemID.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;txt_ChangeItem_ItemID.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="groupBox7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 149</value>
+    <value>240, 35</value>
   </data>
   <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
+    <value>183, 99</value>
   </data>
   <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -1846,111 +1909,36 @@
     <value>groupBox11</value>
   </data>
   <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ComboBox_DeleteItemType.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="ComboBox_DeleteItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
-  </data>
-  <data name="ComboBox_DeleteItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
-  </data>
-  <data name="ComboBox_DeleteItemType.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_DeleteItemType.Name" xml:space="preserve">
-    <value>ComboBox_DeleteItemType</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_DeleteItemType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_DeleteItemType.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_DeleteItemType.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_DeleteItemSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="txt_DeleteItemSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 23</value>
-  </data>
-  <data name="txt_DeleteItemSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 26</value>
-  </data>
-  <data name="txt_DeleteItemSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItemSearch.Name" xml:space="preserve">
-    <value>txt_DeleteItemSearch</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItemSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItemSearch.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;txt_DeleteItemSearch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 28</value>
-  </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
-  </data>
-  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Hae Tavaroita</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
-    <value>groupBox11</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btn_DeleteItem.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btn_ChangeItemDetails.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btn_DeleteItem.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btn_ChangeItemDetails.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
-  <data name="btn_DeleteItem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btn_ChangeItemDetails.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btn_DeleteItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 271</value>
+  <data name="btn_ChangeItemDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 259</value>
   </data>
-  <data name="btn_DeleteItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btn_ChangeItemDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 55</value>
   </data>
-  <data name="btn_DeleteItem.TabIndex" type="System.Int32, mscorlib">
+  <data name="btn_ChangeItemDetails.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
-  <data name="&gt;&gt;btn_DeleteItem.Name" xml:space="preserve">
-    <value>btn_DeleteItem</value>
+  <data name="&gt;&gt;btn_ChangeItemDetails.Name" xml:space="preserve">
+    <value>btn_ChangeItemDetails</value>
   </data>
-  <data name="&gt;&gt;btn_DeleteItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;btn_ChangeItemDetails.Type" xml:space="preserve">
     <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btn_DeleteItem.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btn_ChangeItemDetails.Parent" xml:space="preserve">
     <value>groupBox11</value>
   </data>
-  <data name="&gt;&gt;btn_DeleteItem.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btn_ChangeItemDetails.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="groupBox11.Font" type="System.Drawing.Font, System.Drawing">
@@ -1960,13 +1948,13 @@
     <value>769, 90</value>
   </data>
   <data name="groupBox11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 374</value>
+    <value>441, 374</value>
   </data>
   <data name="groupBox11.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
   <data name="groupBox11.Text" xml:space="preserve">
-    <value>Tavaroiden poistaminen</value>
+    <value>Tavaroiden tietojen muuttaminen</value>
   </data>
   <data name="&gt;&gt;groupBox11.Name" xml:space="preserve">
     <value>groupBox11</value>
@@ -2290,7 +2278,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>16</value>
   </data>
   <data name="checkbox_AcceptAllLoans.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2374,7 +2362,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 255</value>
+    <value>837, 139</value>
   </data>
   <data name="groupBox15.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 99</value>
@@ -2396,81 +2384,6 @@
   </data>
   <data name="&gt;&gt;groupBox15.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="combobox_waiting_ReturnItemtype.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="combobox_waiting_ReturnItemtype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 59</value>
-  </data>
-  <data name="combobox_waiting_ReturnItemtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
-  </data>
-  <data name="combobox_waiting_ReturnItemtype.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;combobox_waiting_ReturnItemtype.Name" xml:space="preserve">
-    <value>combobox_waiting_ReturnItemtype</value>
-  </data>
-  <data name="&gt;&gt;combobox_waiting_ReturnItemtype.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;combobox_waiting_ReturnItemtype.Parent" xml:space="preserve">
-    <value>groupBox16</value>
-  </data>
-  <data name="&gt;&gt;combobox_waiting_ReturnItemtype.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemsearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemsearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 23</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemsearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 26</value>
-  </data>
-  <data name="txt_Waiting_ReturnItemsearch.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemsearch.Name" xml:space="preserve">
-    <value>txt_Waiting_ReturnItemsearch</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemsearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemsearch.Parent" xml:space="preserve">
-    <value>groupBox16</value>
-  </data>
-  <data name="&gt;&gt;txt_Waiting_ReturnItemsearch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox16.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 18</value>
-  </data>
-  <data name="groupBox16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 99</value>
-  </data>
-  <data name="groupBox16.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="groupBox16.Text" xml:space="preserve">
-    <value>Hae Tavaroita</value>
-  </data>
-  <data name="&gt;&gt;groupBox16.Name" xml:space="preserve">
-    <value>groupBox16</value>
-  </data>
-  <data name="&gt;&gt;groupBox16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox16.Parent" xml:space="preserve">
-    <value>Waiting_Events_panel</value>
-  </data>
-  <data name="&gt;&gt;groupBox16.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="btnAcceptReturn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2500,7 +2413,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="dtp_Waiting_ReturnReturnDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2572,7 +2485,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 139</value>
+    <value>837, 23</value>
   </data>
   <data name="groupBox17.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 103</value>
@@ -2593,7 +2506,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox17.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checklist_Waiting_PendingReturns.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2620,7 +2533,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;checklist_Waiting_PendingReturns.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="btnDenyLoan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2632,7 +2545,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnDenyLoan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 361</value>
+    <value>196, 363</value>
   </data>
   <data name="btnDenyLoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 55</value>
@@ -2650,7 +2563,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="txt_Waiting_LoanUserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 27</value>
@@ -2698,7 +2611,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="btnAcceptLoan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2710,7 +2623,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAcceptLoan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 361</value>
+    <value>12, 363</value>
   </data>
   <data name="btnAcceptLoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 55</value>
@@ -2728,7 +2641,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="txt_Waiting_LoanItemType.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 25</value>
@@ -2821,7 +2734,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="checklist_Waiting_PendingLoans.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2848,7 +2761,7 @@
     <value>Waiting_Events_panel</value>
   </data>
   <data name="&gt;&gt;checklist_Waiting_PendingLoans.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="Waiting_Events_panel.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 80</value>
@@ -2872,7 +2785,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Waiting_Events_panel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <data name="datagrid_Users.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 18</value>
@@ -3340,7 +3253,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AccountManagement_Panel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3679,7 +3592,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Reservation_Panel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>22</value>
   </data>
   <data name="cb_LoanHistory_Item.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>

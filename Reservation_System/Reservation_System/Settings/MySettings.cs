@@ -11,5 +11,6 @@ namespace Reservation_System
         public bool English = true;
         public bool RememberUserName = false;
         public string Username = "";
+        public string connectionstring = "";
     }
 }

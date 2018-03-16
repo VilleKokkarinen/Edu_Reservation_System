@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace Reservation_System.User
 {
@@ -48,7 +49,7 @@ namespace Reservation_System.User
     }
     class UserDataMapper
     {
-        private static readonly string _connectionString = "SERVER=10.12.132.34;DATABASE=Ville_Kokkarinen_OHTU;UID=p119980;PASSWORD=12345;";
+        private static readonly string _connectionString = Program.Settings.connectionstring;
 
         public static User CreateFromDatabase(string username, string password)
         {
@@ -90,8 +91,8 @@ namespace Reservation_System.User
                     return User;
                 }
             }
-            catch (Exception)
-            { }
+            catch (Exception e)
+            { MessageBox.Show("Yhteys tietokantaan ei toimi\n\n" + e); }
 
             return null;
         }        

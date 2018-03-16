@@ -102,15 +102,15 @@
             this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Item_Management = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.checklist_DeleteItem = new System.Windows.Forms.CheckedListBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txt_DeleteItem_ItemState = new System.Windows.Forms.TextBox();
-            this.txt_DeleteItem_ItemType = new System.Windows.Forms.TextBox();
-            this.txt_DeleteItem_ItemID = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.ComboBox_DeleteItemType = new System.Windows.Forms.ComboBox();
-            this.txt_DeleteItemSearch = new System.Windows.Forms.TextBox();
-            this.btn_DeleteItem = new Reservation_System.UI.ShapedButton();
+            this.txt_ItemNewName = new System.Windows.Forms.TextBox();
+            this.cb_ItemNewState = new System.Windows.Forms.ComboBox();
+            this.cb_EditItemDetails = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txt_ChangeItem_ItemState = new System.Windows.Forms.TextBox();
+            this.txt_ChangeItem_ItemType = new System.Windows.Forms.TextBox();
+            this.txt_ChangeItem_ItemID = new System.Windows.Forms.TextBox();
+            this.btn_ChangeItemDetails = new Reservation_System.UI.ShapedButton();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.btn_CreateItem = new Reservation_System.UI.ShapedButton();
@@ -127,9 +127,6 @@
             this.checkbox_AcceptAllReturns = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txt_Waiting_ReturnUserName = new System.Windows.Forms.TextBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.combobox_waiting_ReturnItemtype = new System.Windows.Forms.ComboBox();
-            this.txt_Waiting_ReturnItemsearch = new System.Windows.Forms.TextBox();
             this.btnAcceptReturn = new Reservation_System.UI.ShapedButton();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.dtp_Waiting_ReturnReturnDate = new System.Windows.Forms.DateTimePicker();
@@ -199,14 +196,13 @@
             this.groupBox5.SuspendLayout();
             this.Item_Management.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.Waiting_Events_panel.SuspendLayout();
             this.groupBox15.SuspendLayout();
-            this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -665,7 +661,10 @@
             // 
             // combobox_Loan_ItemType
             // 
+            this.combobox_Loan_ItemType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combobox_Loan_ItemType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combobox_Loan_ItemType.DisplayMember = "Text";
+            this.combobox_Loan_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.combobox_Loan_ItemType, "combobox_Loan_ItemType");
             this.combobox_Loan_ItemType.FormattingEnabled = true;
             this.combobox_Loan_ItemType.Name = "combobox_Loan_ItemType";
@@ -753,7 +752,6 @@
             this.checklist_Loan_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.checklist_Loan_Items.FormattingEnabled = true;
             this.checklist_Loan_Items.Name = "checklist_Loan_Items";
-            this.checklist_Loan_Items.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Loan_Items_ItemCheck);
             this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
             // 
             // UserLoans_Panel
@@ -837,6 +835,7 @@
             // combobox_UserLoans_ItemType
             // 
             this.combobox_UserLoans_ItemType.DisplayMember = "Text";
+            this.combobox_UserLoans_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.combobox_UserLoans_ItemType, "combobox_UserLoans_ItemType");
             this.combobox_UserLoans_ItemType.FormattingEnabled = true;
             this.combobox_UserLoans_ItemType.Name = "combobox_UserLoans_ItemType";
@@ -913,99 +912,96 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.checklist_DeleteItem);
-            this.groupBox11.Controls.Add(this.groupBox7);
             this.groupBox11.Controls.Add(this.groupBox6);
-            this.groupBox11.Controls.Add(this.btn_DeleteItem);
+            this.groupBox11.Controls.Add(this.cb_EditItemDetails);
+            this.groupBox11.Controls.Add(this.groupBox7);
+            this.groupBox11.Controls.Add(this.btn_ChangeItemDetails);
             resources.ApplyResources(this.groupBox11, "groupBox11");
             this.groupBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.TabStop = false;
             // 
-            // checklist_DeleteItem
-            // 
-            this.checklist_DeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checklist_DeleteItem.CheckOnClick = true;
-            this.checklist_DeleteItem.DisplayMember = "Text";
-            resources.ApplyResources(this.checklist_DeleteItem, "checklist_DeleteItem");
-            this.checklist_DeleteItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checklist_DeleteItem.FormattingEnabled = true;
-            this.checklist_DeleteItem.Name = "checklist_DeleteItem";
-            this.checklist_DeleteItem.SelectedValueChanged += new System.EventHandler(this.checklist_DeleteItem_SelectedValueChanged);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.txt_DeleteItem_ItemState);
-            this.groupBox7.Controls.Add(this.txt_DeleteItem_ItemType);
-            this.groupBox7.Controls.Add(this.txt_DeleteItem_ItemID);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            // 
-            // txt_DeleteItem_ItemState
-            // 
-            resources.ApplyResources(this.txt_DeleteItem_ItemState, "txt_DeleteItem_ItemState");
-            this.txt_DeleteItem_ItemState.Name = "txt_DeleteItem_ItemState";
-            // 
-            // txt_DeleteItem_ItemType
-            // 
-            resources.ApplyResources(this.txt_DeleteItem_ItemType, "txt_DeleteItem_ItemType");
-            this.txt_DeleteItem_ItemType.Name = "txt_DeleteItem_ItemType";
-            // 
-            // txt_DeleteItem_ItemID
-            // 
-            resources.ApplyResources(this.txt_DeleteItem_ItemID, "txt_DeleteItem_ItemID");
-            this.txt_DeleteItem_ItemID.Name = "txt_DeleteItem_ItemID";
-            // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.ComboBox_DeleteItemType);
-            this.groupBox6.Controls.Add(this.txt_DeleteItemSearch);
+            this.groupBox6.Controls.Add(this.txt_ItemNewName);
+            this.groupBox6.Controls.Add(this.cb_ItemNewState);
             resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
-            // ComboBox_DeleteItemType
+            // txt_ItemNewName
             // 
-            this.ComboBox_DeleteItemType.DisplayMember = "Text";
-            resources.ApplyResources(this.ComboBox_DeleteItemType, "ComboBox_DeleteItemType");
-            this.ComboBox_DeleteItemType.FormattingEnabled = true;
-            this.ComboBox_DeleteItemType.Name = "ComboBox_DeleteItemType";
+            resources.ApplyResources(this.txt_ItemNewName, "txt_ItemNewName");
+            this.txt_ItemNewName.Name = "txt_ItemNewName";
             // 
-            // txt_DeleteItemSearch
+            // cb_ItemNewState
             // 
-            resources.ApplyResources(this.txt_DeleteItemSearch, "txt_DeleteItemSearch");
-            this.txt_DeleteItemSearch.Name = "txt_DeleteItemSearch";
+            this.cb_ItemNewState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_ItemNewState.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_ItemNewState, "cb_ItemNewState");
+            this.cb_ItemNewState.Name = "cb_ItemNewState";
             // 
-            // btn_DeleteItem
+            // cb_EditItemDetails
             // 
-            this.btn_DeleteItem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_DeleteItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_DeleteItem.BorderWidth = 2;
-            this.btn_DeleteItem.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.btn_DeleteItem.ButtonText = "Poista";
-            this.btn_DeleteItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_DeleteItem.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_DeleteItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btn_DeleteItem, "btn_DeleteItem");
-            this.btn_DeleteItem.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteItem.GradientAngle = 90;
-            this.btn_DeleteItem.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btn_DeleteItem.MouseClickColor2 = System.Drawing.Color.Black;
-            this.btn_DeleteItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_DeleteItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_DeleteItem.Name = "btn_DeleteItem";
-            this.btn_DeleteItem.ShowButtontext = true;
-            this.btn_DeleteItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_DeleteItem.TextLocation_X = 28;
-            this.btn_DeleteItem.TextLocation_Y = 17;
-            this.btn_DeleteItem.Transparent1 = 250;
-            this.btn_DeleteItem.Transparent2 = 250;
-            this.btn_DeleteItem.UseVisualStyleBackColor = false;
-            this.btn_DeleteItem.Click += new System.EventHandler(this.btn_DeleteItem_Click);
+            this.cb_EditItemDetails.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_EditItemDetails.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_EditItemDetails, "cb_EditItemDetails");
+            this.cb_EditItemDetails.Name = "cb_EditItemDetails";
+            this.cb_EditItemDetails.SelectedValueChanged += new System.EventHandler(this.cb_EditItemDetails_SelectedValueChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txt_ChangeItem_ItemState);
+            this.groupBox7.Controls.Add(this.txt_ChangeItem_ItemType);
+            this.groupBox7.Controls.Add(this.txt_ChangeItem_ItemID);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            // 
+            // txt_ChangeItem_ItemState
+            // 
+            resources.ApplyResources(this.txt_ChangeItem_ItemState, "txt_ChangeItem_ItemState");
+            this.txt_ChangeItem_ItemState.Name = "txt_ChangeItem_ItemState";
+            // 
+            // txt_ChangeItem_ItemType
+            // 
+            resources.ApplyResources(this.txt_ChangeItem_ItemType, "txt_ChangeItem_ItemType");
+            this.txt_ChangeItem_ItemType.Name = "txt_ChangeItem_ItemType";
+            // 
+            // txt_ChangeItem_ItemID
+            // 
+            resources.ApplyResources(this.txt_ChangeItem_ItemID, "txt_ChangeItem_ItemID");
+            this.txt_ChangeItem_ItemID.Name = "txt_ChangeItem_ItemID";
+            // 
+            // btn_ChangeItemDetails
+            // 
+            this.btn_ChangeItemDetails.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ChangeItemDetails.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_ChangeItemDetails.BorderWidth = 2;
+            this.btn_ChangeItemDetails.ButtonShape = Reservation_System.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_ChangeItemDetails.ButtonText = "Muuta";
+            this.btn_ChangeItemDetails.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ChangeItemDetails.FlatAppearance.BorderSize = 0;
+            this.btn_ChangeItemDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ChangeItemDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_ChangeItemDetails, "btn_ChangeItemDetails");
+            this.btn_ChangeItemDetails.ForeColor = System.Drawing.Color.White;
+            this.btn_ChangeItemDetails.GradientAngle = 90;
+            this.btn_ChangeItemDetails.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_ChangeItemDetails.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_ChangeItemDetails.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_ChangeItemDetails.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_ChangeItemDetails.Name = "btn_ChangeItemDetails";
+            this.btn_ChangeItemDetails.ShowButtontext = true;
+            this.btn_ChangeItemDetails.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ChangeItemDetails.TextLocation_X = 28;
+            this.btn_ChangeItemDetails.TextLocation_Y = 17;
+            this.btn_ChangeItemDetails.Transparent1 = 250;
+            this.btn_ChangeItemDetails.Transparent2 = 250;
+            this.btn_ChangeItemDetails.UseVisualStyleBackColor = false;
+            this.btn_ChangeItemDetails.Click += new System.EventHandler(this.btn_DeleteItem_Click);
             // 
             // groupBox10
             // 
@@ -1129,7 +1125,6 @@
             this.Waiting_Events_panel.Controls.Add(this.checkbox_AcceptAllLoans);
             this.Waiting_Events_panel.Controls.Add(this.checkbox_AcceptAllReturns);
             this.Waiting_Events_panel.Controls.Add(this.groupBox15);
-            this.Waiting_Events_panel.Controls.Add(this.groupBox16);
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptReturn);
             this.Waiting_Events_panel.Controls.Add(this.groupBox17);
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingReturns);
@@ -1169,27 +1164,6 @@
             // 
             resources.ApplyResources(this.txt_Waiting_ReturnUserName, "txt_Waiting_ReturnUserName");
             this.txt_Waiting_ReturnUserName.Name = "txt_Waiting_ReturnUserName";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.combobox_waiting_ReturnItemtype);
-            this.groupBox16.Controls.Add(this.txt_Waiting_ReturnItemsearch);
-            resources.ApplyResources(this.groupBox16, "groupBox16");
-            this.groupBox16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.TabStop = false;
-            // 
-            // combobox_waiting_ReturnItemtype
-            // 
-            this.combobox_waiting_ReturnItemtype.DisplayMember = "Text";
-            resources.ApplyResources(this.combobox_waiting_ReturnItemtype, "combobox_waiting_ReturnItemtype");
-            this.combobox_waiting_ReturnItemtype.FormattingEnabled = true;
-            this.combobox_waiting_ReturnItemtype.Name = "combobox_waiting_ReturnItemtype";
-            // 
-            // txt_Waiting_ReturnItemsearch
-            // 
-            resources.ApplyResources(this.txt_Waiting_ReturnItemsearch, "txt_Waiting_ReturnItemsearch");
-            this.txt_Waiting_ReturnItemsearch.Name = "txt_Waiting_ReturnItemsearch";
             // 
             // btnAcceptReturn
             // 
@@ -1576,6 +1550,7 @@
             // combox_reservation_itemtype
             // 
             this.combox_reservation_itemtype.DisplayMember = "Text";
+            this.combox_reservation_itemtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.combox_reservation_itemtype, "combox_reservation_itemtype");
             this.combox_reservation_itemtype.FormattingEnabled = true;
             this.combox_reservation_itemtype.Name = "combox_reservation_itemtype";
@@ -1676,6 +1651,7 @@
             // 
             // cb_LoanHistory_Item
             // 
+            this.cb_LoanHistory_Item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_LoanHistory_Item.FormattingEnabled = true;
             resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
             this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
@@ -1699,6 +1675,7 @@
             // 
             // cb_LoanHistory_User
             // 
+            this.cb_LoanHistory_User.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_LoanHistory_User.FormattingEnabled = true;
             resources.ApplyResources(this.cb_LoanHistory_User, "cb_LoanHistory_User");
             this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
@@ -1733,13 +1710,13 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.UserLoans_Panel);
-            this.Controls.Add(this.Reservation_Panel);
-            this.Controls.Add(this.LoanHistoryPanel);
+            this.Controls.Add(this.Item_Management);
             this.Controls.Add(this.Loan_Panel);
+            this.Controls.Add(this.LoanHistoryPanel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.AccountManagement_Panel);
-            this.Controls.Add(this.Item_Management);
+            this.Controls.Add(this.UserLoans_Panel);
+            this.Controls.Add(this.Reservation_Panel);
             this.Controls.Add(this.Settings_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripZ1;
@@ -1772,10 +1749,10 @@
             this.groupBox5.PerformLayout();
             this.Item_Management.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
@@ -1785,8 +1762,6 @@
             this.Waiting_Events_panel.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
             this.groupBox14.ResumeLayout(false);
@@ -1873,15 +1848,11 @@
         private System.Windows.Forms.TextBox txt_UserLoans_ItemType;
         private System.Windows.Forms.CheckedListBox Checklist_UserLoans_Items;
         private System.Windows.Forms.Panel Item_Management;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox ComboBox_DeleteItemType;
-        private System.Windows.Forms.TextBox txt_DeleteItemSearch;
-        private ShapedButton btn_DeleteItem;
+        private ShapedButton btn_ChangeItemDetails;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox txt_DeleteItem_ItemState;
-        private System.Windows.Forms.TextBox txt_DeleteItem_ItemType;
-        private System.Windows.Forms.TextBox txt_DeleteItem_ItemID;
-        private System.Windows.Forms.CheckedListBox checklist_DeleteItem;
+        private System.Windows.Forms.TextBox txt_ChangeItem_ItemState;
+        private System.Windows.Forms.TextBox txt_ChangeItem_ItemType;
+        private System.Windows.Forms.TextBox txt_ChangeItem_ItemID;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox8;
         private ShapedButton btn_CreateItemType;
@@ -1908,9 +1879,6 @@
         private System.Windows.Forms.DateTimePicker dtp_Waiting_ReturnReturnDate;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.TextBox txt_Waiting_ReturnUserName;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.ComboBox combobox_waiting_ReturnItemtype;
-        private System.Windows.Forms.TextBox txt_Waiting_ReturnItemsearch;
         private ShapedButton btnAcceptReturn;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.TextBox txt_Waiting_ReturnItemType;
@@ -1970,5 +1938,9 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.ComboBox cb_LoanHistory_User;
         private System.Windows.Forms.DataGridView dataGridUserLoanHistory;
+        private System.Windows.Forms.ComboBox cb_EditItemDetails;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txt_ItemNewName;
+        private System.Windows.Forms.ComboBox cb_ItemNewState;
     }
 }
